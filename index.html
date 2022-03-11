@@ -17,15 +17,15 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="随便聊点什么吧，什么都可以">
+  <meta name="description" content="欢迎来找我随便聊点什么哦">
 <meta property="og:type" content="website">
 <meta property="og:title" content="闲话茶楼">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="闲话茶楼">
-<meta property="og:description" content="随便聊点什么吧，什么都可以">
+<meta property="og:description" content="欢迎来找我随便聊点什么哦">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="西走菜菜">
 <meta name="twitter:card" content="summary">
@@ -115,6 +115,16 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
@@ -152,7 +162,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="随便聊点什么吧，什么都可以">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -172,7 +182,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-11 12:29:59 / 修改时间：14:31:51" itemprop="dateCreated datePublished" datetime="2022-03-11T12:29:59+08:00">2022-03-11</time>
+              <time title="创建时间：2022-03-11 12:29:59 / 修改时间：15:46:50" itemprop="dateCreated datePublished" datetime="2022-03-11T12:29:59+08:00">2022-03-11</time>
             </span>
 
           
@@ -187,75 +197,14 @@
 
       
           <h2 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//代码块语法</span></span><br><span class="line"><span class="comment">//```java```   </span></span><br><span class="line"><span class="comment">//```shell```</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>1.java代码</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner; <span class="comment">//键盘扫描类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span>&#123;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">Scanner input=<span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);<span class="comment">//创建一个键盘扫描类对象</span></span><br><span class="line">System.out.print(<span class="string">&quot;请您输入内容:&quot;</span>);</span><br><span class="line"><span class="type">int</span> contents=input.nextInt(); <span class="comment">//输入整型</span></span><br><span class="line">String contents1=input.next(); <span class="comment">//输入字符串型</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>2.shell脚本</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Scanner input=new Scanner(System.in);//创建一个键盘扫描类对象</span><br><span class="line">System.out.print(&quot;请您输入内容:&quot;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-标题："><a href="#2-标题：" class="headerlink" title="2.标题："></a>2.标题：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="3-字体"><a href="#3-字体" class="headerlink" title="3.字体"></a>3.字体</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加粗</span></span><br><span class="line">**加粗**</span><br><span class="line"><span class="comment">// 高亮</span></span><br><span class="line">==高亮==</span><br><span class="line"><span class="comment">// 删除线</span></span><br><span class="line">~~删除~~</span><br><span class="line"><span class="comment">// 斜体</span></span><br><span class="line">*斜体*</span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;&#x2F; 加粗<br><strong>加粗</strong><br>&#x2F;&#x2F; 高亮<br>&#x3D;&#x3D;高亮&#x3D;&#x3D;<br>&#x2F;&#x2F; 删除线<br><del>删除</del><br>&#x2F;&#x2F; 斜体<br><em>斜体</em></p>
-<h2 id="4、引用"><a href="#4、引用" class="headerlink" title="4、引用"></a>4、引用</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引用语法</span></span><br><span class="line">&gt;作者<span class="number">1</span></span><br><span class="line">&gt;&gt;作者<span class="number">2</span></span><br><span class="line">&gt;&gt;&gt;作者<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;&#x2F;引用语法</p>
-<blockquote>
-<p>作者1</p>
-<blockquote>
-<p>作者2</p>
-<blockquote>
-<p>作者3</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//分割线</span></span><br><span class="line">---</span><br><span class="line"><span class="comment">//分割线</span></span><br><span class="line">***</span><br></pre></td></tr></table></figure>
-
-<h2 id="x2F-x2F-分割线"><a href="#x2F-x2F-分割线" class="headerlink" title="&#x2F;&#x2F;分割线"></a>&#x2F;&#x2F;分割线</h2><p>&#x2F;&#x2F;分割线</p>
-<hr>
-<h2 id="6、图片插入"><a href="#6、图片插入" class="headerlink" title="6、图片插入"></a>6、图片插入</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在线图片/本地图片</span></span><br><span class="line">![我的照片](/image/me.png) --路径</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1605789268&di=56f17d5e7a3548de4497a0729cc75db1&src=http://2b.zol-img.com.cn/product/56/453/ceSDvy4d2LE2.jpg" alt="我的图片"></p>
-<p><img src="https://github.com/YongtaiQ/Markdown_Picture/blob/main//img/Wallpaper-of-the-Week-176.jpg" alt="我的图片"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/15563CS5-2.jpg" alt="15563CS5-2"></p>
-<p><img src="https://github.com/YongtaiQ/Markdown_Picture/blob/main//img/15563A941-3.jpg" alt="15563A941-3"></p>
-<h2 id="7、超链接"><a href="#7、超链接" class="headerlink" title="7、超链接"></a>7、超链接</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//超链接语法</span></span><br><span class="line">[百度](https:<span class="comment">//www.baidu.com/)</span></span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;&#x2F;超链接语法<br><a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a></p>
-<h2 id="8、列表"><a href="#8、列表" class="headerlink" title="8、列表"></a>8、列表</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//无序列表</span></span><br><span class="line">- 目录<span class="number">1</span></span><br><span class="line">- 目录<span class="number">2</span></span><br><span class="line">- 目录<span class="number">3</span></span><br><span class="line"><span class="comment">//有序列表</span></span><br><span class="line"><span class="number">1</span>+. + 名称    </span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;&#x2F;无序列表</p>
-<ul>
-<li>目录1</li>
-<li>目录2</li>
-<li>目录3</li>
-</ul>
-<p>1.首页</p>
-<p>2.分类</p>
-<p>3.标签</p>
-<h2 id="9、表格"><a href="#9、表格" class="headerlink" title="9、表格"></a>9、表格</h2><table>
-<thead>
-<tr>
-<th>成绩</th>
-<th>语文</th>
-<th>数学</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>78</td>
-<td>88</td>
-</tr>
-</tbody></table>
-<h1 id="10-高级技巧"><a href="#10-高级技巧" class="headerlink" title="10.高级技巧"></a>10.高级技巧</h1><p>阿这 <a href="%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%BE%E7%A4%BA">^a</a></p>
-<p><code>printf</code></p>
-<p><kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>del</kbd>重启电脑</p>
-<p>*正常显示*</p>
-<hr>
-<p>2020&#x2F;12&#x2F;3</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/11/Markdown_start_usingtypora/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -279,7 +228,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="随便聊点什么吧，什么都可以">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -299,7 +248,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-11 11:39:41 / 修改时间：12:55:14" itemprop="dateCreated datePublished" datetime="2022-03-11T11:39:41+08:00">2022-03-11</time>
+              <time title="创建时间：2022-03-11 11:39:41 / 修改时间：15:03:27" itemprop="dateCreated datePublished" datetime="2022-03-11T11:39:41+08:00">2022-03-11</time>
             </span>
 
           
@@ -320,247 +269,14 @@
 <p>写下这篇还有个原因，就是隐约感觉或许能帮到还有着同样疑惑的朋友，哪怕一点点，我都觉得挺开心。</p>
 <p>这可能是些很冒犯的文字，我只针对我自己，如果触怒了你，希望能得到你的原谅。</p>
 <p>这一遍，是因为我想读和小狐狸<strong>驯服</strong>的故事，所以其它都是不太重要的部分，但我仍然按照顺序简单随手记录一下好了。</p>
-<h1 id="2-那些不太重要的部分"><a href="#2-那些不太重要的部分" class="headerlink" title="2 那些不太重要的部分"></a>2 那些不太重要的部分</h1><h2 id="2-1-初遇小王子"><a href="#2-1-初遇小王子" class="headerlink" title="2.1 初遇小王子"></a>2.1 初遇小王子</h2><blockquote>
-<p>要是你对他们说：“小王子存在的证据就是他非常漂亮，他笑着，想要一只羊。他想要一只小羊，这就证明他的存在。”他们一定会耸耸肩膀，把你当作孩子看待！但是，如果你对他们说：“小王子来自的星球就是小行星B612”，那么 他们就十分信服，他们就不会提出一大堆问题来和你纠缠。他们就是这样的。小 孩子们对大人们应该宽厚些，不要埋怨他们。</p>
-<p>……</p>
-</blockquote>
-<p>人们对未知事物价值的认识，往往容易忽视事物本身，因为不相信自己的判断等原因；转而通过外界的评价来确认事物或者人的价值。对于认清自我来说也是这样。</p>
-<blockquote>
-<p>“一天，我看见过四十三次日落。”</p>
-</blockquote>
-<p>一句话就能表达清楚孤独和忧伤，越琢磨，越能感同身受的人，越能体会到感情的厚重，我喜欢这种含蓄的，隐藏其中的简单易读的侧面描写，可惜我的文字为了易读易懂太直白了，显得很粗鲁，有时候让我自己讨厌。</p>
-<blockquote>
-<p>她<strong>已经精细地做了那么长的准备工作</strong>，却打着哈欠说道：</p>
-<p>“我刚刚睡醒，真对不起，瞧我的头发还是乱蓬蓬的……”</p>
-<p>……</p>
-</blockquote>
-<p>真让我喜欢，我喜欢这朵 漂亮的、内心想法太多、言不由衷的、敏感的、傲娇的、可爱的小花:cherry_blossom:。</p>
-<blockquote>
-<p>……</p>
-</blockquote>
-<p>离别真让人伤感，小王子还没有意识到小花有多爱他，他就是小花的全部，没了他，小花还剩下什么？但她又不能挽留，因为这样太自私了，她不能要求小王子像自己，植物，一样陪着自己，静静的活着。她那么脆弱，尽管自己不愿意承认；没有手脚无法移动；花期很短，注定一别就永远不可能相见了。所以不再需要玻璃罩子也就很好懂了，难过，她是不会说出来的。</p>
-<hr>
-<h2 id="2-2-不同的人"><a href="#2-2-不同的人" class="headerlink" title="2.2 不同的人"></a>2.2 不同的人</h2><p>小王子遇到的各个星球上的大人，他觉得都很古怪，因为他们有着自己觉得重要的、在意的事，他们把一些本不重要的东西看得太重，他们太自以为是了。人嘛，想得简单点，或者说假装想得简单点，骗骗自己，才能更好的享受这个世界。</p>
-<blockquote>
-<p>“因为花卉是短暂的。”</p>
-<p>“什么叫短暂？”</p>
-<p>……</p>
-</blockquote>
-<p>小王子和地理学家的对话，以及对短暂的追问，证实了，他果然不知道离别是什么意思。</p>
-<p>我想我和小王子的不同可能是，他铁了心要回去，有回去的办法，虽然不知道是不是成功了；我一直在旅途上，未来的路我有各种选择，我不知道该怎么停下来，也没办法向后转，只能回头看看来时的路。我相信自己会遇上更多的花，那时我应该还是会照顾这些普通又独特的小花，因为这是哪个时候的、<strong>此时此刻</strong>的我，发自内心想<strong>要做</strong>的事。 </p>
-<blockquote>
-<p>“这颗行星真奇怪！它上面全是干巴巴的，而且又尖利又咸涩， 人们一点想象力都没有。他们只是重复别人对他们说的话……在我的家乡，我有一 朵花。她总是自己先说话……”</p>
-</blockquote>
-<p>他们总是重复别人对他们说的话，他们总是重复别人做过的事，然后渴望得到一句，<strong>学的真像</strong>（做得真好，你真棒，真厉害），他们总是活在别人的影子里面，沉迷于别人的夸奖，甚至忘记自己喜欢什么，想要什么。连自己喜欢什么都搞不清楚，更别提其它东西了，以房子为例吧。</p>
-<blockquote>
-<p>如果你对大人们说：“我看到一幢用玫瑰色的砖盖成的漂亮的房子，它的窗户上 有天竺葵，屋顶上还有鸽子……”他们怎么也想象不出这种房子有多么好。必须对 他们说：“我看见了一幢价值十万法郎的房子。”那么他们就惊叫道：“多么漂亮的房子啊！”</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>“他们什么也不追随。”扳道工说，“他们在里面睡觉，或是在打哈欠。只 有孩子们把鼻子贴在玻璃窗上往外看。”</p>
-<p>“只有孩子知道他们自己在寻找什么。”小王子说，“他们为一个布娃娃花 费不少时间，这个布娃娃就成了很重要的东西，如果有人夺走的他们的布娃娃， 他们就哭泣……”</p>
-<p>“他们真幸运。”扳道工说。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>“为什么？”</p>
-<p>“因为这就要渴死人了。”</p>
-<p>他不理解我的思路，他回答我道：</p>
-<p>“<strong>即使快要死了，有过一个朋友也好么！我就为我有过一个狐狸朋友而感到很高兴……</strong>”</p>
-<p>“他不顾危险。”我自己思量着，“他从来不知道饥渴。只要有点阳光，他 就满足了……”</p>
-</blockquote>
-<p>我从来都不指望能有人理解这个，因为确实是自己有问题。说白了，大家更在意的点不一样罢了。</p>
-<h1 id="3-正文-驯服"><a href="#3-正文-驯服" class="headerlink" title="3 正文 驯服"></a>3 正文 驯服</h1><h2 id="3-1-第二十章"><a href="#3-1-第二十章" class="headerlink" title="3.1 第二十章"></a>3.1 第二十章</h2><blockquote>
-<p>在沙漠、岩石、雪地上行走了很长的时间以后，小王子终于发现了一条大路。 所有的大路都是通往人住的地方的。</p>
-<p>“你们好。”小王子说。</p>
-<p>这是一个玫瑰盛开的花园。</p>
-<p>“你好。”玫瑰花说道。</p>
-<p>小王子瞅着这些花，它们全都和他的那朵花一样。</p>
-<p>“你们是什么花？”小王子惊奇地问。</p>
-<p>“我们是玫瑰花。”花儿们说道。</p>
-<p>“啊！”小王子说……。</p>
-<p>他感到自己非常不幸。<strong>他的那朵花曾对他说她是整个宇宙中独一无二的一种花</strong>。可是，仅在这一座花园里就有五千朵完全一样的这种花朵！</p>
-<p><strong>小王子自言自语地说：“如果她看到这些，她是一定会很恼火……她会咳嗽得 更厉害，并且为避免让人耻笑，她会佯装死去。那么，我还得装着去护理她，因为如果不这样的话，她为了使我难堪，她可能会真的死去……”</strong></p>
-<p>接着他又说道：“我还以为我有一朵独一无二的花呢，我有的仅是一朵普通 的花。这朵花，再加上三座只有我膝盖那么高的火山，而且其中一座还可能是永 远熄灭了的，这一切不会使我成为一个了不起的王子……”于是，他躺在草丛中哭 泣起来。</p>
-</blockquote>
-<p>小王子意识到了自己离开的爱的花并不独特，还是会先从她的视角思考，让我觉得很有爱，<strong>很心动</strong>。</p>
-<p>我遗憾的是，小花确实没有骗他，她确实是整个宇宙中独一无二的一种花，因为他们相遇相爱产生了**&#x3D;&#x3D;强烈的联系&#x3D;&#x3D;**，没有任何一朵花，或者任何其它事物和她一样。</p>
-<p>尽管小花在他离开已经说过了：</p>
-<blockquote>
-<p>她终于对他说道：“我方才真蠢。请你原谅我。希望你能幸福。” 花儿对他毫不抱怨，他感到很惊讶。他举着罩子，不知所措地伫立在那里。 他不明白她为什么会这样温柔恬静。</p>
-<p>“的确，我爱你。”花儿对他说道：“但由于我的过错，你一点也没有理会。 这丝毫不重要。不过，你也和我一样的蠢。希望你今后能幸福。把罩子放在一边 吧，我用不着它了。”</p>
-</blockquote>
-<p>小王子此时仍然只看到了花的普通，没有意识到她的独特。他从一开始的相遇，到照顾，到离开，直到现在遇上其它的花们，都完全没有意识到这种独特有多么难得。这让我觉得很遗憾。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的叙述被这一段第九章的话打断了，这段小花离别前的花让我动容，我终于还是，要插入小花的几个章节了，这虽然不是我想讨论的主题，但也很重要。但是请注意，原本第二十章和第二十一章是连在一起的。纠结了一下，决定坠在文末了，当作一个补充吧。也不影响读者本来的思路。</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<h2 id="3-2-第二十一章"><a href="#3-2-第二十一章" class="headerlink" title="3.2 第二十一章"></a>3.2 第二十一章</h2><h3 id="核心，就不加其它格式了，写这么多就是为了这一章节"><a href="#核心，就不加其它格式了，写这么多就是为了这一章节" class="headerlink" title="核心，就不加其它格式了，写这么多就是为了这一章节"></a>核心，就不加其它格式了，写这么多就是为了这一章节</h3><p>就在这当儿，跑来了一只狐狸。</p>
-<p>“你好。”狐狸说。</p>
-<p>“你好。”小王子很有礼貌地回答道。他转过身来，但什么也没有看到。</p>
-<p>“我在这儿，在苹果树下。”那声音说。</p>
-<p>“你是谁？”小王子说，“你很漂亮。”</p>
-<p>“我是一只狐狸。”狐狸说。</p>
-<p>“来和我一起玩吧，”小王子建议道，“我很苦恼……”</p>
-<p>“我不能和你一起玩，”狐狸说，“我还没有被<strong>驯服</strong>呢。”</p>
-<p>“啊！真对不起。”小王子说。</p>
-<p>思索了一会儿，他又说道：</p>
-<p>“<strong>什么叫‘驯服’呀？</strong>”</p>
-<p>“你不是此地人。”狐狸说，“你来寻找什么？”</p>
-<p>“我来找人。”小王子说，“<strong>什么叫‘驯服’呢？</strong>”</p>
-<p>“人，”狐狸说，“他们有枪，他们还打猎，这真碍事！他们唯一的可取之 处就是他们也养鸡，你是来寻找鸡的吗？”</p>
-<p>“不，”小王子说，“我是来找朋友的。<strong>什么叫‘驯服’呢？</strong>”</p>
-<p>“<strong>这是已经早就被人遗忘了的事情，</strong>”狐狸说，“**它的意思就是&#x3D;&#x3D;‘建立联系’&#x3D;&#x3D;**。”</p>
-<p>“<strong>建立联系？</strong>”</p>
-<p><strong>“一点不错，”狐狸说。“对我来说，你还只是一个小男孩，就像其他千万个小男孩一样。我不需要你。你也同样用不着我。对你来说，我也不过是一只狐 狸，和其他千万只狐狸一样。但是，如果你驯服了我，我们就互相不可缺少了。 对我来说，你就是世界上唯一的了；我对你来说，也是世界上&#x3D;&#x3D;唯一&#x3D;&#x3D;的了。”</strong></p>
-<p>“我有点明白了。”小王子说，“有一朵花……，我想，她把我驯服了……”</p>
-<p>“这是可能的。”狐狸说，“世界上什么样的事都可能看到……”</p>
-<p>“啊，这不是在地球上的事。”小王子说。</p>
-<p>狐狸感到十分蹊跷。</p>
-<p>“在另一个星球上？”</p>
-<p>“是的。”</p>
-<p>“在那个星球上，有猎人吗？”</p>
-<p>“没有。”</p>
-<p>“这很有意思。那么，有鸡吗？”</p>
-<p>“没有。”</p>
-<p>“没有十全十美的。”狐狸叹息地说道。</p>
-<p>可是，狐狸又把话题拉回来：</p>
-<p><strong>“我的生活很单调。我捕捉鸡，而人又捕捉我。所有的鸡全都一样，所有的 人也全都一样。因此，我感到有些&#x3D;&#x3D;厌烦&#x3D;&#x3D;了。但是，如果你要是驯服了我，我的生 活就一定会是&#x3D;&#x3D;欢快&#x3D;&#x3D;的。我会辨认出一种与众不同的脚步声。其他的脚步声会使我躲到地下去，而你的脚步声就会象音乐一样让我从洞里走出来。再说，你看！你 看到那边的麦田没有？我不吃面包，麦子对我来说，一点用也没有。我对麦田无动于衷。而这，真使人扫兴。但是，你有着金黄色的头发。那么，一旦你驯服了 我，这就会十分美妙。麦子，是金黄色的，它就会&#x3D;&#x3D;使我想起你&#x3D;&#x3D;。而且，我甚至会喜欢那风吹麦浪的声音……”</strong></p>
-<p>狐狸沉默不语，久久地看着小王子。</p>
-<p>“请你驯服我吧！”他说。</p>
-<p>“我是很愿意的。”小王子回答道，“可我的时间不多了。我还要去寻找朋友，还有许多事物要了解。”</p>
-<p>“<strong>只有被驯服了的事物，才会被了解。</strong>”狐狸说，“<strong>人不会再有时间去了解 任何东西的。</strong>他们总是到商人那里去购买现成的东西。因为世界上还没有购买朋友的商店，所以人也就没有朋友。如果你想要一个朋友，那就驯服我吧！”</p>
-<p>“那么应当做些什么呢？”小王子说。</p>
-<p><strong>“应当非常耐心。”狐狸回答道，“开始你就这样坐在草丛中，坐得离我稍 微远些。我用眼角瞅着你，你什么也不要说。话语是误会的根源。但是，每天，你坐得靠我更近些……”</strong></p>
-<p>第二天，小王子又来了。</p>
-<p><strong>“最好还是在原来的那个时间来。”狐狸说道，“比如说，你下午四点钟来， 那么从三点钟起，我就开始感到幸福。时间越临近，我就越感到幸福。到了四点 钟的时候，我就会坐立不安；我就会发现幸福的代价。但是，如果你随便什么时 候来，我就不知道在什么时候该准备好我的心情……应当有一定的仪式。”</strong></p>
-<p>“仪式是什么？”小王子问道。</p>
-<p>“这也是一种早已被人忘却了的事。”狐狸说，“它就是使某一天与其他日 子不同，使某一时刻与其他时刻不同。比如说，我的那些猎人就有一种仪式。他 们每星期四都和村子里的姑娘们跳舞。于是，星期四就是一个美好的日子！我可 以一直散步到葡萄园去。如果猎人们什么时候都跳舞，天天又全都一样，那么我 也就没有假日了。”</p>
-<p>就这样，小王子驯服了狐狸。当<strong>出发的时刻就快要来到时</strong>：</p>
-<p>“啊！”狐狸说，“<strong>我一定会哭的</strong>。”</p>
-<p>“<strong>这是你的过错，</strong>”小王子说，“<strong>我本来并不想给你任何痛苦，可你却要我驯服你……</strong>”</p>
-<p>“<strong>是这样的。</strong>”狐狸说。</p>
-<p>“你可就要哭了！”小王子说。</p>
-<p>“**&#x3D;&#x3D;当然罗&#x3D;&#x3D;**。”狐狸说。</p>
-<p>“<strong>那么你什么好处也没得到。</strong>”</p>
-<p>“<strong>由于麦子颜色的缘故，我还是得到了好处。</strong>”狐狸说。</p>
-<p>然后，他又接着说。</p>
-<p>“<strong>再去看看那些玫瑰花吧。你一定会明白，你的那朵是世界上独一无二的玫 瑰。你回来和我告别时，我再赠送给你一个秘密。</strong>”</p>
-<p>于是小王子又去看那些玫瑰。</p>
-<p>“<strong>你们一点也不象我的那朵玫瑰，你们还什么都不是呢！”小王子对她们说。 “没有人驯服过你们，你们也没有驯服过任何人。你们就象我的狐狸过去那样， 它那时只是和千万只别的狐狸一样的一只狐狸。但是，我现在已经把它当成了我 的朋友，于是它现在就是世界上&#x3D;&#x3D;独一无二&#x3D;&#x3D;的了。</strong>”</p>
-<p>这时，那些玫瑰花显得十分难堪。</p>
-<p>“你们很美，但你们是空虚的。”小王子仍然在对她们说，“<strong>没有人能为你们去死。当然罗，我的那朵玫瑰花，一个普通的过路人以为她和你们一样。可是， 她单独一朵就比你们全体更重要，因为她是我浇灌的。因为她是我放在花罩中的。 因为她是我用屏风保护起来的。因为她身上的毛虫（除了留下两三只为了变蝴蝶 而外）是我除灭的。因为我倾听过她的怨艾和自诩，甚至有时我聆听着她的沉默。 因为她是我的玫瑰。</strong>”</p>
-<p>他又回到了狐狸身边。</p>
-<p>“再见了。”小王子说道。</p>
-<p>“再见。”狐狸说。“喏，这就是我的秘密。**&#x3D;&#x3D;很简单：只有用心才能看得清。 实质性的东西，用眼睛是看不见的。&#x3D;&#x3D;**”</p>
-<p>“实质性的东西，用眼睛是看不见的。”小王子重复着这句话，以便能把它<strong>记在心间</strong>。</p>
-<p>“<strong>正因为你为你的玫瑰花费了时间，这才使你的玫瑰变得如此重要。</strong>”</p>
-<p>“正因为你为你的玫瑰花费了时间……”小王子又重复着，<strong>要使自己记住这些</strong>。</p>
-<p>“<strong>人们已经忘记了这个道理，”狐狸说，“可是，你不应该忘记它。你现在要对你驯服过的一切负责到底。你要对你的玫瑰负责……</strong>”</p>
-<p>“我要对我的玫瑰负责……”小王子又重复着……</p>
-<hr>
-<p>我读的汗毛战栗，甚至热泪盈眶（以及之后作者和小王子的离别），反复读了几遍，还是写不出什么东西，文章交代的已经够直白了。</p>
-<p>驯养过的东西，就是你的全部，<strong>活着的证据</strong>就是和<strong>世界建立的无数的千丝万缕的联系</strong>，联系越多越密切，你越能接近世界原本的样子，客观全面的认识，才能克服来自未知的恐惧。而这联系，简单的可以分为，喜欢的事情和喜欢的人。</p>
-<p>喜欢的事，如果不以外界评价，仅靠自己来判断，就像之前2.2中交代的那样，对于现在这个阶段的我来说，变难了，搞不清自己喜欢什么确实有点烦。</p>
-<p>喜欢的人，对应着自己付出了时间精力的驯服，这使得，我能把你和万千普通的丑陋的人类中区分出来，成为那个珍贵的、宝石一样闪闪发光的独特唯一的你。</p>
-<blockquote>
-<p>“啊！”狐狸说，“<strong>我一定会哭的</strong>。”</p>
-<p>“<strong>这是你的过错，</strong>”小王子说，“<strong>我本来并不想给你任何痛苦，可你却要我驯服你……</strong>”</p>
-<p>“<strong>是这样的。</strong>”狐狸说。</p>
-<p>“你可就要哭了！”小王子说。</p>
-<p>“**&#x3D;&#x3D;当然罗&#x3D;&#x3D;**。”狐狸说。</p>
-<p>“<strong>那么你什么好处也没得到。</strong>”</p>
-<p>“<strong>由于麦子颜色的缘故，我还是得到了好处。</strong>”狐狸说。</p>
-</blockquote>
-<p>倘若你投入的感情越多，你的收获就越多，这是很浪漫的，也是痛苦的，但是于我来说，更多的是快乐的。这收获指的并不是简单的来自对方的好感或者依赖，甚至极端一点，和对方都没有什么关系，而是更加唯心一些的联系：<strong>你觉得</strong>对方成为了你生命的一部分，就像小麦能让狐狸想起小王子一样。</p>
-<blockquote>
-<p>我对麦田无动于衷。而这，真使人扫兴。但是，你有着金黄色的头发。那么，一旦你驯服了 我，这就会十分美妙。麦子，是金黄色的，它就会&#x3D;&#x3D;使我想起你&#x3D;&#x3D;。而且，我甚至会喜欢那风吹麦浪的声音……</p>
-</blockquote>
-<p>假若，对方也一样，也同你有了一样的收获，互相成了彼此的联系，那真的要恭喜你，因为这种概率实在太小了。你们从此成了<strong>强相关</strong>，彼此的命运线从毫不相关，变成交织在一起。你们在一起的时候，会忘记原来自己在这个世界中是那么的孤独，你们会觉得世界真的很美好，希望在一起的时间越长越好，即便无所事事，一起消磨时间也是快乐的。这时你就会发自内心的感叹：<strong>活着真好！</strong>也就是一开头想说的活着的感觉。</p>
-<p>要对自己驯服过的负责到底，因为你是他们存在的强有力的证明，这不能简单理解为负担，也请不要轻易的不负责任想单方面的抹去，因为对两个人来说<strong>都一样</strong>。</p>
-<p>而提到的仪式感，我现在的解读，更多是快速形成习惯的方式，让对方融入进自己的生活中。</p>
-<p>喜欢的事和喜欢的人，两者<strong>互为基础，相辅相成</strong>。通过发掘爱好，你可以找到更多喜欢的人；通过和喜欢的人建立更密切的联系，你能获得更多爱好，或者加深某些爱好。</p>
-<hr>
-<h1 id="4-赘述-小花"><a href="#4-赘述-小花" class="headerlink" title="4 赘述 小花"></a>4 赘述 小花</h1><blockquote>
-<h2 id="第七章部分"><a href="#第七章部分" class="headerlink" title="第七章部分"></a>第七章部分</h2><p>小王子当时气得脸色发白。</p>
-<p>“几百万年以来花儿都在制造着刺，几百万年以来羊仍然在吃花。要搞清楚 为什么花儿费那么大劲给自己制造没有什么用的刺，这难道不是正经事？难道羊 和花之间的战争不重要？这难道不比那个大胖子红脸先生的帐目更重要？如果我 认识一朵人世间唯一的花，只有我的星球上有它，别的地方都不存在，而一只小 羊胡里胡涂就这样把它一下子毁掉了，这难道不重要？”</p>
-<p>他的脸气得发红，然后又接着说道：</p>
-<p>“如果有人爱上了在这亿万颗星星中独一无二的一株花，当他看着这些星星 的时候，这就足以使他感到幸福。他可以自言自语地说：‘我的那朵花就在其中 的一颗星星上……’，但是如果羊吃掉了这朵花，对他来说，好象所有的星星<strong>一下子全都熄灭了一样</strong>！这难道也不重要吗？！”</p>
-<p>他无法再说下去了，突然泣不成声。夜幕已经降临。我放下手中的工具。我 把锤子、螺钉、饥渴、死亡，全都抛在脑后。<strong>在一颗星球上，在一颗行星上，在 我的行星上，在地球上有一个小王子需要安慰</strong>！我把他抱在怀里。我摇着他，对他说：“你爱的那朵花没有危险……我给你的小羊画一个罩子……我给你的花画一副盔甲……我……”我也不太知道该说些什么。我觉得自己太笨拙。我不知道怎样才能 达到他的境界，怎样才能再进入他的境界……唉，泪水的世界是多么神秘啊！</p>
-<h2 id="第八章"><a href="#第八章" class="headerlink" title="第八章"></a>第八章</h2><p>很快我就进一步了解了这朵花儿。在小王子的星球上，过去一直都生长着一 些只有一层花瓣的很简单的花。这些花非常小，一点也不占地方，从来也不会去 打搅任何人。她们早晨在草丛中开放，晚上就凋谢了。不知从哪里来了一颗种子， 忽然一天这种子发了芽。小王子特别仔细地监视着这棵与众不同的小苗：这玩艺 说不定是一种新的猴面包树。但是，这小苗不久就不再长了，而且开始孕育着一 个花朵。看到在这棵苗上长出了一个很大很大的花蕾，小王子感觉到从这个花苞 中一定会出现一个奇迹。然而这朵花藏在它那绿茵茵的房间中用了很长的时间来 打扮自己。她精心选择着她将来的颜色，慢慢腾腾地妆饰着，一片片地搭配着她 的花瓣，她不愿象虞美人那样一出世就满脸皱纹。她要让自己带着光艳夺目的丽 姿来到世间。是的，<strong>她是非常爱俏的</strong>。她用好些好些日子天仙般地梳妆打扮。然 后，在一天的早晨，恰好在太阳升起的时候，她开放了。</p>
-<p>她已经精细地做了那么长的准备工作，却打着哈欠说道：</p>
-<p>“<strong>我刚刚睡醒，真对不起，瞧我的头发还是乱蓬蓬的……</strong>”</p>
-<p>小王子这时再也控制不住自己的爱慕心情：<br>“你是多么美丽啊！”</p>
-<p>花儿<strong>悠然自得</strong>地说：</p>
-<p>“是吧，我是与太阳同时出生的……”</p>
-<p>小王子看出了这花儿<strong>不太谦虚</strong>，可是她确实丽姿动人。</p>
-<p>她随后又说道：“现在该是吃早点的时候了吧，请你也想着给我准备一点……”</p>
-<p>小王子很有些不好意思，于是就拿着喷壶，打来了一壶清清的凉水，浇灌着 花儿。</p>
-<p>于是，就这样，这朵花儿就<strong>以她那有点敏感多疑的虚荣心折磨着</strong>小王子。例 如，有一天，她向小王子讲起她身上长的四根刺：</p>
-<p>“老虎，让它张着爪子来吧！”</p>
-<p>小王子顶了她一句：“在我这个星球上没有老虎，而且，老虎是不会吃草的”。</p>
-<p>花儿轻声说道：“我并不是草。”</p>
-<p>“真对不起。”</p>
-<p>“我并不怕什么老虎，可我<strong>讨厌穿堂风</strong>。你没有屏风？”</p>
-<p>小王子思忖着：“讨厌穿堂风……这对一株植物来说，真不走运，这朵花儿真 不大好伺候……”</p>
-<p>“晚上您得把我保护好。你这地方太冷。在这里住得不好，我<strong>原来</strong>住的那个地方……”</p>
-<p>但她没有说下去。她来的时候是粒种子。她<strong>哪里见过什么别的世界</strong>。她叫人 发现她是在凑一个如此不太高明的谎话，她有点<strong>羞怒</strong>，<strong>咳嗽</strong>了两三声。她的这一 招是<strong>要小王子处于有过失的地位</strong>，她说道：<br>“屏风呢？”</p>
-<p>“我这就去拿。可你刚才说的是……”</p>
-<p>于是花儿<strong>放开嗓门咳嗽了几声</strong>，依然要使小王子后悔自己的过失。</p>
-<p>尽管小王子本来诚心诚意地喜欢这朵花，可是，这一来，却使他马上对她<strong>产 生了怀疑</strong>。小王子对一些<strong>无关紧要的话看得太认真，结果使自己很苦恼</strong>。</p>
-<p>有一天他告诉我说：“我不该听信她的话，绝不该听信那些花儿的话，看看 花，闻闻它就得了。我的那朵花使我的星球芳香四溢，可我不会享受它。关于老虎爪子的事，本应该使我产生同情，却反而使我恼火……”</p>
-<p>他还告诉我说：</p>
-<p>“我那时什么也不懂！<strong>我应该根据她的行为，而不是根据她的话来判断她</strong>。 她使我的生活芬芳多彩，我真不该离开她跑出来。我本应该猜出在她那令人爱怜 的花招后面所隐藏的温情。花是多么自相矛盾！我当时太年青，还不懂得爱她。”</p>
-<h2 id="第九章"><a href="#第九章" class="headerlink" title="第九章"></a>第九章</h2><p>我想小王子大概是利用一群候鸟迁徙的机会跑出来的。在他出发的那天早上， 他把他的星球收拾得整整齐齐，把它上头的活火山打扫得干干净净。——他有两 个活火山，早上热早点很方便。他还有一座死火山，他也把它打扫干净。他想， 说不定它还会活动呢！打扫干净了，它们就可以慢慢地有规律地燃烧，而不会突 然爆发。火山爆发就象烟囱里的火焰一样。当然，在我们地球上我们人太小，不 能打扫火山，所以火山给我们带来很多很多麻烦。</p>
-<p>小王子还把剩下的最后几颗猴面包树苗全拔了。他有点忧伤。他以为他再也 不会回来了。这天，这些家常活使他感到特别亲切。当他最后一次浇花时，准备把她好好珍藏起来。他发觉自己要哭出来。</p>
-<p>“再见了。”他对花儿说道。</p>
-<p><strong>可是花儿没有回答他。</strong></p>
-<p>“再见了。”他又说了一遍。</p>
-<p><strong>花儿咳嗽了一阵。但并不是由于感冒。</strong></p>
-<p><strong>她终于对他说道：“我方才真蠢。请你原谅我。希望你能幸福。” 花儿对他毫不抱怨，他感到很惊讶。他举着罩子，不知所措地伫立在那里。 他不明白她为什么会这样温柔恬静。</strong></p>
-<p><strong>“的确，我爱你。”花儿对他说道：“但由于我的过错，你一点也没有理会。 这丝毫不重要。不过，你也和我一样的蠢。希望你今后能幸福。把罩子放在一边 吧，我用不着它了。</strong>”</p>
-<p>“要是风来了怎么办？”</p>
-<p>“我的<strong>感冒并不那么重</strong>……夜晚的凉风对我倒有好处。我是一朵花。”</p>
-<p>“要是有虫子野兽呢？……”</p>
-<p>“我要是想认识蝴蝶，经不起两三只尺蠖是不行的。据说这是很美的。<strong>不然还有谁来看我呢？你就要到远处去了。</strong>至于说大动物，我并不怕，我有爪子。”</p>
-<p>于是，她天真地显露出她那四根刺，随后又说道：<br>“别这么磨蹭了。<strong>真烦人！</strong>你既然决定离开这儿，那么，快走吧！”</p>
-<p>她是怕小王子看见她在哭。她是一朵非常骄傲的花……</p>
-</blockquote>
-<hr>
-<p>关于这儿的心路历程看一开头好了。</p>
-<hr>
-<p>秦永泰<br>2021&#x2F;1&#x2F;12</p>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><h2 id="和李卓琳的讨论"><a href="#和李卓琳的讨论" class="headerlink" title="和李卓琳的讨论"></a>和李卓琳的讨论</h2><p>能有和自己通感的人真好啊，这篇文章写的故事就是我和她过去的互相救赎，能被一眼看出来写的就是自己，坦诚地说出来，一点都不怕我会觉得自作多情什么的，还能零零碎碎，啰啰嗦嗦说一大堆身边的琐事，真好啊。</p>
-<h2 id="和王雪莹的讨论"><a href="#和王雪莹的讨论" class="headerlink" title="和王雪莹的讨论"></a>和王雪莹的讨论</h2><p>让我对这篇文章有了更多的认识，她说她姐说玫瑰是初恋，狐狸是现任。</p>
-<p>我觉得太局限了。</p>
-<p>玫瑰和狐狸，只是两个符号而已，它们可以都不存在，也可以存在在一个人身上。</p>
-<p>作者写玫瑰，重在指出，<strong>唯一性，是对于主观的唯一，而不是客观的唯一</strong>。</p>
-<img src="../picture/61f8b4262ae325e8683f144687f73a7.jpg" alt="61f8b4262ae325e8683f144687f73a7" style="zoom: 25%;" />
-
-<p>而狐狸呢，更像是一种方法论了，驯服就是投入时间和精力，驯服别人，更重要是驯服了自己。</p>
-<p>喜欢风吹麦浪的声音，实在是太浪漫了。</p>
-<blockquote>
-<p>我对麦田无动于衷。而这，真使人扫兴。但是，你有着金黄色的头发。那么，一旦你驯服了 我，这就会十分美妙。麦子，是金黄色的，它就会&#x3D;&#x3D;使我想起你&#x3D;&#x3D;。而且，我甚至会喜欢那风吹麦浪的声音……</p>
-</blockquote>
-<p>忍不住想粘贴一首之前写的小诗，异曲同工。<strong>身上竟都是好闻的味道了</strong>，太浪漫了。</p>
-<blockquote>
-<p>当一个人喜欢你，</p>
-<p>她眼中便有了光，</p>
-<p>脸庞便有了温热，</p>
-<p>嘴唇便有了湿滑，</p>
-<p><strong>身上竟都是好闻的味道了。</strong></p>
-<p>所有这一切，</p>
-<p>都恰到好处。</p>
-<p>这光显得特别明亮，</p>
-<p>泛出她眼眸边缘的湿润，</p>
-<p>误以为她在哭泣。</p>
-<p>原来这光，</p>
-<p>是我眼中的光。</p>
-</blockquote>
-<p>注解看《写点小诗吧》。</p>
-<hr>
-<p>2021&#x2F;3&#x2F;15</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/11/%E5%B0%8F%E7%8E%8B%E5%AD%90%E7%9A%84%E9%A9%AF%E6%9C%8D/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -584,7 +300,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="随便聊点什么吧，什么都可以">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -604,7 +320,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-11 11:24:46 / 修改时间：13:01:51" itemprop="dateCreated datePublished" datetime="2022-03-11T11:24:46+08:00">2022-03-11</time>
+              <time title="创建时间：2022-03-11 11:24:46 / 修改时间：15:03:33" itemprop="dateCreated datePublished" datetime="2022-03-11T11:24:46+08:00">2022-03-11</time>
             </span>
 
           
@@ -623,79 +339,14 @@
 <h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>创建列表：</p>
 <p>thislist &#x3D; [“apple”, “banana”, “cherry”]<br>print(thislist)</p>
 <p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=python_list">运行实例</a></p>
-<h2 id="访问项目"><a href="#访问项目" class="headerlink" title="访问项目"></a>访问项目</h2><p>您可以通过引用索引号来访问列表项：</p>
-<h1 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">()</span><br></pre></td></tr></table></figure>
-
-<h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[]</span><br></pre></td></tr></table></figure>
-
-<p>用 for 循环遍历元组项</p>
-<h2 id="遍历元组"><a href="#遍历元组" class="headerlink" title="遍历元组"></a>遍历元组</h2><p>您可以使用 &#x3D;&#x3D;for&#x3D;&#x3D; 循环遍历元组项目。</p>
-<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><p>遍历项目并打印值：</p>
-<h1 id="set"><a href="#set" class="headerlink" title="set"></a>set</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125;</span><br><span class="line"><span class="built_in">len</span>()</span><br><span class="line">.add()</span><br><span class="line">.update()</span><br><span class="line">.cear()</span><br></pre></td></tr></table></figure>
-
-<h1 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.item()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>会选择一个你爱但是很难在一起的人？</p>
-<blockquote>
-<p>还是合适在一起<em><strong>但是</strong></em>你不爱的人？</p>
-</blockquote>
-</blockquote>
-<h1>
-    标题
-</h1>
-
-<p>
-    duanluo
-</p>
-
-<buttom type>
-
-<input type="text">
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>rt</td>
-<td>gsd</td>
-</tr>
-</tbody></table>
-<h4 id="da"><a href="#da" class="headerlink" title="da"></a>da</h4><p><strong>sfd</strong></p>
-<p><em>asd</em></p>
-<p><u>sdf</u></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>001    </p>
-<ul>
-<li>002<ul>
-<li>003</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-01</p>
-</li>
-<li><p><input disabled="" type="checkbox"> </p>
-</li>
-</ul>
-<p>:airplane:</p>
-<p>:love_hotel:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<p>2020&#x2F;11&#x2F;21</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/11/Object/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -719,7 +370,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="随便聊点什么吧，什么都可以">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -737,8 +388,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-03-11 09:29:01" itemprop="dateCreated datePublished" datetime="2022-03-11T09:29:01+08:00">2022-03-11</time>
+              <time title="创建时间：2022-03-11 09:29:01 / 修改时间：15:03:29" itemprop="dateCreated datePublished" datetime="2022-03-11T09:29:01+08:00">2022-03-11</time>
             </span>
 
           
@@ -753,19 +405,14 @@
 
       
           <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/11/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -839,7 +486,7 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">西走菜菜</p>
-  <div class="site-description" itemprop="description">随便聊点什么吧，什么都可以</div>
+  <div class="site-description" itemprop="description">欢迎来找我随便聊点什么哦</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -880,10 +527,61 @@
   </span>
   <span class="author" itemprop="copyrightHolder">西走菜菜</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
 
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -906,7 +604,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/pisces.js"></script>
+<script src="/js/schemes/muse.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
