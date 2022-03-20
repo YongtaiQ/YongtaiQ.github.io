@@ -157,6 +157,756 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/20/DQN%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/20/DQN%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB/" class="post-title-link" itemprop="url">DQN&&gym</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-20 22:33:36 / 修改时间：22:37:31" itemprop="dateCreated datePublished" datetime="2022-03-20T22:33:36+08:00">2022-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DRL/" itemprop="url" rel="index"><span itemprop="name">DRL</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/20/DQN%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/20/DQN%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="DRL-代码接口实现框架，以及独立实现"><a href="#DRL-代码接口实现框架，以及独立实现" class="headerlink" title="DRL 代码接口实现框架，以及独立实现"></a>DRL 代码接口实现框架，以及独立实现</h1><h3 id="研究是因为有趣"><a href="#研究是因为有趣" class="headerlink" title="研究是因为有趣"></a>研究是因为<em>有趣</em></h3><p>Deep Q Learning,DRL-QoS Cloud Scheduling代码已跑通，AIRL未跑，回过头来重新逐行深入分析理解及复现，以便之后独立使用。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda info -e #（查看所有的虚拟环境）</span><br><span class="line">activate -name#(虚拟环境名字)（进入到该虚拟环境中）</span><br><span class="line"><span class="meta">deactivate#</span><span class="language-bash">退出</span></span><br><span class="line">pip，conda install (list)(show)</span><br><span class="line">https://mirrors.tuna.tsinghua.edu.cn/help/pypi/ #换源网址</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package #临时使用</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/20/DQN%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/20/%E7%BE%BD%E6%AF%9B%E7%90%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/20/%E7%BE%BD%E6%AF%9B%E7%90%83/" class="post-title-link" itemprop="url">打打羽毛球吧</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-20 22:27:06 / 修改时间：22:39:50" itemprop="dateCreated datePublished" datetime="2022-03-20T22:27:06+08:00">2022-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/20/%E7%BE%BD%E6%AF%9B%E7%90%83/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/20/%E7%BE%BD%E6%AF%9B%E7%90%83/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="目前常用参数"><a href="#目前常用参数" class="headerlink" title="目前常用参数"></a>目前常用参数</h2><p>2021&#x2F;11磅数：</p>
+<p>66um24磅；</p>
+<p>63线23磅；</p>
+<h2 id="打磨自己，逐项弱点突破："><a href="#打磨自己，逐项弱点突破：" class="headerlink" title="打磨自己，逐项弱点突破："></a>打磨自己，逐项弱点突破：</h2><ol>
+<li><p>基本功之高远球，击球点太低，发力不协调，胳膊太多身体太少，可能和步伐不到位有很大关系</p>
+</li>
+<li><p>反手过渡回正手区</p>
+</li>
+<li><p>移动降低重心，前场后场移动重心起伏太大</p>
+</li>
+<li><p>网前抢高点，为了停顿放网、停顿推后场</p>
+</li>
+<li><p>头顶底线死穴</p>
+</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/20/%E7%BE%BD%E6%AF%9B%E7%90%83/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/20/%E6%92%B8%E7%8C%AB%E5%BF%83%E5%BE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/20/%E6%92%B8%E7%8C%AB%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">撸猫心得</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-20 22:25:38 / 修改时间：22:38:49" itemprop="dateCreated datePublished" datetime="2022-03-20T22:25:38+08:00">2022-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/20/%E6%92%B8%E7%8C%AB%E5%BF%83%E5%BE%97/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/20/%E6%92%B8%E7%8C%AB%E5%BF%83%E5%BE%97/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="撸猫心得"><a href="#撸猫心得" class="headerlink" title="撸猫心得"></a>撸猫心得</h1><h2 id="关于题目"><a href="#关于题目" class="headerlink" title="关于题目"></a>关于题目</h2><p>本来想起名为撸猫教程，想了想实在太自大了，我能教谁呢？能教什么内容呢？撸什么猫呢？</p>
+<p>我自己不过是喜欢和不同的猫玩罢了，而且我23岁，人生中见过的猫其实很少，真要算的话，最多百十来只吧，这当然是不足以出个教程的。</p>
+<p>但相比我见过的所有人，我似乎是最受猫咪喜爱的，我能感觉到身上有种东西在吸引着各种见过的、没见过的猫咪，尤其是我和她们正面接触的时候，很少会有不理我的情况出现。</p>
+<p>我很难给不熟悉的人证明我上面这段话不是自恋，但事实就是这样，你看到了这些东西，就证明了我觉得你能理解。</p>
+<p>熟悉的猫，大家已经是朋友了，当然是想撸就撸。本文针对更多是初次见面的猫咪。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/20/%E6%92%B8%E7%8C%AB%E5%BF%83%E5%BE%97/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/20/%E4%B9%A1%E5%9C%9F%E6%83%85%E6%80%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/20/%E4%B9%A1%E5%9C%9F%E6%83%85%E6%80%80/" class="post-title-link" itemprop="url">高声大嗓</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-20 22:24:56 / 修改时间：22:39:25" itemprop="dateCreated datePublished" datetime="2022-03-20T22:24:56+08:00">2022-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/20/%E4%B9%A1%E5%9C%9F%E6%83%85%E6%80%80/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/20/%E4%B9%A1%E5%9C%9F%E6%83%85%E6%80%80/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="高声大嗓"><a href="#高声大嗓" class="headerlink" title="高声大嗓"></a>高声大嗓</h2><p>有这么一个农民，外号叫”高声大嗓”，这个外号，是爸妈取的。</p>
+<p>他从来没有进过我们家门，每次要不用自行车驮着纤维袋子鼓鼓囊囊装满的洋芋，要不洋芋拉在三轮车上，到了家门口，大声吆喝”取洋芋咯！”他从不担心我们会听不到，因为他的声音能轻松响彻巷子里所有的街坊邻居，轻松盖过各自家里的电视节目声音。这是已经搬迁了的巷子邻居的共同记忆。</p>
+<p>20多年前，他胃溃疡萎缩性胃炎严重，看了很多大夫都没用，生命垂危，我爸治好了他。但他只是我爸看无数病人中的一位普通病人。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/20/%E4%B9%A1%E5%9C%9F%E6%83%85%E6%80%80/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/20/%E7%BA%AA%E4%BC%AF%E4%BC%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/20/%E7%BA%AA%E4%BC%AF%E4%BC%A6/" class="post-title-link" itemprop="url">读读纪伯伦的小诗吧</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-20 22:24:56 / 修改时间：22:38:41" itemprop="dateCreated datePublished" datetime="2022-03-20T22:24:56+08:00">2022-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/20/%E7%BA%AA%E4%BC%AF%E4%BC%A6/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/20/%E7%BA%AA%E4%BC%AF%E4%BC%A6/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/20/%E7%BA%AA%E4%BC%AF%E4%BC%A6/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/20/java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/20/java/" class="post-title-link" itemprop="url">java</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-20 22:15:57 / 修改时间：22:38:16" itemprop="dateCreated datePublished" datetime="2022-03-20T22:15:57+08:00">2022-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/20/java/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/20/java/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="2022-2-25"><a href="#2022-2-25" class="headerlink" title="2022.2.25"></a>2022.2.25</h2><p><strong>大小写敏感</strong> </p>
+<p><strong>类名class</strong>首字母应该大写 </p>
+<p><strong>方法名void</strong>小写字母开头,后面的每个单词首字母大写f</p>
+<p><strong>源文件名和public类名相同</strong>.java****</p>
+<p>所有的 Java 程序由 <strong>public static void main(String[] args)</strong> 方法开始执行</p>
+<p>ava自带的类</p>
+<p>String <code>integer.toBinaryString(int十进制)</code></p>
+<blockquote>
+<p>返回二进制字符串; </p>
+<p>翻译 intenger 转换器，tobinary二进制</p>
+</blockquote>
+<p>int <code>Integer.parseInt(string字符串,int指定字符串的进制)</code></p>
+<blockquote>
+<p>返回十进制</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">integer</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/20/java/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84API/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84API/" class="post-title-link" itemprop="url">数据结构API</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-20 22:14:33 / 修改时间：22:39:11" itemprop="dateCreated datePublished" datetime="2022-03-20T22:14:33+08:00">2022-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84API/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84API/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="接口复习：集合"><a href="#接口复习：集合" class="headerlink" title="接口复习：集合"></a>接口复习：集合</h1><p>interface接口(申明后直接调用方法)-implement实现(不关心)</p>
+<h2 id="1-集合类-基本接口"><a href="#1-集合类-基本接口" class="headerlink" title="1. 集合类 基本接口"></a>1. 集合类 基本接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Collection&#123;</span><br><span class="line">    add(e);</span><br><span class="line">    iterator迭代器();&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84API/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/20/win%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/20/win%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-title-link" itemprop="url">win快捷键</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-20 22:13:20 / 修改时间：22:38:33" itemprop="dateCreated datePublished" datetime="2022-03-20T22:13:20+08:00">2022-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">小技巧</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/20/win%E5%BF%AB%E6%8D%B7%E9%94%AE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/20/win%E5%BF%AB%E6%8D%B7%E9%94%AE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="记录几个喜欢随手用的win快捷键"><a href="#记录几个喜欢随手用的win快捷键" class="headerlink" title="记录几个喜欢随手用的win快捷键"></a>记录几个喜欢随手用的win快捷键</h1><p>如果你和我一样是电脑小白，又很烦win10所有事情都强烈依赖鼠标，这些快捷键会让你的体验大幅度提升</p>
+<p>前进后退是最常用的我绑定了鼠标<strong>侧键</strong>，当然你也可以用三指触控板</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/20/win%E5%BF%AB%E6%8D%B7%E9%94%AE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/11/Markdown_start_usingtypora/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -345,202 +1095,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/11/Object/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/11/Object/" class="post-title-link" itemprop="url">Object</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-11 11:24:46" itemprop="dateCreated datePublished" datetime="2022-03-11T11:24:46+08:00">2022-03-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-12 18:33:14" itemprop="dateModified" datetime="2022-03-12T18:33:14+08:00">2022-03-12</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">博客测试</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/11/Object/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/11/Object/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">   </span><br></pre></td></tr></table></figure>
-
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>创建列表：</p>
-<p>thislist &#x3D; [“apple”, “banana”, “cherry”]<br>print(thislist)</p>
-<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=python_list">运行实例</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/11/Object/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/11/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/11/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-11 09:29:01" itemprop="dateCreated datePublished" datetime="2022-03-11T09:29:01+08:00">2022-03-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-13 15:40:13" itemprop="dateModified" datetime="2022-03-13T15:40:13+08:00">2022-03-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">博客测试</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/11/hello-world/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/11/hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          有东西被加密了, 请输入密码查看.
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/11/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -609,14 +1168,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
