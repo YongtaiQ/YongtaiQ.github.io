@@ -157,6 +157,1228 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Difficulties-in-AIRL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/21/Difficulties-in-AIRL/" class="post-title-link" itemprop="url">AIRL中遇到的问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：09:38:00" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DRL/" itemprop="url" rel="index"><span itemprop="name">DRL</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/21/Difficulties-in-AIRL/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Difficulties-in-AIRL/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p> 云调度和DRL论文中 <em>待解决</em> 思考：</p>
+<h2 id="1-网格计算-云计算前身"><a href="#1-网格计算-云计算前身" class="headerlink" title="1.网格计算[^云计算前身]"></a>1.网格计算[^<del>云计算前身</del>]</h2><p>这种计算模式是利用互联网把分散在不同地理位置的电脑组织成一个“虚拟的超级计算机”，其中每一台参与计算的计算机就是一个“节点”，而整个计算是由成千上万个“节点”组成的“一张网格”。</p>
+<p>网格计算的优势有两个：一个是数据处理能力超强；另一个是能充分利用网上的闲置处理能力。</p>
+<p>它研究如何把一个需要非常巨大的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E8%83%BD%E5%8A%9B/4554810">计算能力</a>才能解决的问题分成许多小的部分，然后把这些部分分配给许多<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA/140338">计算机</a>进行处理，最后把这些计算结果综合起来得到最终结果。</p>
+<p><a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/70675394.html">网格计算和云计算的概念和区别</a></p>
+<h2 id="2-1-P-VS-NP-Nondeterministic-Polynomial-time"><a href="#2-1-P-VS-NP-Nondeterministic-Polynomial-time" class="headerlink" title="2.1 P VS. NP(Nondeterministic Polynomial time)"></a>2.1 P VS. NP(Nondeterministic Polynomial time)</h2><table>
+<thead>
+<tr>
+<th>P</th>
+<th>VS.</th>
+<th>NP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>能快速求解（易解）</td>
+<td></td>
+<td>不一定能快速求解（易验证）</td>
+</tr>
+<tr>
+<td>P一定是NP，易算易验证</td>
+<td></td>
+<td>NP则不一定是P，能验证不一定能计算，如质数分解</td>
+</tr>
+<tr>
+<td>P就是能在多项式时间内解决的问题(算的快)</td>
+<td></td>
+<td>NP就是能在多项式时间验证答案正确与否的问题(验证快)</td>
+</tr>
+</tbody></table>
+<p><em><strong>P&#x3D;NP?</strong></em>  </p>
+<p>N即不存在不能快速求解。P是否等于NP实质上就是在问，如果对于一个问题我能在多项式时间内验证其答案的正确性，那么我是否能在多项式时间内解决它？</p>
+<p><em><strong>NP-hardness（困难） 和 NP-completeness（完全）：</strong></em></p>
+<p>如果任意一个NP的问题都可以多项式[^归约]到L（L是转化后的问题，高级，困难），称问题L是NP-hard：</p>
+<ul>
+<li><p>显然NP-hard不一定是NP问题，NP-hard是个新问题。</p>
+</li>
+<li><p>如果一个NP-hard，即归约后问题L本身就是NP的，则称L是NP-completeness.(NPC最难，[^时间复杂度最高])</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934343.png" alt="这里写图片描述"></p>
+</li>
+</ul>
+<blockquote>
+<p>“P vs NP”问题：请问那些需要非确定性图灵机（超能力计算机）在多项式时间才能解决的问题，能够用确定性图灵机（普通计算机）在多项式时间解决吗？ <a target="_blank" rel="noopener" href="http://www.yinwang.org/blog-cn/2019/07/21/pnp2">P vs NP不重要</a></p>
+</blockquote>
+<h3 id="2-2-维度诅咒"><a href="#2-2-维度诅咒" class="headerlink" title="2.2[^维度诅咒]"></a>2.2[^维度诅咒]</h3><p>当维度增加(太大)时,体积(难度)指数增加的难题.</p>
+<p><em><strong>分类器中：</strong></em></p>
+<p><img src="https://www.visiondummy.com/wp-content/uploads/2014/04/dimensionality_vs_performance.png" alt="img"></p>
+<p><strong>图2中</strong>随着维度的增加，分类器的性能会提高，直到达到最佳要素数。进一步增加维度而不增加训练样本的数量导致分类器性能的降低。 过拟合 ，</p>
+<p>维度的诅咒使得训练数据的 稀疏性 ，训练样本的密度呈指数下降。</p>
+<p>维度诅咒的另一个影响是，这种稀疏性不是均匀分布在搜索空间上。实际上，原点周围的数据（在超立方体的 中心 ）比搜索空间的 角落 中的数据要稀疏得多。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934531.png" alt="img"></p>
+<p>**图3.**随着维度的增加，更大比例的训练数据驻留在要素空间的 角落 中。</p>
+<p><em><strong>如何避免：</strong></em></p>
+<p>问题是 “太大” 意味着什么: [^特征的数量和样本数量有关]</p>
+<p><strong>特征选择方法：</strong>通常采用启发式(如<a target="_blank" rel="noopener" href="http://www.obitko.com/tutorials/genetic-algorithms/">GA算法</a>)(贪婪方法，最佳优先方法等）来定位最佳数量和特征组合</p>
+<p><strong>特征提取方法（降维）：</strong><a target="_blank" rel="noopener" href="http://www.visiondummy.com/2014/05/feature-extraction-using-pca/">主成分分析（PCA）</a>，它产生原始N特征的不相关的线性组合。PCA试图找到较低维度的线性子空间，以便保持原始数据的最大方差（向着极大无关组出发）。但是，请注意，数据的最大差异不一定代表最具辨别力的信息。</p>
+<p><strong>交叉验证：</strong></p>
+<blockquote>
+<p>交叉验证方法将原始训练数据分成一个或多个训练子集。</p>
+<p>在分类器训练期间，一个子集用于 测试 所得分类器的准确度和精度，而其他子集用于 参数估计 (真实训练)。</p>
+<p>如果用于 训练 的子集的分类结果与用于 测试 的子集的结果大不相同，则过度拟合正在发挥作用。</p>
+<p>如果只有<strong>有限</strong>数量的训练数据可用，则可以使用几种类型的交叉验证，例如k折交叉验证和留一交叉验证。</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/K-fold_cross_validation_EN.jpg" alt="img"></p>
+<p><strong>Diagram of k-fold cross-validation with k&#x3D;4</strong></p>
+<h4 id="为什么说RL与深度神经网络结合可以避免维度之咒？"><a href="#为什么说RL与深度神经网络结合可以避免维度之咒？" class="headerlink" title="为什么说RL与深度神经网络结合可以避免维度之咒？"></a>为什么说RL与深度神经网络结合可以避免维度之咒？</h4><blockquote>
+<p>因为神经网络能够提取特征。</p>
+</blockquote>
+<p>Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
+<p>事实上，SVM及 神经网络 都可以看做是寻找一个合适的特征维度的过程。</p>
+<p>当数据的维度过小的时候，数据分布过于稠密，不能很好的进行区分，这时候可以通过带有核函数的SVM将低纬度的数据映射到高纬度。</p>
+<p>当样本的<strong>维度过大</strong>时，受限于样本的多少及计算机的计算能力，需要利用 神经网络 对样本的维度进行压缩，便于分类。</p>
+<p>两者目的都在于使得数据的维度达到一个合适的稠密程度，从而更方便找到分类超平面。这也决定了SVM适用于低维小样本数据，而神经网络适合于大规模高维数据。</p>
+<p>时间复杂度决定了模型的训练&#x2F;预测时间。如果复杂度过高，则会导致模型训练和预测耗费大量时间，既无法快速的验证想法和改善模型，也无法做到快速的预测。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210935895.svg+xml" alt="[公式]"></p>
+<ul>
+<li><img src="https://www.zhihu.com/equation?tex=D" alt="[公式]"> 神经网络所具有的卷积层数，也即<strong>网络的深度</strong>。</li>
+<li><img src="https://www.zhihu.com/equation?tex=l" alt="[公式]"> 神经网络第 <img src="https://www.zhihu.com/equation?tex=l" alt="[公式]"> 个卷积层</li>
+<li><img src="https://www.zhihu.com/equation?tex=C_l" alt="[公式]"> 神经网络第 <img src="https://www.zhihu.com/equation?tex=l" alt="[公式]"> 个卷积层的输出通道数 <img src="https://www.zhihu.com/equation?tex=C_%7Bout%7D" alt="[公式]"> ，也即该层的卷积核个数。</li>
+<li>对于第 <img src="https://www.zhihu.com/equation?tex=l" alt="[公式]"> 个卷积层而言，其输入通道数 <img src="https://www.zhihu.com/equation?tex=C_%7Bin%7D" alt="[公式]"> 就是第 <img src="https://www.zhihu.com/equation?tex=(l+-+1)" alt="[公式]"> 个卷积层的输出通道数。</li>
+<li>可见，CNN整体的时间复杂度并不神秘，只是所有卷积层的时间复杂度累加而已。</li>
+<li>简而言之，层内连乘，层间累加。</li>
+</ul>
+<p><em><strong>空间复杂度</strong></em> 决定了模型的参数数量。</p>
+<p>由于<strong>维度诅咒的限制</strong>，模型的参数越多，训练模型所需的数据量就越大，而现实生活中的数据集通常不会太大，这会导致模型的训练更容易<strong>过拟合</strong>。</p>
+<p>空间复杂度（访存量），严格来讲包括两部分：总参数量 + 各层输出特征图。</p>
+<ul>
+<li><strong>参数量</strong>：模型所有带参数的层的权重参数总量（即<strong>模型体积</strong>，下式第一个求和表达式）</li>
+<li><strong>特征图</strong>：模型在实时运行过程中每层所计算出的输出特征图大小（下式第二个求和表达式）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210935748.svg+xml" alt="[公式]"></p>
+<ul>
+<li>总参数量只与卷积核的尺寸 <img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210935123.svg+xml" alt="[公式]"> 、通道数 <img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210935127.svg+xml" alt="[公式]"> 、层数 <img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210935117.svg+xml" alt="[公式]"> 相关，而<strong>与输入数据的大小无关</strong>。</li>
+<li>输出特征图的空间占用比较容易，就是其空间尺寸 <img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210935535.svg+xml" alt="[公式]"> 和通道数 <img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210935617.svg+xml" alt="[公式]"> 的连乘。</li>
+</ul>
+<p><strong>公式来源</strong>：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/31575074">卷积神经网络复杂度分析</a></p>
+<p> <a href="%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%83%BD%E6%88%98%E8%83%9C%E7%BB%B4%E5%BA%A6%E7%9A%84%E8%AF%85%E5%92%92%E5%90%97%EF%BC%9F%E4%B8%80%E4%B8%AA%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%AE%AD%E7%BB%83%E8%A7%86%E8%A7%92.pdf">浅层神经网络能战胜维度的诅咒吗？一个平均场训练视角.pdf</a> </p>
+<h2 id="3-梯度下降和神经网络的关系"><a href="#3-梯度下降和神经网络的关系" class="headerlink" title="3.梯度下降和神经网络的关系"></a>3.梯度下降和神经网络的关系</h2><h4 id="深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com"><a href="#深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com" class="headerlink" title="[深入浅出–梯度下降法及其实现](深入浅出–梯度下降法及其实现 - 简书 (jianshu.com))"></a>[深入浅出–梯度下降法及其实现](<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c7e642877b0e">深入浅出–梯度下降法及其实现 - 简书 (jianshu.com)</a>)</h4><h4 id="深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN"><a href="#深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN" class="headerlink" title="[深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)"></a>[<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7251b03847f4">深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)</a></h4><h4 id="matplotlib模块数据可视化-3D图"><a href="#matplotlib模块数据可视化-3D图" class="headerlink" title="matplotlib模块数据可视化-3D图"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_36772813/article/details/77365296">matplotlib模块数据可视化-3D图</a></h4><hr>
+<h2 id="4-核心困难：云计算中多目标资源调度QoS"><a href="#4-核心困难：云计算中多目标资源调度QoS" class="headerlink" title="4.核心困难：云计算中多目标资源调度QoS"></a>4.核心困难：云计算中多目标资源调度QoS</h2><h3 id="方法：某深度强化学习"><a href="#方法：某深度强化学习" class="headerlink" title="方法：某深度强化学习"></a>方法：某深度强化学习</h3><h3 id="传统方法的数学推导："><a href="#传统方法的数学推导：" class="headerlink" title="传统方法的数学推导："></a>传统方法的数学推导：</h3><h2 id="5-理论方法："><a href="#5-理论方法：" class="headerlink" title="5.理论方法："></a>5.理论方法：</h2><ol>
+<li>排队论</li>
+<li>控制论</li>
+<li>博弈论</li>
+</ol>
+<h2 id="6-启发式方法"><a href="#6-启发式方法" class="headerlink" title="6.启发式方法"></a>6.启发式方法</h2><ul>
+<li>Biological Inspiration (BI): Genetic Algorithm (<strong>GA</strong>)[8],[12], [18],[20] ,Memetic Algorithm (MA), Lion Algorithm (LA)[21], Imperialist Competitive Algorithm (ICA), etc.</li>
+<li>Swarm Intelligence (SI): Ant Colony Optimization (<strong>ACO</strong>)[9], [19]Particle Swarm Optimization (PSO)[11],[13],[14],[15], [16],[17]  Simulated Annealing (<strong>SA</strong>), Artificial Bee Colony (ABC)[22], Cat Swarm Optimization (CSO)[23], Bat Algorithm (BA), Wind Driven Optimization (WDO), etc.</li>
+</ul>
+<h3 id="新待看"><a href="#新待看" class="headerlink" title="新待看:"></a>新待看:</h3><p><a target="_blank" rel="noopener" href="http://www.obitko.com/tutorials/genetic-algorithms/">GA背后的直觉</a></p>
+<h2 id="注脚："><a href="#注脚：" class="headerlink" title="注脚："></a>注脚：</h2><p>[^归约]: polynomial-time Karp’ reduction；A转化成B问题，B至少不比A容易<br>[^时间复杂度最高]: 所以completeness 的直观解释就是，解决了它就可以解决所有同级别此类问题。<br>[^维度诅咒]: Moreover, to avoid the  curse of dimensionality  of traditional RL techniques, RL combined with deep neuralnetwork (i.e. DRL) is adopted in our work.<br>[^特征的数量和样本数量有关]: 如果N个训练样本足以覆盖单位区间大小的1D特征空间，则需要N ^ 2个样本来覆盖具有相同密度的2D特征空间，并且在3D特征空间中需要N ^ 3个样本。换句话说，所需的训练实例数量随着使用的维度数量呈指数增长。<br>[^<del>云计算前身</del>]: Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
+<hr>
+<p>2020&#x2F;12&#x2F;11</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/" class="post-title-link" itemprop="url">Deep Q-Learning with Keras and Gym</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：15:40:13" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DRL/" itemprop="url" rel="index"><span itemprop="name">DRL</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="DRL-代码接口实现框架，以及独立实现"><a href="#DRL-代码接口实现框架，以及独立实现" class="headerlink" title="DRL 代码接口实现框架，以及独立实现"></a>DRL 代码接口实现框架，以及独立实现</h2><h3 id="研究是因为有趣"><a href="#研究是因为有趣" class="headerlink" title="研究是因为有趣"></a>研究是因为<em>有趣</em></h3><p><a target="_blank" rel="noopener" href="https://keon.github.io/deep-q-learning/">Deep Q-Learning with Keras and Gym · Keon’s Blog</a></p>
+<p>Deep Q Learning,DRL-QoS Cloud Scheduling代码已跑通，AIRL未跑，回过头来重新逐行深入分析理解及复现，以便之后独立使用。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda info -e #（查看所有的虚拟环境）</span><br><span class="line">activate -name #(虚拟环境名字)（进入到该虚拟环境中）</span><br><span class="line">deactivate #退出</span><br><span class="line">pip，conda install (list)(show)</span><br><span class="line">https://mirrors.tuna.tsinghua.edu.cn/help/pypi/ #换源网址</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package #临时使用</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Data-structure-API/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/21/Data-structure-API/" class="post-title-link" itemprop="url">数据结构API</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-03-21 17:15:44" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-20 22:39:11" itemprop="dateModified" datetime="2022-03-20T22:39:11+08:00">2022-03-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/21/Data-structure-API/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Data-structure-API/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="接口复习：集合"><a href="#接口复习：集合" class="headerlink" title="接口复习：集合"></a>接口复习：集合</h1><p>interface接口(申明后直接调用方法)-implement实现(不关心)</p>
+<h2 id="1-集合类-基本接口"><a href="#1-集合类-基本接口" class="headerlink" title="1. 集合类 基本接口"></a>1. 集合类 基本接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Collection&#123;</span><br><span class="line">    add(e);</span><br><span class="line">    iterator迭代器();&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/21/Data-structure-API/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Code-Markdown-gracefully/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/21/Code-Markdown-gracefully/" class="post-title-link" itemprop="url">如何优雅的编写Markdown</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：17:09:38" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown-Blog/" itemprop="url" rel="index"><span itemprop="name">Markdown&Blog</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/21/Code-Markdown-gracefully/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Code-Markdown-gracefully/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="答案是Typora-PicGo-GitHub-Blog-Hexo"><a href="#答案是Typora-PicGo-GitHub-Blog-Hexo" class="headerlink" title="答案是Typora+PicGo+GitHub+Blog+Hexo"></a>答案是Typora+PicGo+GitHub+Blog+Hexo</h1><p>经常向朋友推荐，或者被问到该怎么愉快的使用markdown，各位不妨将我的使用习惯做一个参考。</p>
+<p>这里即是导言也是本系列的目录，刚开始看的读者直接阅读，不点击跳转链接，不影响阅读。</p>
+<p>Markdown是一个支持很广的轻量化标记语言，通过本文<a target="_blank" rel="noopener" href="https://yongtaiq.github.io/2022/03/21/Code-Markdown-gracefully/">如何优雅的编写Markdown </a>半小诗就能学会，写笔记很方便；而且你不必是markdown专家，配合Typora只需要简单的拖拽和<a target="_blank" rel="noopener" href="https://yongtaiq.github.io/2022/03/21/Win10-shortcut-key/">win快捷键</a>就可以完成大部分操作，这里是<a target="_blank" rel="noopener" href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置</a>。有了这两个工具你就可以轻松在本地编写你的markdown啦！</p>
+<p>因为是前端语法，除了markdown还支持html&#x2F;css&#x2F;Latex等等语法，<a target="_blank" rel="noopener" href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图</a>，可谓是下限极低上限极高。但是本人更倾向于截屏或者手写拍照插入，内容大于形式。</p>
+<p>如果想要分享给朋友会发现图片无法分享，这是因为图片保存在本地路径，<a target="_blank" rel="noopener" href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床</a>，把图存在云端如Github；PicGo是一个方便的图床管理工具，配合Typora通过简单的拖拽图片，自动帮你完成复制-&gt;上传-&gt;拷贝URL-&gt;目标插入位置，现在你可以分享带有图片的markdown以及导出的各种格式啦！</p>
+<p>如果你像我一样，觉得每次分享pdf&#x2F;md&#x2F;图片，太麻烦，本文还将讲述如何通过<a target="_blank" rel="noopener" href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建</a>，优雅的分享Markdown，搭建过程，需要极大的耐心。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/21/Code-Markdown-gracefully/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Blind-Willow&Sleeping-Woman/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/21/Blind-Willow&Sleeping-Woman/" class="post-title-link" itemprop="url">盲柳与睡女——村上春树</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：09:26:27" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/21/Blind-Willow&Sleeping-Woman/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Blind-Willow&Sleeping-Woman/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="盲柳与睡女——村上春树mangliuyushuinv"><a href="#盲柳与睡女——村上春树mangliuyushuinv" class="headerlink" title="盲柳与睡女——村上春树mangliuyushuinv"></a><a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=vBU8qWh5VvyLh1o518XvN9s_og0ZHuBp8G5KxdB4S0Vdcjj0aNxGZA0rimbFtA-89x9OWloiM1kzf0SijF4NGa&wd=&eqid=c34874ee000a1ec1000000036052a85c"><em>盲柳与睡女</em>——<em>村上春树</em>mangliuyushuinv</a></h3><blockquote>
+<p>带有硕果般膨胀感的五月的风。</p>
+<p>风里有粗粗拉拉的果皮，有果肉的粘汁，有果核的颗粒。</p>
+</blockquote>
+<p>潮湿，温热，缺氧，果香味粘稠到让人窒息的风。本来美好的世界，让作者觉得很枯燥无味。</p>
+<blockquote>
+<p>“不贵，便宜货。”我又看了一眼表盘说道。</p>
+<p>“便宜货。”我看着表弟的脸，一字一板地重复，“便宜是便宜，但相当准。”</p>
+</blockquote>
+<p>自尊心作用，第一遍便宜货声音太小，让表弟听不清，第二遍大声了，又补上了无关紧要的找回面子的话。两个人的生疏是显而易见的。</p>
+<blockquote>
+<p>必须回东京做的事一件也没有。但是我不能留在这里，不能。</p>
+</blockquote>
+<p>回去的理由没有，但是有离开的理由，最大的理由就是，作者觉得亲戚觉得自己不该呆在这里。</p>
+<blockquote>
+<p>我觉得很久很久以前似乎在哪里见过同样的光景？</p>
+</blockquote>
+<p>到处可见的就是漠不关心，还要假装关心而陪伴。所有地方都是，不只是餐厅，或是医院。</p>
+<blockquote>
+<p>白色块体出现了，就像显微镜下的微生物无声地一伸一缩，或改变形状或四下扩散，旋即又聚成一个？</p>
+</blockquote>
+<p>不太理解，或许这儿就是作者对于自己体内苍蝇的想象吧。</p>
+<hr>
+<p>看完最明显的感觉就是起鸡皮疙瘩。</p>
+<p>主要是因为全文出现的<strong>所有人</strong>都是，<strong>漠不关心，但假装一副关心的模样</strong>，之所以会触动我，是因为作者意识到了这件事，但无力改变自己。</p>
+<blockquote>
+<p>那位同学其后不久就死了。</p>
+</blockquote>
+<p>“其实”，”不久”，”就”。他对他的死去的朋友，非常平淡，仿佛和他没有一点关心，仿佛再说一个故事里的，不存在的人一样。</p>
+<blockquote>
+<p>往前弯腰时，从V 形领的胸口闪出未被太阳晒着的平滑白皙的胸脯。</p>
+<p>……我移开眼睛，想象医生们切开她的胸肌，往里面伸进用橡胶手套包裹的手指移动肋骨位置的场面。</p>
+<p>“别逗人家笑嘛。”她不无痛苦地说，“一笑胸口还痛的。”</p>
+<p><strong>她又笑了。</strong></p>
+</blockquote>
+<blockquote>
+<p>“听起来是够伤心的。”我说。</p>
+</blockquote>
+<p>陈述句的杀伤力太大了。第二遍读过去就像发生在身边的事一样。</p>
+<blockquote>
+<p>两人躺在沙滩上天南海北闲聊，那时间里巧克力盒就一直扔在八月火辣辣的阳光下。</p>
+<p>对此我们本该有所感觉才是，本该有谁——无论谁——多少说一句有意义的话才是。然而，那个下午我们全然无动于衷，互相开着无聊的玩笑，就那么告别了，任凭盲柳爬满那座山岗。</p>
+</blockquote>
+<p>他和他死去的朋友一样，不关心哪个做手术的”盲女”，都不关心生了什么病，经历了什么痛苦，两人觉得都是她自己的事，和自己没有任何关系，也完全不顾女孩的痛苦，自己怎么开心怎么来。巧克力说明，看望女生，也只是该走的形式而已。</p>
+<p><strong>这就是沾了粉的苍蝇。悄悄爬入你的身体，你自己意识不到，因为睡着了，睡着了指，身处大环境中，你可以意识到，也可以意识不到，这不重要，你影响不了他们，你甚至影响不了自己，你醒不过来。所有人都是只在走形式，做着自己觉得应该做的事而已，做着别人觉得应该做的事而已。</strong></p>
+<p><strong>但是你还是会痛苦，因为渴望别人的感情涌入自己，也渴望自己的感情能付出，就像被苍蝇吃尽了五脏六腑一样，自己的感情消失了。</strong></p>
+<p>他也不关心自己耳聋的表弟，就是和大家一样，为了表示关心而表示关心，是一种礼貌，客套，套路。对于治疗，他也没有任何期待，但是表弟治疗结束后的呆滞还是说明了他有所期待，他以为治好了，自己就解脱了，不用因而耳疾用客套回应客套了，他以为就能感受到感情了。</p>
+<blockquote>
+<p>小伙子拨开挡住去路的密密麻麻的盲柳</p>
+<p>为了见到沉睡的少女，为了把她从长久的酣睡中唤醒。</p>
+</blockquote>
+<p>这儿其实作者是有所带入的</p>
+<blockquote>
+<p>但此时看见他这么歪起脖子把左耳一动不动对着我的样子，我奇异地为之心动了。他那不无稚拙的一举一动就像很久以前听到的雨声一样让我感到分外亲切。</p>
+</blockquote>
+<p>表弟时时刻刻把左耳对着作者，不想放过一丝一毫的语言，语气，表达，就像听雨一样。这实际上让作者有了愧疚感，对他来说，表弟就像唤醒睡女的小伙子。</p>
+<blockquote>
+<p>“所有人的眼睛都能看到的事是不那么重要的——大概是这个意思吧……不大明白。”</p>
+</blockquote>
+<blockquote>
+<p>表弟蹙起眉头：“我也稀里糊涂。只是，每当因为耳朵被人同情时，不知为什么我就想起那句话：‘看见印第安人，就是说印第安人不在那里。”</p>
+</blockquote>
+<blockquote>
+<p>表弟歪起头想了想说：“忽然意识到时，简直一点声音都听不到了。不过意识到要花相当一些时间。意识到时已经什么都听不见了，就像堵着耳塞待在深海底。它要持续好大一阵子。那时间里耳朵自然听不见，但不单单是耳朵。耳朵听不见只是它的极小一部分。”</p>
+<p>“感觉不快吧？”</p>
+<p>表弟短促而坚决地摇了下头：“也不知为什么，倒也没有不快的感觉。只是这个那个不方便，如果听不见声音的话。”</p>
+</blockquote>
+<p>表弟在说的，其实也是同一件事，看到的根本不重要，因为只是套路而已，大家大同小异，说话前就知道你要说什么，也就没有看的必要了。</p>
+<p>“印第安人不在那里”其实是在说，问题不在耳朵，痛苦的原因不在耳朵，没有必要，因为耳朵有问题，就假装一副同情的样子，表弟为了回应假装的同情，还得自己的表演，很累。</p>
+<p>听不到了的感觉，同上，知道大家要说什么了，因为什么在说这些话，那听不到其实就无所谓了，听不到反而会是一种快乐，不必为此而费神劳累了，但是会不方便，因为无法回应别人的表演，毕竟还是会让别人不快的。</p>
+<blockquote>
+<p>现实的车门将打开，我将钻进去赶往别的场所。</p>
+<p>我把手放在表弟肩上。“不要紧的。”我说。</p>
+</blockquote>
+<p>回归现实，去同样的，没有感情投入的地方罢了。要不要紧，根本无所谓。</p>
+<hr>
+<h2 id="主观唯心者想说的"><a href="#主观唯心者想说的" class="headerlink" title="主观唯心者想说的"></a>主观唯心者想说的</h2><p>你看到的世界的样子，你对待世界的样子，就是你想看到的世界的样子。</p>
+<p>人活着很短暂，很难得，珍惜自己的体验，遇到的感情、经历，<strong>最该珍惜的就是自己内心的感受</strong>、变化。保护自己的内心不要被苍蝇吃掉。</p>
+<p>不要对外界有什么期待，把期待值降到最低，建设自己的内心，找到自己的快乐。</p>
+<p>为自己而活，别人的看法，那些社会的规则，套路客套，想回应就回应，不想回应就不回应，没有那么重要，当个怪人又如何，融入不了社会又如何，自己开心最重要。</p>
+<p>莹莹，我喜欢你，你喜欢我，我很开心，这完全是感情的流动，起因是，我愿意，你愿意。而不是我应该，你应该。所以是对这篇文章的否定的证据。</p>
+<hr>
+<p>2021&#x2F;3&#x2F;18</p>
+<p>西走菜菜</p>
+<hr>
+<h2 id="和莹莹的简单讨论"><a href="#和莹莹的简单讨论" class="headerlink" title="和莹莹的简单讨论"></a>和莹莹的简单讨论</h2><blockquote>
+<p>西走菜菜:你可以说说你的看法，先说你对文章的看法，再说对我的东西的看法</p>
+<p>Sherry:我之前写得没了</p>
+<p>Sherry:但是感觉我们想的差不多</p>
+<p>西走菜菜:哪有什么看不懂的吗？</p>
+<p>Sherry:写公交车上的老人有什么作用呢</p>
+<p>Sherry:感觉很诡异那段</p>
+<p>Sherry:我以前觉得</p>
+<p>西走菜菜:我觉得详细描写公交，是为了说明他俩的生疏，以及他对于表弟看病的不关心</p>
+<p>Sherry:是表达男主的注意力不在表弟身上，而去思考乱七八糟的事情</p>
+<p>西走菜菜:是的</p>
+<p>Sherry:我觉得我是看了好多遍思考才能理解一点的</p>
+<p>西走菜菜:还有看不懂的点吗？</p>
+<p>Sherry:为啥女孩觉得拯救自己的不是男友啊</p>
+<p>Sherry:是意识到了吗男友不关心</p>
+<p>西走菜菜:对</p>
+<p>Sherry:那为啥不直接说呢</p>
+<p>Sherry:感觉她不在乎的样子</p>
+<p>西走菜菜:没有意义</p>
+<p>Sherry:没意义为啥还在一起</p>
+<p>西走菜菜:因为大家都一样</p>
+<p>西走菜菜:这就是这篇文章的世界观</p>
+<p>Sherry:嗯</p>
+<p>西走菜菜:默认拯救的小伙子不存在</p>
+<p>Sherry:感觉看完自己也像聋了</p>
+<p>西走菜菜:是呀</p>
+<p>Sherry:就是一种被隔膜的感觉</p>
+<p>西走菜菜:嗯，感觉人和人的距离感，没有人真的关心自己</p>
+<p>Sherry:但其实表弟和女孩是希望得到关心的吧</p>
+<p>西走菜菜:我变成这样也就是这些年一直抗争的结果吧，算是找到了出路</p>
+<p>西走菜菜:当然了，文章里每个人都不关心别人，都希望别人的关心</p>
+<p>Sherry:其实多多少少都会有一点，自我满足式的关心</p>
+<p>Sherry:因为人和人之间的隔阂难以逾越</p>
+<p>西走菜菜:对的，文章里就是因为大家都在这样，就去关心，说白了就是客套</p>
+<p>西走菜菜:在我看来完全没必要</p>
+<p>Sherry:怎么打破呢自我满足的关心</p>
+<p>Sherry:我觉得不自觉就开始了</p>
+<p>西走菜菜:隔阂的话，文章没法逾越，现实里，比想象的还要轻松得多</p>
+<p>西走菜菜:自我满足的关心，指的是什么？</p>
+<p>西走菜菜:为了关心别人而关心别人？</p>
+<p>Sherry:我的关心不是别人需要的</p>
+<p>Sherry:人性的疏忽与散漫</p>
+<p>Sherry:为什么这么说</p>
+<p>西走菜菜:首先呢，关心从来都不嫌多，只是看有没有必要了</p>
+<p>西走菜菜:人性的疏忽和散漫也只是针对，对方是否是你真正在乎的人</p>
+<p>Sherry:不是呢怎么办</p>
+<p>西走菜菜:打破这个很简单，细心感受人与人的感情，别人的喜欢，享受它，回应它，介入彼此的生活</p>
+<p>西走菜菜:打破隔阂，就是互相信任，互相介入彼此生活</p>
+<p>西走菜菜:文章有个背景，是工作丢了，女朋友没了，母亲死了，熟悉的家也离开了，独自在陌生的东京。个人很绝望很孤独，是和外界联系最浅的时候。</p>
+<p>西走菜菜:你有我，我不会离开你的</p>
+<p>西走菜菜:你是最贴近的心底的人，我也一样，我们是心贴心的，作者在写这篇文章的时候，无法理解这种感觉，尤其是在日本，更严重。</p>
+<p>西走菜菜:能对你彻彻底底，把心敞开，还能被接纳，感觉真的很好。羡慕自己。</p>
+<p>Sherry:很全面了</p>
+<p>西走菜菜:小可爱，我喜欢你</p>
+<p>Sherry:<strong>我也喜欢你</strong></p>
+<p>西走菜菜:喜欢你这件事本身，就让我喜欢自己</p>
+<p>Sherry:<strong>哈哈哈哈能被你喜欢这件事，让我喜欢自己</strong></p>
+<p>西走菜菜:哈哈哈</p>
+<p>西走菜菜:俩傻子</p>
+<p>Sherry:不行了</p>
+<p>Sherry:想给你安利更多的短篇</p>
+<p>西走菜菜:行啊</p>
+<p>Sherry:感觉我们想法很接近</p>
+<p>西走菜菜:因为你开始接纳我的思想了吧</p>
+<p>西走菜菜:只是觉得，你能接纳我的想法了，如果说这能给你带来幸福感，那是再好不过的了</p>
+<p>Sherry:嗯，我一天贼幸福</p>
+<p>Sherry:有时候就不太把心思放别人身上了</p>
+<p>西走菜菜:我的意思是说为啥会带入自己</p>
+<p>Sherry:村上的短篇能触动我心的不多</p>
+<p>Sherry:烧仓房也不错</p>
+<p>Sherry:我也是看了好多遍，越看越恐怖</p>
+<p>Sherry:再袭面包店也很好玩，里面的隐喻值得玩味</p>
+<p>西走菜菜:值得你用心的人，实际上可能不多，但是呢，稍微辨别一下就好了，没必要自己非得分个清清楚楚去，自己想关心，想付出，想喜欢，那就这么做就好了，不想的话，那就没必要做那些了，不要太在意别人的想法和回应。当然了，如果遇上我这样的，还是得好好珍惜。</p>
+<p>Sherry:哈哈哈哈会珍惜的，我以后不结婚了</p>
+<p>西走菜菜:这和结不结婚有什么关系</p>
+<p>Sherry:就有了男票，就和你联系变少了之类的？</p>
+<p>西走菜菜:不会的，放心吧</p>
+<p>西走菜菜:不要为没有发生的事担心</p>
+<p>Sherry:好吧</p>
+<p>Sherry:那你以后有了其他喜欢的女孩呢</p>
+<p>西走菜菜:那也不会和你疏远啊</p>
+<p>Sherry:好吧，到时候再说吧</p>
+<p>西走菜菜:当然了，你要是有什么想法随时都一定要说出来</p>
+<p>西走菜菜:我哪儿让你不舒服了，一定要告诉我</p>
+<p>西走菜菜:无论是什么事</p>
+<p>Sherry:好</p>
+<p>西走菜菜:即便说是因为父母，或者女朋友，都一定要说出来。不说我都可能不知道你难受。而且也不要觉得，不说问题就没了，说了也解决不了。要相信我，一定会有解决方法的，不管什么问题都一样。</p>
+<p>西走菜菜:要对我说出来</p>
+<p>Sherry:我说着呢啊</p>
+<p>西走菜菜:我们一起承担，一起解决，就不会太害怕未知的未来了</p>
+<p>Sherry:我觉得短时间内我们不会出啥问题</p>
+<p>西走菜菜:其实说出来这件事，挺难做到的，尤其是在遇上事的时候，我就是在针对你的担忧，告诉你那时候应该怎么做嘛</p>
+<p>西走菜菜:能做到的话，一直都会变好的</p>
+<p>Sherry:好吧，我们也应该没啥不能说的</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Win10-shortcut-key/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/21/Win10-shortcut-key/" class="post-title-link" itemprop="url">win快捷键</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：15:44:34" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7-%E5%BF%AB%E6%8D%B7%E9%94%AE-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">小技巧&快捷键&命令</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/21/Win10-shortcut-key/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Win10-shortcut-key/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="记录几个喜欢随手用的win快捷键"><a href="#记录几个喜欢随手用的win快捷键" class="headerlink" title="记录几个喜欢随手用的win快捷键"></a>记录几个喜欢随手用的win快捷键</h1><p>如果你和我一样是电脑小白，又很烦win10所有事情都强烈依赖鼠标，这些快捷键会让你的体验大幅度提升</p>
+<p>前进后退是最常用的我绑定了鼠标<strong>侧键</strong>，当然你也可以用三指触控板</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/21/Win10-shortcut-key/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Hadoop+pyspark/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/21/Hadoop+pyspark/" class="post-title-link" itemprop="url">hadoop+pyspark学习和部署</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：16:00:44" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Cloud-Computing/" itemprop="url" rel="index"><span itemprop="name">Cloud Computing</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/21/Hadoop+pyspark/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Hadoop+pyspark/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a target="_blank" rel="noopener" href="https://codingdict.com/article/8880">PySpark简介</a></p>
+<p>map reduce工具 将现有算法<strong>并行化</strong>  （执行平台）<strong>hadoop</strong>（java）上执行，其它如spark兼容python</p>
+<p>基础架构如hadoop-&gt;分析基础架构hive，hbase-&gt;高级工具</p>
+<p>mapreduce做并行化的几个应用方向：文本，图，关系型数据，机器学习（）</p>
+<p>并行化挑战：进程计算结果交换；程序共享资源</p>
+<h3 id="函数式编程初探-阮一峰的网络日志"><a href="#函数式编程初探-阮一峰的网络日志" class="headerlink" title="函数式编程初探 - 阮一峰的网络日志"></a><a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=B9Nckg0KW9QLQnfwtG0ugkemDjOfjEwNqxYuDnMmPO20rwFL2_uOnV_0_XAH9c23JHMXtpJ-GfKxTDJ0g08lOALp5-klyO8Riqs6K_N9oxy&wd=&eqid=b45c6d5d00040e07000000036098f887"><em>函数式编程</em>初探 - 阮一峰的网络日志</a></h3><p><strong>PySpark完成实验：</strong> Spark+python；支持本地和分布式集群；程序运行平台，spark，hadoop都可以，迁移方便。具体看官方文档。</p>
+<hr>
+<p>逻辑视图：四个原语</p>
+<p>利用MapReduce框架对某个算法并行化</p>
+<p> map map <strong>map</strong> ，$f$函数</p>
+<p>fold (或<strong>reduce</strong>)汇总，有初始值，自动完成</p>
+<p>链式组合t数组.map.map.reduce</p>
+<p><code>map(k1,v1)-&gt;list(k2,v2) </code> kv对，k主码，v其它，key，value</p>
+<p><code>reduce(k2,list(v2)-&gt;list(k3,v3)</code></p>
+<p>数据切片，k作为主码，v是信息，<code>map</code>分派$f$，数据清洗，简单来说就是用关键字划分组，以此为依据，交给<code>reduce</code>，往往是数组，汇总。</p>
+<p><strong>MapReduce“Runtime”（运行时）</strong>,framework,底层软件，类似spark或者Hadoop，他来处理：处理任务调度，负载均衡，同步异步，灾害重建</p>
+<p>为了减少map与ruduce中间分布式排序时间，MRCP</p>
+<p>增加<code>partition(k,p)</code>,上层map的k下层p为reduce用哈希绕开分布式排序</p>
+<p>和<code>combine(k2,list(v2))</code> minireduce，本地统一组合一个虚拟机的不同分片</p>
+<p>t-&gt;map-&gt;combine-&gt;partition-按关键字分组排序-&gt;reduce</p>
+<p>map，reduce 输出<code>emit</code>交给分布式排序</p>
+<hr>
+<p> 物理视图：数据分片，分布式磁盘-&gt;给了VM,Map-&gt;本地保存到本地磁盘-&gt;分布式排序，有网络通讯，远程异地-&gt;VM做reduce-&gt;输出</p>
+<p>两次分配算法都由控制主机master控制：作业提交，分配map节点，reduce节点。</p>
+<p><strong>数据移动，作业调度 是几个矩阵？</strong></p>
+<ul>
+<li>分布式数据库到map虚拟机；</li>
+<li>map虚拟机到reduce虚拟机？</li>
+<li>master指派job给map，指派job给reduce虚拟机？计算效率？通信效率？这是不是task调度？</li>
+</ul>
+<p>多个机器，低性能。随机访问代价昂贵</p>
+<p>(hadoop)job提交：</p>
+<ul>
+<li>job分成map reduce等四个task</li>
+<li>每个task会有一个任务跟踪器</li>
+<li>多个job会形成有一个工作流</li>
+</ul>
+<p>数据现在很多是以kv对的形式存储计算的，不用中间格式转换，如mangodb</p>
+<p>Hadoop可以本地部署，本地调试好在部署到云，不然debug麻烦死。</p>
+<hr>
+<p>作业：安装pyspark实现个小例子。</p>
+<p>PySpark相关资料：</p>
+<p>1、Pyspark基础教程：rdd弹性数据集 datafree<br>      <a target="_blank" rel="noopener" href="https://github.com/jadianes/spark-py-notebooks">https://github.com/jadianes/spark-py-notebooks</a><br>2、PySpark MLLib教程 ：<br>      <a target="_blank" rel="noopener" href="https://github.com/susanli2016/PySpark-and-MLlib">https://github.com/susanli2016/PySpark-and-MLlib</a><br>3、项目实践：<br>      <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/52753778">https://zhuanlan.zhihu.com/p/52753778</a>  （知乎）</p>
+<hr>
+<p>可视化工具据deck.gl，kepler.gl</p>
+<p>版本信息用<code>py36</code>环境搭建</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">py36   //菜菜</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==3.02</span><br><span class="line">hadoopp==3.2</span><br><span class="line">winutils==3.0.0</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.6.12</span><br><span class="line">pyspark==3.0.2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//李敏</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==2.4.7</span><br><span class="line">hadoopp==2.7.7</span><br><span class="line">winutils==2.7.1</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.7.6</span><br><span class="line">pyspark==2.4.0</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>spark下的分布式启动sark方法：spark目录下，sbin目录，集群启动，start-all.sh脚本运行</p>
+<p>终端地址<a target="_blank" rel="noopener" href="http://192.168.152.131:8080/">http://192.168.152.131:8080/</a></p>
+<p>会显示集群URL</p>
+<p>提供的是spark主机的URL即可加入</p>
+<hr>
+<p>打开终端<code>Ctrl+alt+T</code></p>
+<p>复制粘贴<code>ctrl + shift + c，ctrl + shift + v</code></p>
+<p>显示目录<code>ls  </code></p>
+<p>自动补全 <code>tab</code> <code>tab</code></p>
+<p>显示当前路径 <code>pwd</code></p>
+<p>vim</p>
+<p><code>i</code>插入</p>
+<p> <code>:</code> <code>q</code>是退出，<code>w</code>保存</p>
+<p><code>wq!</code>强制保存退出vim</p>
+<p>anaconda可视化界面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/anaconda3/bin/activate root  </span><br></pre></td></tr></table></figure>
+
+<p>显示界面<code>anaconda-navigator</code></p>
+<p>显示jyputer notebook<code>jyputer book</code></p>
+<p>显示虚拟环境<code>conda info --envs</code></p>
+<p>conda创建虚拟环境<code>conda create -n your_name python=X.X（如2.7，3.6等）</code></p>
+<p>进入虚拟环境<code>source activate your_name</code></p>
+<p>退出虚拟环境 <code>source deactivate</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export SPARK_HOME=/home/qyt/Downloads/spark-3.0.2-bin-hadoop3.2</span><br><span class="line">export PATH=$PATH:$SPARK_HOME/bin</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/home/qyt/Downloads/hadoop-3.2.2</span><br><span class="line">export PATH=$&#123;HADOOP_HOME&#125;/bin:$PATH</span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p><code>vim /etc/profile</code>环境变量配置位置</p>
+<p><code>./</code>执行文件</p>
+<hr>
+<p>MRDP-&gt;spark 为什么？</p>
+<p>大数据表达能力不足；spark对MADP扩充到四十个，一类是map一类是reduce</p>
+<p>每次map reduce 都需要HDFS文件管理系统，需要大量的IO</p>
+<p>spark RDD弹性数据集，内存分布式，spark底层对RDD做高度的冗余</p>
+<p>Hadoop不支持中间HDFS换成RDD，spark可以。</p>
+<p>mapreduce基本指令集太少，太简单了；迭代过程中间的磁盘IO太大；</p>
+<p>spark弱化了map，reduce的成对性</p>
+<p>RDD数据类型</p>
+<p>transformationscc;action</p>
+<p>构建数据流图（谱系图）linage</p>
+<p>图论做优化</p>
+<hr>
+<p>如何对梯度下降进行并行化？</p>
+<p>梯度下降法并行化设计：</p>
+<p>机器学习：分类问题或者回归预测问题</p>
+<p>特征向量，标签找出$f:X\rightarrow Y$</p>
+<p>$\to \gets \theta$ 太熟了就不写了</p>
+<p>如何并行化？</p>
+<p>递归过程不能并行化，能并行化：$\Sigma$找梯度 由map完成。reduce做外层的一次加减。 </p>
+<p>logistiic 回归 $\to$分类，w向量求梯度，可以并行化</p>
+<hr>
+<p>如何并行快速处理大规模，复杂的图？</p>
+<p>图的并行算法设计总结：</p>
+<p>BFS在map reduce怎么表示？数据结构：K，V对：node n，结点对应临界列表和最短路径d。</p>
+<p>pagerank：d不一样。衡量一个网页的重要性，随机冲浪模型：概率（网址跳转+外链）；</p>
+<p>草原生态模型：湖有高度差和邻接河道，权重矩阵是概率转移矩阵$P$，迭代直到两个状态矩阵$\pi$相同，$\pi \cdot P&#x3D;\pi$, $\pi$就是PageRank，外链访问，网页重要程度.</p>
+<p>如果有蒸发下雨，$\alpha$蒸发, 绝对地址直接访问网页，$\pi&#x3D;\pi\cdot P \times\alpha+(1-\alpha)\cdot N$，N是湖泊（网页）个数</p>
+<p>出度 由map；入度求和由reduce；KV对排序</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>PageRank</th>
+<th>BFS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>map</td>
+<td>PR&#x2F;N</td>
+<td>d+1</td>
+</tr>
+<tr>
+<td>reduce</td>
+<td>sum</td>
+<td>min</td>
+</tr>
+</tbody></table>
+<hr>
+<p>作业：</p>
+<ol>
+<li>之前pyspark的实验搭建过程</li>
+<li>大作业 自拟题目</li>
+</ol>
+<p>题目1、请自拟题目，自选方向（电力方向尤佳），撰写一篇云计算在不同领域的最新应用的综述文章。（3000+）</p>
+<p>题目2、请自拟题目，自选一个已运用MapReduce实现过的算法（机器学习算法尤佳），撰写一篇分析运用MapReduce编程模型对传统算法进行并行化的文章。（2000-3000）</p>
+<p>题目3、请自拟题目，自选一个未运用MapReduce实现过的算法（电力方向的算法尤佳），运用MapReduce程模型对该算法进行并行化设计，采用Hadoop API实现该算法，并在Hadoop集群上运行测试，根据测试结果撰写一篇文章。（2000-3000）</p>
+<hr>
+<p>Towards Self-managing cloud storage with rl</p>
+<p><code>connectedpapers.com</code> 文献追踪</p>
+<hr>
+<p>2021&#x2F;9</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Blog+Hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/21/Blog+Hexo/" class="post-title-link" itemprop="url">Blog+Hexo搭建</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：17:05:58" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown-Blog/" itemprop="url" rel="index"><span itemprop="name">Markdown&Blog</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/21/Blog+Hexo/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Blog+Hexo/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          有东西被加密了, 请输入密码查看.
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/21/Blog+Hexo/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Birthday/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/21/Birthday/" class="post-title-link" itemprop="url">生日助记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：09:21:15" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/21/Birthday/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Birthday/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          有东西被加密了, 请输入密码查看.
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/21/Birthday/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Typora+PicGo+GitHub/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -182,7 +1404,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：15:33:35" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
+              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：17:11:31" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -219,862 +1441,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>前文已经讲述了markdown语法，快捷键，Typora的使用。但是本地图床仍有遗失风险和难以跨设备查看的不足，为了避免图片遗失，增强分享和多端查看的便利性，本文将进一步增强网络图床的配置，实现更进一步的自动化，只需要简单的拖拽或者复制粘贴，一切都很优雅。</p>
+          <p>前文已经讲述了<a target="_blank" rel="noopener" href="https://yongtaiq.github.io/2022/03/21/Code-Markdown-gracefully/">如何优雅的编写Markdown</a>，<a target="_blank" rel="noopener" href="https://yongtaiq.github.io/2022/03/21/Win10-shortcut-key/">win快捷键</a>，<a target="_blank" rel="noopener" href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置</a>。但是本地图床仍有遗失风险和难以跨设备查看的不足，为了避免图片遗失，增强分享和多端查看的便利性，本文将进一步增强网络图床的配置，实现更进一步的自动化，只需要简单的拖拽或者复制粘贴，一切都很优雅。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/03/21/Typora+PicGo+GitHub/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Typora%20Setting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/21/Typora%20Setting/" class="post-title-link" itemprop="url">Typora的设置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：15:29:18" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown-Blog/" itemprop="url" rel="index"><span itemprop="name">Markdown&Blog</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/21/Typora%20Setting/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Typora%20Setting/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用的快捷键(链接)可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/21/Typora%20Setting/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/The%20Little%20Prince/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/21/The%20Little%20Prince/" class="post-title-link" itemprop="url">小王子</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：09:17:38" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/21/The%20Little%20Prince/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/The%20Little%20Prince/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>阅读原文请点击<a target="_blank" rel="noopener" href="https://www.ppzuowen.com/book/xiaowangzi/">小王子</a> .</p>
-<h1 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1 写在前面"></a>1 写在前面</h1><p>之前看过几遍《小王子》，虽然每一遍都自以为看的很深入，果然因为人生体验不足，之后随着年龄变大，每次看都仍有不一样的感觉。</p>
-<p>这倒使我好奇起来了，我的那本或许现在已经破烂不堪的精美的《小王子》绘本在哪里？如果恰好我把这篇啰啰嗦嗦的文字发给了你，而且那本书恰好在你的手里，你要肯还给我或者借给我，让你给我看看里面的字迹我会非常开心。因为里面夹着我高中每次看过后的读后感，以及王雪莹，刘斌留在里面当时关于我问题的解答。其实也不能算作读后感，我这种读者是不招作者喜欢的，我没有能力读懂别人的故事，而是喜欢在看别人东西的时候带入自己的情绪和故事，企图从中找到一些共鸣或者用别人的思路解决自己当下的问题。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/21/The%20Little%20Prince/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/The%20Hadoop%20Distributed%20File%20System/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/21/The%20Hadoop%20Distributed%20File%20System/" class="post-title-link" itemprop="url">The Hadoop Distributed File System</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：16:10:46" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Cloud-Computing/" itemprop="url" rel="index"><span itemprop="name">Cloud Computing</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/21/The%20Hadoop%20Distributed%20File%20System/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/The%20Hadoop%20Distributed%20File%20System/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Hadoop的重要特点是数据在数千节点上分区存储和计算，并行执行应用程序的计算。</p>
-<p>HDFS和其他分布式文件系统(PVFS、Lustre、GFS)一样，分开存储文件系统元信息(NameNode)和应用程序数据(DataNodes)，服务器之间通过基于TCP的协议通信。</p>
-<p>DataNodes没有和PVFS一样使用数据保护机制(如RAID)来使文件持久存放，而是像GFS一样在多个DataNode冗余存放文件内容来实现可靠性。保证持久存放的同时也可以加速传输数据。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/21/The%20Hadoop%20Distributed%20File%20System/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/The%20farmer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/21/The%20farmer/" class="post-title-link" itemprop="url">高声大嗓</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-21 16:21:34" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-20 22:39:25" itemprop="dateModified" datetime="2022-03-20T22:39:25+08:00">2022-03-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/21/The%20farmer/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/The%20farmer/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="高声大嗓"><a href="#高声大嗓" class="headerlink" title="高声大嗓"></a>高声大嗓</h2><p>有这么一个农民，外号叫”高声大嗓”，这个外号，是爸妈取的。</p>
-<p>他从来没有进过我们家门，每次要不用自行车驮着纤维袋子鼓鼓囊囊装满的洋芋，要不洋芋拉在三轮车上，到了家门口，大声吆喝”取洋芋咯！”他从不担心我们会听不到，因为他的声音能轻松响彻巷子里所有的街坊邻居，轻松盖过各自家里的电视节目声音。这是已经搬迁了的巷子邻居的共同记忆。</p>
-<p>20多年前，他胃溃疡萎缩性胃炎严重，看了很多大夫都没用，生命垂危，我爸治好了他。但他只是我爸看无数病人中的一位普通病人。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/21/The%20farmer/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Play%20with%20cats%20gracefully/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/21/Play%20with%20cats%20gracefully/" class="post-title-link" itemprop="url">如何优雅的和猫咪玩耍</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：09:13:48" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/21/Play%20with%20cats%20gracefully/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Play%20with%20cats%20gracefully/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="关于题目"><a href="#关于题目" class="headerlink" title="关于题目"></a>关于题目</h2><p>本来想起名为撸猫教程，想了想实在太自大了，我能教谁呢？能教什么内容呢？撸什么猫呢？</p>
-<p>我自己不过是喜欢和不同的猫玩罢了，而且我23岁，人生中见过的猫其实很少，真要算的话，最多百十来只吧，这当然是不足以出个教程的。</p>
-<p>但相比我见过的所有人，我似乎是最受猫咪喜爱的，我能感觉到身上有种东西在吸引着各种见过的、没见过的猫咪，尤其是我和她们正面接触的时候，很少会有不理我的情况出现。</p>
-<p>我很难给不熟悉的人证明我上面这段话不是自恋，但事实就是这样，你看到了这些东西，就证明了我觉得你能理解。</p>
-<p>熟悉的猫，大家已经是朋友了，当然是想撸就撸。本文针对更多是初次见面的猫咪。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/21/Play%20with%20cats%20gracefully/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Play%20badminton%20gracefully/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/21/Play%20badminton%20gracefully/" class="post-title-link" itemprop="url">如何优雅的学打羽毛球</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：09:11:49" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/21/Play%20badminton%20gracefully/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Play%20badminton%20gracefully/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="目前常用参数"><a href="#目前常用参数" class="headerlink" title="目前常用参数"></a>目前常用参数</h2><p>2021&#x2F;11磅数：</p>
-<p>66um24磅；</p>
-<p>63线23磅；</p>
-<h2 id="打磨自己，逐项弱点突破："><a href="#打磨自己，逐项弱点突破：" class="headerlink" title="打磨自己，逐项弱点突破："></a>打磨自己，逐项弱点突破：</h2><ol>
-<li><p>基本功之高远球，击球点太低，发力不协调，胳膊太多身体太少，可能和步伐不到位有很大关系</p>
-</li>
-<li><p>反手过渡回正手区</p>
-</li>
-<li><p>移动降低重心，前场后场移动重心起伏太大</p>
-</li>
-<li><p>网前抢高点，为了停顿放网、停顿推后场</p>
-</li>
-<li><p>头顶底线死穴</p>
-</li>
-</ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/21/Play%20badminton%20gracefully/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Latex/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/21/Latex/" class="post-title-link" itemprop="url">Latex&流程图</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：11:09:13" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown-Blog/" itemprop="url" rel="index"><span itemprop="name">Markdown&Blog</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/21/Latex/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Latex/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-Latex支持"><a href="#1-Latex支持" class="headerlink" title="1. Latex支持"></a>1. Latex支持</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$J^&#123;wt&#125;_&#123;i&#125;$ </span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">&#123;\mathbb R&#125; = \sum_&#123;t=0&#125;^&#123;n&#125;&#123; &#123;\mathbb R_t&#125;\gamma^&#123;t&#125; &#125;</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/21/Latex/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Kahlil%20Gibran/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/21/Kahlil%20Gibran/" class="post-title-link" itemprop="url">读读纪伯伦的小诗吧</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-21 16:21:34" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-20 22:38:41" itemprop="dateModified" datetime="2022-03-20T22:38:41+08:00">2022-03-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/" itemprop="url" rel="index"><span itemprop="name">生活和诗歌</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/21/Kahlil%20Gibran/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Kahlil%20Gibran/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/21/Kahlil%20Gibran/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Java%20LeetCode/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="西走菜菜">
-      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="闲话茶楼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/21/Java%20LeetCode/" class="post-title-link" itemprop="url">java LeetCode(日更)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：09:29:43" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/03/21/Java%20LeetCode/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Java%20LeetCode/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="2022-2-25"><a href="#2022-2-25" class="headerlink" title="2022.2.25"></a>2022.2.25</h2><p><strong>大小写敏感</strong> </p>
-<p><strong>类名class</strong>首字母应该大写 </p>
-<p><strong>方法名void</strong>小写字母开头,后面的每个单词首字母大写f</p>
-<p><strong>源文件名和public类名相同</strong>.java</p>
-<p>所有的 Java 程序由 <strong>public static void main(String[] args)</strong> 方法开始执行</p>
-<p>ava自带的类</p>
-<p>String <code>integer.toBinaryString(int十进制)</code></p>
-<blockquote>
-<p>返回二进制字符串; </p>
-<p>翻译 intenger 转换器，tobinary二进制</p>
-</blockquote>
-<p>int <code>Integer.parseInt(string字符串,int指定字符串的进制)</code></p>
-<blockquote>
-<p>返回十进制</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">integer</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/21/Java%20LeetCode/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

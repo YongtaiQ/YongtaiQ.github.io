@@ -20,19 +20,23 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="PySpark简介 map reduce工具 将现有算法并行化  （执行平台）hadoop（java）上执行，其它如spark兼容python 基础架构如hadoop-&gt;分析基础架构hive，hbase-&gt;高级工具 mapreduce做并行化的几个应用方向：文本，图，关系型数据，机器学习（） 并行化挑战：进程计算结果交换；程序共享资源 函数式编程初探 - 阮一峰的网络日志PySpark">
+  <meta name="description" content="Hadoop的重要特点是数据在数千节点上分区存储和计算，并行执行应用程序的计算。 HDFS和其他分布式文件系统(PVFS、Lustre、GFS)一样，分开存储文件系统元信息(NameNode)和应用程序数据(DataNodes)，服务器之间通过基于TCP的协议通信。 DataNodes没有和PVFS一样使用数据保护机制(如RAID)来使文件持久存放，而是像GFS一样在多个DataNode冗余存放文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hadoop+pyspark学习和部署">
-<meta property="og:url" content="http://example.com/2022/03/21/Hadoop+pyspark/index.html">
+<meta property="og:title" content="The Hadoop Distributed File System">
+<meta property="og:url" content="http://example.com/2022/03/21/The-Hadoop-Distributed-File-System/index.html">
 <meta property="og:site_name" content="闲话茶楼">
-<meta property="og:description" content="PySpark简介 map reduce工具 将现有算法并行化  （执行平台）hadoop（java）上执行，其它如spark兼容python 基础架构如hadoop-&gt;分析基础架构hive，hbase-&gt;高级工具 mapreduce做并行化的几个应用方向：文本，图，关系型数据，机器学习（） 并行化挑战：进程计算结果交换；程序共享资源 函数式编程初探 - 阮一峰的网络日志PySpark">
+<meta property="og:description" content="Hadoop的重要特点是数据在数千节点上分区存储和计算，并行执行应用程序的计算。 HDFS和其他分布式文件系统(PVFS、Lustre、GFS)一样，分开存储文件系统元信息(NameNode)和应用程序数据(DataNodes)，服务器之间通过基于TCP的协议通信。 DataNodes没有和PVFS一样使用数据保护机制(如RAID)来使文件持久存放，而是像GFS一样在多个DataNode冗余存放文">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-21T08:21:34.706Z">
-<meta property="article:modified_time" content="2022-03-21T08:00:44.629Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211550034">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600459.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600752.jpeg">
+<meta property="article:published_time" content="2022-03-21T09:15:44.502Z">
+<meta property="article:modified_time" content="2022-03-21T08:01:20.136Z">
 <meta property="article:author" content="西走菜菜">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211550034">
 
-<link rel="canonical" href="http://example.com/2022/03/21/Hadoop+pyspark/">
+<link rel="canonical" href="http://example.com/2022/03/21/The-Hadoop-Distributed-File-System/">
 
 
 <script id="page-configurations">
@@ -45,7 +49,7 @@
   };
 </script>
 
-  <title>hadoop+pyspark学习和部署 | 闲话茶楼</title>
+  <title>The Hadoop Distributed File System | 闲话茶楼</title>
   
 
 
@@ -160,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Hadoop+pyspark/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/The-Hadoop-Distributed-File-System/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -173,7 +177,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hadoop+pyspark学习和部署
+          The Hadoop Distributed File System
         </h1>
 
         <div class="post-meta">
@@ -184,7 +188,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：16:00:44" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
+              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：16:01:20" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -205,8 +209,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2022/03/21/Hadoop+pyspark/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Hadoop+pyspark/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/03/21/The-Hadoop-Distributed-File-System/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/The-Hadoop-Distributed-File-System/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -221,146 +225,40 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a target="_blank" rel="noopener" href="https://codingdict.com/article/8880">PySpark简介</a></p>
-<p>map reduce工具 将现有算法<strong>并行化</strong>  （执行平台）<strong>hadoop</strong>（java）上执行，其它如spark兼容python</p>
-<p>基础架构如hadoop-&gt;分析基础架构hive，hbase-&gt;高级工具</p>
-<p>mapreduce做并行化的几个应用方向：文本，图，关系型数据，机器学习（）</p>
-<p>并行化挑战：进程计算结果交换；程序共享资源</p>
-<h3 id="函数式编程初探-阮一峰的网络日志"><a href="#函数式编程初探-阮一峰的网络日志" class="headerlink" title="函数式编程初探 - 阮一峰的网络日志"></a><a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=B9Nckg0KW9QLQnfwtG0ugkemDjOfjEwNqxYuDnMmPO20rwFL2_uOnV_0_XAH9c23JHMXtpJ-GfKxTDJ0g08lOALp5-klyO8Riqs6K_N9oxy&wd=&eqid=b45c6d5d00040e07000000036098f887"><em>函数式编程</em>初探 - 阮一峰的网络日志</a></h3><p><strong>PySpark完成实验：</strong> Spark+python；支持本地和分布式集群；程序运行平台，spark，hadoop都可以，迁移方便。具体看官方文档。</p>
-<hr>
-<p>逻辑视图：四个原语</p>
-<p>利用MapReduce框架对某个算法并行化</p>
-<p> map map <strong>map</strong> ，$f$函数</p>
-<p>fold (或<strong>reduce</strong>)汇总，有初始值，自动完成</p>
-<p>链式组合t数组.map.map.reduce</p>
-<p><code>map(k1,v1)-&gt;list(k2,v2) </code> kv对，k主码，v其它，key，value</p>
-<p><code>reduce(k2,list(v2)-&gt;list(k3,v3)</code></p>
-<p>数据切片，k作为主码，v是信息，<code>map</code>分派$f$，数据清洗，简单来说就是用关键字划分组，以此为依据，交给<code>reduce</code>，往往是数组，汇总。</p>
-<p><strong>MapReduce“Runtime”（运行时）</strong>,framework,底层软件，类似spark或者Hadoop，他来处理：处理任务调度，负载均衡，同步异步，灾害重建</p>
-<p>为了减少map与ruduce中间分布式排序时间，MRCP</p>
-<p>增加<code>partition(k,p)</code>,上层map的k下层p为reduce用哈希绕开分布式排序</p>
-<p>和<code>combine(k2,list(v2))</code> minireduce，本地统一组合一个虚拟机的不同分片</p>
-<p>t-&gt;map-&gt;combine-&gt;partition-按关键字分组排序-&gt;reduce</p>
-<p>map，reduce 输出<code>emit</code>交给分布式排序</p>
-<hr>
-<p> 物理视图：数据分片，分布式磁盘-&gt;给了VM,Map-&gt;本地保存到本地磁盘-&gt;分布式排序，有网络通讯，远程异地-&gt;VM做reduce-&gt;输出</p>
-<p>两次分配算法都由控制主机master控制：作业提交，分配map节点，reduce节点。</p>
-<p><strong>数据移动，作业调度 是几个矩阵？</strong></p>
-<ul>
-<li>分布式数据库到map虚拟机；</li>
-<li>map虚拟机到reduce虚拟机？</li>
-<li>master指派job给map，指派job给reduce虚拟机？计算效率？通信效率？这是不是task调度？</li>
-</ul>
-<p>多个机器，低性能。随机访问代价昂贵</p>
-<p>(hadoop)job提交：</p>
-<ul>
-<li>job分成map reduce等四个task</li>
-<li>每个task会有一个任务跟踪器</li>
-<li>多个job会形成有一个工作流</li>
-</ul>
-<p>数据现在很多是以kv对的形式存储计算的，不用中间格式转换，如mangodb</p>
-<p>Hadoop可以本地部署，本地调试好在部署到云，不然debug麻烦死。</p>
-<hr>
-<p>作业：安装pyspark实现个小例子。</p>
-<p>PySpark相关资料：</p>
-<p>1、Pyspark基础教程：rdd弹性数据集 datafree<br>      <a target="_blank" rel="noopener" href="https://github.com/jadianes/spark-py-notebooks">https://github.com/jadianes/spark-py-notebooks</a><br>2、PySpark MLLib教程 ：<br>      <a target="_blank" rel="noopener" href="https://github.com/susanli2016/PySpark-and-MLlib">https://github.com/susanli2016/PySpark-and-MLlib</a><br>3、项目实践：<br>      <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/52753778">https://zhuanlan.zhihu.com/p/52753778</a>  （知乎）</p>
-<hr>
-<p>可视化工具据deck.gl，kepler.gl</p>
-<p>版本信息用<code>py36</code>环境搭建</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">py36   //菜菜</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==3.02</span><br><span class="line">hadoopp==3.2</span><br><span class="line">winutils==3.0.0</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.6.12</span><br><span class="line">pyspark==3.0.2</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//李敏</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==2.4.7</span><br><span class="line">hadoopp==2.7.7</span><br><span class="line">winutils==2.7.1</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.7.6</span><br><span class="line">pyspark==2.4.0</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>spark下的分布式启动sark方法：spark目录下，sbin目录，集群启动，start-all.sh脚本运行</p>
-<p>终端地址<a target="_blank" rel="noopener" href="http://192.168.152.131:8080/">http://192.168.152.131:8080/</a></p>
-<p>会显示集群URL</p>
-<p>提供的是spark主机的URL即可加入</p>
-<hr>
-<p>打开终端<code>Ctrl+alt+T</code></p>
-<p>复制粘贴<code>ctrl + shift + c，ctrl + shift + v</code></p>
-<p>显示目录<code>ls  </code></p>
-<p>自动补全 <code>tab</code> <code>tab</code></p>
-<p>显示当前路径 <code>pwd</code></p>
-<p>vim</p>
-<p><code>i</code>插入</p>
-<p> <code>:</code> <code>q</code>是退出，<code>w</code>保存</p>
-<p><code>wq!</code>强制保存退出vim</p>
-<p>anaconda可视化界面</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/anaconda3/bin/activate root  </span><br></pre></td></tr></table></figure>
-
-<p>显示界面<code>anaconda-navigator</code></p>
-<p>显示jyputer notebook<code>jyputer book</code></p>
-<p>显示虚拟环境<code>conda info --envs</code></p>
-<p>conda创建虚拟环境<code>conda create -n your_name python=X.X（如2.7，3.6等）</code></p>
-<p>进入虚拟环境<code>source activate your_name</code></p>
-<p>退出虚拟环境 <code>source deactivate</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export SPARK_HOME=/home/qyt/Downloads/spark-3.0.2-bin-hadoop3.2</span><br><span class="line">export PATH=$PATH:$SPARK_HOME/bin</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/home/qyt/Downloads/hadoop-3.2.2</span><br><span class="line">export PATH=$&#123;HADOOP_HOME&#125;/bin:$PATH</span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p><code>vim /etc/profile</code>环境变量配置位置</p>
-<p><code>./</code>执行文件</p>
-<hr>
-<p>MRDP-&gt;spark 为什么？</p>
-<p>大数据表达能力不足；spark对MADP扩充到四十个，一类是map一类是reduce</p>
-<p>每次map reduce 都需要HDFS文件管理系统，需要大量的IO</p>
-<p>spark RDD弹性数据集，内存分布式，spark底层对RDD做高度的冗余</p>
-<p>Hadoop不支持中间HDFS换成RDD，spark可以。</p>
-<p>mapreduce基本指令集太少，太简单了；迭代过程中间的磁盘IO太大；</p>
-<p>spark弱化了map，reduce的成对性</p>
-<p>RDD数据类型</p>
-<p>transformationscc;action</p>
-<p>构建数据流图（谱系图）linage</p>
-<p>图论做优化</p>
-<hr>
-<p>如何对梯度下降进行并行化？</p>
-<p>梯度下降法并行化设计：</p>
-<p>机器学习：分类问题或者回归预测问题</p>
-<p>特征向量，标签找出$f:X\rightarrow Y$</p>
-<p>$\to \gets \theta$ 太熟了就不写了</p>
-<p>如何并行化？</p>
-<p>递归过程不能并行化，能并行化：$\Sigma$找梯度 由map完成。reduce做外层的一次加减。 </p>
-<p>logistiic 回归 $\to$分类，w向量求梯度，可以并行化</p>
-<hr>
-<p>如何并行快速处理大规模，复杂的图？</p>
-<p>图的并行算法设计总结：</p>
-<p>BFS在map reduce怎么表示？数据结构：K，V对：node n，结点对应临界列表和最短路径d。</p>
-<p>pagerank：d不一样。衡量一个网页的重要性，随机冲浪模型：概率（网址跳转+外链）；</p>
-<p>草原生态模型：湖有高度差和邻接河道，权重矩阵是概率转移矩阵$P$，迭代直到两个状态矩阵$\pi$相同，$\pi \cdot P&#x3D;\pi$, $\pi$就是PageRank，外链访问，网页重要程度.</p>
-<p>如果有蒸发下雨，$\alpha$蒸发, 绝对地址直接访问网页，$\pi&#x3D;\pi\cdot P \times\alpha+(1-\alpha)\cdot N$，N是湖泊（网页）个数</p>
-<p>出度 由map；入度求和由reduce；KV对排序</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>PageRank</th>
-<th>BFS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>map</td>
-<td>PR&#x2F;N</td>
-<td>d+1</td>
-</tr>
-<tr>
-<td>reduce</td>
-<td>sum</td>
-<td>min</td>
-</tr>
-</tbody></table>
-<hr>
-<p>作业：</p>
+        <p>Hadoop的重要特点是数据在数千节点上分区存储和计算，并行执行应用程序的计算。</p>
+<p>HDFS和其他分布式文件系统(PVFS、Lustre、GFS)一样，分开存储文件系统元信息(NameNode)和应用程序数据(DataNodes)，服务器之间通过基于TCP的协议通信。</p>
+<p>DataNodes没有和PVFS一样使用数据保护机制(如RAID)来使文件持久存放，而是像GFS一样在多个DataNode冗余存放文件内容来实现可靠性。保证持久存放的同时也可以加速传输数据。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211550034" alt="img"></p>
+<p>HDFS总体上采用了master&#x2F;slave架构，主要由以下几个组件构成：Client、NameNode、Secondary NameNode和DataNode。<br>NameNode管理文件系统的命名空间，维护文件系统树及整棵树内所有的文件和目录。这些信息以两个文件形式永久保存在本地磁盘上：命名空间镜像文件fsimage和编辑日志edits文件。NameNode也记录着每个文件中各个块所在的数据节点信息，但它并不永久保存块的位置信息，因为这些信息会在系统启动时由数据节点重建。<br>Secondary NameNode最重要的任务并不是为NameNode元数据进行热备份，而是定期合并fsimage和edits日志，并传输给NameNode。这里需要注意的是，为了减少NameNode的压力，NameNode并不会自己合并fsimage和edits，而是将文件存储到磁盘上，交由Secondary NameNode完成。<br>DataNode是文件系统的工作节点。它们根据需要存储并检索数据块(受客户端或NameNode调度)，并且定期向NameNode发送它们所存储的块的列表。<br>客户端(client)代表用户通过与NameNode和DataNode交互来访问整个文件系统。客户端提供一个类似于POSIX的文件系统接口，因此用户在编程时无需知道NameNode和DataNode也可以实现其功能。</p>
+<h3 id="NameNode"><a href="#NameNode" class="headerlink" title="NameNode"></a>NameNode</h3><p>HDFS命名空间是文件和目录的层级结构。文件和目录在NameNode上通过inodes表示，inodes记录了各种属性如：权限、修改和访问次数、命名空间、磁盘空间配额。</p>
+<h3 id="DataNodes"><a href="#DataNodes" class="headerlink" title="DataNodes"></a>DataNodes</h3><p>DataNode中的每个块副本通过两个原生文件来表示，一个包含数据本身，另一个是文件元数据(包括块数据校验和、块生成戳 generation stamp)。数据文件的大小等于实际块长度，不需要额外空间舍入到传统文件系统中的名义块大小，因此如果块是半满的，就在本地占一半的空间。</p>
+<h3 id="HDFS-Client"><a href="#HDFS-Client" class="headerlink" title="HDFS Client"></a>HDFS Client</h3><p>用户应用程序通过HDFS客户端访问文件系统，这是一个程序库，开放了HDFS文件系统接口。</p>
+<h3 id="Image-and-Journal"><a href="#Image-and-Journal" class="headerlink" title="Image and Journal"></a>Image and Journal</h3><p>命名空间的image就是文件系统的元数据，将应用数据以目录和文件的形式组织。一条被写入的image持久化记录叫做checkpoint。journal是提前写入的提交日志，是必须被持久化的文件系统修改情况。对于每个客户端启动的事务，所做的修改被记录在journal中，journal文件会在更改提交到HDFS客户端前刷新和同步。</p>
+<h3 id="CheckpointNode"><a href="#CheckpointNode" class="headerlink" title="CheckpointNode"></a>CheckpointNode</h3><p>HDFS的NameNode除了服务客户端之外，还可以扮演另外两个角色之一，即CheckpointNode或BackupNode，这在启动时指定。</p>
+<h3 id="BackupNode"><a href="#BackupNode" class="headerlink" title="BackupNode"></a>BackupNode</h3><p>和CHeckpointNode类似，BackupNode也有能力创建定期检查点，但除此之外还在内存中维护文件系统命名空间最新的image，这总是和NameNode的状态一起同步</p>
+<h3 id="Upgrades-File-System-Snapshots"><a href="#Upgrades-File-System-Snapshots" class="headerlink" title="Upgrades, File System Snapshots"></a>Upgrades, File System Snapshots</h3><p>在软件升级的时候，由于软件bug或人犯错导致系统崩溃的可能性会增加。在HDFS中创建快照的目的就是在升级期间，使对保存在系统中数据的潜在损伤最小化。</p>
+<h2 id="2-2-论文核心算法"><a href="#2-2-论文核心算法" class="headerlink" title="2.2 论文核心算法"></a>2.2 论文核心算法</h2><h4 id="The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎"><a href="#The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎" class="headerlink" title="The Hadoop Distributed File System (Yahoo!)笔记 - 知乎"></a><a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=zBpkij4sYNFP99V5k41zkLgAe9Wmz7B3pQWmKkRXXus2p_MxCO_UjL5iDo96zw_G&wd=&eqid=f23dd73f000b5b380000000360c7162a"><em>The</em> <em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em> (Yahoo!)笔记 - 知乎</a></h4><h4 id="HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…"><a href="#HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…" class="headerlink" title="HDFS(Hadoop Distributed File System)简介_Bob Liu的…_…"></a><a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=qdR7pYI7y85J3TqZwpB-UJFWfYABEGYypIuLmTtNmqsInxbtgnVKrQCfoUIHFDXKa3O0iKzkiOl7YNr37YeMaONRoCaRJXX5Ryz_MMH-P73&wd=&eqid=f23dd73f000b5b380000000360c7162a">HDFS(<em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em>)简介_Bob Liu的…_…</a></h4><p>这两个笔记我觉得写的挺好的，可以看看。</p>
+<p>当应用程序读一个文件：</p>
 <ol>
-<li>之前pyspark的实验搭建过程</li>
-<li>大作业 自拟题目</li>
+<li>HDFS客户端要求NameNode提供托管文件块副本的DataNode列表，</li>
+<li>直接联系DataNode，并请求需要传送的块</li>
 </ol>
-<p>题目1、请自拟题目，自选方向（电力方向尤佳），撰写一篇云计算在不同领域的最新应用的综述文章。（3000+）</p>
-<p>题目2、请自拟题目，自选一个已运用MapReduce实现过的算法（机器学习算法尤佳），撰写一篇分析运用MapReduce编程模型对传统算法进行并行化的文章。（2000-3000）</p>
-<p>题目3、请自拟题目，自选一个未运用MapReduce实现过的算法（电力方向的算法尤佳），运用MapReduce程模型对该算法进行并行化设计，采用Hadoop API实现该算法，并在Hadoop集群上运行测试，根据测试结果撰写一篇文章。（2000-3000）</p>
+<p>当客户端写文件：</p>
+<ol>
+<li>要求NameNode选择几个DataNode托管第一个文件块的副本</li>
+<li>客户端组织node-to-node流水线，并传送数据</li>
+<li>当第一个块填入后，客户端要求新的DataNodes来托管下一个块的副本</li>
+<li>组织新的流水线，传送数据，每次倾向选择不同的DataNodes</li>
+</ol>
+<p>客户端、NameNode、DataNodes的交互如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600459.jpeg" alt="img"></p>
+<p>客户端通过把路径传给NameNode来创建一个新文件，NameNode为文件的每个块返回DataNode列表来托管块的副本。客户端然后通过流水线把数据传给选定的DataNodes，这些DataNodes最终将创建块副本的确认信息告诉NameNode。</p>
+<p>一个HDFS文件是由块组成的。需要新块时，NameNode会分配一个具有unique block ID的块，并且决策出一个DataNodes列表来处理块副本。DataNodes组成一个管道，其顺序使客户端到最后一个DataNode的总网络距离最小。字节作为分组序列（sequence of packets）被推入流水线。应用程序在客户端写入第一个缓冲区，填充完一个缓冲区（通常64KB）后，数据被推送到流水线。在接收到先前数据包的确认信息之前，可以将下一个分组推送到流水线。未完成分组的数量受客户端未完成分组的窗口大小的限制。</p>
+<p>在数据被写入HDFS文件后，HDFS不保证数据对新reader可见，直到文件被关闭。如果用户应用需要这种可见性保证，可以显式调用 <em>hflush</em> 操作。这样当前的分组会立即推送到流水线，hflush操作会等待所有的DataNode确认已经成功传输了分组。所有之前写入的数据就会理所应当地对reader可见。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600752.jpeg" alt="img"></p>
+<p>如果没有错误发生，block construction会像上图一样发生。图2展示了一个有三个DataNodes的管道和5个分组的块。粗线表示数据分组，虚线表示确认信息，细线表示设置和关闭流水线的控制信息。垂直线表示客户端和三个DataNode的活动，时间从上到下依次进行。t0到t1是流水线设置阶段。t1到t2是数据流阶段，t1是首次传输分组的时间，t2是收到最后一个分组确认信息的时间。这里hflush操作将传输第二个分组。hflush指示数据分组传输不是一个分离的操作。t2到t3是流水线关闭阶段。</p>
 <hr>
-<p>Towards Self-managing cloud storage with rl</p>
-<p><code>connectedpapers.com</code> 文献追踪</p>
-<hr>
-<p>2021&#x2F;9</p>
+<p>2021&#x2F;7</p>
 
     </div>
 
@@ -396,7 +294,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2022/03/21/Hadoop+pyspark/" title="hadoop+pyspark学习和部署">http://example.com/2022/03/21/Hadoop+pyspark/</a>
+    <a href="http://example.com/2022/03/21/The-Hadoop-Distributed-File-System/" title="The Hadoop Distributed File System">http://example.com/2022/03/21/The-Hadoop-Distributed-File-System/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -452,12 +350,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/03/21/Blog+Hexo/" rel="prev" title="Blog+Hexo搭建">
-      <i class="fa fa-chevron-left"></i> Blog+Hexo搭建
+    <a href="/2022/03/21/The-farmer/" rel="prev" title="高声大嗓">
+      <i class="fa fa-chevron-left"></i> 高声大嗓
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/03/21/Win10-shortcut-key/" rel="next" title="win快捷键">
-      win快捷键 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/03/21/The-Little-Prince/" rel="next" title="小王子">
+      小王子 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -520,7 +418,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%88%9D%E6%8E%A2-%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97"><span class="nav-number">1.</span> <span class="nav-text">函数式编程初探 - 阮一峰的网络日志</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#NameNode"><span class="nav-number">1.</span> <span class="nav-text">NameNode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DataNodes"><span class="nav-number">2.</span> <span class="nav-text">DataNodes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDFS-Client"><span class="nav-number">3.</span> <span class="nav-text">HDFS Client</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Image-and-Journal"><span class="nav-number">4.</span> <span class="nav-text">Image and Journal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CheckpointNode"><span class="nav-number">5.</span> <span class="nav-text">CheckpointNode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BackupNode"><span class="nav-number">6.</span> <span class="nav-text">BackupNode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Upgrades-File-System-Snapshots"><span class="nav-number">7.</span> <span class="nav-text">Upgrades, File System Snapshots</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E8%AE%BA%E6%96%87%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95"><span class="nav-number"></span> <span class="nav-text">2.2 论文核心算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Hadoop-Distributed-File-System-Yahoo-%E7%AC%94%E8%AE%B0-%E7%9F%A5%E4%B9%8E"><span class="nav-number">0.1.</span> <span class="nav-text">The Hadoop Distributed File System (Yahoo!)笔记 - 知乎</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HDFS-Hadoop-Distributed-File-System-%E7%AE%80%E4%BB%8B-Bob-Liu%E7%9A%84%E2%80%A6-%E2%80%A6"><span class="nav-number">0.2.</span> <span class="nav-text">HDFS(Hadoop Distributed File System)简介_Bob Liu的…_…</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

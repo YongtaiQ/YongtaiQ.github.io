@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="DRL 代码接口实现框架，以及独立实现研究是因为有趣Deep Q-Learning with Keras and Gym · Keon’s Blog Deep Q Learning,DRL-QoS Cloud Scheduling代码已跑通，AIRL未跑，回过头来重新逐行深入分析理解及复现，以便之后独立使用。 123456conda info -e #（查看所有的虚拟环境）activate -na">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deep Q-Learning with Keras and Gym">
+<meta property="og:url" content="http://example.com/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/index.html">
+<meta property="og:site_name" content="闲话茶楼">
+<meta property="og:description" content="DRL 代码接口实现框架，以及独立实现研究是因为有趣Deep Q-Learning with Keras and Gym · Keon’s Blog Deep Q Learning,DRL-QoS Cloud Scheduling代码已跑通，AIRL未跑，回过头来重新逐行深入分析理解及复现，以便之后独立使用。 123456conda info -e #（查看所有的虚拟环境）activate -na">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202232676.png">
+<meta property="og:image" content="https://keon.github.io/images/deep-q-learning/deep-q-learning.png">
+<meta property="article:published_time" content="2022-03-21T09:15:44.413Z">
+<meta property="article:modified_time" content="2022-03-21T07:40:13.112Z">
+<meta property="article:author" content="西走菜菜">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202232676.png">
+
+<link rel="canonical" href="http://example.com/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Deep Q-Learning with Keras and Gym | 闲话茶楼</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">闲话茶楼</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="西走菜菜">
+      <meta itemprop="description" content="欢迎来找我随便聊点什么哦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲话茶楼">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Deep Q-Learning with Keras and Gym
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：15:40:13" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DRL/" itemprop="url" rel="index"><span itemprop="name">DRL</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="DRL-代码接口实现框架，以及独立实现"><a href="#DRL-代码接口实现框架，以及独立实现" class="headerlink" title="DRL 代码接口实现框架，以及独立实现"></a>DRL 代码接口实现框架，以及独立实现</h2><h3 id="研究是因为有趣"><a href="#研究是因为有趣" class="headerlink" title="研究是因为有趣"></a>研究是因为<em>有趣</em></h3><p><a target="_blank" rel="noopener" href="https://keon.github.io/deep-q-learning/">Deep Q-Learning with Keras and Gym · Keon’s Blog</a></p>
+<p>Deep Q Learning,DRL-QoS Cloud Scheduling代码已跑通，AIRL未跑，回过头来重新逐行深入分析理解及复现，以便之后独立使用。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda info -e #（查看所有的虚拟环境）</span><br><span class="line">activate -name #(虚拟环境名字)（进入到该虚拟环境中）</span><br><span class="line">deactivate #退出</span><br><span class="line">pip，conda install (list)(show)</span><br><span class="line">https://mirrors.tuna.tsinghua.edu.cn/help/pypi/ #换源网址</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package #临时使用</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><table>
+<thead>
+<tr>
+<th align="left">目录</th>
+<th>名称</th>
+<th>本机版本号</th>
+<th>命令或备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">python</td>
+<td>anaconda</td>
+<td>ok</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>python</td>
+<td>ok</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>pip，conda换源</td>
+<td>ok</td>
+<td>尽量用conda和anaconda安装，少用pip</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>虚拟环境</td>
+<td>ok</td>
+<td>activate xx  ；deactivate</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>pycharm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left">GPU驱动</td>
+<td>GPU</td>
+<td>456.71</td>
+<td>nvidia-smi</td>
+</tr>
+<tr>
+<td align="left">GPU加速</td>
+<td>cuda</td>
+<td>11.1.96</td>
+<td>nvcc -V</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>cuDNN</td>
+<td></td>
+<td>GUDA,CUDNN,PY,</td>
+</tr>
+<tr>
+<td align="left">框架</td>
+<td>opencv</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>tensorflow</td>
+<td>版本容易与keras冲突</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>pytorch</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left">步骤</td>
+<td><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_26412763/article/details/90272491">https://blog.csdn.net/qq_26412763/article/details/90272491</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left">冲突关系</td>
+<td>tensorflow</td>
+<td>keras</td>
+<td><a target="_blank" rel="noopener" href="https://docs.floydhub.com/guides/environments/">https://docs.floydhub.com/guides/environments/</a></td>
+</tr>
+<tr>
+<td align="left">gpu驱动</td>
+<td>CUDA</td>
+<td>cuDNN</td>
+<td>先更新显卡驱动，然后下载对应的CUDA,国内ip无法下载官网CUDA包，成功后会秒变1kb</td>
+</tr>
+</tbody></table>
+<h3 id="Deep-Q-Learning"><a href="#Deep-Q-Learning" class="headerlink" title="Deep Q Learning"></a><a target="_blank" rel="noopener" href="https://keon.github.io/deep-q-learning/">Deep Q Learning</a></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tensorflow == 1.10.0</span><br><span class="line">keras == 2.1.2</span><br><span class="line">python == 3.6</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202232676.png" alt="image-20201211102446854"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> gym</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">from</span> keras.optimizers <span class="keyword">import</span> Adam</span><br><span class="line"><span class="comment">#from A import B 这种方式意味着从A中引入B。相当于：import A， b=A.b。</span></span><br><span class="line"><span class="comment">#import A as B 这种方式为给引入的包A定义一个别名B</span></span><br><span class="line">EPISODES = <span class="number">1000</span></span><br><span class="line"><span class="comment">#循环训练次数</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DQNAgent</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, state_size, action_size</span>):</span><br><span class="line">        <span class="comment">#self面向对象指DQNAgent，state_size,action_size对应statespace和actionspace的大小</span></span><br><span class="line">        self.state_size = state_size</span><br><span class="line">        self.action_size = action_size<span class="comment">#传参</span></span><br><span class="line">        self.memory = deque(maxlen=<span class="number">2000</span>) <span class="comment">#定义memory为deque()双端队列，定义最大内存</span></span><br><span class="line">        self.gamma = <span class="number">0.95</span>    <span class="comment"># discount rate折扣率，未来和现实的比重</span></span><br><span class="line">        self.epsilon = <span class="number">1.0</span>  <span class="comment"># exploration rate 探索率</span></span><br><span class="line">        self.epsilon_min = <span class="number">0.01</span> <span class="comment">#最小探索率也保证0.01</span></span><br><span class="line">        self.epsilon_decay = <span class="number">0.995</span> <span class="comment">#探索率是衰变的，从随机到不随机</span></span><br><span class="line">        self.learning_rate = <span class="number">0.001</span> <span class="comment">#学习率，每次迭代中学习多少神经网络 </span></span><br><span class="line">        self.model = self._build_model() <span class="comment">#model是下个函数_build_model()中定义的</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_build_model</span>(<span class="params">self</span>):<span class="comment">#调用Keras创建简单的神经网络</span></span><br><span class="line">        <span class="comment"># Neural Net for Deep-Q learning Model</span></span><br><span class="line">        <span class="comment">#输入层4个信息，2个隐藏层，输出层2个节点01</span></span><br><span class="line">        model = Sequential()<span class="comment">#Sequential()创建基础层</span></span><br><span class="line">        model.add(Dense(<span class="number">24</span>, input_dim=self.state_size, activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">        <span class="comment">#Dense全连接层，包含输入层和第一个隐藏层，输入层大小为statesize为4，隐藏层具有24个节点</span></span><br><span class="line">        <span class="comment">#activation激活函数relu max(0,x)非线性输出</span></span><br><span class="line">        model.add(Dense(<span class="number">24</span>, activation=<span class="string">&#x27;relu&#x27;</span>))<span class="comment">#第二个隐藏层，24个节点</span></span><br><span class="line">        model.add(Dense(self.action_size, activation=<span class="string">&#x27;linear&#x27;</span>))</span><br><span class="line">        <span class="comment">#最后一层输出层，大小为actionsize为2，activation激活函数linear线性</span></span><br><span class="line">        model.<span class="built_in">compile</span>(loss=<span class="string">&#x27;mse&#x27;</span>,<span class="comment">#由以上信息编译model，</span></span><br><span class="line">                      <span class="comment">#用loss提升model，定义loss用mse平均方差</span></span><br><span class="line">                      optimizer=Adam(lr=self.learning_rate))</span><br><span class="line">        <span class="comment">#优化optimizer方法，Adam自适应状态估计，用规定的学习率</span></span><br><span class="line">        <span class="keyword">return</span> model<span class="comment">#返回创建的model</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#memorize()将state，action，reward和next_state储存到memory队列</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">memorize</span>(<span class="params">self, state, action, reward, next_state, done</span>):</span><br><span class="line">        self.memory.append((state, action, reward, next_state, done))</span><br><span class="line">    <span class="comment">#append()在deque双向队列memory右侧添加(state, action, reward, next_state, done)</span></span><br><span class="line">    <span class="comment">#memory定义在__init__简单的双端队列，具体顺序按如上排列</span></span><br><span class="line">    <span class="comment">#done对应是否结束</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">act</span>(<span class="params">self, state</span>):</span><br><span class="line">        <span class="keyword">if</span> np.random.rand() &lt;= self.epsilon:<span class="comment">#如果随机数小于探索率</span></span><br><span class="line">            <span class="comment">#np.random.rand()随机返回一个(默认)或一组服从[0,1)均匀分布的随机样本值。</span></span><br><span class="line">            <span class="keyword">return</span> random.randrange(self.action_size)<span class="comment">#action_size为2</span></span><br><span class="line">            <span class="comment">#random.randrange()从指定范围内随机选择的元素，或者数值范围随机输出，</span></span><br><span class="line">            <span class="comment">#返回 输出结果0或1</span></span><br><span class="line">        act_values = self.model.predict(state)<span class="comment">#训练后predict()模型根据当前状态预测回报</span></span><br><span class="line">        <span class="comment">#act_values就是reward</span></span><br><span class="line">        <span class="keyword">return</span> np.argmax(act_values[<span class="number">0</span>])  <span class="comment"># returns action</span></span><br><span class="line">        <span class="comment">#act_values[0]固定格式必须写0，输出类似[0.67，0.2]，代表01两个action的reward</span></span><br><span class="line">        <span class="comment">#argmax(fx)为fx取得最大值时对应的参数,此处为最大reward的action对应的参数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">replay</span>(<span class="params">self, batch_size</span>):<span class="comment">#reply用memory队列里的经验训练神经网络</span></span><br><span class="line">        minibatch = random.sample(self.memory, batch_size)</span><br><span class="line">        <span class="comment">#minibatch为memory中的抽样，随机抽样random.sample(取样来源memory,取样个数)</span></span><br><span class="line">        <span class="keyword">for</span> state, action, reward, next_state, done <span class="keyword">in</span> minibatch:</span><br><span class="line">            <span class="comment">#对mini_batch里的每一个从memory中抽样得到的元素来说</span></span><br><span class="line">            target = reward<span class="comment">#如果done为完成??? target就是最后一个，即所有的reward和</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> done:</span><br><span class="line">                target = (reward + self.gamma *</span><br><span class="line">                          np.amax(self.model.predict(next_state)[<span class="number">0</span>]))</span><br><span class="line">                <span class="comment">#Keras为我们处理了神经网络的所有任务，</span></span><br><span class="line">                <span class="comment">#我们只需要定义target，fit()就自动计算LOSS</span></span><br><span class="line">                <span class="comment">#TD算法中的target，gamma为折扣率(现实与未来)，</span></span><br><span class="line">                <span class="comment">#np.amax(predit(next_s))当前如果采取a后下一状态s对应的未来奖励Q，</span></span><br><span class="line">                <span class="comment">#比较计算不同a对应未来的Q最大值</span></span><br><span class="line">                <span class="comment">#具体讲就是我们先采取了行动a，然后得到了奖励r，并且到达了一个新的状态 next s</span></span><br><span class="line">                <span class="comment">#计算最大的目标值 np.amax()，</span></span><br><span class="line">                <span class="comment">#乘以一个折扣率 gamma，将未来的reward折算到当下，</span></span><br><span class="line">                <span class="comment">#target目标奖励值为reward加未来reward</span></span><br><span class="line">                <span class="comment">#循环直到done，把所有reward都加起来，也就是return</span></span><br><span class="line">             </span><br><span class="line">            target_f = self.model.predict(state)</span><br><span class="line">            <span class="comment">#target_f为当前state对应的预期reward Q(s,a)</span></span><br><span class="line">            target_f[<span class="number">0</span>][action] = target</span><br><span class="line">            <span class="comment">#啥意思？？？target和target_f有什么关系</span></span><br><span class="line">            self.model.fit(state, target_f, epochs=<span class="number">1</span>, verbose=<span class="number">0</span>)</span><br><span class="line">            <span class="comment">#向其提供信息为了使神经网络能够根据环境数据进行理解和预测</span></span><br><span class="line">            <span class="comment">#fit()成对将输入和输出给模型训练，可以根据输入预测输出</span></span><br><span class="line">            <span class="comment">#神经网络就可以从确定的state预测reward了</span></span><br><span class="line">            <span class="comment">#重复fit()，神奇的减少LOSS，提高分数</span></span><br><span class="line">            <span class="comment">#DQN最明显的特征是memorize and replay </span></span><br><span class="line">            <span class="comment">#用state和target_f训练神经网络</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">if</span> self.epsilon &gt; self.epsilon_min:<span class="comment">#如果探索率在正常范围内，就给他乘衰减，因此，随着</span></span><br><span class="line">            self.epsilon *= self.epsilon_decay</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">load</span>(<span class="params">self, name</span>):</span><br><span class="line">        self.model.load_weights(name)</span><br><span class="line">        <span class="comment">#用h5文件加载图层权重，调用keras</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">save</span>(<span class="params">self, name</span>):</span><br><span class="line">        self.model.save_weights(name)<span class="comment">#保存</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    env = gym.make(<span class="string">&#x27;CartPole-v1&#x27;</span>)<span class="comment">#加载CartPole游戏</span></span><br><span class="line">    state_size = env.observation_space.shape[<span class="number">0</span>]</span><br><span class="line">    action_size = env.action_space.n<span class="comment">#action_size为action_space的个数 2</span></span><br><span class="line">    <span class="comment">#此时env.action_space == Discrete(2)即离散(2)</span></span><br><span class="line">    <span class="comment">#env.action_space.n == 2  .n为action_space的个数</span></span><br><span class="line">    agent = DQNAgent(state_size, action_size)<span class="comment">#运行DQNAgent</span></span><br><span class="line">    <span class="comment"># agent.load(&quot;./save/cartpole-dqn.h5&quot;)</span></span><br><span class="line">    done = <span class="literal">False</span><span class="comment">#初始化done</span></span><br><span class="line">    batch_size = <span class="number">32</span><span class="comment">#设置mini_batch的大小</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> e <span class="keyword">in</span> <span class="built_in">range</span>(EPISODES):<span class="comment">#迭代游戏</span></span><br><span class="line">        state = env.reset()<span class="comment">#每次游戏初都重置state</span></span><br><span class="line">        state = np.reshape(state, [<span class="number">1</span>, state_size])</span><br><span class="line">        <span class="comment">#np.reshape()把单行的state数组重组为1行4列state_size的无数个数组</span></span><br><span class="line">        <span class="keyword">for</span> time <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">500</span>):<span class="comment">#time代表游戏的每一帧，小棍直立时间，等于分数</span></span><br><span class="line">            env.render()<span class="comment">#渲染图像，可视化展示环境</span></span><br><span class="line">            action = agent.act(state) <span class="comment">#由agent.act()决定动作是0或1</span></span><br><span class="line">            next_state, reward, done, _ = env.step(action) <span class="comment">#获取下一步的环境、得分、检测是否完成</span></span><br><span class="line">            <span class="comment">#env.step(action)，将选择的action输入给env，env 按照这个动作走一步使环境进入下一个状态，所以它的返回值有四个：observation：进入的新状态；reward：采取这个行动得到的奖励；done：当前游戏是否结束；info：其他一些信息，如性能表现，延迟等等，可用于调优</span></span><br><span class="line">            reward = reward <span class="keyword">if</span> <span class="keyword">not</span> done <span class="keyword">else</span> -<span class="number">10</span><span class="comment">#如果没掉reward=reward否则reward-10</span></span><br><span class="line">            next_state = np.reshape(next_state, [<span class="number">1</span>, state_size])<span class="comment">#刷新next_state</span></span><br><span class="line">            <span class="comment">#next_state独立刷新，state不再刷新，通过由next_state复制来推动</span></span><br><span class="line">            agent.memorize(state, action, reward, next_state, done)<span class="comment">#memory队列记录当前信息</span></span><br><span class="line">            state = next_state<span class="comment">#上面提到的赋值</span></span><br><span class="line">            <span class="keyword">if</span> done:<span class="comment">#游戏结束，则输出</span></span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;episode: &#123;&#125;/&#123;&#125;, score: &#123;&#125;, e: &#123;:.2&#125;&quot;</span></span><br><span class="line">                      .<span class="built_in">format</span>(e, EPISODES, time, agent.epsilon))</span><br><span class="line">                <span class="comment">#print(&quot;&#123;&#125;&quot;.format())格式化输出，用()代替&#123;&#125;</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(agent.memory) &gt; batch_size:</span><br><span class="line">                <span class="comment">#如果neemory队列里面内容变多，多于batch_size,才reply()，</span></span><br><span class="line">                <span class="comment">#因此修改batch后，batch改的越大，刚开始进行游戏速度极快，始终分数很低，因为没有训练，只是随机的玩。在一个提醒后，突然就变慢了，怀疑和勘探率，学习率有关，进入了训练。</span></span><br><span class="line">                agent.replay(batch_size)</span><br><span class="line">        <span class="comment"># if e % 10 == 0:</span></span><br><span class="line">        <span class="comment">#     agent.save(&quot;./save/cartpole-dqn.h5&quot;)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p> <a target="_blank" rel="noopener" href="https://www.cnblogs.com/wzdLY/p/9710478.html">激活函数sigmoid、tanh、relu、Swish</a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.cnblogs.com/GeekDanny/p/9655597.html">深度学习常见的优化方法(Optimizer)总结:Adam,SGD,Momentum,AdaGard等</a></p>
+<p><img src="https://keon.github.io/images/deep-q-learning/deep-q-learning.png" alt="deep-q-learning"></p>
+<p><strong>图</strong>TD中的LOSS</p>
+<h2 id="安装Gym后，一般的使用流程是："><a href="#安装Gym后，一般的使用流程是：" class="headerlink" title="安装Gym后，一般的使用流程是："></a>安装Gym后，一般的使用流程是：</h2><ol>
+<li><p>加载 gym 库：<code>import gym</code></p>
+</li>
+<li><p>进入指定的实验环境：<code>env = gym.make(&quot;Taxi-v2&quot;).env</code></p>
+</li>
+<li><p>渲染环境，即可视化看看环境的样子：<code>env.render()</code></p>
+</li>
+</ol>
+<h3 id="其中-env-是-gym-的核心接口，有几个常用的方法也是实验中通用的："><a href="#其中-env-是-gym-的核心接口，有几个常用的方法也是实验中通用的：" class="headerlink" title="其中 env 是 gym 的核心接口，有几个常用的方法也是实验中通用的："></a>其中 env 是 gym 的核心接口，有几个常用的方法也是实验中通用的：</h3><ol>
+<li><p><code>env.reset</code>， 重置环境，返回一个随机的初始状态。</p>
+</li>
+<li><p><code>env.step(action)</code>，将选择的action输入给env，env 按照这个动作走一步使环境进入下一个状态，所以它的返回值有四个：</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">next_state, reward, done, _ = env.step(action)</span><br></pre></td></tr></table></figure>
+
+<p>observation：进入的新状态</p>
+<p>reward：采取这个行动得到的奖励</p>
+<p>done：当前游戏是否结束</p>
+<p>info：其他一些信息，如性能表现，延迟等等，可用于调优</p>
+<ol start="3">
+<li><code>env.render</code>，这个前面说过可以可视化展示环境</li>
+</ol>
+<p><strong>注意到，在 state1-action-state2 这个过程中，action 是需要我们决定的，通常会通过 greedy search 和 q learning 等算法选择，而 state1，state2 就可以用 env 自动获取。</strong></p>
+<h2 id="gym模块中环境的常用函数"><a href="#gym模块中环境的常用函数" class="headerlink" title="gym模块中环境的常用函数"></a>gym模块中环境的常用函数</h2><h3 id="gym的初始化"><a href="#gym的初始化" class="headerlink" title="gym的初始化"></a>gym的初始化</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">env = gym.make(<span class="string">&#x27;CartPole-v0&#x27;</span>)   </span><br><span class="line"><span class="comment"># 定义使用gym库中的某一个环境，&#x27;CartPole-v0&#x27;可以改为其它环境</span></span><br><span class="line">env = env.unwrapped             </span><br><span class="line"><span class="comment"># 据说不做这个动作会有很多限制，unwrapped是打开限制的意思</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="gym的各个参数的获取"><a href="#gym的各个参数的获取" class="headerlink" title="gym的各个参数的获取"></a>gym的各个参数的获取</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">env.action_space   		</span><br><span class="line"><span class="comment"># 查看这个环境中可用的action有多少个，返回Discrete()格式 (离散)</span></span><br><span class="line">env.observation_space   </span><br><span class="line"><span class="comment"># 查看这个环境中observation的特征，返回Box()格式</span></span><br><span class="line">n_actions=env.action_space.n </span><br><span class="line"><span class="comment"># 查看这个环境中可用的action有多少个，返回int</span></span><br><span class="line">n_features=env.observation_space.shape[<span class="number">0</span>] </span><br><span class="line"><span class="comment"># 查看这个环境中observation的特征有多少个，返回int</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="刷新环境"><a href="#刷新环境" class="headerlink" title="刷新环境"></a>刷新环境</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">env.reset()</span><br><span class="line"><span class="comment"># 用于一个世代（done）后环境的重启，获取回合的第一个observation</span></span><br><span class="line">env.render()	</span><br><span class="line"><span class="comment"># 用于每一步后刷新环境状态,渲染环境，即可视化看看环境的样子</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="读取环境"><a href="#读取环境" class="headerlink" title="读取环境"></a>读取环境</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">observation_, reward, done, info = env.step(action)</span><br><span class="line"><span class="comment"># 获取下一步的环境因此之上写作next_state、得分、检测是否完成。</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>2020&#x2F;12&#x2F;28</p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="西走菜菜 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="西走菜菜 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>西走菜菜
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/" title="Deep Q-Learning with Keras and Gym">http://example.com/2022/03/21/Deep-Q-Learning-with-Keras-and-Gym/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/qq_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-qq"></i>
+            </span>
+
+            <span class="label">QQ</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/cloudmusic_channel.jpg">
+            <span class="icon">
+              <i class="fa fa-music"></i>
+            </span>
+
+            <span class="label">CloudMusic</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/03/21/Data-structure-API/" rel="prev" title="数据结构API">
+      <i class="fa fa-chevron-left"></i> 数据结构API
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/03/21/Difficulties-in-AIRL/" rel="next" title="AIRL中遇到的问题">
+      AIRL中遇到的问题 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DRL-%E4%BB%A3%E7%A0%81%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%A1%86%E6%9E%B6%EF%BC%8C%E4%BB%A5%E5%8F%8A%E7%8B%AC%E7%AB%8B%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.</span> <span class="nav-text">DRL 代码接口实现框架，以及独立实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E6%98%AF%E5%9B%A0%E4%B8%BA%E6%9C%89%E8%B6%A3"><span class="nav-number">1.1.</span> <span class="nav-text">研究是因为有趣</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.2.</span> <span class="nav-text">环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deep-Q-Learning"><span class="nav-number">1.3.</span> <span class="nav-text">Deep Q Learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Gym%E5%90%8E%EF%BC%8C%E4%B8%80%E8%88%AC%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B%E6%98%AF%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">安装Gym后，一般的使用流程是：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%B8%AD-env-%E6%98%AF-gym-%E7%9A%84%E6%A0%B8%E5%BF%83%E6%8E%A5%E5%8F%A3%EF%BC%8C%E6%9C%89%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95%E4%B9%9F%E6%98%AF%E5%AE%9E%E9%AA%8C%E4%B8%AD%E9%80%9A%E7%94%A8%E7%9A%84%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">其中 env 是 gym 的核心接口，有几个常用的方法也是实验中通用的：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gym%E6%A8%A1%E5%9D%97%E4%B8%AD%E7%8E%AF%E5%A2%83%E7%9A%84%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">gym模块中环境的常用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gym%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">3.1.</span> <span class="nav-text">gym的初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gym%E7%9A%84%E5%90%84%E4%B8%AA%E5%8F%82%E6%95%B0%E7%9A%84%E8%8E%B7%E5%8F%96"><span class="nav-number">3.2.</span> <span class="nav-text">gym的各个参数的获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B7%E6%96%B0%E7%8E%AF%E5%A2%83"><span class="nav-number">3.3.</span> <span class="nav-text">刷新环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E7%8E%AF%E5%A2%83"><span class="nav-number">3.4.</span> <span class="nav-text">读取环境</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="西走菜菜"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">西走菜菜</p>
+  <div class="site-description" itemprop="description">欢迎来找我随便聊点什么哦</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/34573805?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;34573805?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fa fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://neac2021.github.io/" title="https:&#x2F;&#x2F;neac2021.github.io" rel="noopener" target="_blank">NEAC2021</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">西走菜菜</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+-->
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.16/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'l7twJ9cKCWv63HlcJEN1ANB9-gzGzoHsz',
+      appKey     : 'tAcatwRNiPa0cNToShTbnvVF',
+      placeholder: "本站支持匿名评论和markdown语法，无需登录~o(〃'▽'〃)o   请尽量备注名昵让我回复你吧~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
