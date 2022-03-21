@@ -20,19 +20,32 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="有东西被加密了, 请输入密码查看.">
+  <meta name="description" content="前文已经讲述了markdown语法，快捷键，Typora的使用。但是本地图床仍有遗失风险和难以跨设备查看的不足，为了避免图片遗失，增强分享和多端查看的便利性，本文将进一步增强网络图床的配置，实现更进一步的自动化，只需要简单的拖拽或者复制粘贴，一切都很优雅。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2022/03/11/hello-world/index.html">
+<meta property="og:title" content="Typora+PicGo+GitHub搭建云端图床">
+<meta property="og:url" content="http://example.com/2022/03/21/Typora+PicGo+GitHub/index.html">
 <meta property="og:site_name" content="闲话茶楼">
-<meta property="og:description" content="有东西被加密了, 请输入密码查看.">
+<meta property="og:description" content="前文已经讲述了markdown语法，快捷键，Typora的使用。但是本地图床仍有遗失风险和难以跨设备查看的不足，为了避免图片遗失，增强分享和多端查看的便利性，本文将进一步增强网络图床的配置，实现更进一步的自动化，只需要简单的拖拽或者复制粘贴，一切都很优雅。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-11T01:29:01.632Z">
-<meta property="article:modified_time" content="2022-03-13T07:40:13.410Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211443301.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211448966.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211450893.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211451474.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211453732.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211509724.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211457134.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211459196.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211513795.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211520598.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211523976.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211525622.png">
+<meta property="article:published_time" content="2022-03-21T08:21:34.665Z">
+<meta property="article:modified_time" content="2022-03-21T07:33:35.956Z">
 <meta property="article:author" content="西走菜菜">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211443301.png">
 
-<link rel="canonical" href="http://example.com/2022/03/11/hello-world/">
+<link rel="canonical" href="http://example.com/2022/03/21/Typora+PicGo+GitHub/">
 
 
 <script id="page-configurations">
@@ -45,7 +58,7 @@
   };
 </script>
 
-  <title>Hello World | 闲话茶楼</title>
+  <title>Typora+PicGo+GitHub搭建云端图床 | 闲话茶楼</title>
   
 
 
@@ -160,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/11/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/Typora+PicGo+GitHub/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -173,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          Typora+PicGo+GitHub搭建云端图床
         </h1>
 
         <div class="post-meta">
@@ -182,23 +195,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-03-11 09:29:01" itemprop="dateCreated datePublished" datetime="2022-03-11T09:29:01+08:00">2022-03-11</time>
+              <time title="创建时间：2022-03-21 16:21:34 / 修改时间：15:33:35" itemprop="dateCreated datePublished" datetime="2022-03-21T16:21:34+08:00">2022-03-21</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-13 15:40:13" itemprop="dateModified" datetime="2022-03-13T15:40:13+08:00">2022-03-13</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">博客测试</span></a>
+                  <a href="/categories/Markdown-Blog/" itemprop="url" rel="index"><span itemprop="name">Markdown&Blog</span></a>
                 </span>
             </span>
 
@@ -211,8 +218,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2022/03/11/hello-world/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/11/hello-world/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/03/21/Typora+PicGo+GitHub/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/21/Typora+PicGo+GitHub/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -227,21 +234,68 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-surge">
-      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+        <p>前文已经讲述了markdown语法，快捷键，Typora的使用。但是本地图床仍有遗失风险和难以跨设备查看的不足，为了避免图片遗失，增强分享和多端查看的便利性，本文将进一步增强网络图床的配置，实现更进一步的自动化，只需要简单的拖拽或者复制粘贴，一切都很优雅。</p>
+<span id="more"></span>
+
+<h1 id="1-GitHub"><a href="#1-GitHub" class="headerlink" title="1.GitHub"></a>1.GitHub</h1><h2 id="1-1创建仓库"><a href="#1-1创建仓库" class="headerlink" title="1.1创建仓库"></a>1.1创建仓库</h2><p>首先选择一个仓库，什么都可以，我选择GitHub。</p>
+<p>注册GitHub，<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> 创建public仓库，New Repository</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211443301.png" alt="image-20220321144313086"></p>
+<p>起个名字，我写的是MarkdownPicture选择Public类型，使用“Add a README file”初始化仓库。注意仓库要是public的，不然上传的图片还是无法使用的。Create repository创建就好了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211448966.png" alt="image-20220321144803632"></p>
+<h2 id="1-2在GitHub生成一个token"><a href="#1-2在GitHub生成一个token" class="headerlink" title="1.2在GitHub生成一个token"></a>1.2在GitHub生成一个token</h2><p>点击Settings</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211450893.png" alt="image-20220321145015693"></p>
+<p>选择”developer settings”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211451474.png" alt="image-20220321145158246"></p>
+<p>选择“Personal access tokens ”-&gt;“generate new token”，</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211453732.png" alt="image-20220321145302542"></p>
+<p>验证密码，note自己备注一下，勾选repo完全控制，修改Expiration有效期为No expiration，滑到最下面，生成个人使用的token，复制此token，只出现一次，别丢了，用于后续图床配置。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211509724.png" alt="image-20220321150935103"></p>
+<h1 id="2-PicGo"><a href="#2-PicGo" class="headerlink" title="2.PicGo"></a>2.PicGo</h1><h2 id="2-1-下载部署"><a href="#2-1-下载部署" class="headerlink" title="2.1 下载部署"></a>2.1 下载部署</h2><p>点击<a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=aOcVNFeznBqnWXq4EhfQcVEk2587GzwKywb6U4bUSOTuCqKMIxizrg44UfJ-TJx3&wd=&eqid=b65f8679001141b0000000036238215f">图床管理工具:<em>picgo</em></a>官网下载</p>
+<p>我安装的是64位安装程序，either way is fine</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211457134.png" alt="image-20220321145705932"></p>
+<h2 id="2-2-配置picGo-gt-GitHub"><a href="#2-2-配置picGo-gt-GitHub" class="headerlink" title="2.2 配置picGo-&gt;GitHub"></a>2.2 配置picGo-&gt;GitHub</h2><p>在图床设置-&gt;GitHub图床</p>
+<ul>
+<li><p>仓库名的格式是<code>GitHub用户名\仓库名</code>，前面不用加什么http，后面也不用加.git。</p>
+</li>
+<li><p>分支名就用默认的主分支<code>master</code>。我喜欢用main都可以。</p>
+</li>
+<li><p>token上一步在github里生成的token，粘贴过来。</p>
+</li>
+<li><p>指定存储路径指的是在GitHub仓库里面的路径，我写了<code>img/</code>，所以我的仓库下面会生成一个img目录，所有图片都会上传到这个img目录下。指定存储路径不是必填项，可以不写。</p>
+</li>
+<li><p>设置自定义域名，记得用cdn加速，否则国内打开图片需要加载很长时间。</p>
+<p>格式<code>https://cdn.jsdelivr.net/gh/</code>GitHub用户名<code>/</code>仓库名。</p>
+</li>
+<li><p>设为默认图床。</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211459196.png" alt="image-20220321145957051"></p>
+<p>PicGo设置，打开更新，打开上传后自动复制URL，这是我们使用PicGo的原因。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211513795.png" alt="image-20220321151322675"></p>
+<p>Typora报错及推荐解决办法：</p>
+<ol>
+<li><p>时间戳命名打开，不然之后Typora日常使用中容易报错<code>&quot;success&quot;:false,&quot;message&quot;:&quot;upload error.</code></p>
+</li>
+<li><p>如果<code>Failed to fetch</code>，打开PicGo设置，点击设置Server选项，将端口改为36677端口，这是PicGo推荐的默认端口号，然后保存，成功。</p>
+</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211520598.png" alt="image-20220321152043494"></p>
+<h1 id="3-Typora-lt-gt-PicGo"><a href="#3-Typora-lt-gt-PicGo" class="headerlink" title="3.Typora&lt;-&gt;PicGo"></a>3.Typora&lt;-&gt;PicGo</h1><p>打开Typora，点击弹出框里下方的偏好设置，</p>
+<p>打开页面，左侧选择图象，图像里的设置按下设置：</p>
+<ul>
+<li>设置插入图片时为 上传图片</li>
+<li>勾选所有，当然你也可以按需</li>
+<li>在上传服务中选择PicGo(app)</li>
+<li>在路径中选择 你的PicGo安装目录PicGo.exe</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211523976.png" alt="image-20220321152330789"></p>
+<p>点击验证图片上传</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211525622.png" alt="image-20220321152513445"></p>
+<p>恭喜你配置成功，此时图已经被推到了GitHub仓库中，而且你粘贴的话，就是返回给你的URL。</p>
+<h2 id="4-日常使用"><a href="#4-日常使用" class="headerlink" title="4.日常使用"></a>4.日常使用</h2><p>直接拖拽或者复制粘贴图片到Typora即可，或者把没有上传的图片手动右键上传，PicGo在帮你上传图片的时候会自动打开或者需要你手动打开，在Typora目标位置会自动替换成目标图片URL，非常方便。</p>
+<hr>
+<p>2022&#x2F;3&#x2F;21</p>
+
     </div>
 
     
@@ -276,7 +330,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2022/03/11/hello-world/" title="Hello World">http://example.com/2022/03/11/hello-world/</a>
+    <a href="http://example.com/2022/03/21/Typora+PicGo+GitHub/" title="Typora+PicGo+GitHub搭建云端图床">http://example.com/2022/03/21/Typora+PicGo+GitHub/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -331,10 +385,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/03/21/Introduction%20of%20Cloud%20Computing/" rel="next" title="云计算通读">
-      云计算通读 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/03/21/Typora%20Setting/" rel="prev" title="Typora的设置">
+      <i class="fa fa-chevron-left"></i> Typora的设置
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/03/21/Win10%20shortcut%20key/" rel="next" title="win快捷键">
+      win快捷键 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -397,6 +454,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-GitHub"><span class="nav-number">1.</span> <span class="nav-text">1.GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">1.1.</span> <span class="nav-text">1.1创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2%E5%9C%A8GitHub%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AAtoken"><span class="nav-number">1.2.</span> <span class="nav-text">1.2在GitHub生成一个token</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-PicGo"><span class="nav-number">2.</span> <span class="nav-text">2.PicGo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E4%B8%8B%E8%BD%BD%E9%83%A8%E7%BD%B2"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 下载部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E9%85%8D%E7%BD%AEpicGo-gt-GitHub"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 配置picGo-&gt;GitHub</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Typora-lt-gt-PicGo"><span class="nav-number">3.</span> <span class="nav-text">3.Typora&lt;-&gt;PicGo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8"><span class="nav-number">3.1.</span> <span class="nav-text">4.日常使用</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
