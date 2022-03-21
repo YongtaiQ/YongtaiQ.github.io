@@ -361,7 +361,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：09:17:38" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
+              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：17:44:41" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -452,7 +452,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：16:01:20" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
+              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：17:42:31" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -492,38 +492,14 @@
           <p>Hadoop的重要特点是数据在数千节点上分区存储和计算，并行执行应用程序的计算。</p>
 <p>HDFS和其他分布式文件系统(PVFS、Lustre、GFS)一样，分开存储文件系统元信息(NameNode)和应用程序数据(DataNodes)，服务器之间通过基于TCP的协议通信。</p>
 <p>DataNodes没有和PVFS一样使用数据保护机制(如RAID)来使文件持久存放，而是像GFS一样在多个DataNode冗余存放文件内容来实现可靠性。保证持久存放的同时也可以加速传输数据。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211550034" alt="img"></p>
-<p>HDFS总体上采用了master&#x2F;slave架构，主要由以下几个组件构成：Client、NameNode、Secondary NameNode和DataNode。<br>NameNode管理文件系统的命名空间，维护文件系统树及整棵树内所有的文件和目录。这些信息以两个文件形式永久保存在本地磁盘上：命名空间镜像文件fsimage和编辑日志edits文件。NameNode也记录着每个文件中各个块所在的数据节点信息，但它并不永久保存块的位置信息，因为这些信息会在系统启动时由数据节点重建。<br>Secondary NameNode最重要的任务并不是为NameNode元数据进行热备份，而是定期合并fsimage和edits日志，并传输给NameNode。这里需要注意的是，为了减少NameNode的压力，NameNode并不会自己合并fsimage和edits，而是将文件存储到磁盘上，交由Secondary NameNode完成。<br>DataNode是文件系统的工作节点。它们根据需要存储并检索数据块(受客户端或NameNode调度)，并且定期向NameNode发送它们所存储的块的列表。<br>客户端(client)代表用户通过与NameNode和DataNode交互来访问整个文件系统。客户端提供一个类似于POSIX的文件系统接口，因此用户在编程时无需知道NameNode和DataNode也可以实现其功能。</p>
-<h3 id="NameNode"><a href="#NameNode" class="headerlink" title="NameNode"></a>NameNode</h3><p>HDFS命名空间是文件和目录的层级结构。文件和目录在NameNode上通过inodes表示，inodes记录了各种属性如：权限、修改和访问次数、命名空间、磁盘空间配额。</p>
-<h3 id="DataNodes"><a href="#DataNodes" class="headerlink" title="DataNodes"></a>DataNodes</h3><p>DataNode中的每个块副本通过两个原生文件来表示，一个包含数据本身，另一个是文件元数据(包括块数据校验和、块生成戳 generation stamp)。数据文件的大小等于实际块长度，不需要额外空间舍入到传统文件系统中的名义块大小，因此如果块是半满的，就在本地占一半的空间。</p>
-<h3 id="HDFS-Client"><a href="#HDFS-Client" class="headerlink" title="HDFS Client"></a>HDFS Client</h3><p>用户应用程序通过HDFS客户端访问文件系统，这是一个程序库，开放了HDFS文件系统接口。</p>
-<h3 id="Image-and-Journal"><a href="#Image-and-Journal" class="headerlink" title="Image and Journal"></a>Image and Journal</h3><p>命名空间的image就是文件系统的元数据，将应用数据以目录和文件的形式组织。一条被写入的image持久化记录叫做checkpoint。journal是提前写入的提交日志，是必须被持久化的文件系统修改情况。对于每个客户端启动的事务，所做的修改被记录在journal中，journal文件会在更改提交到HDFS客户端前刷新和同步。</p>
-<h3 id="CheckpointNode"><a href="#CheckpointNode" class="headerlink" title="CheckpointNode"></a>CheckpointNode</h3><p>HDFS的NameNode除了服务客户端之外，还可以扮演另外两个角色之一，即CheckpointNode或BackupNode，这在启动时指定。</p>
-<h3 id="BackupNode"><a href="#BackupNode" class="headerlink" title="BackupNode"></a>BackupNode</h3><p>和CHeckpointNode类似，BackupNode也有能力创建定期检查点，但除此之外还在内存中维护文件系统命名空间最新的image，这总是和NameNode的状态一起同步</p>
-<h3 id="Upgrades-File-System-Snapshots"><a href="#Upgrades-File-System-Snapshots" class="headerlink" title="Upgrades, File System Snapshots"></a>Upgrades, File System Snapshots</h3><p>在软件升级的时候，由于软件bug或人犯错导致系统崩溃的可能性会增加。在HDFS中创建快照的目的就是在升级期间，使对保存在系统中数据的潜在损伤最小化。</p>
-<h2 id="2-2-论文核心算法"><a href="#2-2-论文核心算法" class="headerlink" title="2.2 论文核心算法"></a>2.2 论文核心算法</h2><h4 id="The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎"><a href="#The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎" class="headerlink" title="The Hadoop Distributed File System (Yahoo!)笔记 - 知乎"></a><a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=zBpkij4sYNFP99V5k41zkLgAe9Wmz7B3pQWmKkRXXus2p_MxCO_UjL5iDo96zw_G&wd=&eqid=f23dd73f000b5b380000000360c7162a"><em>The</em> <em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em> (Yahoo!)笔记 - 知乎</a></h4><h4 id="HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…"><a href="#HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…" class="headerlink" title="HDFS(Hadoop Distributed File System)简介_Bob Liu的…_…"></a><a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=qdR7pYI7y85J3TqZwpB-UJFWfYABEGYypIuLmTtNmqsInxbtgnVKrQCfoUIHFDXKa3O0iKzkiOl7YNr37YeMaONRoCaRJXX5Ryz_MMH-P73&wd=&eqid=f23dd73f000b5b380000000360c7162a">HDFS(<em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em>)简介_Bob Liu的…_…</a></h4><p>这两个笔记我觉得写的挺好的，可以看看。</p>
-<p>当应用程序读一个文件：</p>
-<ol>
-<li>HDFS客户端要求NameNode提供托管文件块副本的DataNode列表，</li>
-<li>直接联系DataNode，并请求需要传送的块</li>
-</ol>
-<p>当客户端写文件：</p>
-<ol>
-<li>要求NameNode选择几个DataNode托管第一个文件块的副本</li>
-<li>客户端组织node-to-node流水线，并传送数据</li>
-<li>当第一个块填入后，客户端要求新的DataNodes来托管下一个块的副本</li>
-<li>组织新的流水线，传送数据，每次倾向选择不同的DataNodes</li>
-</ol>
-<p>客户端、NameNode、DataNodes的交互如下图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600459.jpeg" alt="img"></p>
-<p>客户端通过把路径传给NameNode来创建一个新文件，NameNode为文件的每个块返回DataNode列表来托管块的副本。客户端然后通过流水线把数据传给选定的DataNodes，这些DataNodes最终将创建块副本的确认信息告诉NameNode。</p>
-<p>一个HDFS文件是由块组成的。需要新块时，NameNode会分配一个具有unique block ID的块，并且决策出一个DataNodes列表来处理块副本。DataNodes组成一个管道，其顺序使客户端到最后一个DataNode的总网络距离最小。字节作为分组序列（sequence of packets）被推入流水线。应用程序在客户端写入第一个缓冲区，填充完一个缓冲区（通常64KB）后，数据被推送到流水线。在接收到先前数据包的确认信息之前，可以将下一个分组推送到流水线。未完成分组的数量受客户端未完成分组的窗口大小的限制。</p>
-<p>在数据被写入HDFS文件后，HDFS不保证数据对新reader可见，直到文件被关闭。如果用户应用需要这种可见性保证，可以显式调用 <em>hflush</em> 操作。这样当前的分组会立即推送到流水线，hflush操作会等待所有的DataNode确认已经成功传输了分组。所有之前写入的数据就会理所应当地对reader可见。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600752.jpeg" alt="img"></p>
-<p>如果没有错误发生，block construction会像上图一样发生。图2展示了一个有三个DataNodes的管道和5个分组的块。粗线表示数据分组，虚线表示确认信息，细线表示设置和关闭流水线的控制信息。垂直线表示客户端和三个DataNode的活动，时间从上到下依次进行。t0到t1是流水线设置阶段。t1到t2是数据流阶段，t1是首次传输分组的时间，t2是收到最后一个分组确认信息的时间。这里hflush操作将传输第二个分组。hflush指示数据分组传输不是一个分离的操作。t2到t3是流水线关闭阶段。</p>
-<hr>
-<p>2021&#x2F;7</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/21/The-Hadoop-Distributed-File-System/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1059,7 +1035,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：15:59:01" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
+              <time title="创建时间：2022-03-21 17:15:44 / 修改时间：17:42:24" itemprop="dateCreated datePublished" datetime="2022-03-21T17:15:44+08:00">2022-03-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1105,73 +1081,14 @@
 </ul>
 <p>对于实时的<strong>强交互性</strong>软件，有两种解决方法：</p>
 <p>就近部署云计算分支中心。改造软件以便能通过网页浏览器访问，用户只与本地的网页浏览器进行实时输入&#x2F;输出交互，而网页浏览器与“云”中软件进行批量输入&#x2F;输出传输</p>
-<h2 id="2-计算机由哪些软件和硬件组成？"><a href="#2-计算机由哪些软件和硬件组成？" class="headerlink" title="2.计算机由哪些软件和硬件组成？"></a>2.计算机由哪些软件和硬件组成？</h2><p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211556534.gif" alt="计算机系统逻辑层次结构"><br>图 1 计算机系统逻辑层次结构</p>
-<p>手段与目的分离是云计算的另一个<strong>特征</strong>，即云计算服务提供商拥有<strong>计算资源</strong>这个“手段”，而云计算用户拥有<strong>数据资料</strong>这个“目的”。</p>
-<h2 id="3-计算机网络（因特网）是什么？"><a href="#3-计算机网络（因特网）是什么？" class="headerlink" title="3.计算机网络（因特网）是什么？"></a>3.计算机网络（因特网）是什么？</h2><p>消息的打包和传递都是由计算机网络自动完成的，而且以电或光的速度传播，所以速度非常快。传递路径上<strong>转发机构（通常是路由器）的多少</strong>决定了一条消息到达对方计算机所消耗的时间（术语称<strong>延时</strong>），因此位于深圳的用户给美国的朋友发送消息有可能比给武汉的朋友发送消息还快。</p>
-<p>一个云计算中心的<strong>延时半径</strong>通常为 100 毫秒，即一个数据包从云中心出发，50 毫秒所能到达的范围（返回也要 50 毫秒），这个数字与地理位置没有直接关系，而与网络路径上的转发机构和数目有关。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211556125.jpeg" alt="延时半径100毫秒"><br>图 2 延时半径100毫秒</p>
-<h2 id="4-IT系统组成"><a href="#4-IT系统组成" class="headerlink" title="4.IT系统组成"></a>4.IT系统组成</h2><p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211556341.jpeg" alt="IT系统的逻辑层次结构"><br>图 1 IT系统的逻辑层次结构</p>
-<p><strong>IT</strong> 就是信息（Information）与技术（Technology），其中 I 是<strong>目的</strong>，T 是<strong>手段</strong>，T 是用来加工处理 I 的。T 广义上还包括企业中的计算机技术人员。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211556852.jpeg" alt="应用软件与平台软件的关系"><br>图 2 应用软件与平台软件的关系</p>
-<p>运行库有点像电工人员的<strong>工具袋</strong>，里面有螺丝刀、电笔、老虎钳、剥线钳等，应用软件在运行时需要使用各种小工具（术语叫系统库函数调用），操作系统提供了绝大多数常用的小工具，并分门别类地保存在硬盘的文件中。Windows 操作系统中以 .dll为扩展名的文件。</p>
-<h2 id="5-云计算是什么？它有哪些形式？"><a href="#5-云计算是什么？它有哪些形式？" class="headerlink" title="5.云计算是什么？它有哪些形式？"></a>5.云计算是什么？它有哪些形式？</h2><p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211556236.jpeg" alt="云计算的可视化模型"><br>图 1 云计算的可视化模型</p>
-<h2 id="6-IaaS、PaaS和SaaS：云计算的三种服务模式"><a href="#6-IaaS、PaaS和SaaS：云计算的三种服务模式" class="headerlink" title="6.IaaS、PaaS和SaaS：云计算的三种服务模式"></a>6.IaaS、PaaS和SaaS：云计算的三种服务模式</h2><p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211557224.jpeg" alt="云计算的3种服务模式"><br>图 1 云计算的 3 种服务模式</p>
-<h3 id="IaaS"><a href="#IaaS" class="headerlink" title="IaaS"></a>IaaS</h3><p>I<strong>aaS 是“Infrastructure as a Service”的首字母缩写，意思是基础设施即服务，即把 IT 系统的基础设施层作为服务出租出去</strong>。由云服务提供商把 IT 系统的基础设施建设好，并对计算设备进行池化，然后<strong>直接对外出租硬件服务器、虚拟主机、存储或网络设施（负载均衡器、防火墙、公网IP地址及诸如 DNS 等基础服务）</strong>等。</p>
-<p>云服务提供商负责管理机房基础设施、计算机网络、磁盘柜、服务器和虚拟机，租户自己安装和管理操作系统、数据库、中间件、应用软件和数据信息，</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211557078.jpeg" alt="Iaas云"><br>图 1 IaaS 云</p>
-<p>IaaS 云服务提供商<strong>计算租赁费用</strong>的因素包括 CPU、内存和存储的数量，一定时间内消耗的网络带宽，公网 IP 地址数量及一些其他需要的增值服务（如监控、自动伸缩等）等。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211557002.jpeg" alt="IaaS云端基本架构模型"><br>图 2 IaaS 云端基本架构模型</p>
-<p><strong>第一层云管理器</strong>是云端对外的总入口，在这里验证用户身份，管理用户权限，向合法用户发放票据（然后用户持此票据使用计算资源）、分配资源并管理用户租赁的资源。</p>
-<p><strong>第二层</strong>每一个集群负责管理本集群内部的高速互联在一起的计算机，一个集群内的计算机可能有成百上千台。</p>
-<p>集群管理器接受上层的资源查询请求，然后向下层的计算机管理器发送查询请求.</p>
-<p>另外，本层 PLS 中存储了本集群内的全<strong>部虚拟机镜像文件</strong>，这样一台虚拟机就能在集群内任意一台计算机上运行，并轻松实现虚拟机热迁移。</p>
-<p><strong>第三层</strong>每台计算机上都有一个计算机管理器，它一方面与上层的集群管理器打交道，另一方面与本机上的虚拟机软件打交道。</p>
-<p>一些搞研发的计算机技术人员倾向于<strong>租赁</strong> IaaS 主机。但是对于租户来说，IaaS 云主机除管理难度大外，还有一个明显的缺陷：计算资源浪费严重。因为操作系统、数据库和中间件本身要消耗大量的计算资源（CPU、内存和磁盘空间）。</p>
-<p>下面是一些 IaaS 云服务的实际应用。</p>
-<ol>
-<li>备份和恢复服务。</li>
-<li>计算服务：提供弹性资源。</li>
-<li><strong>内容分发网络（CDN）</strong>：把内容分发到靠近用户的地方，对于一些基于网页的应用系统，为了提高用户体验，往往在各个地方（人口稠密的地方）设立分支服务器，当用户浏览网页时，被重定向到本地 Web 服务器，所以数据必须实时分发并保持一致。</li>
-<li>服务管理：管理云端基础设施平台的各种服务。</li>
-<li>存储服务：提供用于备份、归档和文件存储的大规模可伸缩存储。</li>
-</ol>
-<h3 id="PaaS"><a href="#PaaS" class="headerlink" title="PaaS"></a>PaaS</h3><p>PaaS 是“Platform as a Service”的首字母缩写，意为平台即服务，即把 IT 系统的平台软件层作为服务出租出去，如图 1 所示。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211557360.jpeg" alt="PaaS云"><br>图 1 PaaS 云</p>
-<p>相比于 IaaS 云服务提供商，PaaS 云服务提供商要做的事情增加了，他们需要准备机房、布好网络、购买设备、安装操作系统、数据库和中间件，即把基础设施层和平台软件层都搭建好，然后在平台软件层上划分“小块”（习惯称之为<strong>容器</strong>）并对外出租。</p>
-<p>PaaS 云服务提供商也可以从其他 IaaS 云服务提供商那里租赁计算资源，然后自己部署平台软件层。另外，为了让消费者能直接在云端开发调试程序，PaaS 云服务提供商还得安装各种开发调试工具。相反，租户要做的事情相比 IaaS 要少很多，租户只要开发和调试软件或者安装、配置和使用应用软件即可。PaaS 云服务的<strong>消费者</strong>主要包括以下人员。程序开发人员，程序测试人员，软件部署人员，应用软件管理员，应用程序最终用户。</p>
-<p><strong>半平台 PaaS</strong>平台软件层中只安装了操作系统，其他的留给租户自己解决。<strong>全平台 PaaS</strong> 安装了应用软件依赖的全部平台软件（操作系统、数据库、中间件、运行库）。</p>
-<p>下面是一些 PaaS 云服务的实际应用。</p>
-<ol>
-<li>商业智能（BI）：用于创建仪表盘、报表系统、数据分析等应用程序的平台。</li>
-<li>数据库：提供关系型数据库或者非关系型数据库服务。</li>
-<li>开发和测试平台。</li>
-<li>软件集成平台。</li>
-<li>应用软件部署：提供应用软件部署的依赖环境。</li>
-</ol>
-<h3 id="SaaS"><a href="#SaaS" class="headerlink" title="SaaS"></a>SaaS</h3><p><strong>SaaS 是“Software as a Service”</strong>的首字母缩写，意为<strong>软件即服务</strong>。简言之，直接使用软件。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211557766.jpeg" alt="SaaS云"><br>图 1 SaaS 云</p>
-<p>SaaS 云服务提供商这时有 3 种选择：</p>
-<ol>
-<li>租用别人的 IaaS 云服务，自己再搭建和管理平台软件层和应用软件层。</li>
-<li>租用别人的 PaaS 云服务，自己再部署和管理应用软件层。</li>
-<li>自己搭建和管理基础设施层、平台软件层和应用软件层。</li>
-</ol>
-<p> 适合做 SaaS 的<strong>应用软件</strong>有的几个<strong>特点</strong>：<strong>1）复杂</strong> <strong>2）主要面向企业用户</strong> <strong>3）模块化结构</strong> <strong>4）多租户</strong> <strong>5）多币种、多语言、多时区支持</strong> <strong>6）非强交互性软件</strong></p>
-<p> <strong>适合</strong>云化并以 SaaS 模式交付给用户的<strong>软件</strong> <strong>1）企事业单位的业务处理类软件</strong> <strong>2）协同工作类软件</strong> <strong>3）办公类软件</strong> <strong>4）软件工具类</strong></p>
-<p> <strong>不适合</strong>作为公共 SaaS 云服务出租的软件 <strong>1）实时处理软件</strong> <strong>2）时时产生并处理大量消费者数据的软件</strong> <strong>3）关键软件</strong></p>
-<p><strong>与传统的软件运行模式相比，SaaS 模式具有的优点：</strong> <strong>1）云终端少量安装或不用安装软件</strong> <strong>2）有效使用软件许可证</strong> <strong>3）数据安全性得到提高</strong> <strong>4）有利于消费者摆脱 IT 运维的技术泥潭而专注于自己的核心业务</strong> <strong>5）消费者能节约大量前期投资</strong></p>
-<p> 服务的实际应用 1）电子邮件和在线办公软件 2）计费开票软件 3）客户关系管理系统（CRM） 4）协作工具 5）内容管理系统（CMS） 6）财务软件 7）人力资源管理系统 8）销售工具 9）社交网络：如微信、WhatsApp、LINE 等 10）企业资源计划（ERP）11）谷歌在线翻译。</p>
-<h3 id="私有云、社区云、公共云和混合云：云计算的4种部署模型"><a href="#私有云、社区云、公共云和混合云：云计算的4种部署模型" class="headerlink" title="私有云、社区云、公共云和混合云：云计算的4种部署模型"></a>私有云、社区云、公共云和混合云：云计算的4种部署模型</h3><p><a target="_blank" rel="noopener" href="http://c.biancheng.net/cloud_computing/">云计算</a>有 4 种部署模型，分别是私有云、社区云、公共云和混合云，这是根据云计算服务的消费者来源划分的，即：</p>
-<ul>
-<li>如果一个云端的所有消费者只来自一个特定的单位组织（如微算科技公司），那么就是私有云。</li>
-<li>如果一个云端的所有消费者来自两个或两个以上特定的单位组织，那么就是社区云。</li>
-<li>如果一个云端的所有消费者来自社会公众，那么就是公共云。</li>
-<li>如果一个云端的资源来自两个或两个以上的云，那么就是混合云。</li>
-</ul>
-<p>目前绝大多数混合云由企事业单位主导，以私有云为主体，并融合部分公共云资源，也就是说，混合云的消费者主要来自一个或几个特定的单位组织。</p>
-<hr>
-<p>2020&#x2F;12&#x2F;11</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/21/Introduction-of-Cloud-Computing/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
