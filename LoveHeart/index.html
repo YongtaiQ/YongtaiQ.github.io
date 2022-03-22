@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>love line with Rongrong</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<!-- BGM区域 
+<embed src="https://img-blog.nos-eastchina1.126.net/backimg/U%20are%20so%20beautiful.mp3" width="0" height="0" loop="-1" autostart="true"> </embed>
+-->
+
+<!-- 文字区域 -->
+<div id="mainDiv">
+<div id="content">
+      <div id="code"> <span class="comments">宝贝女儿：</span><br />
+    <span class="space"><span class="comments"></span></span><br />
+    <span class="space"><span class="comments">生日快乐哦~</span></span><br /><br />
+    <span class="space"/><span class="comments">恭喜我们从过去一年走到现在，成为彼此的私人定制，这是关系的阶段性胜利。
+真不容易啊~当时表白的那个晚上，没人会想到有这么困难。好在过去一年我都正面面对了，没像大多数时候一样逃避，莹莹也接受了我，真的是太好了。</span><br /><br />
+    <span class="space"/><span class="comments">还记得当时我们有多绝望吗？
+如今，我们变得不再动摇，对彼此信任又坚定；成长且独立，为着现实因素而焦虑，而不是别人的看法；我们磕磕绊绊探索出旁人或更早以前的我们难以理解的相处模式。
+一件一件的，回过头来似乎都是小事，但无论你我都发生了翻天覆地的变化，我们克服了很多确实存在过的困难。</span><br /><br />
+    <span class="space"/><span class="comments">面临就业，我们都因为异地而烦恼，异地不是彼此任何一个人有问题或者爱与不爱，异地就是异地，是一个客观存在的现实困难，无论放在过去还是未来，都不算最大的困难，解决它就足够了。
+解决异地问题，目前能抓得住的，先运营好自己，有了余额支撑的安全感，加上双向奔赴，就容易多了，其它就交给信任的对方和天意吧，善良的人总会得到回应的。
+</span><br /><br />
+    <span class="space"><span class="comments">我想为你撑起一个只属于咋俩，可以遮风挡雨的地方。</span></span><br /><br />
+    <span class="space"/><span class="comments">　　　　　　　　　　　　　　　　　　　　　　　　--春天的熊</span><br />
+    <span class="space"/><span class="comments">　　　　　　　　　　　　　　　　　　　　　　　　2022/3/26</span><br />
+  </div>
+      <div id="loveHeart">
+    <canvas id="garden"></canvas>
+    <div id="words">
+          <div id="messages"> 这是我们在一起的第
+        <div id="elapseClock"></div>
+      </div>
+          <div id="loveu"> 我属于你<br/>
+        <div class="signature"> </div>
+      </div>
+        </div>
+  </div>
+      <div class="bg1">
+
+    </div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+
+//起始时间 
+together.setFullYear(2021, 3, 19);//1.23；3.29 年月日
+together.setHours(12);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+<!-- 附加信息-->
+<div style="text-align:center;clear:both">
+<p>Made for 莹莹, made by <a href="https://github.com/YongtaiQ" target="_blank">西走菜菜<a /></p>
+<p>Copyright © 2021 - 2022 XIZOUCAICAI. All Rights Reserved. Designed by <a href="https://github.com/YongtaiQ" target="_blank">西走菜菜<a /> </p>
+</div>
+</body>
+</html>
