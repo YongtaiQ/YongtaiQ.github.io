@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://example.com/2022/03/26/first-person/</loc>
+    <loc>http://example.com/2022/03/21/Movie-recommendation/</loc>
     <lastmod>2022-03-26</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2022/03/23/suishouhua/</loc>
+    <loc>http://example.com/2022/03/23/Casual-painting/</loc>
+    <lastmod>2022-03-26</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2022/03/26/First-person/</loc>
     <lastmod>2022-03-26</lastmod>
   </url>
   <url>
@@ -46,10 +50,6 @@
   </url>
   <url>
     <loc>http://example.com/2021/03/18/Blind-Willow&Sleeping-Woman/</loc>
-    <lastmod>2022-03-26</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2022/03/21/shumaxiaowang/</loc>
     <lastmod>2022-03-26</lastmod>
   </url>
   <url>
