@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #0f134d;
+  background: #47ff39;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2374,8 +2374,13 @@ hr {
 .posts-expand .post-eof {
   display: none;
 }
-.posts-expand .post-block:not(:first-child) {
-  margin-top: 120px;
+.posts-expand .post-block {
+  background-color: rgba(255,255,255,0.6);
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 30px;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 .posts-expand .post-title,
 .posts-expand .post-meta {
@@ -2455,7 +2460,7 @@ hr {
   display: inline-block;
 }
 body {
-  background: url("https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203252203452.jpeg");
+  background: url("https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261152139.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
