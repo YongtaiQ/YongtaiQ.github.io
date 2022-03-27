@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://example.com/2022/03/21/Blog+Hexo/</loc>
+    <lastmod>2022-03-27</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2022/03/21/Java-LeetCode/</loc>
+    <lastmod>2022-03-27</lastmod>
+  </url>
+  <url>
     <loc>http://example.com/2022/03/21/Movie-recommendation/</loc>
     <lastmod>2022-03-26</lastmod>
   </url>
@@ -37,15 +45,7 @@
     <lastmod>2022-03-26</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2022/03/21/Java-LeetCode/</loc>
-    <lastmod>2022-03-26</lastmod>
-  </url>
-  <url>
     <loc>http://example.com/2020/12/28/Deep-Q-Learning-with-Keras-and-Gym/</loc>
-    <lastmod>2022-03-26</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2022/03/21/Blog+Hexo/</loc>
     <lastmod>2022-03-26</lastmod>
   </url>
   <url>
