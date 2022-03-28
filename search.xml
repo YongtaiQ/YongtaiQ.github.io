@@ -23,6 +23,167 @@
       </categories>
   </entry>
   <entry>
+    <title>Blog+Hexo搭建(五)</title>
+    <url>/2022/03/21/Blog+Hexo/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="78674cdf62a39c323fbf39caf876f29908cc66849118885479e2364de0ab4db8">2a1fcbdcb7eb03b565a95d6de79a00028a36b8b1c5aaa935fdbb222768ee810912a75264fb648254f98d454c9dbee5d103f21b68344745bd5b5eb9bc900e979a77808281265f4575bf2cd8b334310826c78faea443bd824c88fddefacfd28a63ea6282c67fe10688ed131badf349bfe109dcdf4a1b4a5e425d2bc035246554865e534c21fd5cc367f40f04cce627a5b904b2dbecc76fbdc5d5289ab384354ecfbfe16ac31cf123b8a98174a1c26689d1de5ad13b95008324e5857e134afa0f5924d148d3736120fb3bf86db8e48ec554fb61122e724183a08b11e1374fce56d723593c98aea997b9f02a20ab2a96df8861e0724f32b54c15eea9a40a1e02749fe45bc7fafffbd1119fe52c8bd9527dfe53e03c503fbaf538fb3a6facc3df0c60f681aecfc841d807051eab8ef6f23258f7da34775ddfffb98547baaa714cf1e638b1f9c52bcb8c8fec71eda6c365f82cc4408da9b64df58495a607530c6127043af278fe89a953b863f0469e84848e57a6347777b68f41085ed205aa9a690f097198a8c3612e6a628f292be8fd2c45537acf5951a0b43ca6be81d502d1acbfd3dbe9fdf06af0169f6700776357979a974d9bf35872a99397fc299a11182cb04b8e4cf80296fd4d0ac1c49e5202a01ba7cf7968e79158c0154b71d05f93413f9acb6acd5d52b65566fbfdff861c2da91b8d4eb63fa5a293a17fa5e99ac6edfd561fb07b0e603c2baa9c37fb075522e0de5c85317bc3e86628c41fd97d79d8f09bcb0d168eb2f4ca98db573f11ff94eb48cbd209eeeebc7778f9fd90607b000f616cc080b074501896aa4629685a50d7eefb1eaeca111f92ac1a5395f237fd1afda9a3465fa5a46be9484ee89e174585219c26801e1d609eb206025dc4089e18b78b7b2ef582c50cad334e75ae7d4cabf3163294406182be316e407fee7ea3976cf8c08ce662a1f6e9a44f43b6a82b009a5e9c2082fdae430a3d142acdfceef799bdddf3c3c2b5b4e971b840ec7aeb331406eb2f2d5a8bd0f78e7ee1273a743170b04669943b75f7c0350b51aa0d20badc62e6b0b489ce77818e9529988971b42cd0624e9e75f9aeac954f71e0f2fa68c4c925c7ba386bb3a76de65ea097b61067c4adde5d25c4b6e6403b03c14062be0eac228f8be1721d8cdfaa434297c58df7c0a934de2f5abf4ae4adb73ad6ef3dcc760755ffe1664fc6a756600cb3c896fdff61da4a76303141696c40456a7dda374a07fcd1adc431a6c1908a1404e8a354e23b5f931c05730dae09c8b12a73815d5cc63462d7dc9d96881ed25a607adfef01f8b291f06128ceace759cf82cf748e607cbef781f750a84e9f71f4a5c271e34df4398984402be3486f8d0cf3aca4d144f3425b0f8e7a933fc6a74570ee486974d6a880fc91ada49dd05df0d24be725a954179caade35fec0ced18ccf9677bdda12671fbc753eb759c8fc20220e6b60df652410e65d3002f9fb220b3caab842ae785571b73fe31673f58eef93dfb22d8f9ab6c57bd72b337c1b1b1315aa51ef45fabd2aacf1c39faa8ddb1eb96d4896ab8ea84ed6b91da9b273750ea5565e70173b420922368bdac3d1a0c3e34ded6bd6b85cfad84ef3621df9c9d9a9a49c6dda76a11b1c1aa9fd0f5a389b9d269e27a38bed4e472f280533a92fd26c8d2fd4c918b845a23bd65b5c5eee431eea4e051454dc073f083ac3637f8e2d9db012b26c30ba93576eede6495f35e779d946a45f979a50e0e8de112c493761738b52c293ee17c31cbdd34eccdff909ef9d750bee9c718c184233c55e143b802cb5a7d1d5d4265529102582492e6993eaf728d1458a0d850fe81d2f20b92ffec1c8f9502c359c68f90945934bb2d460f7050330a172a3c66b8e1e2f1323f7e42ba92e4c49525d09f207a7a9d4d24eb41ee9afbe6082abb00a32f39531c3b164dce75edd5b96b21d18fc35823a8a20b7832c101495fd8d6b2988f6ae85d4d2c04bdd338223d02760dd90d51d686058cc05c03bcc92836c19a4531fb1c3d4e0e0a376938cda489307091b173e99bdefa1573d1767a53072e5d84f43105c42494648f878944b3f08b68fec13aac282142a161eb0bbc22109b93f6d2a4d834cf34d3fbf1fbd411d183cdbb66727501afc1ae4ba2899d40c1ceace569fa6a688030d74eb9652c9fc06920ab747c62e02f2cc62fc08a796070bed75052d1ae2f6862845fd510e68d692d8ada9a4636a6b771e2c97d05a7510ab23ee4825f1e949981ddca7ae675e36252ada9dc1eb4ef066bbfe86f38d8a2f1c572a4123bb0b54a193506b54ac9257a1dbfcca73c6cabe551c229df2c1eb61cd3853928b4360efd5839ab9c0f4b7736782afb13389100cb36638824832f054c055bdef63ebb1f1e8004b42b6d557b63fd29b888681a75cc24cad34a9372d0abae716dd1759529e900988eec76c34672c36548bfd6ff5c85a90b6ad7bdd4b7b270243a0da40f88265a57ad69333b47034335879457080ac29e60fe0e0addd933952088a45fe2a5681a1d8c1a85ef6c73f3edc44fa36f7eeea4cad867c654a5cea011926966789adbdbbc226a0b4d6f95772902978b5e7d4748adcdc3f715e37cea2cf08de3569b2775662b763164695a5deb3587f16e83e7a27d2b20ff0e66602c0b734d45c6af48fa3ccce29e9c9684e11fcced7f9861beb26e0178c19fddbd905eaca28351aeb5513a3c3244f5a98600204bb504f42c86635269f016934eb5cd10812aad3580b8e87d87edf4f61bebf8e25abe5ebd6b60ba2bad90cad06bad2bda2c3c8fdc1e8496693bf2034509b9e0922b5b4ab030492b86da74d00b42c1f4aba71da1300c3d0dc17d554f3747005651c55bb7a8e3529bc9398357058059fb1f849f9e65c0ebf56b730a2a64149d3b5b16c98b231a47a7d889a305904493424cf95f1219d3e5750ca7a4c4df80058b5ef7858db1b925f79b8599c5d20429d71da22d4960eb4f56b0db2cd038d6edf9cbced566e69869fbefac976b10d8e394a1647096747e995c2ec313a23b88454112a72aea15fb1781dc861718f56baa81644862bf6a531db28a123de0ca82f9b755049b6ce72f5ec517daaa91be5c16cb9fc62a236fc737551c1de0071d835f4683568a288540e5e225e2c85d192b05d72af5c720d3cdb82b696ca5f98d69891a9bb281211f1f56f06bc70d0659677405537e1250d07bdf4c9419c323ad8d4b9400350d5f2ee26d7477d656b2dc227dbaa0536a293f764fb766ac6c9be85ba5e501a65e1820213015bee4c2aa82a966fae1f2a6bc0839e0efde92f89b25d232e9f1254b61de2226547caefcb86b863188624b656151f32e060d153250771cba1524693db03c69163a56e78de9dd1495cbc4def681e887ef8fbe576995d95c767309a9eb4bec89dd79edbe0aba2978d3da4414b1c574c70af27f24c611387a53aa371062802f3b5d835d6d506a4081b669d73ed987c51863ccd6903ac4e1770669118e46c3b8e97b74ed5f78c025c526e9ad11b9d4b0e4d6b87dc7b615dd6adf8aea4e9a3664578bcde695f5274f205c8cb41c64ff4b129e2fcfbc392f0757bed59d0023000bbf9c85ef0e95858e8e39ca296b99664942041bfb6d24b8f7a280f01546f8f4dc006909ab0344e75d01b5688ca2c339368a5edc4f8c73882fa8b2beb5a9dc6548f2283f37913abeaa3f822ed655b6043b1b50db522931f6fe09ee3938cf5ad4aaa49efe00851f6b09b9b78e6103136ece04f714bad5a14fe8eedabc571d8b7e82f5eda3a6232f62cbc8f212f8b02d32e3ce9b50a864f40bfe9d71d4fde7be7a73be556284f9c0d11a38a89b38bcae9f9b6f2fb521c34f569e0677773220baa8632cd99b17d3272900270f3e5e5022ba057d0ac0a58ca0da42d18fbb2a20c86adc60013924c4c5dcd06f293af090ee7eedc1a58e892e9efa060c1281ece17a08c51afbcbdb4625fcd72103d5289f2cb34b79b8834a856654b605133e358b061e5900b1957c1c164bd757f77023e8984aee4fb964b6f9952ef0c12768456dfa662f5f219a604653b4c3f060db3a0e7dad1121f19b5b181d3ecccd29b5e8fa52d79e066630e856658ae1c110f54fd485d62e7a60d60ce6f0a8edca414bb549bd7264ed06469004bb7f1c6eb36cd062f668d0eda214e5e0527ebc8674e12b0ddf2b58c318045b14c901f396fa190970f02532f22698ae97b687ef8f69319dd4a17413d04f6bbab6b00ba2aa64db9bd5079069928e23d95c0a7b785e5fd20dbbe7c3ba3b4f304d8e9574142f775bd78d5834ce77079fdbb147e6735e6d0ce4b642c86e8263ba4666430ef80f8fd97d36da1483909c92689cc665645ecf79cdb8b3eb664ce6c707722e983e2bdc6a13a60dbe8a7dcfe29e788f9bb6f8f2f45f12e0a31e1a4c6ee71ae8cb445f03db5778f7a43343c9c541b72ccac0a20587e1a7c9592e0ef67b92d3f10f4ba78488146109ce0a554a0d17998f5442a6a6636583ac420a7a855953ec4e3401ea9e31243948c72acdf6412a5a8abf24494019446211eb45c27ecc40e6c1605fb54fbec5f587a28aee26a4b22c8de665143c0cfb08651c7a4a574386e47c6e2b84819ec0869656619e172d6174aeec2861f844e7ea60a29618f1870336db56271860b6fea83384a530605262622326c81851b5457087b7884649a169182c984084682d8bc55bc62e05065442360f6ebd415c2f32b585d8b4d3061ca554d53418ee3cc3fb04f7eb8218e1d351c49319b3bf41643be1615d076294820b7eecfef1756e95f5f8908c557ac971f46df76ddae32ca40012e5173a0f02e266384f2ce72e6a1f5fb3bcf2ba4019687fca92a2b8cfdbae4a217ae73c313b1d27ea7ef27bb952e4c28309bce7fa005a8f1af491e0c081c611de7d5f0bc3ebbbe409de8b7809db6197ca59d6c0a1c482b3514d3b76607d982255173aff331b925b0b9bfde74c276f3c172d5e89a6a5887fd588999cc1a85c60bed88fa11646d5e866c07bb818207ad68406c1480a63c1f1d44e0d242ef20f80f0e46a1c5ccfd961dd00ef63f38fc0a706ac0772a2bbd30801fb6e7b00aa086cfc18f69207335ee63694476d598979a269abf47e60c9d7a9435f0dce9d6993035575cc263137044300093aacdf15ad6337e853308d034404afff962a491054db20c630134bc3438b15abc3ed519d68757a502acb7ce70703ab8b1fd924dfa14b8c17ef59777cc31759ae0db12c69761e17e7ca26cccba589de03ea0b7f4deed728bccee2e4879f8374aec5b7c003a811042382ec9c3357fdd220746a0ae5cc5bdf3b608417a3e8b1698c654788e70b2ef226c20527827590636f68936660ccbd0ddde8c8685761f5985eeb6d1a3cf197c0dfd24e91f462cca466fa8604fbbf1c14b0c76be20d8bef245819074b97d1b0115e7c33d060e7853892367e0ad389059033c44b1b8af41f121fc61cc765bf01a20daf837e96bff54ee0612495f0b6534df98ce0cbb5297dff764762ed10ffe0eb627fe65589f4f80c3a710c9272c05aa26847e7265d2127f1db9fcd5187087ce6fc60983e8bde4d2d0c1f2d6258fe8d56ffab3e7eacce95a4e56e0e1da198873653d9a5be5b4af1bbdc5ed8e54a5b8ab8c376b471cb07efb576062138fb418a9ab2526302cb6986e988c2e655d213de290b4b8a48d9e4df082b093b3ab3fae07c1fc8461b5d4fb166dce5cb9ff45a0e6f9daa77c7991020d5384beb885c7c7648887e15bf04f52cb885c60fd4559a5af03405a4220a4f2a597025ea38cd1dbd72aa87930cf70df0782932977f7c01f668475eb8b8e882f8c47d23f9388365045a8c0c5bae81417f73f18fdd7126ccdefc329a125201641812c51be122f1d1e5693e37d0db68797e38228b76050e25fc32d655a54b32e4399f2dbea1d0c5244a119d45cf03f12a9ce44b5e44a59c2d8bbad0d169aec8f404bb05bc087164166857e9e852712bb90b6b979ee4124c8bb3f143e7bb15fcaeeee348b7042b5619edb2adcafc61447d4979352559cca3282e34fbc9b046ef1721ec3d3156c306246b26d4fc9cf1fe8086ea9379dad7e714a1d0bfd2a1e7be87b461e75063fb7673f7f28b1e011abea978bb4bb2b1238a83ea19c154fdfb98c137e2ebaf90ec62401123aa33b49412692f8e6525f84dcdea3ba03ef71192ccc4a0270c907828fa84f6bf3da802b72557daaf53a0015c949f3d800304f2db0ef77e1a4916bcccffa423b82bce91262529d74c69c3a69a03cb56642f3b01cf616fd8b41ae18ca53bdb1212400fc3f985b79fa3573ce7b78a7a95d7d0844496d05267658435d37cc65546dce3f8982aca7ae3eaecfae1cd7c8dc6d13dd5856e91edb21f6899fe683a762bbcd8eaefd9632346b019af87ad40f9d403c53fb243e6cdd2c71ec0e9fcc80369b5b0ac450700782ba958877e7f69ee3db3c4aef0451b74aa49bae7a4a44ff98e20ab8c612047680b66ac8fb31a7958071c71dcb12fa5363d335608a13318d1e1e5d755f4c2c0392cbaf1ea1f69cfd6dc3e845f069d6d11596442caffb3d055d5dfe3a7a4ebae418ff2f078939e4659836acceac8082bc97b75d7e9f8d90934ac363cd3070e01cf817413a72939900e5fa66fb122bb5ae549e39be0784f449c3ac3899bbe7f6843ce4dc08fcf4e769328ecb72992ce826283ce872515e9c309efb9c70c4746462a0a51aab20789ad1279c7f2a5dc82e95c0b519e67fbd0470a35095fcf349bc9e0ea8ba5cf07d4cfb3dbbde97a4812d74beb9775fb9e0db3ef96d79f3727020dba33be60a6ffe1d6285a937e63d0833f241d3561cde0c878608faec31f09e71648bd53f5765df9cc320023cd128c7168f965eca543549b7294bd1da7b7c1611dde7937ba0ab0c0bbe7f8ad6d6c5823eec29d16e7289bc75e47cd3d1067d76e183d202f46619a191fd6f0770c34baecaf860002d8d074fc2ec9aee11210f358fa3a20e4484a389aba13695c7101f4bcbdffa68ea1d6410dc6cb8c6a9fa64f482c0f227415d54cca840eddca44c0e63a24711dc3e73e13caa5cf0801724b25e0f681d62ad1fa390fa749d2f9996f6c935454f0db8d1776961dad881c7f1346ea116f3cf859d5825c8e86e0675726e4da7436d9fcbd77181dedb576170066ab718c5e647ae6300f8915e7a709dc9ced2379e1b8dd69cc11226155c8907f4afbec31a44bfb4625e45074d3556cf560b2fdae1b7e67cdf8ffbda0e966eedac3b77e9184162499064b0c3cb8b2e4b227d952461cea0fda044d286087d1c80436283f861098fad5ace233e92cdb90684682f8192f65a1b66341b6e4053e9143cffae56ebb8d07f4a4febd5a98961f48c4a1a88d499e8012d693947465da52d6cdbbda587ef1435bd242dacae7f611f305bae786f000855564f737e0eb30ad64134c9f7353d44e0dcdfaef2a5b29884c4a0f54577675d78603aef5127fbc38bedd3e89ba371f1f01d68381c96c507cf431fc46e91e5f04dcd2a59dd305aade6944fbc20fadbebe89acae6e5d2f63e365ad4ab28d5410fe87054cfbb7fa220ddc37e651854d6f4291cbb0a8e55018d5bbbedb53790cba6721b17f537266527737095200f0573983c962c5167e496822b80ac1d0ce3e1e1a4af34212c5544188676bbe937367af14c6db2af9c3655fdfa64f73215ea2dc79ce6b1ff10b35697efc181a51ff24a57e835312cab9a8ad2241c5285a21e3654a3fe22762b67d31fb85103bf6759b881debfa73d14394dc25e2fd6dbc57e325cdfc2a0f6bb4229efef6c44fb65a472a884e3116697b14dcb375fc572dd28ecaa3df473b39819aef8db674210a683244e7c5b2277247e560fba7d927c133a54fbd9ae3683ca7aa18f8853dba72aabb0be7800b5a086d0ec8cc970c2409bbe844eb657be83280e69d2d0aadb3f1f1d1ce6ed312772bc972d986b8d314e0a1f3538469977ad76ca78351f0b9d2cb6c023f0f2b9cafca5ad5cdc810c6e9e25949b2c218698c6ba71e3d09d52bf8eb421a2bf45b41d532ebb43fdf53fa1e40b5d173d4dbc4731c27a2a039653e76a11c5f821c28fd65374d3f3b28b68e166afdc99608c1518724388744b2dbf43388450f3cc0b59835955b7b082bea2214087cb2bb3f1abfd7ffb2231ed7fb2adfe462cd4a1a4dec00b5ee40c4f94a76d1124ba6ce3977fbcc83e2898aa4c2c67d8724304d07472aef9e6ff52c3d32b181575783f390d4d32bc00f7f239b37cc644468cea059395867804f84d64ee6d14bdd30db66855e7612cbd9e4270329fbe68cacaea1c2c1ce539c37bd81ee8ab0fbc2ecbd3b692f2a44ec37a5519b798886a865a2f8232d66599c9f08e73e1ea40db11e8b51ff971d2b5b08ec4aa8345c5c7de83d0ce6521f09a6517ed935e4a05dcef248d2edd6fbd16bc2f2527fe7f82d12b6b9558a3e15eb82ac3783beaec95f2aefcc4c56a1f3971ea72d1a28ca1a4c42783a10bf06091423796a8e82a8c2907fec1262d3829b34c1f867bc7cda12badd37adb00a23e899a4d52a896fc3a0e4d4dcc13a7ef4dd0e848e10fab447358af9c314b9251d04fc359b70dd4d314ad5c95eec9047da6e2906035311c3fb6788917bdf79540ae9b948b7cf9d82e413e9c940cb460a65041e0baa336fe1da64ea00997bf986da009883b09a7eca4c41226ea8fd1fac0ded9abb2251bc1753e616eda640a7d74615bd3766cf98e2306548fb60b9198da54ae091d1965e61bef875bfe7446551004410b65526d3d2711b2eed1361f06b02e084bb5093884ee894d9359218a4f3ad864bc79487dd4d111bd7268a2ce90183bb10bd844660489e79c19daa2abbfc070532c20689da6244c265759216bae7ac500be114e981e9c68ecc22b9dcf8a1d28fd122bf2964cec172672c1778dd5973e27bd501d7977882889f1a4ea5c1db0846fa16a572213510a9ee8fefc51817146d86a11788779c48ab46b3de4dea480c09ad11bff5799e4c8dace6a9b2cfd3ff1d103d5bf3405cac0c758310c43f09ab3e6119c2e719f60d15218edca97ba65fe2a8e8615083081e1e3efe19447742af4dd4377245883cf28dbc5bb75d2ca223b9745d3868ec5bf189807da19c68855097f41cf3810830d922114f2f5c32a5afb5c8adf2b8186d03b2267a9469c348eadf856c926fb0bb9fe9445a6ebf3b12abf5dc4641470d8787011beee4ffb49f7b946c0f3b5b1248fca372c15dc1c47d4d762f21dcff79ffe3f41be397f453c8d0895963300215db42516881992db95f497331184f23a51b38281754ff751de7140d85bf2b6fe9c4afb2c50f719602b8e979bf4d48985eadfb839c9ab2ced237edbe0451538cdf8625b4118e3d4618b9adba1eda0434d5a6f4aa0e5a18416fef09ba10bd686f2fa2f9be722fc44adeb5a741280c842875ef4e6aca40817cf6b4e6c627ddbc37d4f085d55f32110781bc5c56c0165792726805b4b64a3e776f6691a4fb8ef33e39c5e2a871d4b7d75b1c61e2537a7227de32a2a5d5b9987ce983e923a2c18da96ea5d6dec2cc3de53f3a30770d59c49fa9dd9bf56c8de407bee7b9949dc7c7bc48e41aff4c8e7a00811dcb8ae79f5cf5338b25f271b87d2b1dfd03615d9b3970283aaa0493137a02a2bcd07bf2f25bf3686692c9d174f50e240548cd494db8c4e7881a106ba97a74892361e8550fb36a154651da516893b61b9d179d1690ec0c58d91581f96adf172efbab89a46c1097d0848c1df4b2f6f71561b7785fe9951190a4c15f7946af6ab3bb3f2dad24a708169b45cd01bc678d2f274d5567fc3296c242ffd9fd4202dcfdef2352c8f92b6ed4c3849d015af1e8bf23e0f2c4d140d965c470b3851f62bd97d21b2b580ba29d0a321c31160e75370db07548dd845b0b07ad445e3242dacb35fce049ebbaab449b1e1dec1b8b6822be3c796351049f3e8a48623fb4ad3c986b0cefab087bf0bc050167b8c603d865d47c1747843b35907fb1615487f55a252058312cb4d953df92e9515985a8d209ddf6867c14556d51b59299e74796d4298227703746f15396b7528f6cd7146c4460cf313ae52650e4687cc1d24d34da36f91dd9a34d3a54a75607119c91ae481cf608f295b89911318600766c6f4cdbca6a6c0f879701a4e75498acc93671f35dea42ba0c007764df657d13618c2011479553a22485fe3c3f4eeff23c0bc75a42cb8457f938e430896cc2159873dfb1e812fe87e2b14b33b9bb3dc44012ed077b9635eff0fdfcf0a54c2e634af27c211d43bfd131f80b01eaca6cd400ce91f1312178f73298b631824ec7501baac5c49b10250eb091f352b34a4f845ff77575f9a42e5afb4b9071f101f19cc72bb606c464aedb7a39cd386a3e9eea0232962f6ca6e920a4a3124718a03878de09ae951c7e77935961ce8d92038ee75cf12d272a88b0aa6030c666d88d1a51bfb8748d490d7484d2b04d407d55f6fd0615dacbbc17b9e6b8375c0f72c7fa818cf9fa4fe2563d0f58e5319cf9b5679d31cb33e0d638f7e4211625f5c4f46e8d48a8b728f4fa64cff551bc33b8e324fa77e16bb059355ab66840921f5cd1e3c3e2fe9a4315c02f670872836ed677352514198ec53b6ed94debdc492d911e52e0dc150464116751509da23a4cf16de2ee2a7003154069ea5b20c63051c2eda23812664465320dbdde13fa1663b5abb850f3020e597395d604afd7aab81d596584593346003ab83097fc4e66c4df3bd1aec92ea410e06890b0273629add64c30273bfc9695cd84ee5381938fe2897f2e4b58a8dd9659e81ce0374a4b061ddc26e3b947d404f7853019a1dede340b66ad42430ca708823c1a5a38702130f5062f2dd6eb57e7d2c2f6abb3ce552a604232ad31f5a3e447081011e9bfa6744bf7abc066b9deeea2d7c39dbddb6a2a543f087e100b8aae0f6870371a45521780debf9fe2c28fe52a20eab3c309bc1130e335a02c5919511813ece0dd7b8654dd53bfaeb65f573d35827b5868d40346477f7bbc7e940fa47d3fcc58b2841e0292899262437a32765e289ed0652be6aeb445c85b246501f2c4fa71b1fa51acf0c04d18230b06e096feb61af9776dd0b8b54bdf733e79085f45dfd4d9dda6d35717a960c4371381be087515fce087321fc9297ae19da6b7922ed68bc8bc400eac0e046fcaf94f6dcc7a0375bd8f189ca1bb9d4df5b29486d4b62758942c65581c695e068fd8690ee96e46b499db337b5a974376a7b1f42f6a51e9a033a3bb4a35fa0ad58794a241d7dbf9aea45bab3e1f7cb11a7f830e2e423846612ef20c07bfcbb7fe40a62ceb59002712977e745bb4de8a52c0f49c9bc04081de788c61733642febe3452cc4aef3d1b7c0ec979cd3df90247176be433bc42ee263df6ea8b4cabb0234b85dc24d24a4b1b826bf72ecf4377fe8d3cbb3dfc311b39f16422db2cfcab2c7d4f8d5df549202fd0204a9be5b96f0fb0691e0fade515ee1e6373a3feb39b70dbbea1980eff03b25a5010345a74cf9b94d25c097d8f6fe4eeaf425b8091b803cda55ebea1204267997c759c60b44ba9bb8bd4e3431445c6cad374795390d83e31e787c8c2efb6917db2c9cb4a4930ba1a116f24655b07b170e56c93b0823dc92c81b5790eac85cd4ff8f68bcee347c3aacca5b4e6fd542d0343c0c6ee2880e3071d48ed0e0aa03cc596ef0ed2066b95ff61c29364ed60048123daf3ef927593f658ee005248676a7acc3</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-surge">
+      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>如何优雅的编写Markdown(一)</title>
+    <url>/2020/12/03/Code-Markdown-gracefully/</url>
+    <content><![CDATA[<p><strong>答案是Typora PicGo GitHub Blog Hexo</strong></p>
+<p>经常向朋友推荐，或者被问到该怎么愉快的使用markdown，各位不妨将我的使用习惯做一个参考。</p>
+<p>这里即是导言也是本系列的目录，刚开始看的读者直接阅读，不点击跳转链接，不影响阅读。</p>
+<p>Markdown是一个支持很广的轻量化标记语言，通过本文<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一)</a>半小时就能学会，写笔记很方便；而且你不必是markdown专家，配合Typora只需要简单的拖拽和<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>就可以完成大部分操作，这里是<a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a>。有了这两个工具你就可以轻松在本地编写你的markdown啦！</p>
+<span id="more"></span>
+
+<p>因为是前端语法，除了markdown还支持html&#x2F;css&#x2F;Latex等等语法，<a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a>，可谓是下限极低上限极高。但是本人更倾向于截屏或者手写拍照插入，内容大于形式。</p>
+<p>如果想要分享给朋友会发现图片无法分享，这是因为图片保存在本地路径，<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，把图存在云端如Github；PicGo是一个方便的图床管理工具，配合Typora通过简单的拖拽图片，自动帮你完成复制-&gt;上传-&gt;拷贝URL-&gt;目标插入位置，现在你可以分享带有图片的markdown以及导出的各种格式啦！</p>
+<p>如果你像我一样，觉得每次分享pdf&#x2F;md&#x2F;图片，太麻烦，本文还将讲述如何通过<a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a>，优雅的分享Markdown，搭建过程，需要极大的耐心。</p>
+<h1 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h1><p>请先下载Typora，跟练一遍就足够啦</p>
+<h2 id="1-标题："><a href="#1-标题：" class="headerlink" title="1.标题："></a>1.标题：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2.字体"></a>2.字体</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 加粗</span></span><br><span class="line">**加粗**</span><br><span class="line"><span class="comment">// 高亮</span></span><br><span class="line">==高亮==</span><br><span class="line"><span class="comment">// 删除线</span></span><br><span class="line">~~删除~~</span><br><span class="line"><span class="comment">// 斜体</span></span><br><span class="line">*斜体*</span><br></pre></td></tr></table></figure>
+
+<p>&#x2F;&#x2F; 加粗<br><strong>加粗</strong><br>&#x2F;&#x2F; 高亮</p>
+<p>本站很遗憾不支持高亮效果，各位请自行尝试</p>
+<p>&#x2F;&#x2F; 删除线<br><del>删除</del><br>&#x2F;&#x2F; 斜体<br><em>斜体</em></p>
+<h2 id="3-引用"><a href="#3-引用" class="headerlink" title="3.引用"></a>3.引用</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//引用语法</span></span><br><span class="line">&gt;作者<span class="number">1</span></span><br><span class="line">&gt;&gt;作者<span class="number">2</span></span><br><span class="line">&gt;&gt;&gt;作者<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<p>&#x2F;&#x2F;引用语法</p>
+<blockquote>
+<p>作者1</p>
+<blockquote>
+<p>作者2</p>
+<blockquote>
+<p>作者3</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="4-分割线"><a href="#4-分割线" class="headerlink" title="4.分割线"></a>4.分割线</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//分割线</span></span><br><span class="line">---</span><br><span class="line"><span class="comment">//分割线</span></span><br><span class="line">****</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<hr>
+<h2 id="5-图片插入"><a href="#5-图片插入" class="headerlink" title="5.图片插入"></a>5.图片插入</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在线图片/本地图片</span></span><br><span class="line">![我的照片](/image/me.png) --路径</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/15563CS5-2.jpg" alt="15563CS5-2"></p>
+<h2 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6.超链接"></a>6.超链接</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//超链接语法</span></span><br><span class="line">[百度](https:<span class="comment">//www.baidu.com/)</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.baidu.com/">百度</a></p>
+<h2 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//无序列表</span></span><br><span class="line">- 目录<span class="number">1</span></span><br><span class="line">- 目录<span class="number">2</span></span><br><span class="line">- 目录<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>目录1</p>
+</li>
+<li><p>目录2</p>
+</li>
+<li><p>目录3</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//有序列表 </span></span><br></pre></td></tr></table></figure>
+
+<p><code>1</code>+<code>.</code> +<code> </code> +名称 </p>
+<ol>
+<li><p>首页</p>
+</li>
+<li><p>分类</p>
+</li>
+<li><p>标签</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//逐级</span></span><br><span class="line">- <span class="number">001</span>	</span><br><span class="line">  - <span class="number">002</span></span><br><span class="line">    - <span class="number">003</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>001    <ul>
+<li>002<ul>
+<li>003</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//可勾选</span></span><br><span class="line">- [ ] <span class="number">01</span></span><br><span class="line">- [ ] <span class="number">02</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><input disabled="" type="checkbox"> 01</li>
+<li><input disabled="" type="checkbox"> 02</li>
+</ul>
+<h2 id="8-代码块："><a href="#8-代码块：" class="headerlink" title="8.代码块："></a>8.代码块：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//代码块语法</span></span><br><span class="line"><span class="comment">//```java```   </span></span><br><span class="line"><span class="comment">//```shell```</span></span><br></pre></td></tr></table></figure>
+
+<p>  <strong>1.java代码里面内容不用管</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner; <span class="comment">//键盘扫描类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span>&#123;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">Scanner input=<span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);<span class="comment">//创建一个键盘扫描类对象</span></span><br><span class="line">System.out.print(<span class="string">&quot;请您输入内容:&quot;</span>);</span><br><span class="line"><span class="type">int</span> contents=input.nextInt(); <span class="comment">//输入整型</span></span><br><span class="line">String contents1=input.next(); <span class="comment">//输入字符串型</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>2.shell脚本</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Scanner input=new Scanner(System.in);//创建一个键盘扫描类对象</span><br><span class="line">System.out.print(&quot;请您输入内容:&quot;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-小小代码块"><a href="#3-小小代码块" class="headerlink" title="3.小小代码块"></a>3.小小代码块</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`printf`</span><br></pre></td></tr></table></figure>
+
+<p><code>printf</code></p>
+<h2 id="9-表格"><a href="#9-表格" class="headerlink" title="9.表格"></a>9.表格</h2><table>
+<thead>
+<tr>
+<th>成绩</th>
+<th>语文</th>
+<th>数学</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>78</td>
+<td>88</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>恭喜你到此你已经是个可以独立用markdown写笔记的专家啦！</strong></p>
+<p>接下来的技巧实用性不高，贴出来做一个参考。</p>
+<hr>
+<h2 id="10-脚注页内跳转和好用的html标签"><a href="#10-脚注页内跳转和好用的html标签" class="headerlink" title="10.脚注页内跳转和好用的html标签"></a>10.脚注页内跳转和好用的html标签</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//脚注</span></span><br><span class="line">阿这 [^a]</span><br><span class="line">[^a]: 我为什么不显示  <span class="comment">//这一行一般放到文章最后</span></span><br></pre></td></tr></table></figure>
+
+<p>阿这 <a href="%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%BE%E7%A4%BA">^a</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//页内跳转 把下面这段话复制到typora，记住一定要按住ctrl并点击才能实现效果</span><br><span class="line">[点我去标题1](# 标题1)</span><br><span class="line"># 标题1</span><br></pre></td></tr></table></figure>
+
+<p>页内跳转&#x2F;&#x2F;博客对这个语法的支持不好，读者请自行尝试<br>[点我去Typora+PicGo+GitHub+Blog+Hexo](# 答案是Typora+PicGo+GitHub+Blog+Hexo)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//漂亮的小代码块</span><br><span class="line">&lt;kbd&gt;ctrl&lt;/kbd&gt;+&lt;kbd&gt;alt&lt;/kbd&gt;+&lt;kbd&gt;del&lt;/kbd&gt;任务管理器</span><br></pre></td></tr></table></figure>
+
+<p><kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>del</kbd>任务管理器</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//定制字号</span><br><span class="line">&lt;font size=2.5&gt;定制字号&lt;/font&gt; </span><br></pre></td></tr></table></figure>
+
+<p><font size=2.5>定制字号</font> </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//下划线</span></span><br><span class="line">&lt;u&gt;sdf&lt;/u&gt;</span><br></pre></td></tr></table></figure>
+
+<p><u>sdf</u></p>
+<h2 id="11-Latex-amp-流程图-Markdown-amp-Blog笔记二"><a href="#11-Latex-amp-流程图-Markdown-amp-Blog笔记二" class="headerlink" title="11. Latex&amp;流程图(Markdown&amp;Blog笔记二) "></a>11. <a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></h2><h2 id="12-工欲善其事必先利其器，学习Typora的设置-Markdown-amp-Blog笔记三-吧"><a href="#12-工欲善其事必先利其器，学习Typora的设置-Markdown-amp-Blog笔记三-吧" class="headerlink" title="12. 工欲善其事必先利其器，学习Typora的设置(Markdown&amp;Blog笔记三) 吧~"></a>12. 工欲善其事必先利其器，学习<a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a>吧~</h2><hr>
+<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
+<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
+</ol>
+<hr>
+<p>2020&#x2F;12&#x2F;3</p>
+]]></content>
+      <categories>
+        <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
     <title>盲柳与睡女</title>
     <url>/2021/03/18/Blind-Willow&amp;Sleeping-Woman/</url>
     <content><![CDATA[<h3 id="盲柳与睡女——村上春树"><a href="#盲柳与睡女——村上春树" class="headerlink" title="盲柳与睡女——村上春树"></a><a href="https://www.baidu.com/link?url=vBU8qWh5VvyLh1o518XvN9s_og0ZHuBp8G5KxdB4S0Vdcjj0aNxGZA0rimbFtA-89x9OWloiM1kzf0SijF4NGa&wd=&eqid=c34874ee000a1ec1000000036052a85c"><em>盲柳与睡女</em>——<em>村上春树</em></a></h3><blockquote>
@@ -213,238 +374,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Blog+Hexo搭建(五)</title>
-    <url>/2022/03/21/Blog+Hexo/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="78674cdf62a39c323fbf39caf876f29908cc66849118885479e2364de0ab4db8">2a1fcbdcb7eb03b565a95d6de79a00028a36b8b1c5aaa935fdbb222768ee810912a75264fb648254f98d454c9dbee5d103f21b68344745bd5b5eb9bc900e979a77808281265f4575bf2cd8b334310826c78faea443bd824c88fddefacfd28a63ea6282c67fe10688ed131badf349bfe109dcdf4a1b4a5e425d2bc035246554865e534c21fd5cc367f40f04cce627a5b904b2dbecc76fbdc5d5289ab384354ecfbfe16ac31cf123b8a98174a1c26689d1de5ad13b95008324e5857e134afa0f5924d148d3736120fb3bf86db8e48ec554fb61122e724183a08b11e1374fce56d723593c98aea997b9f02a20ab2a96df8861e0724f32b54c15eea9a40a1e02749fe45bc7fafffbd1119fe52c8bd9527dfe53e03c503fbaf538fb3a6facc3df0c60f681aecfc841d807051eab8ef6f23258f7da34775ddfffb98547baaa714cf1e638b1f9c52bcb8c8fec71eda6c365f82cc4408da9b64df58495a607530c6127043af278fe89a953b863f0469e84848e57a6347777b68f41085ed205aa9a690f097198a8c3612e6a628f292be8fd2c45537acf5951a0b43ca6be81d502d1acbfd3dbe9fdf06af0169f6700776357979a974d9bf35872a99397fc299a11182cb04b8e4cf80296fd4d0ac1c49e5202a01ba7cf7968e79158c0154b71d05f93413f9acb6acd5d52b65566fbfdff861c2da91b8d4eb63fa5a293a17fa5e99ac6edfd561fb07b0e603c2baa9c37fb075522e0de5c85317bc3e86628c41fd97d79d8f09bcb0d168eb2f4ca98db573f11ff94eb48cbd209eeeebc7778f9fd90607b000f616cc080b074501896aa4629685a50d7eefb1eaeca111f92ac1a5395f237fd1afda9a3465fa5a46be9484ee89e174585219c26801e1d609eb206025dc4089e18b78b7b2ef582c50cad334e75ae7d4cabf3163294406182be316e407fee7ea3976cf8c08ce662a1f6e9a44f43b6a82b009a5e9c2082fdae430a3d142acdfceef799bdddf3c3c2b5b4e971b840ec7aeb331406eb2f2d5a8bd0f78e7ee1273a743170b04669943b75f7c0350b51aa0d20badc62e6b0b489ce77818e9529988971b42cd0624e9e75f9aeac954f71e0f2fa68c4c925c7ba386bb3a76de65ea097b61067c4adde5d25c4b6e6403b03c14062be0eac228f8be1721d8cdfaa434297c58df7c0a934de2f5abf4ae4adb73ad6ef3dcc760755ffe1664fc6a756600cb3c896fdff61da4a76303141696c40456a7dda374a07fcd1adc431a6c1908a1404e8a354e23b5f931c05730dae09c8b12a73815d5cc63462d7dc9d96881ed25a607adfef01f8b291f06128ceace759cf82cf748e607cbef781f750a84e9f71f4a5c271e34df4398984402be3486f8d0cf3aca4d144f3425b0f8e7a933fc6a74570ee486974d6a880fc91ada49dd05df0d24be725a954179caade35fec0ced18ccf9677bdda12671fbc753eb759c8fc20220e6b60df652410e65d3002f9fb220b3caab842ae785571b73fe31673f58eef93dfb22d8f9ab6c57bd72b337c1b1b1315aa51ef45fabd2aacf1c39faa8ddb1eb96d4896ab8ea84ed6b91da9b273750ea5565e70173b420922368bdac3d1a0c3e34ded6bd6b85cfad84ef3621df9c9d9a9a49c6dda76a11b1c1aa9fd0f5a389b9d269e27a38bed4e472f280533a92fd26c8d2fd4c918b845a23bd65b5c5eee431eea4e051454dc073f083ac3637f8e2d9db012b26c30ba93576eede6495f35e779d946a45f979a50e0e8de112c493761738b52c293ee17c31cbdd34eccdff909ef9d750bee9c718c184233c55e143b802cb5a7d1d5d4265529102582492e6993eaf728d1458a0d850fe81d2f20b92ffec1c8f9502c359c68f90945934bb2d460f7050330a172a3c66b8e1e2f1323f7e42ba92e4c49525d09f207a7a9d4d24eb41ee9afbe6082abb00a32f39531c3b164dce75edd5b96b21d18fc35823a8a20b7832c101495fd8d6b2988f6ae85d4d2c04bdd338223d02760dd90d51d686058cc05c03bcc92836c19a4531fb1c3d4e0e0a376938cda489307091b173e99bdefa1573d1767a53072e5d84f43105c42494648f878944b3f08b68fec13aac282142a161eb0bbc22109b93f6d2a4d834cf34d3fbf1fbd411d183cdbb66727501afc1ae4ba2899d40c1ceace569fa6a688030d74eb9652c9fc06920ab747c62e02f2cc62fc08a796070bed75052d1ae2f6862845fd510e68d692d8ada9a4636a6b771e2c97d05a7510ab23ee4825f1e949981ddca7ae675e36252ada9dc1eb4ef066bbfe86f38d8a2f1c572a4123bb0b54a193506b54ac9257a1dbfcca73c6cabe551c229df2c1eb61cd3853928b4360efd5839ab9c0f4b7736782afb13389100cb36638824832f054c055bdef63ebb1f1e8004b42b6d557b63fd29b888681a75cc24cad34a9372d0abae716dd1759529e900988eec76c34672c36548bfd6ff5c85a90b6ad7bdd4b7b270243a0da40f88265a57ad69333b47034335879457080ac29e60fe0e0addd933952088a45fe2a5681a1d8c1a85ef6c73f3edc44fa36f7eeea4cad867c654a5cea011926966789adbdbbc226a0b4d6f95772902978b5e7d4748adcdc3f715e37cea2cf08de3569b2775662b763164695a5deb3587f16e83e7a27d2b20ff0e66602c0b734d45c6af48fa3ccce29e9c9684e11fcced7f9861beb26e0178c19fddbd905eaca28351aeb5513a3c3244f5a98600204bb504f42c86635269f016934eb5cd10812aad3580b8e87d87edf4f61bebf8e25abe5ebd6b60ba2bad90cad06bad2bda2c3c8fdc1e8496693bf2034509b9e0922b5b4ab030492b86da74d00b42c1f4aba71da1300c3d0dc17d554f3747005651c55bb7a8e3529bc9398357058059fb1f849f9e65c0ebf56b730a2a64149d3b5b16c98b231a47a7d889a305904493424cf95f1219d3e5750ca7a4c4df80058b5ef7858db1b925f79b8599c5d20429d71da22d4960eb4f56b0db2cd038d6edf9cbced566e69869fbefac976b10d8e394a1647096747e995c2ec313a23b88454112a72aea15fb1781dc861718f56baa81644862bf6a531db28a123de0ca82f9b755049b6ce72f5ec517daaa91be5c16cb9fc62a236fc737551c1de0071d835f4683568a288540e5e225e2c85d192b05d72af5c720d3cdb82b696ca5f98d69891a9bb281211f1f56f06bc70d0659677405537e1250d07bdf4c9419c323ad8d4b9400350d5f2ee26d7477d656b2dc227dbaa0536a293f764fb766ac6c9be85ba5e501a65e1820213015bee4c2aa82a966fae1f2a6bc0839e0efde92f89b25d232e9f1254b61de2226547caefcb86b863188624b656151f32e060d153250771cba1524693db03c69163a56e78de9dd1495cbc4def681e887ef8fbe576995d95c767309a9eb4bec89dd79edbe0aba2978d3da4414b1c574c70af27f24c611387a53aa371062802f3b5d835d6d506a4081b669d73ed987c51863ccd6903ac4e1770669118e46c3b8e97b74ed5f78c025c526e9ad11b9d4b0e4d6b87dc7b615dd6adf8aea4e9a3664578bcde695f5274f205c8cb41c64ff4b129e2fcfbc392f0757bed59d0023000bbf9c85ef0e95858e8e39ca296b99664942041bfb6d24b8f7a280f01546f8f4dc006909ab0344e75d01b5688ca2c339368a5edc4f8c73882fa8b2beb5a9dc6548f2283f37913abeaa3f822ed655b6043b1b50db522931f6fe09ee3938cf5ad4aaa49efe00851f6b09b9b78e6103136ece04f714bad5a14fe8eedabc571d8b7e82f5eda3a6232f62cbc8f212f8b02d32e3ce9b50a864f40bfe9d71d4fde7be7a73be556284f9c0d11a38a89b38bcae9f9b6f2fb521c34f569e0677773220baa8632cd99b17d3272900270f3e5e5022ba057d0ac0a58ca0da42d18fbb2a20c86adc60013924c4c5dcd06f293af090ee7eedc1a58e892e9efa060c1281ece17a08c51afbcbdb4625fcd72103d5289f2cb34b79b8834a856654b605133e358b061e5900b1957c1c164bd757f77023e8984aee4fb964b6f9952ef0c12768456dfa662f5f219a604653b4c3f060db3a0e7dad1121f19b5b181d3ecccd29b5e8fa52d79e066630e856658ae1c110f54fd485d62e7a60d60ce6f0a8edca414bb549bd7264ed06469004bb7f1c6eb36cd062f668d0eda214e5e0527ebc8674e12b0ddf2b58c318045b14c901f396fa190970f02532f22698ae97b687ef8f69319dd4a17413d04f6bbab6b00ba2aa64db9bd5079069928e23d95c0a7b785e5fd20dbbe7c3ba3b4f304d8e9574142f775bd78d5834ce77079fdbb147e6735e6d0ce4b642c86e8263ba4666430ef80f8fd97d36da1483909c92689cc665645ecf79cdb8b3eb664ce6c707722e983e2bdc6a13a60dbe8a7dcfe29e788f9bb6f8f2f45f12e0a31e1a4c6ee71ae8cb445f03db5778f7a43343c9c541b72ccac0a20587e1a7c9592e0ef67b92d3f10f4ba78488146109ce0a554a0d17998f5442a6a6636583ac420a7a855953ec4e3401ea9e31243948c72acdf6412a5a8abf24494019446211eb45c27ecc40e6c1605fb54fbec5f587a28aee26a4b22c8de665143c0cfb08651c7a4a574386e47c6e2b84819ec0869656619e172d6174aeec2861f844e7ea60a29618f1870336db56271860b6fea83384a530605262622326c81851b5457087b7884649a169182c984084682d8bc55bc62e05065442360f6ebd415c2f32b585d8b4d3061ca554d53418ee3cc3fb04f7eb8218e1d351c49319b3bf41643be1615d076294820b7eecfef1756e95f5f8908c557ac971f46df76ddae32ca40012e5173a0f02e266384f2ce72e6a1f5fb3bcf2ba4019687fca92a2b8cfdbae4a217ae73c313b1d27ea7ef27bb952e4c28309bce7fa005a8f1af491e0c081c611de7d5f0bc3ebbbe409de8b7809db6197ca59d6c0a1c482b3514d3b76607d982255173aff331b925b0b9bfde74c276f3c172d5e89a6a5887fd588999cc1a85c60bed88fa11646d5e866c07bb818207ad68406c1480a63c1f1d44e0d242ef20f80f0e46a1c5ccfd961dd00ef63f38fc0a706ac0772a2bbd30801fb6e7b00aa086cfc18f69207335ee63694476d598979a269abf47e60c9d7a9435f0dce9d6993035575cc263137044300093aacdf15ad6337e853308d034404afff962a491054db20c630134bc3438b15abc3ed519d68757a502acb7ce70703ab8b1fd924dfa14b8c17ef59777cc31759ae0db12c69761e17e7ca26cccba589de03ea0b7f4deed728bccee2e4879f8374aec5b7c003a811042382ec9c3357fdd220746a0ae5cc5bdf3b608417a3e8b1698c654788e70b2ef226c20527827590636f68936660ccbd0ddde8c8685761f5985eeb6d1a3cf197c0dfd24e91f462cca466fa8604fbbf1c14b0c76be20d8bef245819074b97d1b0115e7c33d060e7853892367e0ad389059033c44b1b8af41f121fc61cc765bf01a20daf837e96bff54ee0612495f0b6534df98ce0cbb5297dff764762ed10ffe0eb627fe65589f4f80c3a710c9272c05aa26847e7265d2127f1db9fcd5187087ce6fc60983e8bde4d2d0c1f2d6258fe8d56ffab3e7eacce95a4e56e0e1da198873653d9a5be5b4af1bbdc5ed8e54a5b8ab8c376b471cb07efb576062138fb418a9ab2526302cb6986e988c2e655d213de290b4b8a48d9e4df082b093b3ab3fae07c1fc8461b5d4fb166dce5cb9ff45a0e6f9daa77c7991020d5384beb885c7c7648887e15bf04f52cb885c60fd4559a5af03405a4220a4f2a597025ea38cd1dbd72aa87930cf70df0782932977f7c01f668475eb8b8e882f8c47d23f9388365045a8c0c5bae81417f73f18fdd7126ccdefc329a125201641812c51be122f1d1e5693e37d0db68797e38228b76050e25fc32d655a54b32e4399f2dbea1d0c5244a119d45cf03f12a9ce44b5e44a59c2d8bbad0d169aec8f404bb05bc087164166857e9e852712bb90b6b979ee4124c8bb3f143e7bb15fcaeeee348b7042b5619edb2adcafc61447d4979352559cca3282e34fbc9b046ef1721ec3d3156c306246b26d4fc9cf1fe8086ea9379dad7e714a1d0bfd2a1e7be87b461e75063fb7673f7f28b1e011abea978bb4bb2b1238a83ea19c154fdfb98c137e2ebaf90ec62401123aa33b49412692f8e6525f84dcdea3ba03ef71192ccc4a0270c907828fa84f6bf3da802b72557daaf53a0015c949f3d800304f2db0ef77e1a4916bcccffa423b82bce91262529d74c69c3a69a03cb56642f3b01cf616fd8b41ae18ca53bdb1212400fc3f985b79fa3573ce7b78a7a95d7d0844496d05267658435d37cc65546dce3f8982aca7ae3eaecfae1cd7c8dc6d13dd5856e91edb21f6899fe683a762bbcd8eaefd9632346b019af87ad40f9d403c53fb243e6cdd2c71ec0e9fcc80369b5b0ac450700782ba958877e7f69ee3db3c4aef0451b74aa49bae7a4a44ff98e20ab8c612047680b66ac8fb31a7958071c71dcb12fa5363d335608a13318d1e1e5d755f4c2c0392cbaf1ea1f69cfd6dc3e845f069d6d11596442caffb3d055d5dfe3a7a4ebae418ff2f078939e4659836acceac8082bc97b75d7e9f8d90934ac363cd3070e01cf817413a72939900e5fa66fb122bb5ae549e39be0784f449c3ac3899bbe7f6843ce4dc08fcf4e769328ecb72992ce826283ce872515e9c309efb9c70c4746462a0a51aab20789ad1279c7f2a5dc82e95c0b519e67fbd0470a35095fcf349bc9e0ea8ba5cf07d4cfb3dbbde97a4812d74beb9775fb9e0db3ef96d79f3727020dba33be60a6ffe1d6285a937e63d0833f241d3561cde0c878608faec31f09e71648bd53f5765df9cc320023cd128c7168f965eca543549b7294bd1da7b7c1611dde7937ba0ab0c0bbe7f8ad6d6c5823eec29d16e7289bc75e47cd3d1067d76e183d202f46619a191fd6f0770c34baecaf860002d8d074fc2ec9aee11210f358fa3a20e4484a389aba13695c7101f4bcbdffa68ea1d6410dc6cb8c6a9fa64f482c0f227415d54cca840eddca44c0e63a24711dc3e73e13caa5cf0801724b25e0f681d62ad1fa390fa749d2f9996f6c935454f0db8d1776961dad881c7f1346ea116f3cf859d5825c8e86e0675726e4da7436d9fcbd77181dedb576170066ab718c5e647ae6300f8915e7a709dc9ced2379e1b8dd69cc11226155c8907f4afbec31a44bfb4625e45074d3556cf560b2fdae1b7e67cdf8ffbda0e966eedac3b77e9184162499064b0c3cb8b2e4b227d952461cea0fda044d286087d1c80436283f861098fad5ace233e92cdb90684682f8192f65a1b66341b6e4053e9143cffae56ebb8d07f4a4febd5a98961f48c4a1a88d499e8012d693947465da52d6cdbbda587ef1435bd242dacae7f611f305bae786f000855564f737e0eb30ad64134c9f7353d44e0dcdfaef2a5b29884c4a0f54577675d78603aef5127fbc38bedd3e89ba371f1f01d68381c96c507cf431fc46e91e5f04dcd2a59dd305aade6944fbc20fadbebe89acae6e5d2f63e365ad4ab28d5410fe87054cfbb7fa220ddc37e651854d6f4291cbb0a8e55018d5bbbedb53790cba6721b17f537266527737095200f0573983c962c5167e496822b80ac1d0ce3e1e1a4af34212c5544188676bbe937367af14c6db2af9c3655fdfa64f73215ea2dc79ce6b1ff10b35697efc181a51ff24a57e835312cab9a8ad2241c5285a21e3654a3fe22762b67d31fb85103bf6759b881debfa73d14394dc25e2fd6dbc57e325cdfc2a0f6bb4229efef6c44fb65a472a884e3116697b14dcb375fc572dd28ecaa3df473b39819aef8db674210a683244e7c5b2277247e560fba7d927c133a54fbd9ae3683ca7aa18f8853dba72aabb0be7800b5a086d0ec8cc970c2409bbe844eb657be83280e69d2d0aadb3f1f1d1ce6ed312772bc972d986b8d314e0a1f3538469977ad76ca78351f0b9d2cb6c023f0f2b9cafca5ad5cdc810c6e9e25949b2c218698c6ba71e3d09d52bf8eb421a2bf45b41d532ebb43fdf53fa1e40b5d173d4dbc4731c27a2a039653e76a11c5f821c28fd65374d3f3b28b68e166afdc99608c1518724388744b2dbf43388450f3cc0b59835955b7b082bea2214087cb2bb3f1abfd7ffb2231ed7fb2adfe462cd4a1a4dec00b5ee40c4f94a76d1124ba6ce3977fbcc83e2898aa4c2c67d8724304d07472aef9e6ff52c3d32b181575783f390d4d32bc00f7f239b37cc644468cea059395867804f84d64ee6d14bdd30db66855e7612cbd9e4270329fbe68cacaea1c2c1ce539c37bd81ee8ab0fbc2ecbd3b692f2a44ec37a5519b798886a865a2f8232d66599c9f08e73e1ea40db11e8b51ff971d2b5b08ec4aa8345c5c7de83d0ce6521f09a6517ed935e4a05dcef248d2edd6fbd16bc2f2527fe7f82d12b6b9558a3e15eb82ac3783beaec95f2aefcc4c56a1f3971ea72d1a28ca1a4c42783a10bf06091423796a8e82a8c2907fec1262d3829b34c1f867bc7cda12badd37adb00a23e899a4d52a896fc3a0e4d4dcc13a7ef4dd0e848e10fab447358af9c314b9251d04fc359b70dd4d314ad5c95eec9047da6e2906035311c3fb6788917bdf79540ae9b948b7cf9d82e413e9c940cb460a65041e0baa336fe1da64ea00997bf986da009883b09a7eca4c41226ea8fd1fac0ded9abb2251bc1753e616eda640a7d74615bd3766cf98e2306548fb60b9198da54ae091d1965e61bef875bfe7446551004410b65526d3d2711b2eed1361f06b02e084bb5093884ee894d9359218a4f3ad864bc79487dd4d111bd7268a2ce90183bb10bd844660489e79c19daa2abbfc070532c20689da6244c265759216bae7ac500be114e981e9c68ecc22b9dcf8a1d28fd122bf2964cec172672c1778dd5973e27bd501d7977882889f1a4ea5c1db0846fa16a572213510a9ee8fefc51817146d86a11788779c48ab46b3de4dea480c09ad11bff5799e4c8dace6a9b2cfd3ff1d103d5bf3405cac0c758310c43f09ab3e6119c2e719f60d15218edca97ba65fe2a8e8615083081e1e3efe19447742af4dd4377245883cf28dbc5bb75d2ca223b9745d3868ec5bf189807da19c68855097f41cf3810830d922114f2f5c32a5afb5c8adf2b8186d03b2267a9469c348eadf856c926fb0bb9fe9445a6ebf3b12abf5dc4641470d8787011beee4ffb49f7b946c0f3b5b1248fca372c15dc1c47d4d762f21dcff79ffe3f41be397f453c8d0895963300215db42516881992db95f497331184f23a51b38281754ff751de7140d85bf2b6fe9c4afb2c50f719602b8e979bf4d48985eadfb839c9ab2ced237edbe0451538cdf8625b4118e3d4618b9adba1eda0434d5a6f4aa0e5a18416fef09ba10bd686f2fa2f9be722fc44adeb5a741280c842875ef4e6aca40817cf6b4e6c627ddbc37d4f085d55f32110781bc5c56c0165792726805b4b64a3e776f6691a4fb8ef33e39c5e2a871d4b7d75b1c61e2537a7227de32a2a5d5b9987ce983e923a2c18da96ea5d6dec2cc3de53f3a30770d59c49fa9dd9bf56c8de407bee7b9949dc7c7bc48e41aff4c8e7a00811dcb8ae79f5cf5338b25f271b87d2b1dfd03615d9b3970283aaa0493137a02a2bcd07bf2f25bf3686692c9d174f50e240548cd494db8c4e7881a106ba97a74892361e8550fb36a154651da516893b61b9d179d1690ec0c58d91581f96adf172efbab89a46c1097d0848c1df4b2f6f71561b7785fe9951190a4c15f7946af6ab3bb3f2dad24a708169b45cd01bc678d2f274d5567fc3296c242ffd9fd4202dcfdef2352c8f92b6ed4c3849d015af1e8bf23e0f2c4d140d965c470b3851f62bd97d21b2b580ba29d0a321c31160e75370db07548dd845b0b07ad445e3242dacb35fce049ebbaab449b1e1dec1b8b6822be3c796351049f3e8a48623fb4ad3c986b0cefab087bf0bc050167b8c603d865d47c1747843b35907fb1615487f55a252058312cb4d953df92e9515985a8d209ddf6867c14556d51b59299e74796d4298227703746f15396b7528f6cd7146c4460cf313ae52650e4687cc1d24d34da36f91dd9a34d3a54a75607119c91ae481cf608f295b89911318600766c6f4cdbca6a6c0f879701a4e75498acc93671f35dea42ba0c007764df657d13618c2011479553a22485fe3c3f4eeff23c0bc75a42cb8457f938e430896cc2159873dfb1e812fe87e2b14b33b9bb3dc44012ed077b9635eff0fdfcf0a54c2e634af27c211d43bfd131f80b01eaca6cd400ce91f1312178f73298b631824ec7501baac5c49b10250eb091f352b34a4f845ff77575f9a42e5afb4b9071f101f19cc72bb606c464aedb7a39cd386a3e9eea0232962f6ca6e920a4a3124718a03878de09ae951c7e77935961ce8d92038ee75cf12d272a88b0aa6030c666d88d1a51bfb8748d490d7484d2b04d407d55f6fd0615dacbbc17b9e6b8375c0f72c7fa818cf9fa4fe2563d0f58e5319cf9b5679d31cb33e0d638f7e4211625f5c4f46e8d48a8b728f4fa64cff551bc33b8e324fa77e16bb059355ab66840921f5cd1e3c3e2fe9a4315c02f670872836ed677352514198ec53b6ed94debdc492d911e52e0dc150464116751509da23a4cf16de2ee2a7003154069ea5b20c63051c2eda23812664465320dbdde13fa1663b5abb850f3020e597395d604afd7aab81d596584593346003ab83097fc4e66c4df3bd1aec92ea410e06890b0273629add64c30273bfc9695cd84ee5381938fe2897f2e4b58a8dd9659e81ce0374a4b061ddc26e3b947d404f7853019a1dede340b66ad42430ca708823c1a5a38702130f5062f2dd6eb57e7d2c2f6abb3ce552a604232ad31f5a3e447081011e9bfa6744bf7abc066b9deeea2d7c39dbddb6a2a543f087e100b8aae0f6870371a45521780debf9fe2c28fe52a20eab3c309bc1130e335a02c5919511813ece0dd7b8654dd53bfaeb65f573d35827b5868d40346477f7bbc7e940fa47d3fcc58b2841e0292899262437a32765e289ed0652be6aeb445c85b246501f2c4fa71b1fa51acf0c04d18230b06e096feb61af9776dd0b8b54bdf733e79085f45dfd4d9dda6d35717a960c4371381be087515fce087321fc9297ae19da6b7922ed68bc8bc400eac0e046fcaf94f6dcc7a0375bd8f189ca1bb9d4df5b29486d4b62758942c65581c695e068fd8690ee96e46b499db337b5a974376a7b1f42f6a51e9a033a3bb4a35fa0ad58794a241d7dbf9aea45bab3e1f7cb11a7f830e2e423846612ef20c07bfcbb7fe40a62ceb59002712977e745bb4de8a52c0f49c9bc04081de788c61733642febe3452cc4aef3d1b7c0ec979cd3df90247176be433bc42ee263df6ea8b4cabb0234b85dc24d24a4b1b826bf72ecf4377fe8d3cbb3dfc311b39f16422db2cfcab2c7d4f8d5df549202fd0204a9be5b96f0fb0691e0fade515ee1e6373a3feb39b70dbbea1980eff03b25a5010345a74cf9b94d25c097d8f6fe4eeaf425b8091b803cda55ebea1204267997c759c60b44ba9bb8bd4e3431445c6cad374795390d83e31e787c8c2efb6917db2c9cb4a4930ba1a116f24655b07b170e56c93b0823dc92c81b5790eac85cd4ff8f68bcee347c3aacca5b4e6fd542d0343c0c6ee2880e3071d48ed0e0aa03cc596ef0ed2066b95ff61c29364ed60048123daf3ef927593f658ee005248676a7acc3</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-surge">
-      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>Markdown&amp;Blog</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>随手画记录（更）</title>
-    <url>/2022/03/23/Casual-painting/</url>
-    <content><![CDATA[<p>感觉都是一些碎碎念了。</p>
-<h2 id="手绘"><a href="#手绘" class="headerlink" title="手绘"></a>手绘</h2><h3 id="素描"><a href="#素描" class="headerlink" title="素描"></a>素描</h3><p>下面列出来的几幅是跟着正式的入门课学着画的，比跟着试听课画的完整一些。</p>
-<p>不过最开始因为工具不足，是在32k纸上画的，可能一些笔运用就不够那么细腻，后来在8k纸上画了才能感觉到区别。</p>
-<span id="more"></span>
-
-<h4 id="三棱锥"><a href="#三棱锥" class="headerlink" title="三棱锥"></a>三棱锥</h4><p>2021.3.22，第一幅素描，自此，我的手绘学习旅程也拉开了序幕。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203232146506.jpeg" alt="三棱锥"></p>
-<h4 id="午后甜点"><a href="#午后甜点" class="headerlink" title="午后甜点"></a>午后甜点</h4><p>2021.3.26，第二幅素描，自我感觉还是挺不错的。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261746908.png" alt="午后甜点"></p>
-<h4 id="正方体"><a href="#正方体" class="headerlink" title="正方体"></a>正方体</h4><p>这是2022.3.19画的，右边棱歪得有点过了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261747892.png" alt="正方体"></p>
-<h4 id="礼物盒"><a href="#礼物盒" class="headerlink" title="礼物盒"></a>礼物盒</h4><p>2022.3.22画的，第一次在8开纸上画的素描。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261748508.png" alt="礼物盒"></p>
-<p>下面是跟着试听课直播瞎画的，两个小时，带讲一些其他乱七八糟的东西，也确实画得不好看（除了鲸鱼自我感觉还算满意）</p>
-<h4 id="花木兰"><a href="#花木兰" class="headerlink" title="花木兰"></a>花木兰</h4><p>2021.11.8，可能是某个老师自己设计的形象，我没见过。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261750126.png" alt="花木兰"></p>
-<h4 id="鲸鱼"><a href="#鲸鱼" class="headerlink" title="鲸鱼"></a>鲸鱼</h4><p>2021.11.23，其实海面上还有一只跳出来的小鲸鱼的，但因为时间原因，确实画不好看，就去掉了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261751241.png" alt="鲸鱼"></p>
-<h3 id="速写"><a href="#速写" class="headerlink" title="速写"></a>速写</h3><p>是真的很喜欢速写了，可能因为我只喜欢构图，不喜欢画光影？</p>
-<p>速写可以单纯构图，描边时又快乐又随意，描出轮廓是真的好看，而且什么笔都可以画，真的很难不让我喜欢了。</p>
-<h4 id="古镇一角"><a href="#古镇一角" class="headerlink" title="古镇一角"></a>古镇一角</h4><p>2021.7.10，画的第一张速写，不得不说，因此彻底爱上了速写，可能因为感觉有点恣意吧。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261752157.png" alt="古镇一角"></p>
-<h4 id="街边小铺"><a href="#街边小铺" class="headerlink" title="街边小铺"></a>街边小铺</h4><p>2021.7.31，果然因为才开始画，返回来看这幅的时候，真的感觉挺凌乱的，找不到焦点，阴影什么的涂得也有点过。</p>
-<p>要慢慢学会，根据自己的画面进行调整，而不是老师画什么，我就再加些什么。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261753822.png" alt="街边小铺"></p>
-<h4 id="名作临摹"><a href="#名作临摹" class="headerlink" title="名作临摹"></a>名作临摹</h4><p>2021.8.1，具体是哪位大师的名作，老师没有介绍我也不太清楚，感觉歪得有点严重……不过速写的好处就是不用过于拘泥吧。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261753820.png" alt="名作临摹"></p>
-<h4 id="小小盆景"><a href="#小小盆景" class="headerlink" title="小小盆景"></a>小小盆景</h4><p>2021.8.2，真的好喜欢这种描边，看着很舒服，虽然我速写也才只学了几节课，依旧没有跟完课。加油啊わたし！继续画起来呀！</p>
-<p>不过这是在32k纸上画的，和老师一样，可能构图小，感觉32k画起来更舒服，就像之前不少素描也都是32k纸上画的一样，当然不止是因为有一个32k的素描本方便保存的原因。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261754464.png" alt="小小盆景"></p>
-<h3 id="彩铅"><a href="#彩铅" class="headerlink" title="彩铅"></a>彩铅</h3><p>彩铅还没有正式开始跟课学，纯属瞎画了，都是跟着试听课随便画的，甚至彩铅都只有24色，没什么好选的颜色。</p>
-<h4 id="涂山红红"><a href="#涂山红红" class="headerlink" title="涂山红红"></a>涂山红红</h4><p>2021.12.2，奇奇怪怪的画，感觉可能是头有点扁了，满意的可能只有左耳了。<br>2022.</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261755321.png" alt="涂山红红"></p>
-<h4 id="满船清梦压星河"><a href="#满船清梦压星河" class="headerlink" title="满船清梦压星河"></a>满船清梦压星河</h4><p>2021.12.18，名字挺好听，但画得有点惨不忍睹，渐变的感觉还是因为彩铅颜色不足而有些匮乏了。</p>
-<p>不过倒是第一次知道，原来彩铅渐变是叠色画出来的，以后入个全点色号的绘画专用彩铅，慢慢来。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261756262.png" alt="满船清梦压星河"></p>
-<h4 id="天官赐福"><a href="#天官赐福" class="headerlink" title="天官赐福"></a>天官赐福</h4><p>2021.12.21，实在是太傻了，构图是个大问题，画面中最满意的居然是那只蝴蝶。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261757438.png" alt="天官赐福"></p>
-<h4 id="奥特曼"><a href="#奥特曼" class="headerlink" title="奥特曼"></a>奥特曼</h4><p> 2021.11，好胖的一个奥特曼，笑死。</p>
-<p>为侄子画的，吵着要奥特曼卡片，我也就勉为其难赶鸭子上架了。</p>
-<p>没有铅笔，没有橡皮，直接彩铅上，连纸也是我哥随手翻出来的一张广告单，对于一个纯业余绘画爱好且才刚开始学习不久的我来说，画成这样也是难能可贵了，毕竟想改的时候没有橡皮让我擦，但整体起码能认出这是个奥特曼吧，放在这就当是个纪念吧哈哈哈。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261758311.png" alt="奥特曼"></p>
-<h3 id="简笔画"><a href="#简笔画" class="headerlink" title="简笔画"></a>简笔画</h3><p>真·瞎画了。</p>
-<h4 id="长草颜团子"><a href="#长草颜团子" class="headerlink" title="长草颜团子"></a>长草颜团子</h4><p>哎不记得什么时候画的了，应该在2021年吧，记得老师好像是用马克笔涂色的，我没有，就拿彩色中性笔和彩铅勉强代替了。</p>
-<p>画得太瘦了，不可爱了，不过老师的表情包还是蛮有意思的，还有小故事，我记得讲的大概是：</p>
-<p>遇见——学生遇到了老师，非常开心，都是粉红心心。</p>
-<p>感动——学生努力学画，老师觉得很感动。</p>
-<p>耍赖——要画画，要交很多作业啊，学生不想学了不想画了，开始耍赖了。</p>
-<p>装睡——老师表示不理你的耍赖，画依旧得画，作业依旧得交。</p>
-<p>我错了！——学生认识到了自己的错误，和老师道歉，重新开始了绘画的学习之旅。</p>
-<p>送花——学生继续学习，给老师送花。</p>
-<p>我走了！——学生学成后，满载而归。</p>
-<p>啊，我也得继续加油啊！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261759543.png" alt="长草颜团子"></p>
-<p>感觉虽然画了也算不少画了（但其实还是画得相当之少了），可更多时候都是跟着老师一步步来的，感觉无论是谁，跟着老师画都可以画出来作品。</p>
-<p>到现在自己还是不太会分析画面，有想画的东西时也还是有点无从下手，更经常在大整体还没定好的时候纠结于一些局部的小细节上。还是得继续慢慢来，自己多画一些，多找一些自己想画的随意摸图，不要总是跟着老师一起画，才能积累到经验。老师只是教会我们一些方法，自己还是得学会去运用才行。</p>
-<p>要学会分析，从整体入手呀。</p>
-<h2 id="板绘"><a href="#板绘" class="headerlink" title="板绘"></a>板绘</h2><p>啊，板绘，我的梦想啊，至今还停留在最最基本的描线上，甚至连描线都描不好……就先不献丑了吧，留个地，以后画了放呀~</p>
-<p>感觉跟着课，没有美术基础是真的画得不太行，差得东西太多了，于是跑去了手绘，从素描速写开始学起了。</p>
-<p>以后一定要画好看的画呀~</p>
-<hr>
-<p>慕雪</p>
-<p>2022&#x2F;3&#x2F;23</p>
-]]></content>
-      <categories>
-        <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>如何优雅的编写Markdown(一)</title>
-    <url>/2020/12/03/Code-Markdown-gracefully/</url>
-    <content><![CDATA[<p><strong>答案是Typora PicGo GitHub Blog Hexo</strong></p>
-<p>经常向朋友推荐，或者被问到该怎么愉快的使用markdown，各位不妨将我的使用习惯做一个参考。</p>
-<p>这里即是导言也是本系列的目录，刚开始看的读者直接阅读，不点击跳转链接，不影响阅读。</p>
-<p>Markdown是一个支持很广的轻量化标记语言，通过本文<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一)</a>半小时就能学会，写笔记很方便；而且你不必是markdown专家，配合Typora只需要简单的拖拽和<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>就可以完成大部分操作，这里是<a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a>。有了这两个工具你就可以轻松在本地编写你的markdown啦！</p>
-<span id="more"></span>
-
-<p>因为是前端语法，除了markdown还支持html&#x2F;css&#x2F;Latex等等语法，<a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a>，可谓是下限极低上限极高。但是本人更倾向于截屏或者手写拍照插入，内容大于形式。</p>
-<p>如果想要分享给朋友会发现图片无法分享，这是因为图片保存在本地路径，<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，把图存在云端如Github；PicGo是一个方便的图床管理工具，配合Typora通过简单的拖拽图片，自动帮你完成复制-&gt;上传-&gt;拷贝URL-&gt;目标插入位置，现在你可以分享带有图片的markdown以及导出的各种格式啦！</p>
-<p>如果你像我一样，觉得每次分享pdf&#x2F;md&#x2F;图片，太麻烦，本文还将讲述如何通过<a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a>，优雅的分享Markdown，搭建过程，需要极大的耐心。</p>
-<h1 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h1><p>请先下载Typora，跟练一遍就足够啦</p>
-<h2 id="1-标题："><a href="#1-标题：" class="headerlink" title="1.标题："></a>1.标题：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2.字体"></a>2.字体</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 加粗</span></span><br><span class="line">**加粗**</span><br><span class="line"><span class="comment">// 高亮</span></span><br><span class="line">==高亮==</span><br><span class="line"><span class="comment">// 删除线</span></span><br><span class="line">~~删除~~</span><br><span class="line"><span class="comment">// 斜体</span></span><br><span class="line">*斜体*</span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;&#x2F; 加粗<br><strong>加粗</strong><br>&#x2F;&#x2F; 高亮</p>
-<p>本站很遗憾不支持高亮效果，各位请自行尝试</p>
-<p>&#x2F;&#x2F; 删除线<br><del>删除</del><br>&#x2F;&#x2F; 斜体<br><em>斜体</em></p>
-<h2 id="3-引用"><a href="#3-引用" class="headerlink" title="3.引用"></a>3.引用</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//引用语法</span></span><br><span class="line">&gt;作者<span class="number">1</span></span><br><span class="line">&gt;&gt;作者<span class="number">2</span></span><br><span class="line">&gt;&gt;&gt;作者<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;&#x2F;引用语法</p>
-<blockquote>
-<p>作者1</p>
-<blockquote>
-<p>作者2</p>
-<blockquote>
-<p>作者3</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="4-分割线"><a href="#4-分割线" class="headerlink" title="4.分割线"></a>4.分割线</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//分割线</span></span><br><span class="line">---</span><br><span class="line"><span class="comment">//分割线</span></span><br><span class="line">****</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<hr>
-<h2 id="5-图片插入"><a href="#5-图片插入" class="headerlink" title="5.图片插入"></a>5.图片插入</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在线图片/本地图片</span></span><br><span class="line">![我的照片](/image/me.png) --路径</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/15563CS5-2.jpg" alt="15563CS5-2"></p>
-<h2 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6.超链接"></a>6.超链接</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//超链接语法</span></span><br><span class="line">[百度](https:<span class="comment">//www.baidu.com/)</span></span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.baidu.com/">百度</a></p>
-<h2 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//无序列表</span></span><br><span class="line">- 目录<span class="number">1</span></span><br><span class="line">- 目录<span class="number">2</span></span><br><span class="line">- 目录<span class="number">3</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>目录1</p>
-</li>
-<li><p>目录2</p>
-</li>
-<li><p>目录3</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//有序列表 </span></span><br></pre></td></tr></table></figure>
-
-<p><code>1</code>+<code>.</code> +<code> </code> +名称 </p>
-<ol>
-<li><p>首页</p>
-</li>
-<li><p>分类</p>
-</li>
-<li><p>标签</p>
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//逐级</span></span><br><span class="line">- <span class="number">001</span>	</span><br><span class="line">  - <span class="number">002</span></span><br><span class="line">    - <span class="number">003</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>001    <ul>
-<li>002<ul>
-<li>003</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//可勾选</span></span><br><span class="line">- [ ] <span class="number">01</span></span><br><span class="line">- [ ] <span class="number">02</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><input disabled="" type="checkbox"> 01</li>
-<li><input disabled="" type="checkbox"> 02</li>
-</ul>
-<h2 id="8-代码块："><a href="#8-代码块：" class="headerlink" title="8.代码块："></a>8.代码块：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//代码块语法</span></span><br><span class="line"><span class="comment">//```java```   </span></span><br><span class="line"><span class="comment">//```shell```</span></span><br></pre></td></tr></table></figure>
-
-<p>  <strong>1.java代码里面内容不用管</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner; <span class="comment">//键盘扫描类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span>&#123;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">Scanner input=<span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);<span class="comment">//创建一个键盘扫描类对象</span></span><br><span class="line">System.out.print(<span class="string">&quot;请您输入内容:&quot;</span>);</span><br><span class="line"><span class="type">int</span> contents=input.nextInt(); <span class="comment">//输入整型</span></span><br><span class="line">String contents1=input.next(); <span class="comment">//输入字符串型</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>2.shell脚本</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Scanner input=new Scanner(System.in);//创建一个键盘扫描类对象</span><br><span class="line">System.out.print(&quot;请您输入内容:&quot;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-小小代码块"><a href="#3-小小代码块" class="headerlink" title="3.小小代码块"></a>3.小小代码块</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`printf`</span><br></pre></td></tr></table></figure>
-
-<p><code>printf</code></p>
-<h2 id="9-表格"><a href="#9-表格" class="headerlink" title="9.表格"></a>9.表格</h2><table>
-<thead>
-<tr>
-<th>成绩</th>
-<th>语文</th>
-<th>数学</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>78</td>
-<td>88</td>
-</tr>
-</tbody></table>
-<hr>
-<p><strong>恭喜你到此你已经是个可以独立用markdown写笔记的专家啦！</strong></p>
-<p>接下来的技巧实用性不高，贴出来做一个参考。</p>
-<hr>
-<h2 id="10-脚注页内跳转和好用的html标签"><a href="#10-脚注页内跳转和好用的html标签" class="headerlink" title="10.脚注页内跳转和好用的html标签"></a>10.脚注页内跳转和好用的html标签</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//脚注</span></span><br><span class="line">阿这 [^a]</span><br><span class="line">[^a]: 我为什么不显示  <span class="comment">//这一行一般放到文章最后</span></span><br></pre></td></tr></table></figure>
-
-<p>阿这 <a href="%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%BE%E7%A4%BA">^a</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//页内跳转 把下面这段话复制到typora，记住一定要按住ctrl并点击才能实现效果</span><br><span class="line">[点我去标题1](# 标题1)</span><br><span class="line"># 标题1</span><br></pre></td></tr></table></figure>
-
-<p>页内跳转&#x2F;&#x2F;博客对这个语法的支持不好，读者请自行尝试<br>[点我去Typora+PicGo+GitHub+Blog+Hexo](# 答案是Typora+PicGo+GitHub+Blog+Hexo)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//漂亮的小代码块</span><br><span class="line">&lt;kbd&gt;ctrl&lt;/kbd&gt;+&lt;kbd&gt;alt&lt;/kbd&gt;+&lt;kbd&gt;del&lt;/kbd&gt;任务管理器</span><br></pre></td></tr></table></figure>
-
-<p><kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>del</kbd>任务管理器</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//定制字号</span><br><span class="line">&lt;font size=2.5&gt;定制字号&lt;/font&gt; </span><br></pre></td></tr></table></figure>
-
-<p><font size=2.5>定制字号</font> </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//下划线</span></span><br><span class="line">&lt;u&gt;sdf&lt;/u&gt;</span><br></pre></td></tr></table></figure>
-
-<p><u>sdf</u></p>
-<h2 id="11-Latex-amp-流程图-Markdown-amp-Blog笔记二"><a href="#11-Latex-amp-流程图-Markdown-amp-Blog笔记二" class="headerlink" title="11. Latex&amp;流程图(Markdown&amp;Blog笔记二) "></a>11. <a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></h2><h2 id="12-工欲善其事必先利其器，学习Typora的设置-Markdown-amp-Blog笔记三-吧"><a href="#12-工欲善其事必先利其器，学习Typora的设置-Markdown-amp-Blog笔记三-吧" class="headerlink" title="12. 工欲善其事必先利其器，学习Typora的设置(Markdown&amp;Blog笔记三) 吧~"></a>12. 工欲善其事必先利其器，学习<a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a>吧~</h2><hr>
-<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
-<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
-</ol>
-<hr>
-<p>2020&#x2F;12&#x2F;3</p>
-]]></content>
-      <categories>
-        <category>Markdown&amp;Blog</category>
-      </categories>
-  </entry>
-  <entry>
     <title>数据结构API</title>
     <url>/2022/03/15/Data-structure-API/</url>
     <content><![CDATA[<h1 id="接口复习：集合"><a href="#接口复习：集合" class="headerlink" title="接口复习：集合"></a>接口复习：集合</h1><p>interface接口(申明后直接调用方法)-implement实现(不关心)</p>
@@ -551,6 +480,183 @@
 ]]></content>
       <categories>
         <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>AIRL中遇到的问题</title>
+    <url>/2020/12/11/Difficulties-in-AIRL/</url>
+    <content><![CDATA[<p> 云调度和DRL论文中 <em>待解决</em> 思考：</p>
+<h2 id="1-网格计算-云计算前身"><a href="#1-网格计算-云计算前身" class="headerlink" title="1.网格计算[^云计算前身]"></a>1.网格计算[^<del>云计算前身</del>]</h2><p>这种计算模式是利用互联网把分散在不同地理位置的电脑组织成一个“虚拟的超级计算机”，其中每一台参与计算的计算机就是一个“节点”，而整个计算是由成千上万个“节点”组成的“一张网格”。</p>
+<p>网格计算的优势有两个：一个是数据处理能力超强；另一个是能充分利用网上的闲置处理能力。</p>
+<p>它研究如何把一个需要非常巨大的<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E8%83%BD%E5%8A%9B/4554810">计算能力</a>才能解决的问题分成许多小的部分，然后把这些部分分配给许多<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA/140338">计算机</a>进行处理，最后把这些计算结果综合起来得到最终结果。</p>
+<p><a href="https://zhidao.baidu.com/question/70675394.html">网格计算和云计算的概念和区别</a></p>
+<span id="more"></span>
+
+<h2 id="2-1-P-VS-NP-Nondeterministic-Polynomial-time"><a href="#2-1-P-VS-NP-Nondeterministic-Polynomial-time" class="headerlink" title="2.1 P VS. NP(Nondeterministic Polynomial time)"></a>2.1 P VS. NP(Nondeterministic Polynomial time)</h2><table>
+<thead>
+<tr>
+<th>P</th>
+<th>VS.</th>
+<th>NP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>能快速求解（易解）</td>
+<td></td>
+<td>不一定能快速求解（易验证）</td>
+</tr>
+<tr>
+<td>P一定是NP，易算易验证</td>
+<td></td>
+<td>NP则不一定是P，能验证不一定能计算，如质数分解</td>
+</tr>
+<tr>
+<td>P就是能在多项式时间内解决的问题(算的快)</td>
+<td></td>
+<td>NP就是能在多项式时间验证答案正确与否的问题(验证快)</td>
+</tr>
+</tbody></table>
+<p><em><strong>P&#x3D;NP?</strong></em>  </p>
+<p>N即不存在不能快速求解。P是否等于NP实质上就是在问，如果对于一个问题我能在多项式时间内验证其答案的正确性，那么我是否能在多项式时间内解决它？</p>
+<p><em><strong>NP-hardness（困难） 和 NP-completeness（完全）：</strong></em></p>
+<p>如果任意一个NP的问题都可以多项式[^归约]到L（L是转化后的问题，高级，困难），称问题L是NP-hard：</p>
+<ul>
+<li><p>显然NP-hard不一定是NP问题，NP-hard是个新问题。</p>
+</li>
+<li><p>如果一个NP-hard，即归约后问题L本身就是NP的，则称L是NP-completeness.(NPC最难，[^时间复杂度最高])</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934343.png" alt="这里写图片描述"></p>
+</li>
+</ul>
+<blockquote>
+<p>“P vs NP”问题：请问那些需要非确定性图灵机（超能力计算机）在多项式时间才能解决的问题，能够用确定性图灵机（普通计算机）在多项式时间解决吗？ <a href="http://www.yinwang.org/blog-cn/2019/07/21/pnp2">P vs NP不重要</a></p>
+</blockquote>
+<h3 id="2-2-维度诅咒"><a href="#2-2-维度诅咒" class="headerlink" title="2.2[^维度诅咒]"></a>2.2[^维度诅咒]</h3><p>当维度增加(太大)时,体积(难度)指数增加的难题.</p>
+<p><em><strong>分类器中：</strong></em></p>
+<p><img src="https://www.visiondummy.com/wp-content/uploads/2014/04/dimensionality_vs_performance.png" alt="img"></p>
+<p><strong>图2中</strong>随着维度的增加，分类器的性能会提高，直到达到最佳要素数。进一步增加维度而不增加训练样本的数量导致分类器性能的降低。 过拟合 ，</p>
+<p>维度的诅咒使得训练数据的 稀疏性 ，训练样本的密度呈指数下降。</p>
+<p>维度诅咒的另一个影响是，这种稀疏性不是均匀分布在搜索空间上。实际上，原点周围的数据（在超立方体的 中心 ）比搜索空间的 角落 中的数据要稀疏得多。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934531.png" alt="img"></p>
+<p>**图3.**随着维度的增加，更大比例的训练数据驻留在要素空间的 角落 中。</p>
+<p><em><strong>如何避免：</strong></em></p>
+<p>问题是 “太大” 意味着什么: [^特征的数量和样本数量有关]</p>
+<p><strong>特征选择方法：</strong>通常采用启发式(如<a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA算法</a>)(贪婪方法，最佳优先方法等）来定位最佳数量和特征组合</p>
+<p><strong>特征提取方法（降维）：</strong><a href="http://www.visiondummy.com/2014/05/feature-extraction-using-pca/">主成分分析（PCA）</a>，它产生原始N特征的不相关的线性组合。PCA试图找到较低维度的线性子空间，以便保持原始数据的最大方差（向着极大无关组出发）。但是，请注意，数据的最大差异不一定代表最具辨别力的信息。</p>
+<p><strong>交叉验证：</strong></p>
+<blockquote>
+<p>交叉验证方法将原始训练数据分成一个或多个训练子集。</p>
+<p>在分类器训练期间，一个子集用于 测试 所得分类器的准确度和精度，而其他子集用于 参数估计 (真实训练)。</p>
+<p>如果用于 训练 的子集的分类结果与用于 测试 的子集的结果大不相同，则过度拟合正在发挥作用。</p>
+<p>如果只有<strong>有限</strong>数量的训练数据可用，则可以使用几种类型的交叉验证，例如k折交叉验证和留一交叉验证。</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/K-fold_cross_validation_EN.jpg" alt="img"></p>
+<p><strong>Diagram of k-fold cross-validation with k&#x3D;4</strong></p>
+<h4 id="为什么说RL与深度神经网络结合可以避免维度之咒？"><a href="#为什么说RL与深度神经网络结合可以避免维度之咒？" class="headerlink" title="为什么说RL与深度神经网络结合可以避免维度之咒？"></a>为什么说RL与深度神经网络结合可以避免维度之咒？</h4><blockquote>
+<p>因为神经网络能够提取特征。</p>
+</blockquote>
+<p>Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
+<p>事实上，SVM及 神经网络 都可以看做是寻找一个合适的特征维度的过程。</p>
+<p>当数据的维度过小的时候，数据分布过于稠密，不能很好的进行区分，这时候可以通过带有核函数的SVM将低纬度的数据映射到高纬度。</p>
+<p>当样本的<strong>维度过大</strong>时，受限于样本的多少及计算机的计算能力，需要利用 神经网络 对样本的维度进行压缩，便于分类。</p>
+<p>两者目的都在于使得数据的维度达到一个合适的稠密程度，从而更方便找到分类超平面。这也决定了SVM适用于低维小样本数据，而神经网络适合于大规模高维数据。</p>
+<p>时间复杂度决定了模型的训练&#x2F;预测时间。如果复杂度过高，则会导致模型训练和预测耗费大量时间，既无法快速的验证想法和改善模型，也无法做到快速的预测。</p>
+<p><em><strong>空间复杂度</strong></em> 决定了模型的参数数量。</p>
+<p>由于<strong>维度诅咒的限制</strong>，模型的参数越多，训练模型所需的数据量就越大，而现实生活中的数据集通常不会太大，这会导致模型的训练更容易<strong>过拟合</strong>。</p>
+<p>空间复杂度（访存量），严格来讲包括两部分：总参数量 + 各层输出特征图。</p>
+<ul>
+<li><strong>参数量</strong>：模型所有带参数的层的权重参数总量（即<strong>模型体积</strong>，下式第一个求和表达式）</li>
+<li><strong>特征图</strong>：模型在实时运行过程中每层所计算出的输出特征图大小（下式第二个求和表达式）</li>
+</ul>
+<p><strong>公式来源</strong>：<a href="https://zhuanlan.zhihu.com/p/31575074">卷积神经网络复杂度分析</a></p>
+<p> <a href="%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%83%BD%E6%88%98%E8%83%9C%E7%BB%B4%E5%BA%A6%E7%9A%84%E8%AF%85%E5%92%92%E5%90%97%EF%BC%9F%E4%B8%80%E4%B8%AA%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%AE%AD%E7%BB%83%E8%A7%86%E8%A7%92.pdf">浅层神经网络能战胜维度的诅咒吗？一个平均场训练视角.pdf</a> </p>
+<h2 id="3-梯度下降和神经网络的关系"><a href="#3-梯度下降和神经网络的关系" class="headerlink" title="3.梯度下降和神经网络的关系"></a>3.梯度下降和神经网络的关系</h2><h4 id="深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com"><a href="#深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com" class="headerlink" title="[深入浅出–梯度下降法及其实现](深入浅出–梯度下降法及其实现 - 简书 (jianshu.com))"></a>[深入浅出–梯度下降法及其实现](<a href="https://www.jianshu.com/p/c7e642877b0e">深入浅出–梯度下降法及其实现 - 简书 (jianshu.com)</a>)</h4><h4 id="深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN"><a href="#深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN" class="headerlink" title="[深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)"></a>[<a href="https://www.jianshu.com/p/7251b03847f4">深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)</a></h4><h4 id="matplotlib模块数据可视化-3D图"><a href="#matplotlib模块数据可视化-3D图" class="headerlink" title="matplotlib模块数据可视化-3D图"></a><a href="https://blog.csdn.net/sinat_36772813/article/details/77365296">matplotlib模块数据可视化-3D图</a></h4><hr>
+<h2 id="4-核心困难：云计算中多目标资源调度QoS"><a href="#4-核心困难：云计算中多目标资源调度QoS" class="headerlink" title="4.核心困难：云计算中多目标资源调度QoS"></a>4.核心困难：云计算中多目标资源调度QoS</h2><h3 id="方法：某深度强化学习"><a href="#方法：某深度强化学习" class="headerlink" title="方法：某深度强化学习"></a>方法：某深度强化学习</h3><h3 id="传统方法的数学推导："><a href="#传统方法的数学推导：" class="headerlink" title="传统方法的数学推导："></a>传统方法的数学推导：</h3><h2 id="5-理论方法："><a href="#5-理论方法：" class="headerlink" title="5.理论方法："></a>5.理论方法：</h2><ol>
+<li>排队论</li>
+<li>控制论</li>
+<li>博弈论</li>
+</ol>
+<h2 id="6-启发式方法"><a href="#6-启发式方法" class="headerlink" title="6.启发式方法"></a>6.启发式方法</h2><ul>
+<li>Biological Inspiration (BI): Genetic Algorithm (<strong>GA</strong>)[8],[12], [18],[20] ,Memetic Algorithm (MA), Lion Algorithm (LA)[21], Imperialist Competitive Algorithm (ICA), etc.</li>
+<li>Swarm Intelligence (SI): Ant Colony Optimization (<strong>ACO</strong>)[9], [19]Particle Swarm Optimization (PSO)[11],[13],[14],[15], [16],[17]  Simulated Annealing (<strong>SA</strong>), Artificial Bee Colony (ABC)[22], Cat Swarm Optimization (CSO)[23], Bat Algorithm (BA), Wind Driven Optimization (WDO), etc.</li>
+</ul>
+<h3 id="新待看"><a href="#新待看" class="headerlink" title="新待看:"></a>新待看:</h3><p><a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA背后的直觉</a></p>
+<h2 id="注脚："><a href="#注脚：" class="headerlink" title="注脚："></a>注脚：</h2><p>[^归约]: polynomial-time Karp’ reduction；A转化成B问题，B至少不比A容易<br>[^时间复杂度最高]: 所以completeness 的直观解释就是，解决了它就可以解决所有同级别此类问题。<br>[^维度诅咒]: Moreover, to avoid the  curse of dimensionality  of traditional RL techniques, RL combined with deep neuralnetwork (i.e. DRL) is adopted in our work.<br>[^特征的数量和样本数量有关]: 如果N个训练样本足以覆盖单位区间大小的1D特征空间，则需要N ^ 2个样本来覆盖具有相同密度的2D特征空间，并且在3D特征空间中需要N ^ 3个样本。换句话说，所需的训练实例数量随着使用的维度数量呈指数增长。<br>[^<del>云计算前身</del>]: Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
+<hr>
+<p>2020&#x2F;12&#x2F;11</p>
+]]></content>
+      <categories>
+        <category>DRL</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>随手画记录（更）</title>
+    <url>/2022/03/23/Casual-painting/</url>
+    <content><![CDATA[<p>感觉都是一些碎碎念了。</p>
+<h2 id="手绘"><a href="#手绘" class="headerlink" title="手绘"></a>手绘</h2><h3 id="素描"><a href="#素描" class="headerlink" title="素描"></a>素描</h3><p>下面列出来的几幅是跟着正式的入门课学着画的，比跟着试听课画的完整一些。</p>
+<p>不过最开始因为工具不足，是在32k纸上画的，可能一些笔运用就不够那么细腻，后来在8k纸上画了才能感觉到区别。</p>
+<span id="more"></span>
+
+<h4 id="三棱锥"><a href="#三棱锥" class="headerlink" title="三棱锥"></a>三棱锥</h4><p>2021.3.22，第一幅素描，自此，我的手绘学习旅程也拉开了序幕。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203232146506.jpeg" alt="三棱锥"></p>
+<h4 id="午后甜点"><a href="#午后甜点" class="headerlink" title="午后甜点"></a>午后甜点</h4><p>2021.3.26，第二幅素描，自我感觉还是挺不错的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261746908.png" alt="午后甜点"></p>
+<h4 id="正方体"><a href="#正方体" class="headerlink" title="正方体"></a>正方体</h4><p>这是2022.3.19画的，右边棱歪得有点过了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261747892.png" alt="正方体"></p>
+<h4 id="礼物盒"><a href="#礼物盒" class="headerlink" title="礼物盒"></a>礼物盒</h4><p>2022.3.22画的，第一次在8开纸上画的素描。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261748508.png" alt="礼物盒"></p>
+<p>下面是跟着试听课直播瞎画的，两个小时，带讲一些其他乱七八糟的东西，也确实画得不好看（除了鲸鱼自我感觉还算满意）</p>
+<h4 id="花木兰"><a href="#花木兰" class="headerlink" title="花木兰"></a>花木兰</h4><p>2021.11.8，可能是某个老师自己设计的形象，我没见过。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261750126.png" alt="花木兰"></p>
+<h4 id="鲸鱼"><a href="#鲸鱼" class="headerlink" title="鲸鱼"></a>鲸鱼</h4><p>2021.11.23，其实海面上还有一只跳出来的小鲸鱼的，但因为时间原因，确实画不好看，就去掉了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261751241.png" alt="鲸鱼"></p>
+<h3 id="速写"><a href="#速写" class="headerlink" title="速写"></a>速写</h3><p>是真的很喜欢速写了，可能因为我只喜欢构图，不喜欢画光影？</p>
+<p>速写可以单纯构图，描边时又快乐又随意，描出轮廓是真的好看，而且什么笔都可以画，真的很难不让我喜欢了。</p>
+<h4 id="古镇一角"><a href="#古镇一角" class="headerlink" title="古镇一角"></a>古镇一角</h4><p>2021.7.10，画的第一张速写，不得不说，因此彻底爱上了速写，可能因为感觉有点恣意吧。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261752157.png" alt="古镇一角"></p>
+<h4 id="街边小铺"><a href="#街边小铺" class="headerlink" title="街边小铺"></a>街边小铺</h4><p>2021.7.31，果然因为才开始画，返回来看这幅的时候，真的感觉挺凌乱的，找不到焦点，阴影什么的涂得也有点过。</p>
+<p>要慢慢学会，根据自己的画面进行调整，而不是老师画什么，我就再加些什么。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261753822.png" alt="街边小铺"></p>
+<h4 id="名作临摹"><a href="#名作临摹" class="headerlink" title="名作临摹"></a>名作临摹</h4><p>2021.8.1，具体是哪位大师的名作，老师没有介绍我也不太清楚，感觉歪得有点严重……不过速写的好处就是不用过于拘泥吧。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261753820.png" alt="名作临摹"></p>
+<h4 id="小小盆景"><a href="#小小盆景" class="headerlink" title="小小盆景"></a>小小盆景</h4><p>2021.8.2，真的好喜欢这种描边，看着很舒服，虽然我速写也才只学了几节课，依旧没有跟完课。加油啊わたし！继续画起来呀！</p>
+<p>不过这是在32k纸上画的，和老师一样，可能构图小，感觉32k画起来更舒服，就像之前不少素描也都是32k纸上画的一样，当然不止是因为有一个32k的素描本方便保存的原因。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261754464.png" alt="小小盆景"></p>
+<h3 id="彩铅"><a href="#彩铅" class="headerlink" title="彩铅"></a>彩铅</h3><p>彩铅还没有正式开始跟课学，纯属瞎画了，都是跟着试听课随便画的，甚至彩铅都只有24色，没什么好选的颜色。</p>
+<h4 id="涂山红红"><a href="#涂山红红" class="headerlink" title="涂山红红"></a>涂山红红</h4><p>2021.12.2，奇奇怪怪的画，感觉可能是头有点扁了，满意的可能只有左耳了。<br>2022.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261755321.png" alt="涂山红红"></p>
+<h4 id="满船清梦压星河"><a href="#满船清梦压星河" class="headerlink" title="满船清梦压星河"></a>满船清梦压星河</h4><p>2021.12.18，名字挺好听，但画得有点惨不忍睹，渐变的感觉还是因为彩铅颜色不足而有些匮乏了。</p>
+<p>不过倒是第一次知道，原来彩铅渐变是叠色画出来的，以后入个全点色号的绘画专用彩铅，慢慢来。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261756262.png" alt="满船清梦压星河"></p>
+<h4 id="天官赐福"><a href="#天官赐福" class="headerlink" title="天官赐福"></a>天官赐福</h4><p>2021.12.21，实在是太傻了，构图是个大问题，画面中最满意的居然是那只蝴蝶。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261757438.png" alt="天官赐福"></p>
+<h4 id="奥特曼"><a href="#奥特曼" class="headerlink" title="奥特曼"></a>奥特曼</h4><p> 2021.11，好胖的一个奥特曼，笑死。</p>
+<p>为侄子画的，吵着要奥特曼卡片，我也就勉为其难赶鸭子上架了。</p>
+<p>没有铅笔，没有橡皮，直接彩铅上，连纸也是我哥随手翻出来的一张广告单，对于一个纯业余绘画爱好且才刚开始学习不久的我来说，画成这样也是难能可贵了，毕竟想改的时候没有橡皮让我擦，但整体起码能认出这是个奥特曼吧，放在这就当是个纪念吧哈哈哈。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261758311.png" alt="奥特曼"></p>
+<h3 id="简笔画"><a href="#简笔画" class="headerlink" title="简笔画"></a>简笔画</h3><p>真·瞎画了。</p>
+<h4 id="长草颜团子"><a href="#长草颜团子" class="headerlink" title="长草颜团子"></a>长草颜团子</h4><p>哎不记得什么时候画的了，应该在2021年吧，记得老师好像是用马克笔涂色的，我没有，就拿彩色中性笔和彩铅勉强代替了。</p>
+<p>画得太瘦了，不可爱了，不过老师的表情包还是蛮有意思的，还有小故事，我记得讲的大概是：</p>
+<p>遇见——学生遇到了老师，非常开心，都是粉红心心。</p>
+<p>感动——学生努力学画，老师觉得很感动。</p>
+<p>耍赖——要画画，要交很多作业啊，学生不想学了不想画了，开始耍赖了。</p>
+<p>装睡——老师表示不理你的耍赖，画依旧得画，作业依旧得交。</p>
+<p>我错了！——学生认识到了自己的错误，和老师道歉，重新开始了绘画的学习之旅。</p>
+<p>送花——学生继续学习，给老师送花。</p>
+<p>我走了！——学生学成后，满载而归。</p>
+<p>啊，我也得继续加油啊！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203261759543.png" alt="长草颜团子"></p>
+<p>感觉虽然画了也算不少画了（但其实还是画得相当之少了），可更多时候都是跟着老师一步步来的，感觉无论是谁，跟着老师画都可以画出来作品。</p>
+<p>到现在自己还是不太会分析画面，有想画的东西时也还是有点无从下手，更经常在大整体还没定好的时候纠结于一些局部的小细节上。还是得继续慢慢来，自己多画一些，多找一些自己想画的随意摸图，不要总是跟着老师一起画，才能积累到经验。老师只是教会我们一些方法，自己还是得学会去运用才行。</p>
+<p>要学会分析，从整体入手呀。</p>
+<h2 id="板绘"><a href="#板绘" class="headerlink" title="板绘"></a>板绘</h2><p>啊，板绘，我的梦想啊，至今还停留在最最基本的描线上，甚至连描线都描不好……就先不献丑了吧，留个地，以后画了放呀~</p>
+<p>感觉跟着课，没有美术基础是真的画得不太行，差得东西太多了，于是跑去了手绘，从素描速写开始学起了。</p>
+<p>以后一定要画好看的画呀~</p>
+<hr>
+<p>慕雪</p>
+<p>2022&#x2F;3&#x2F;23</p>
+]]></content>
+      <categories>
+        <category>小伙伴</category>
       </categories>
   </entry>
   <entry>
@@ -707,112 +813,6 @@
 
 <hr>
 <p>2020&#x2F;12&#x2F;28</p>
-]]></content>
-      <categories>
-        <category>DRL</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>AIRL中遇到的问题</title>
-    <url>/2020/12/11/Difficulties-in-AIRL/</url>
-    <content><![CDATA[<p> 云调度和DRL论文中 <em>待解决</em> 思考：</p>
-<h2 id="1-网格计算-云计算前身"><a href="#1-网格计算-云计算前身" class="headerlink" title="1.网格计算[^云计算前身]"></a>1.网格计算[^<del>云计算前身</del>]</h2><p>这种计算模式是利用互联网把分散在不同地理位置的电脑组织成一个“虚拟的超级计算机”，其中每一台参与计算的计算机就是一个“节点”，而整个计算是由成千上万个“节点”组成的“一张网格”。</p>
-<p>网格计算的优势有两个：一个是数据处理能力超强；另一个是能充分利用网上的闲置处理能力。</p>
-<p>它研究如何把一个需要非常巨大的<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E8%83%BD%E5%8A%9B/4554810">计算能力</a>才能解决的问题分成许多小的部分，然后把这些部分分配给许多<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA/140338">计算机</a>进行处理，最后把这些计算结果综合起来得到最终结果。</p>
-<p><a href="https://zhidao.baidu.com/question/70675394.html">网格计算和云计算的概念和区别</a></p>
-<span id="more"></span>
-
-<h2 id="2-1-P-VS-NP-Nondeterministic-Polynomial-time"><a href="#2-1-P-VS-NP-Nondeterministic-Polynomial-time" class="headerlink" title="2.1 P VS. NP(Nondeterministic Polynomial time)"></a>2.1 P VS. NP(Nondeterministic Polynomial time)</h2><table>
-<thead>
-<tr>
-<th>P</th>
-<th>VS.</th>
-<th>NP</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>能快速求解（易解）</td>
-<td></td>
-<td>不一定能快速求解（易验证）</td>
-</tr>
-<tr>
-<td>P一定是NP，易算易验证</td>
-<td></td>
-<td>NP则不一定是P，能验证不一定能计算，如质数分解</td>
-</tr>
-<tr>
-<td>P就是能在多项式时间内解决的问题(算的快)</td>
-<td></td>
-<td>NP就是能在多项式时间验证答案正确与否的问题(验证快)</td>
-</tr>
-</tbody></table>
-<p><em><strong>P&#x3D;NP?</strong></em>  </p>
-<p>N即不存在不能快速求解。P是否等于NP实质上就是在问，如果对于一个问题我能在多项式时间内验证其答案的正确性，那么我是否能在多项式时间内解决它？</p>
-<p><em><strong>NP-hardness（困难） 和 NP-completeness（完全）：</strong></em></p>
-<p>如果任意一个NP的问题都可以多项式[^归约]到L（L是转化后的问题，高级，困难），称问题L是NP-hard：</p>
-<ul>
-<li><p>显然NP-hard不一定是NP问题，NP-hard是个新问题。</p>
-</li>
-<li><p>如果一个NP-hard，即归约后问题L本身就是NP的，则称L是NP-completeness.(NPC最难，[^时间复杂度最高])</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934343.png" alt="这里写图片描述"></p>
-</li>
-</ul>
-<blockquote>
-<p>“P vs NP”问题：请问那些需要非确定性图灵机（超能力计算机）在多项式时间才能解决的问题，能够用确定性图灵机（普通计算机）在多项式时间解决吗？ <a href="http://www.yinwang.org/blog-cn/2019/07/21/pnp2">P vs NP不重要</a></p>
-</blockquote>
-<h3 id="2-2-维度诅咒"><a href="#2-2-维度诅咒" class="headerlink" title="2.2[^维度诅咒]"></a>2.2[^维度诅咒]</h3><p>当维度增加(太大)时,体积(难度)指数增加的难题.</p>
-<p><em><strong>分类器中：</strong></em></p>
-<p><img src="https://www.visiondummy.com/wp-content/uploads/2014/04/dimensionality_vs_performance.png" alt="img"></p>
-<p><strong>图2中</strong>随着维度的增加，分类器的性能会提高，直到达到最佳要素数。进一步增加维度而不增加训练样本的数量导致分类器性能的降低。 过拟合 ，</p>
-<p>维度的诅咒使得训练数据的 稀疏性 ，训练样本的密度呈指数下降。</p>
-<p>维度诅咒的另一个影响是，这种稀疏性不是均匀分布在搜索空间上。实际上，原点周围的数据（在超立方体的 中心 ）比搜索空间的 角落 中的数据要稀疏得多。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934531.png" alt="img"></p>
-<p>**图3.**随着维度的增加，更大比例的训练数据驻留在要素空间的 角落 中。</p>
-<p><em><strong>如何避免：</strong></em></p>
-<p>问题是 “太大” 意味着什么: [^特征的数量和样本数量有关]</p>
-<p><strong>特征选择方法：</strong>通常采用启发式(如<a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA算法</a>)(贪婪方法，最佳优先方法等）来定位最佳数量和特征组合</p>
-<p><strong>特征提取方法（降维）：</strong><a href="http://www.visiondummy.com/2014/05/feature-extraction-using-pca/">主成分分析（PCA）</a>，它产生原始N特征的不相关的线性组合。PCA试图找到较低维度的线性子空间，以便保持原始数据的最大方差（向着极大无关组出发）。但是，请注意，数据的最大差异不一定代表最具辨别力的信息。</p>
-<p><strong>交叉验证：</strong></p>
-<blockquote>
-<p>交叉验证方法将原始训练数据分成一个或多个训练子集。</p>
-<p>在分类器训练期间，一个子集用于 测试 所得分类器的准确度和精度，而其他子集用于 参数估计 (真实训练)。</p>
-<p>如果用于 训练 的子集的分类结果与用于 测试 的子集的结果大不相同，则过度拟合正在发挥作用。</p>
-<p>如果只有<strong>有限</strong>数量的训练数据可用，则可以使用几种类型的交叉验证，例如k折交叉验证和留一交叉验证。</p>
-</blockquote>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/K-fold_cross_validation_EN.jpg" alt="img"></p>
-<p><strong>Diagram of k-fold cross-validation with k&#x3D;4</strong></p>
-<h4 id="为什么说RL与深度神经网络结合可以避免维度之咒？"><a href="#为什么说RL与深度神经网络结合可以避免维度之咒？" class="headerlink" title="为什么说RL与深度神经网络结合可以避免维度之咒？"></a>为什么说RL与深度神经网络结合可以避免维度之咒？</h4><blockquote>
-<p>因为神经网络能够提取特征。</p>
-</blockquote>
-<p>Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
-<p>事实上，SVM及 神经网络 都可以看做是寻找一个合适的特征维度的过程。</p>
-<p>当数据的维度过小的时候，数据分布过于稠密，不能很好的进行区分，这时候可以通过带有核函数的SVM将低纬度的数据映射到高纬度。</p>
-<p>当样本的<strong>维度过大</strong>时，受限于样本的多少及计算机的计算能力，需要利用 神经网络 对样本的维度进行压缩，便于分类。</p>
-<p>两者目的都在于使得数据的维度达到一个合适的稠密程度，从而更方便找到分类超平面。这也决定了SVM适用于低维小样本数据，而神经网络适合于大规模高维数据。</p>
-<p>时间复杂度决定了模型的训练&#x2F;预测时间。如果复杂度过高，则会导致模型训练和预测耗费大量时间，既无法快速的验证想法和改善模型，也无法做到快速的预测。</p>
-<p><em><strong>空间复杂度</strong></em> 决定了模型的参数数量。</p>
-<p>由于<strong>维度诅咒的限制</strong>，模型的参数越多，训练模型所需的数据量就越大，而现实生活中的数据集通常不会太大，这会导致模型的训练更容易<strong>过拟合</strong>。</p>
-<p>空间复杂度（访存量），严格来讲包括两部分：总参数量 + 各层输出特征图。</p>
-<ul>
-<li><strong>参数量</strong>：模型所有带参数的层的权重参数总量（即<strong>模型体积</strong>，下式第一个求和表达式）</li>
-<li><strong>特征图</strong>：模型在实时运行过程中每层所计算出的输出特征图大小（下式第二个求和表达式）</li>
-</ul>
-<p><strong>公式来源</strong>：<a href="https://zhuanlan.zhihu.com/p/31575074">卷积神经网络复杂度分析</a></p>
-<p> <a href="%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%83%BD%E6%88%98%E8%83%9C%E7%BB%B4%E5%BA%A6%E7%9A%84%E8%AF%85%E5%92%92%E5%90%97%EF%BC%9F%E4%B8%80%E4%B8%AA%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%AE%AD%E7%BB%83%E8%A7%86%E8%A7%92.pdf">浅层神经网络能战胜维度的诅咒吗？一个平均场训练视角.pdf</a> </p>
-<h2 id="3-梯度下降和神经网络的关系"><a href="#3-梯度下降和神经网络的关系" class="headerlink" title="3.梯度下降和神经网络的关系"></a>3.梯度下降和神经网络的关系</h2><h4 id="深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com"><a href="#深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com" class="headerlink" title="[深入浅出–梯度下降法及其实现](深入浅出–梯度下降法及其实现 - 简书 (jianshu.com))"></a>[深入浅出–梯度下降法及其实现](<a href="https://www.jianshu.com/p/c7e642877b0e">深入浅出–梯度下降法及其实现 - 简书 (jianshu.com)</a>)</h4><h4 id="深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN"><a href="#深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN" class="headerlink" title="[深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)"></a>[<a href="https://www.jianshu.com/p/7251b03847f4">深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)</a></h4><h4 id="matplotlib模块数据可视化-3D图"><a href="#matplotlib模块数据可视化-3D图" class="headerlink" title="matplotlib模块数据可视化-3D图"></a><a href="https://blog.csdn.net/sinat_36772813/article/details/77365296">matplotlib模块数据可视化-3D图</a></h4><hr>
-<h2 id="4-核心困难：云计算中多目标资源调度QoS"><a href="#4-核心困难：云计算中多目标资源调度QoS" class="headerlink" title="4.核心困难：云计算中多目标资源调度QoS"></a>4.核心困难：云计算中多目标资源调度QoS</h2><h3 id="方法：某深度强化学习"><a href="#方法：某深度强化学习" class="headerlink" title="方法：某深度强化学习"></a>方法：某深度强化学习</h3><h3 id="传统方法的数学推导："><a href="#传统方法的数学推导：" class="headerlink" title="传统方法的数学推导："></a>传统方法的数学推导：</h3><h2 id="5-理论方法："><a href="#5-理论方法：" class="headerlink" title="5.理论方法："></a>5.理论方法：</h2><ol>
-<li>排队论</li>
-<li>控制论</li>
-<li>博弈论</li>
-</ol>
-<h2 id="6-启发式方法"><a href="#6-启发式方法" class="headerlink" title="6.启发式方法"></a>6.启发式方法</h2><ul>
-<li>Biological Inspiration (BI): Genetic Algorithm (<strong>GA</strong>)[8],[12], [18],[20] ,Memetic Algorithm (MA), Lion Algorithm (LA)[21], Imperialist Competitive Algorithm (ICA), etc.</li>
-<li>Swarm Intelligence (SI): Ant Colony Optimization (<strong>ACO</strong>)[9], [19]Particle Swarm Optimization (PSO)[11],[13],[14],[15], [16],[17]  Simulated Annealing (<strong>SA</strong>), Artificial Bee Colony (ABC)[22], Cat Swarm Optimization (CSO)[23], Bat Algorithm (BA), Wind Driven Optimization (WDO), etc.</li>
-</ul>
-<h3 id="新待看"><a href="#新待看" class="headerlink" title="新待看:"></a>新待看:</h3><p><a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA背后的直觉</a></p>
-<h2 id="注脚："><a href="#注脚：" class="headerlink" title="注脚："></a>注脚：</h2><p>[^归约]: polynomial-time Karp’ reduction；A转化成B问题，B至少不比A容易<br>[^时间复杂度最高]: 所以completeness 的直观解释就是，解决了它就可以解决所有同级别此类问题。<br>[^维度诅咒]: Moreover, to avoid the  curse of dimensionality  of traditional RL techniques, RL combined with deep neuralnetwork (i.e. DRL) is adopted in our work.<br>[^特征的数量和样本数量有关]: 如果N个训练样本足以覆盖单位区间大小的1D特征空间，则需要N ^ 2个样本来覆盖具有相同密度的2D特征空间，并且在3D特征空间中需要N ^ 3个样本。换句话说，所需的训练实例数量随着使用的维度数量呈指数增长。<br>[^<del>云计算前身</del>]: Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
-<hr>
-<p>2020&#x2F;12&#x2F;11</p>
 ]]></content>
       <categories>
         <category>DRL</category>
@@ -1542,102 +1542,6 @@ li {undefined
       </categories>
   </entry>
   <entry>
-    <title>读读纪伯伦的小诗吧</title>
-    <url>/2021/09/10/Kahlil-Gibran/</url>
-    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
-<span id="more"></span>
-
-<hr>
-<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
-<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
-<hr>
-<p>2021&#x2F;9&#x2F;10</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Latex&amp;流程图(二)</title>
-    <url>/2022/03/21/Latex/</url>
-    <content><![CDATA[<h1 id="1-Latex支持"><a href="#1-Latex支持" class="headerlink" title="1. Latex支持"></a>1. Latex支持</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$J^&#123;wt&#125;_&#123;i&#125;$ </span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">&#123;\mathbb R&#125; = \sum_&#123;t=0&#125;^&#123;n&#125;&#123; &#123;\mathbb R_t&#125;\gamma^&#123;t&#125; &#125;</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>$J^{wt}_{i}$ </p>
-<p>$$<br>{\mathbb R} &#x3D; \sum_{t&#x3D;0}^{n}{ {\mathbb R_t}\gamma^{t} }<br>$$</p>
-<p>$$<br>\begin{equation}min_{\phi}\sum_{i&#x3D;1}^{|B|}(r_{t_{i} } + \gamma max_{\hat{a}\in\mathcal{A} }Q_{\phi^{target} }(s_{t_{i}+1},\hat{a}) - Q_{\phi}(s_{t_{i} },a_{t_{i} }))^2<br>\end{equation}<br>$$</p>
-<hr>
-<h1 id="2-流程图绘制"><a href="#2-流程图绘制" class="headerlink" title="2.流程图绘制"></a>2.流程图绘制</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//flow流程图</span></span><br><span class="line">st=&gt;start: Start|past:&gt;http:<span class="comment">//www.google.com[blank]</span></span><br><span class="line">e=&gt;end: End:&gt;http:<span class="comment">//www.google.com</span></span><br><span class="line">op1=&gt;operation: My Operation|past</span><br><span class="line">op2=&gt;operation: Stuff|current</span><br><span class="line">sub1=&gt;subroutine: My Subroutine|invalid</span><br><span class="line">cond=&gt;condition: Yes</span><br><span class="line">or No?|approved:&gt;http:<span class="comment">//www.google.com</span></span><br><span class="line">c2=&gt;condition: Good idea|rejected</span><br><span class="line">io=&gt;inputoutput: <span class="keyword">catch</span> something...|request</span><br><span class="line"></span><br><span class="line">st-&gt;op1(right)-&gt;cond</span><br><span class="line"><span class="title function_">cond</span><span class="params">(yes, right)</span>-&gt;c2</span><br><span class="line"><span class="title function_">cond</span><span class="params">(no)</span>-&gt;sub1(left)-&gt;op1</span><br><span class="line"><span class="title function_">c2</span><span class="params">(yes)</span>-&gt;io-&gt;e</span><br><span class="line"><span class="title function_">c2</span><span class="params">(no)</span>-&gt;op2-&gt;e</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<div id="flowchart-0" class="flow-chart"></div>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//mermaid流程图</span></span><br><span class="line">graph TD</span><br><span class="line">    <span class="title function_">B</span><span class="params">((开始)</span>) --&gt;C&#123;判断&#125;</span><br><span class="line">    C --  a=<span class="number">1</span> --&gt;D[执行语句<span class="number">1</span>]</span><br><span class="line">    C --  a=<span class="number">2</span>  --&gt;E[执行语句<span class="number">2</span>]</span><br><span class="line">    C --  a=<span class="number">3</span> --&gt;F[执行语句<span class="number">3</span>]</span><br><span class="line">    C -- a=<span class="number">4</span>  --&gt;G[执行语句<span class="number">4</span>]</span><br><span class="line">    D--&gt; AA((结束))</span><br><span class="line">    E--&gt; AA</span><br><span class="line">    F--&gt; AA</span><br><span class="line">   G--&gt; AA      </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<pre class="mermaid">
-graph TD
-    B((开始)) -->C{判断}
-    C --  a=1 -->D[执行语句1]
-    C --  a=2  -->E[执行语句2]
-    C --  a=3 -->F[执行语句3]
-    C -- a=4  -->G[执行语句4]
-    D--> AA((结束))
-    E--> AA
-    F--> AA
-   G--> AA</pre>
-
-<h1 id="3-回来的路-gt-如何优雅的编写Markdown-Markdown-amp-Blog笔记一"><a href="#3-回来的路-gt-如何优雅的编写Markdown-Markdown-amp-Blog笔记一" class="headerlink" title="3.回来的路-&gt;如何优雅的编写Markdown(Markdown&amp;Blog笔记一) "></a>3.回来的路-&gt;<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></h1><hr>
-<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
-<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
-</ol>
-<hr>
-<p>2022&#x2F;3&#x2F;21</p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start|past:>http://www.google.com[blank]
-e=>end: End:>http://www.google.com
-op1=>operation: My Operation|past
-op2=>operation: Stuff|current
-sub1=>subroutine: My Subroutine|invalid
-cond=>condition: Yes
-or No?|approved:>http://www.google.com
-c2=>condition: Good idea|rejected
-io=>inputoutput: catch something...|request
-
-st->op1(right)->cond
-cond(yes, right)->c2
-cond(no)->sub1(left)->op1
-c2(yes)->io->e
-c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>]]></content>
-      <categories>
-        <category>Markdown&amp;Blog</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>电影推荐</title>
-    <url>/2022/03/21/Movie-recommendation/</url>
-    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
-<hr>
-<span id="more"></span>
-
-<p>这是我的好朋友，买手机找他，便宜且很靠谱~我和家人换新机都找他。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211733922.jpg" alt="14452845a506cefc10220686ce97f8a"></p>
-<hr>
-<p>数码小王</p>
-<p>2022&#x2F;3&#x2F;21</p>
-]]></content>
-      <categories>
-        <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
     <title>如何优雅的学打羽毛球</title>
     <url>/2021/11/15/Play-badminton-gracefully/</url>
     <content><![CDATA[<h2 id="目前常用参数"><a href="#目前常用参数" class="headerlink" title="目前常用参数"></a>目前常用参数</h2><p>2021&#x2F;11磅数：</p>
@@ -1811,42 +1715,99 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>如何优雅的和猫咪玩耍</title>
-    <url>/2021/05/21/Play-with-cats-gracefully/</url>
-    <content><![CDATA[<p>本来想起名为撸猫教程，想了想实在太自大了，我能教谁呢？能教什么内容呢？撸什么猫呢？</p>
-<p>我自己不过是喜欢和不同的猫玩罢了，而且我23岁，人生中见过的猫其实很少，真要算的话，最多百十来只吧，这当然是不足以出个教程的。</p>
-<p>但相比我见过的所有人，我似乎是最受猫咪喜爱的，我能感觉到身上有种东西在吸引着各种见过的、没见过的猫咪，尤其是我和她们正面接触的时候，很少会有不理我的情况出现。</p>
-<p>我很难给不熟悉的人证明我上面这段话不是自恋，但事实就是这样，你看到了这些东西，就证明了我觉得你能理解。</p>
-<p>熟悉的猫，大家已经是朋友了，当然是想撸就撸。本文针对更多是初次见面的猫咪。</p>
+    <title>读读纪伯伦的小诗吧</title>
+    <url>/2021/09/10/Kahlil-Gibran/</url>
+    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
 <span id="more"></span>
 
-<h2 id="撸猫的心态和动作"><a href="#撸猫的心态和动作" class="headerlink" title="撸猫的心态和动作"></a>撸猫的心态和动作</h2><p>这个应该是读者最想看的会有实际收获的内容吧。</p>
-<h3 id="心态"><a href="#心态" class="headerlink" title="心态"></a>心态</h3><p>首先撸猫的心态呢，不能是高高在上的，不能觉得自己是个人，就高猫一等，你得首先明白，你和她是平等的，你是想和她做朋友，想一起玩；她也是因为想和你一起玩，相信不会被你伤害而回应你的请求才同意被你撸的。</p>
-<p>不养猫的我，撸猫基本都是初次见面的猫，也有可能是见过几次已经很熟悉的猫，相对而言初次见面的猫我觉得对想被猫咪喜欢的人更有参考意义。</p>
-<p>就跟与人交往一样，你得友好，善良，平等，在一起就是为了开心，同时呢心中得有边界感，你得充分信任她，但是得做好被挠一下的心里和身体的准备，准备好在不对劲的时候随时逃跑。但是，相信我，猫的世界是很单纯的，相比于普通人，她们很容易信任别人。</p>
-<p>初次撸猫与人交往一样，我们是抱着友好的态度和想要亲近和被信任的欲望去尝试交流的，但是得清楚，要不要亲近，要不要信任是猫咪自己说了算，这不是你能左右的。所以不要抱太高期望，被回应了会特别开心；但被拒绝了也不要太遗憾，是很正常的事。</p>
-<p>猫咪很胆小，很调皮，喜欢亲近人啊狗啊其它猫啊，只要她觉得不会伤害她就好，她们内心很孤独的。当然，猫咪很爱面子的，最好不要让他觉得丢了面子，不然多半就不理你了。可以回忆一下，猫咪在摔倒或者撞到什么东西，或者恶作剧被无情揭穿，都会做的一件事就是舔爪子洗脸，掩饰尴尬。</p>
-<h3 id="动作"><a href="#动作" class="headerlink" title="动作"></a>动作</h3><p>有了正确的心态后，这些动作会让猫咪觉得很舒服：</p>
-<ol>
-<li>初次尝试交流的时候，内心完全释放你的善意和友好，不要有任何顾忌，你的气味会是善意的气味。我一直都觉得，味道是一切交往发生的前提，与猫咪，与小狗，与人都一样。</li>
-<li>完全释放善意，你脸部的表情和线条也会变得柔和，猫咪很喜欢这个，放松，自然发自内心的微笑，当然了，还有你没有任何警惕感的眼神，这个眼神可能需要练习，要温柔，要比平时对人的温柔时候睁得更小，相信我，有些猫咪甚至更希望你闭上眼睛。</li>
-<li>充分表达你想要被回应的心情，猫咪很善良的，通常在感受到以后，会主动靠过来，就算不是完全乐意，也绝对不会拒绝你靠近她的。</li>
-<li>尤其面对胆小的猫咪，要更有耐心一些，什么猫是想要和你玩但是不敢的，撸猫多了一眼就能看出来，面对他们，在她在回头看你，的时候，不妨多等等她，等她主动靠过来，只要她没有跑掉，都是可以等的。</li>
-<li>引起猫咪的注意有很多种方法，用嘴发出啧啧声，拍手，都可以，但不要太用力了，猫咪普遍很胆小，别吓到他们。只要她们的眼神注意到了你，就够了。</li>
-<li>猫咪很胆小的，理所当然，我们都会害怕比我们大得多的生物，所以如果可以的话，趴在地上是最好的，做得到的话，蹲下，然后尽量把头和身体放松，越低越好，在撸猫的时候，你的眼里应该只有他，没有别的路人的眼光，我觉得这是很容易做到的一件事，但或许对你来说不一定。</li>
-<li>不该摸猫咪的哪儿呢？首先不要逆着毛摸她，不要太用力了，当然了，面对初次认识的猫咪，也要避免触摸敏感部位，比如鼻子，耳朵，胸，腹部，生殖器附近，太不礼貌了。摸爪子和尾巴，猫咪一般会觉得你失礼，她会轻轻咬你一下，让你知道这样不礼貌，但是因为你不是猫咪所以就原谅你了，但被警告就不要继续了。</li>
-<li>怎么样的手法会让猫咪舒服呢?正常人的思路都是顺着毛摸脑袋和身体背部，因为这是猫咪直接暴露给你的，也是小时候经常被妈妈舔的地方。但是有个部位可以让你们关系迅速升温，就是脖子，下巴的哪个凹槽，有经验的人会直接顺着纹理从脖子到下巴撸这儿，猫咪会舒服的把头伸到最远，闭上眼睛，充分享受，甚至会发出呼噜声。</li>
-</ol>
-<h2 id="什么样的猫咪可以做朋友"><a href="#什么样的猫咪可以做朋友" class="headerlink" title="什么样的猫咪可以做朋友"></a>什么样的猫咪可以做朋友</h2><p>答案当然是什么样的都可以。</p>
-<p>不要因为她是流浪猫或者在翻垃圾就嫌弃她，人人都有自己的难处，如果我是一只猫，会不会也有流浪，被生活所迫，每天找不到吃的而去翻垃圾呢？很有可能吧。交朋友不该考虑那么多的，结束以后记得洗手就好啦。当然了也不要因为对方身份高贵，或者对方主人身份高贵而自卑，但我猜大多数人不会有这个问题吧。</p>
-<p>非常警惕的猫，或者心情不好的猫，自然是没有交流的机会的。</p>
-<p>只要他无所事事晒太阳，或者在闲逛，或者和别的猫一起玩，都可以试试。</p>
 <hr>
-<p>2021&#x2F;5&#x2F;21</p>
-<p>西走菜菜</p>
+<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
+<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
+<hr>
+<p>2021&#x2F;9&#x2F;10</p>
 ]]></content>
       <categories>
         <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Latex&amp;流程图(二)</title>
+    <url>/2022/03/21/Latex/</url>
+    <content><![CDATA[<h1 id="1-Latex支持"><a href="#1-Latex支持" class="headerlink" title="1. Latex支持"></a>1. Latex支持</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$J^&#123;wt&#125;_&#123;i&#125;$ </span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">&#123;\mathbb R&#125; = \sum_&#123;t=0&#125;^&#123;n&#125;&#123; &#123;\mathbb R_t&#125;\gamma^&#123;t&#125; &#125;</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>$J^{wt}_{i}$ </p>
+<p>$$<br>{\mathbb R} &#x3D; \sum_{t&#x3D;0}^{n}{ {\mathbb R_t}\gamma^{t} }<br>$$</p>
+<p>$$<br>\begin{equation}min_{\phi}\sum_{i&#x3D;1}^{|B|}(r_{t_{i} } + \gamma max_{\hat{a}\in\mathcal{A} }Q_{\phi^{target} }(s_{t_{i}+1},\hat{a}) - Q_{\phi}(s_{t_{i} },a_{t_{i} }))^2<br>\end{equation}<br>$$</p>
+<hr>
+<h1 id="2-流程图绘制"><a href="#2-流程图绘制" class="headerlink" title="2.流程图绘制"></a>2.流程图绘制</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//flow流程图</span></span><br><span class="line">st=&gt;start: Start|past:&gt;http:<span class="comment">//www.google.com[blank]</span></span><br><span class="line">e=&gt;end: End:&gt;http:<span class="comment">//www.google.com</span></span><br><span class="line">op1=&gt;operation: My Operation|past</span><br><span class="line">op2=&gt;operation: Stuff|current</span><br><span class="line">sub1=&gt;subroutine: My Subroutine|invalid</span><br><span class="line">cond=&gt;condition: Yes</span><br><span class="line">or No?|approved:&gt;http:<span class="comment">//www.google.com</span></span><br><span class="line">c2=&gt;condition: Good idea|rejected</span><br><span class="line">io=&gt;inputoutput: <span class="keyword">catch</span> something...|request</span><br><span class="line"></span><br><span class="line">st-&gt;op1(right)-&gt;cond</span><br><span class="line"><span class="title function_">cond</span><span class="params">(yes, right)</span>-&gt;c2</span><br><span class="line"><span class="title function_">cond</span><span class="params">(no)</span>-&gt;sub1(left)-&gt;op1</span><br><span class="line"><span class="title function_">c2</span><span class="params">(yes)</span>-&gt;io-&gt;e</span><br><span class="line"><span class="title function_">c2</span><span class="params">(no)</span>-&gt;op2-&gt;e</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<div id="flowchart-0" class="flow-chart"></div>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//mermaid流程图</span></span><br><span class="line">graph TD</span><br><span class="line">    <span class="title function_">B</span><span class="params">((开始)</span>) --&gt;C&#123;判断&#125;</span><br><span class="line">    C --  a=<span class="number">1</span> --&gt;D[执行语句<span class="number">1</span>]</span><br><span class="line">    C --  a=<span class="number">2</span>  --&gt;E[执行语句<span class="number">2</span>]</span><br><span class="line">    C --  a=<span class="number">3</span> --&gt;F[执行语句<span class="number">3</span>]</span><br><span class="line">    C -- a=<span class="number">4</span>  --&gt;G[执行语句<span class="number">4</span>]</span><br><span class="line">    D--&gt; AA((结束))</span><br><span class="line">    E--&gt; AA</span><br><span class="line">    F--&gt; AA</span><br><span class="line">   G--&gt; AA      </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre class="mermaid">
+graph TD
+    B((开始)) -->C{判断}
+    C --  a=1 -->D[执行语句1]
+    C --  a=2  -->E[执行语句2]
+    C --  a=3 -->F[执行语句3]
+    C -- a=4  -->G[执行语句4]
+    D--> AA((结束))
+    E--> AA
+    F--> AA
+   G--> AA</pre>
+
+<h1 id="3-回来的路-gt-如何优雅的编写Markdown-Markdown-amp-Blog笔记一"><a href="#3-回来的路-gt-如何优雅的编写Markdown-Markdown-amp-Blog笔记一" class="headerlink" title="3.回来的路-&gt;如何优雅的编写Markdown(Markdown&amp;Blog笔记一) "></a>3.回来的路-&gt;<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></h1><hr>
+<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
+<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
+</ol>
+<hr>
+<p>2022&#x2F;3&#x2F;21</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End:>http://www.google.com
+op1=>operation: My Operation|past
+op2=>operation: Stuff|current
+sub1=>subroutine: My Subroutine|invalid
+cond=>condition: Yes
+or No?|approved:>http://www.google.com
+c2=>condition: Good idea|rejected
+io=>inputoutput: catch something...|request
+
+st->op1(right)->cond
+cond(yes, right)->c2
+cond(no)->sub1(left)->op1
+c2(yes)->io->e
+c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>]]></content>
+      <categories>
+        <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>电影推荐</title>
+    <url>/2022/03/21/Movie-recommendation/</url>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
+<hr>
+<span id="more"></span>
+
+<p>这是我的好朋友，买手机找他，便宜且很靠谱~我和家人换新机都找他。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211733922.jpg" alt="14452845a506cefc10220686ce97f8a"></p>
+<hr>
+<p>数码小王</p>
+<p>2022&#x2F;3&#x2F;21</p>
+]]></content>
+      <categories>
+        <category>小伙伴</category>
       </categories>
   </entry>
   <entry>
@@ -1892,6 +1853,45 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>小伙伴</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>如何优雅的和猫咪玩耍</title>
+    <url>/2021/05/21/Play-with-cats-gracefully/</url>
+    <content><![CDATA[<p>本来想起名为撸猫教程，想了想实在太自大了，我能教谁呢？能教什么内容呢？撸什么猫呢？</p>
+<p>我自己不过是喜欢和不同的猫玩罢了，而且我23岁，人生中见过的猫其实很少，真要算的话，最多百十来只吧，这当然是不足以出个教程的。</p>
+<p>但相比我见过的所有人，我似乎是最受猫咪喜爱的，我能感觉到身上有种东西在吸引着各种见过的、没见过的猫咪，尤其是我和她们正面接触的时候，很少会有不理我的情况出现。</p>
+<p>我很难给不熟悉的人证明我上面这段话不是自恋，但事实就是这样，你看到了这些东西，就证明了我觉得你能理解。</p>
+<p>熟悉的猫，大家已经是朋友了，当然是想撸就撸。本文针对更多是初次见面的猫咪。</p>
+<span id="more"></span>
+
+<h2 id="撸猫的心态和动作"><a href="#撸猫的心态和动作" class="headerlink" title="撸猫的心态和动作"></a>撸猫的心态和动作</h2><p>这个应该是读者最想看的会有实际收获的内容吧。</p>
+<h3 id="心态"><a href="#心态" class="headerlink" title="心态"></a>心态</h3><p>首先撸猫的心态呢，不能是高高在上的，不能觉得自己是个人，就高猫一等，你得首先明白，你和她是平等的，你是想和她做朋友，想一起玩；她也是因为想和你一起玩，相信不会被你伤害而回应你的请求才同意被你撸的。</p>
+<p>不养猫的我，撸猫基本都是初次见面的猫，也有可能是见过几次已经很熟悉的猫，相对而言初次见面的猫我觉得对想被猫咪喜欢的人更有参考意义。</p>
+<p>就跟与人交往一样，你得友好，善良，平等，在一起就是为了开心，同时呢心中得有边界感，你得充分信任她，但是得做好被挠一下的心里和身体的准备，准备好在不对劲的时候随时逃跑。但是，相信我，猫的世界是很单纯的，相比于普通人，她们很容易信任别人。</p>
+<p>初次撸猫与人交往一样，我们是抱着友好的态度和想要亲近和被信任的欲望去尝试交流的，但是得清楚，要不要亲近，要不要信任是猫咪自己说了算，这不是你能左右的。所以不要抱太高期望，被回应了会特别开心；但被拒绝了也不要太遗憾，是很正常的事。</p>
+<p>猫咪很胆小，很调皮，喜欢亲近人啊狗啊其它猫啊，只要她觉得不会伤害她就好，她们内心很孤独的。当然，猫咪很爱面子的，最好不要让他觉得丢了面子，不然多半就不理你了。可以回忆一下，猫咪在摔倒或者撞到什么东西，或者恶作剧被无情揭穿，都会做的一件事就是舔爪子洗脸，掩饰尴尬。</p>
+<h3 id="动作"><a href="#动作" class="headerlink" title="动作"></a>动作</h3><p>有了正确的心态后，这些动作会让猫咪觉得很舒服：</p>
+<ol>
+<li>初次尝试交流的时候，内心完全释放你的善意和友好，不要有任何顾忌，你的气味会是善意的气味。我一直都觉得，味道是一切交往发生的前提，与猫咪，与小狗，与人都一样。</li>
+<li>完全释放善意，你脸部的表情和线条也会变得柔和，猫咪很喜欢这个，放松，自然发自内心的微笑，当然了，还有你没有任何警惕感的眼神，这个眼神可能需要练习，要温柔，要比平时对人的温柔时候睁得更小，相信我，有些猫咪甚至更希望你闭上眼睛。</li>
+<li>充分表达你想要被回应的心情，猫咪很善良的，通常在感受到以后，会主动靠过来，就算不是完全乐意，也绝对不会拒绝你靠近她的。</li>
+<li>尤其面对胆小的猫咪，要更有耐心一些，什么猫是想要和你玩但是不敢的，撸猫多了一眼就能看出来，面对他们，在她在回头看你，的时候，不妨多等等她，等她主动靠过来，只要她没有跑掉，都是可以等的。</li>
+<li>引起猫咪的注意有很多种方法，用嘴发出啧啧声，拍手，都可以，但不要太用力了，猫咪普遍很胆小，别吓到他们。只要她们的眼神注意到了你，就够了。</li>
+<li>猫咪很胆小的，理所当然，我们都会害怕比我们大得多的生物，所以如果可以的话，趴在地上是最好的，做得到的话，蹲下，然后尽量把头和身体放松，越低越好，在撸猫的时候，你的眼里应该只有他，没有别的路人的眼光，我觉得这是很容易做到的一件事，但或许对你来说不一定。</li>
+<li>不该摸猫咪的哪儿呢？首先不要逆着毛摸她，不要太用力了，当然了，面对初次认识的猫咪，也要避免触摸敏感部位，比如鼻子，耳朵，胸，腹部，生殖器附近，太不礼貌了。摸爪子和尾巴，猫咪一般会觉得你失礼，她会轻轻咬你一下，让你知道这样不礼貌，但是因为你不是猫咪所以就原谅你了，但被警告就不要继续了。</li>
+<li>怎么样的手法会让猫咪舒服呢?正常人的思路都是顺着毛摸脑袋和身体背部，因为这是猫咪直接暴露给你的，也是小时候经常被妈妈舔的地方。但是有个部位可以让你们关系迅速升温，就是脖子，下巴的哪个凹槽，有经验的人会直接顺着纹理从脖子到下巴撸这儿，猫咪会舒服的把头伸到最远，闭上眼睛，充分享受，甚至会发出呼噜声。</li>
+</ol>
+<h2 id="什么样的猫咪可以做朋友"><a href="#什么样的猫咪可以做朋友" class="headerlink" title="什么样的猫咪可以做朋友"></a>什么样的猫咪可以做朋友</h2><p>答案当然是什么样的都可以。</p>
+<p>不要因为她是流浪猫或者在翻垃圾就嫌弃她，人人都有自己的难处，如果我是一只猫，会不会也有流浪，被生活所迫，每天找不到吃的而去翻垃圾呢？很有可能吧。交朋友不该考虑那么多的，结束以后记得洗手就好啦。当然了也不要因为对方身份高贵，或者对方主人身份高贵而自卑，但我猜大多数人不会有这个问题吧。</p>
+<p>非常警惕的猫，或者心情不好的猫，自然是没有交流的机会的。</p>
+<p>只要他无所事事晒太阳，或者在闲逛，或者和别的猫一起玩，都可以试试。</p>
+<hr>
+<p>2021&#x2F;5&#x2F;21</p>
+<p>西走菜菜</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -2236,6 +2236,80 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>win快捷键</title>
+    <url>/2022/03/20/Win10-shortcut-key/</url>
+    <content><![CDATA[<h1 id="记录几个喜欢随手用的win快捷键"><a href="#记录几个喜欢随手用的win快捷键" class="headerlink" title="记录几个喜欢随手用的win快捷键"></a>记录几个喜欢随手用的win快捷键</h1><p>如果你和我一样是电脑小白，又很烦win10所有事情都强烈依赖鼠标，这些快捷键会让你的体验大幅度提升</p>
+<p>前进后退是最常用的我绑定了鼠标<strong>侧键</strong>，当然你也可以用三指触控板</p>
+<span id="more"></span>
+
+<h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p><strong><code>CTRL</code>+<code>L</code>锁屏</strong></p>
+<p><strong><code>WIN</code>+<code>Shift</code>+<code>S</code>截屏</strong></p>
+<p><code>PrtSc</code>截屏</p>
+<p><code>CTRL</code>+<code>Shift</code>+<code>S</code>浏览器捕获页面，完整截屏</p>
+<p><strong><code>CTRL</code>+<code>ALT</code>+<code>DEL</code>任务管理器</strong></p>
+<h2 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h2><p><strong><code>ALT</code>+<code>TAB</code> 切换任务</strong></p>
+<p><strong><code>CTRL</code>+<code>TAB</code>浏览器中切换标签</strong></p>
+<p><code>CTRL</code>+<code>W</code>关闭当前页面或文件</p>
+<p>虚拟桌面：</p>
+<ul>
+<li><p>创建新的虚拟桌面：<code>Win </code>+<code> Ctr</code>l +<code> D</code></p>
+</li>
+<li><p>关闭当前虚拟桌面：<code>Win</code> + <code>Ctrl</code> + <code>F4</code></p>
+</li>
+<li><p>切换虚拟桌面：<code>Win</code> +<code>Ctrl</code>+<code>左/右</code></p>
+</li>
+</ul>
+<h2 id="创建和搜索"><a href="#创建和搜索" class="headerlink" title="创建和搜索"></a>创建和搜索</h2><p><code>WIN</code>呼出菜单</p>
+<p><strong><code>win</code>+<code>E</code>我的电脑</strong></p>
+<p><strong><code>WIN</code>+<code>R</code>运行进Dos什么的</strong></p>
+<p><strong><code>WIN</code>+<code>s</code>搜索</strong></p>
+<p><strong><code>CTRL</code>+<code>E</code>浏览器中搜索</strong>，不用每次手动定位搜索框</p>
+<p><strong><code>CTRL</code>+<code>F</code>本地或本页面搜索</strong></p>
+<h2 id="markdown编写"><a href="#markdown编写" class="headerlink" title="markdown编写"></a>markdown编写</h2><p><strong><code>CTRL</code>+<code>/</code>切换源码格式</strong></p>
+<p><code>CTRL</code>+<code>E</code>全选当前一行</p>
+<p><code>CTRL</code>+<code>D</code>全选当前词语</p>
+<p><strong><code>CTRL</code>+<code>B</code>加粗</strong></p>
+<h2 id="文本和文件管理"><a href="#文本和文件管理" class="headerlink" title="文本和文件管理"></a>文本和文件管理</h2><p><strong><code>CTRL</code>+<code>S</code>保存</strong></p>
+<p><strong><code>CTRL</code>+<code>Z</code>撤销</strong></p>
+<p><strong><code>CTRL</code>+<code>X</code>键切</strong></p>
+<p><strong><code>CTRL</code>+<code>C</code>复制</strong></p>
+<p><strong><code>CTRL</code>+<code>V</code>粘贴</strong></p>
+<h2 id="随便截几张图，十分清爽吧"><a href="#随便截几张图，十分清爽吧" class="headerlink" title="随便截几张图，十分清爽吧"></a>随便截几张图，十分清爽吧</h2><p>typora</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202207784.png" alt="image-20220320220719612"></p>
+<p>浏览器</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202205857.png" alt="image-20220320220501601"></p>
+<p>桌面</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202205093.png" alt="image-20220320220535720"></p>
+<hr>
+<p>2022&#x2F;3&#x2F;20</p>
+]]></content>
+      <categories>
+        <category>小技巧&amp;快捷键&amp;命令</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/03/09/hello-world/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-surge">
+      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>博客测试</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Typora PicGo GitHub云图床(四)</title>
     <url>/2022/03/21/Typora+PicGo+GitHub/</url>
     <content><![CDATA[<p>前文已经讲述了<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a>，<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>，<a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a>。但是本地图床仍有遗失风险和难以跨设备查看的不足，为了避免图片遗失，增强分享和多端查看的便利性，本文将进一步增强网络图床的配置，实现更进一步的自动化，只需要简单的拖拽或者复制粘贴，一切都很优雅。</p>
@@ -2359,58 +2433,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>win快捷键</title>
-    <url>/2022/03/20/Win10-shortcut-key/</url>
-    <content><![CDATA[<h1 id="记录几个喜欢随手用的win快捷键"><a href="#记录几个喜欢随手用的win快捷键" class="headerlink" title="记录几个喜欢随手用的win快捷键"></a>记录几个喜欢随手用的win快捷键</h1><p>如果你和我一样是电脑小白，又很烦win10所有事情都强烈依赖鼠标，这些快捷键会让你的体验大幅度提升</p>
-<p>前进后退是最常用的我绑定了鼠标<strong>侧键</strong>，当然你也可以用三指触控板</p>
-<span id="more"></span>
-
-<h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p><strong><code>CTRL</code>+<code>L</code>锁屏</strong></p>
-<p><strong><code>WIN</code>+<code>Shift</code>+<code>S</code>截屏</strong></p>
-<p><code>PrtSc</code>截屏</p>
-<p><code>CTRL</code>+<code>Shift</code>+<code>S</code>浏览器捕获页面，完整截屏</p>
-<p><strong><code>CTRL</code>+<code>ALT</code>+<code>DEL</code>任务管理器</strong></p>
-<h2 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h2><p><strong><code>ALT</code>+<code>TAB</code> 切换任务</strong></p>
-<p><strong><code>CTRL</code>+<code>TAB</code>浏览器中切换标签</strong></p>
-<p><code>CTRL</code>+<code>W</code>关闭当前页面或文件</p>
-<p>虚拟桌面：</p>
-<ul>
-<li><p>创建新的虚拟桌面：<code>Win </code>+<code> Ctr</code>l +<code> D</code></p>
-</li>
-<li><p>关闭当前虚拟桌面：<code>Win</code> + <code>Ctrl</code> + <code>F4</code></p>
-</li>
-<li><p>切换虚拟桌面：<code>Win</code> +<code>Ctrl</code>+<code>左/右</code></p>
-</li>
-</ul>
-<h2 id="创建和搜索"><a href="#创建和搜索" class="headerlink" title="创建和搜索"></a>创建和搜索</h2><p><code>WIN</code>呼出菜单</p>
-<p><strong><code>win</code>+<code>E</code>我的电脑</strong></p>
-<p><strong><code>WIN</code>+<code>R</code>运行进Dos什么的</strong></p>
-<p><strong><code>WIN</code>+<code>s</code>搜索</strong></p>
-<p><strong><code>CTRL</code>+<code>E</code>浏览器中搜索</strong>，不用每次手动定位搜索框</p>
-<p><strong><code>CTRL</code>+<code>F</code>本地或本页面搜索</strong></p>
-<h2 id="markdown编写"><a href="#markdown编写" class="headerlink" title="markdown编写"></a>markdown编写</h2><p><strong><code>CTRL</code>+<code>/</code>切换源码格式</strong></p>
-<p><code>CTRL</code>+<code>E</code>全选当前一行</p>
-<p><code>CTRL</code>+<code>D</code>全选当前词语</p>
-<p><strong><code>CTRL</code>+<code>B</code>加粗</strong></p>
-<h2 id="文本和文件管理"><a href="#文本和文件管理" class="headerlink" title="文本和文件管理"></a>文本和文件管理</h2><p><strong><code>CTRL</code>+<code>S</code>保存</strong></p>
-<p><strong><code>CTRL</code>+<code>Z</code>撤销</strong></p>
-<p><strong><code>CTRL</code>+<code>X</code>键切</strong></p>
-<p><strong><code>CTRL</code>+<code>C</code>复制</strong></p>
-<p><strong><code>CTRL</code>+<code>V</code>粘贴</strong></p>
-<h2 id="随便截几张图，十分清爽吧"><a href="#随便截几张图，十分清爽吧" class="headerlink" title="随便截几张图，十分清爽吧"></a>随便截几张图，十分清爽吧</h2><p>typora</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202207784.png" alt="image-20220320220719612"></p>
-<p>浏览器</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202205857.png" alt="image-20220320220501601"></p>
-<p>桌面</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202205093.png" alt="image-20220320220535720"></p>
-<hr>
-<p>2022&#x2F;3&#x2F;20</p>
-]]></content>
-      <categories>
-        <category>小技巧&amp;快捷键&amp;命令</category>
-      </categories>
-  </entry>
-  <entry>
     <title>读《第一人称单数》</title>
     <url>/2022/03/26/first-person/</url>
     <content><![CDATA[<p>时隔六年村上春树又出新小说了，这是写于2018至2019年的一些短篇小说，可以说都是村上七十多岁写的东西了，但是在他的小说里，主人公永远是年轻人，一个不介意孤独的主角，能自己给自己找乐子，我对着这样的人有着莫名的亲近感。啊对了，村上本人也很健康很自律，给人一种活力充沛的印象，铁人三项的爱好者，果然爱运动的人都很有魅力呢。</p>
@@ -2456,28 +2478,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/03/09/hello-world/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-surge">
-      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>博客测试</category>
       </categories>
   </entry>
 </search>
