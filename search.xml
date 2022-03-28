@@ -1072,6 +1072,127 @@
       </categories>
   </entry>
   <entry>
+    <title>Html拓展</title>
+    <url>/2022/03/28/Html/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+             <div class="text" style=" text-align:center;">
+<font face="楷体" color=grey size=6>露の世は露の世ながらさりながら</font>
+</div>
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<p>用Html拓展你的markdown</p>
+<span id="more"></span>
+
+<h2 id="大引号，字体"><a href="#大引号，字体" class="headerlink" title="大引号，字体"></a>大引号，字体</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125; &lt;div class=<span class="string">&quot;text&quot;</span> style=<span class="string">&quot; text-align:center;&quot;</span>&gt;</span><br><span class="line">&lt;font face=<span class="string">&quot;楷体&quot;</span> color=grey size=<span class="number">6</span>&gt;露の世は露の世ながらさりながら&lt;/font&gt;</span><br><span class="line">&lt;/div&gt;&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+
+<!-- 居中 -->
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;内容&lt;/center&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<center>内容</center>
+<!-- 右对齐 -->
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;div style=<span class="string">&quot;text-align:right&quot;</span>&gt;内容&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<div style="text-align:right">内容</div>
+
+<h2 id="文本框"><a href="#文本框" class="headerlink" title="文本框"></a>文本框</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC <span class="string">&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;</span>&gt;</span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">&lt;HEAD&gt;</span><br><span class="line">&lt;TITLE&gt; New Document &lt;/TITLE&gt;</span><br><span class="line">&lt;style type=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line">* &#123;undefined</span><br><span class="line">    font-size:12px;</span><br><span class="line">    margin:<span class="number">0</span>;</span><br><span class="line">    padding:<span class="number">0</span>; </span><br><span class="line">&#125; </span><br><span class="line">fieldset.test &#123;undefined</span><br><span class="line">    padding:10px;</span><br><span class="line">    margin:10px;</span><br><span class="line">    width:270px;</span><br><span class="line">    color:#<span class="number">333</span>; </span><br><span class="line">    border:#06c solid 1px;</span><br><span class="line">&#125; </span><br><span class="line">legend &#123;undefined</span><br><span class="line">    color:#06c;</span><br><span class="line">    padding:5px 10px;</span><br><span class="line">    font-weight:<span class="number">800</span>; </span><br><span class="line">    <span class="comment">/*background:white;*/</span></span><br><span class="line">&#125; </span><br><span class="line">ul &#123;undefined</span><br><span class="line">    list-style-type: none;</span><br><span class="line">    margin:8px <span class="number">0</span> 4px <span class="number">0</span>;</span><br><span class="line">&#125; </span><br><span class="line">li &#123;undefined</span><br><span class="line">    margin-top:4px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/HEAD&gt;</span><br><span class="line">&lt;BODY&gt;</span><br><span class="line">&lt;fieldset style=<span class="string">&quot;width:300px; height:100px;&quot;</span>&gt; </span><br><span class="line">        &lt;legend&gt;生产信息 &lt;/legend&gt; </span><br><span class="line">        &lt;div&gt;试一下 &lt;/div&gt; </span><br><span class="line">    &lt;/fieldset&gt;</span><br><span class="line">&lt;fieldset class=<span class="string">&quot;test&quot;</span>&gt; </span><br><span class="line">&lt;legend&gt;CSS网页布局&lt;/legend&gt; </span><br><span class="line">    &lt;ul&gt; </span><br><span class="line">   &lt;li&gt;哈哈哈哈哈哈哈哈哈哈哈哈&lt;/li&gt; </span><br><span class="line">   &lt;li&gt;哈哈哈哈哈哈哈哈哈哈哈哈&lt;/li&gt; </span><br><span class="line">   &lt;li&gt;哈哈哈哈哈哈哈哈哈哈哈哈&lt;/li&gt; </span><br><span class="line">   &lt;li&gt;哈哈哈哈哈哈哈哈哈哈哈哈&lt;/li&gt; </span><br><span class="line">    &lt;/ul&gt; </span><br><span class="line">&lt;/fieldset&gt;</span><br><span class="line">&lt;/BODY&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<style type="text/css">
+* {undefined
+    font-size:12px;
+    margin:0;
+    padding:0; 
+} 
+fieldset.test {undefined
+    padding:10px;
+    margin:10px;
+    width:270px;
+    color:#333; 
+    border:#06c solid 1px;
+} 
+legend {undefined
+    color:#06c;
+    padding:5px 10px;
+    font-weight:800; 
+    /*background:white;*/
+} 
+ul {undefined
+    list-style-type: none;
+    margin:8px 0 4px 0;
+} 
+li {undefined
+    margin-top:4px;
+}
+</style>
+</HEAD>
+<BODY>
+<fieldset style="width:300px; height:100px;"> 
+        <legend>生产信息 </legend> 
+        <div>试一下 </div> 
+    </fieldset>
+<fieldset class="test"> 
+<legend>CSS网页布局</legend> 
+    <ul> 
+   <li>哈哈哈哈哈哈哈哈哈哈哈哈</li> 
+   <li>哈哈哈哈哈哈哈哈哈哈哈哈</li> 
+   <li>哈哈哈哈哈哈哈哈哈哈哈哈</li> 
+   <li>哈哈哈哈哈哈哈哈哈哈哈哈</li> 
+    </ul> 
+</fieldset>
+</BODY>
+</HTML>
+
+
+<h2 id="4添加一言或者今日诗词"><a href="#4添加一言或者今日诗词" class="headerlink" title="4添加一言或者今日诗词"></a>4添加一言或者今日诗词</h2><p>\themes\next\source\css_common\components\post\post.styl添加了样式</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">.poem-wrap &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    width: 730px;</span><br><span class="line">    max-width: <span class="number">80</span>%;</span><br><span class="line">    border: 2px solid #<span class="number">797979</span>;</span><br><span class="line">    border-top: none;</span><br><span class="line">    text-align: center;</span><br><span class="line">    margin: 80px auto;</span><br><span class="line">&#125;</span><br><span class="line">.poem-wrap h1 &#123;</span><br><span class="line">    font-size: 30px;</span><br><span class="line">    position: relative;</span><br><span class="line">    margin-top: -20px;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    letter-spacing: 4px;</span><br><span class="line">    color: #<span class="number">797979</span></span><br><span class="line">&#125;</span><br><span class="line">.poem-wrap p &#123;</span><br><span class="line">    width: <span class="number">70</span>%;</span><br><span class="line">    margin: auto;</span><br><span class="line">    line-height: 30px;</span><br><span class="line">    color: #<span class="number">797979</span>;</span><br><span class="line">&#125;</span><br><span class="line">.poem-wrap p#poem &#123;</span><br><span class="line">    font-size: 25px;</span><br><span class="line">&#125;</span><br><span class="line">.poem-wrap p#info &#123;</span><br><span class="line">    font-size: 15px;</span><br><span class="line">    margin: 15px auto;</span><br><span class="line">&#125;</span><br><span class="line">.poem-border &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    height: 2px;</span><br><span class="line">    width: <span class="number">27</span>%;</span><br><span class="line">    background-color: #<span class="number">797979</span>;</span><br><span class="line">&#125;</span><br><span class="line">.poem-right &#123;</span><br><span class="line">    right: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">.poem-left &#123;</span><br><span class="line">    left: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@media</span> (max-width: 685px) &#123;</span><br><span class="line">    .poem-border &#123;</span><br><span class="line">        width: <span class="number">18</span>%;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@media</span> (max-width: 500px) &#123;</span><br><span class="line">    .poem-wrap &#123;</span><br><span class="line">        margin-top: 60px;</span><br><span class="line">        margin-bottom: 20px;</span><br><span class="line">        border-top: 2px solid #<span class="number">797979</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    .poem-wrap h1 &#123;</span><br><span class="line">        margin: 20px 6px;</span><br><span class="line">    &#125;</span><br><span class="line">    .poem-border &#123;</span><br><span class="line">        display: none;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="引入一言，或者今日诗词"><a href="#引入一言，或者今日诗词" class="headerlink" title="引入一言，或者今日诗词"></a>引入一言，或者今日诗词</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;poem-wrap&quot;</span>&gt;</span><br><span class="line">  &lt;div class=<span class="string">&quot;poem-border poem-left&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=<span class="string">&quot;poem-border poem-right&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;h1&gt;念两句诗&lt;/h1&gt;</span><br><span class="line">    &lt;p id=<span class="string">&quot;poem&quot;</span>&gt;挑选中...&lt;/p&gt;</span><br><span class="line">    &lt;p id=<span class="string">&quot;info&quot;</span>&gt;</span><br><span class="line">  &lt;script src=<span class="string">&quot;https://sdk.jinrishici.com/v2/browser/jinrishici.js&quot;</span> charset=<span class="string">&quot;utf-8&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    jinrishici.load(function(result) &#123;</span><br><span class="line">      poem.innerHTML = result.data.content</span><br><span class="line">      info.innerHTML = <span class="string">&#x27;【&#x27;</span> + result.data.origin.dynasty + <span class="string">&#x27;】&#x27;</span> + result.data.origin.author + <span class="string">&#x27;《&#x27;</span> + result.data.origin.title + <span class="string">&#x27;》&#x27;</span></span><br><span class="line">      document.getElementById(<span class="string">&quot;poem&quot;</span>).value(poem);</span><br><span class="line">      document.getElementById(<span class="string">&quot;info&quot;</span>).value(info);  </span><br><span class="line">  &#125;);</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<div class="poem-wrap">
+  <div class="poem-border poem-left"></div>
+  <div class="poem-border poem-right"></div>
+    <h1>留言墙</h1>
+    <p id="poem">挑选中...</p>
+    <p id="info">
+  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    jinrishici.load(function(result) {
+      poem.innerHTML = result.data.content
+      info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+      document.getElementById("poem").value(poem);
+      document.getElementById("info").value(info);  
+  });
+  </script>
+</div>
+
+<h3 id="一言"><a href="#一言" class="headerlink" title="一言"></a>一言</h3><p>和上面做一个替换即可，种类更多，不过个人不太喜欢，质量不高，总有种<em>为赋新词强说愁</em>的感觉</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;p id=<span class="string">&quot;hitokoto&quot;</span>&gt;获取中...&lt;/p&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto&quot;</span> defer&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p id="hitokoto">获取中...</p>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+
+<hr>
+<p>西走菜菜</p>
+<p>2022&#x2F;3&#x2F;28</p>
+]]></content>
+      <categories>
+        <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
     <title>云计算通读</title>
     <url>/2020/12/11/Introduction-of-Cloud-Computing/</url>
     <content><![CDATA[<p>详情请见：<a href="http://c.biancheng.net/cloud_computing/">云计算技术与应用学习教程（精华版）</a></p>
@@ -1157,29 +1278,15 @@
       </categories>
   </entry>
   <entry>
-    <title>读读纪伯伦的小诗吧</title>
-    <url>/2021/09/10/Kahlil-Gibran/</url>
-    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
-<span id="more"></span>
-
-<hr>
-<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
-<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
-<hr>
-<p>2021&#x2F;9&#x2F;10</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
     <title>java LeetCode(更)</title>
     <url>/2022/03/21/Java-LeetCode/</url>
-    <content><![CDATA[<h2 id="2022-2-25"><a href="#2022-2-25" class="headerlink" title="2022.2.25"></a>2022.2.25</h2><p><strong>大小写敏感</strong> </p>
+    <content><![CDATA[<p><strong>大小写敏感</strong> </p>
 <p><strong>类名class</strong>首字母应该大写 </p>
 <p><strong>方法名void</strong>小写字母开头,后面的每个单词首字母大写f</p>
 <p><strong>源文件名和public类名相同</strong>.java</p>
 <p>所有的 Java 程序由 <strong>public static void main(String[] args)</strong> 方法开始执行</p>
+<span id="more"></span>
+
 <p>ava自带的类</p>
 <p>String <code>integer.toBinaryString(int十进制)</code></p>
 <blockquote>
@@ -1192,12 +1299,12 @@
 </blockquote>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">integer</span><br></pre></td></tr></table></figure>
 
-<span id="more"></span>
 
-<h2 id="2022-2-26"><a href="#2022-2-26" class="headerlink" title="2022.2.26"></a>2022.2.26</h2><p>正则表达式，java具体的实现没看</p>
+
+<p>正则表达式，java具体的实现没看</p>
 <p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202220476.png" alt="image-20220228154654072"></p>
-<h2 id="2022-3-2"><a href="#2022-3-2" class="headerlink" title="2022.3.2"></a>2022.3.2</h2><p>过完一遍java基础</p>
-<h2 id="2022-3-3"><a href="#2022-3-3" class="headerlink" title="2022.3.3"></a>2022.3.3</h2><p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202214699.png" alt="image-20220303100236374"></p>
+<p>过完一遍java基础</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202214699.png" alt="image-20220303100236374"></p>
 <h2 id="1-Binary-Search"><a href="#1-Binary-Search" class="headerlink" title="1. Binary Search"></a>1. Binary Search</h2><p>   <img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203202214289.png" alt="image-20220303101332728"></p>
    <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//伪代码，这个不好</span></span><br><span class="line">start=<span class="number">0</span>;end=len-<span class="number">1</span>;<span class="comment">//第一个这个好记一些，但不好用</span></span><br><span class="line"><span class="keyword">while</span>(start+<span class="number">1</span>&lt;end)&#123;<span class="comment">//！！！！如果数组队列只有1个，+1就会越界！！！！</span></span><br><span class="line">    <span class="comment">//不加一最终没法结束循环,只能判断2个及以上</span></span><br><span class="line">    mid=start+(end-start)/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(num[mid]&lt;target)</span><br><span class="line">        start=mid;<span class="comment">//在右边</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        end=mid;</span><br><span class="line">&#125;<span class="comment">//(start,end)</span></span><br></pre></td></tr></table></figure>
 
@@ -1435,6 +1542,22 @@
       </categories>
   </entry>
   <entry>
+    <title>读读纪伯伦的小诗吧</title>
+    <url>/2021/09/10/Kahlil-Gibran/</url>
+    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
+<span id="more"></span>
+
+<hr>
+<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
+<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
+<hr>
+<p>2021&#x2F;9&#x2F;10</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Latex&amp;流程图(二)</title>
     <url>/2022/03/21/Latex/</url>
     <content><![CDATA[<h1 id="1-Latex支持"><a href="#1-Latex支持" class="headerlink" title="1. Latex支持"></a>1. Latex支持</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$J^&#123;wt&#125;_&#123;i&#125;$ </span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">&#123;\mathbb R&#125; = \sum_&#123;t=0&#125;^&#123;n&#125;&#123; &#123;\mathbb R_t&#125;\gamma^&#123;t&#125; &#125;</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -1512,45 +1635,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>如何优雅的和猫咪玩耍</title>
-    <url>/2021/05/21/Play-with-cats-gracefully/</url>
-    <content><![CDATA[<p>本来想起名为撸猫教程，想了想实在太自大了，我能教谁呢？能教什么内容呢？撸什么猫呢？</p>
-<p>我自己不过是喜欢和不同的猫玩罢了，而且我23岁，人生中见过的猫其实很少，真要算的话，最多百十来只吧，这当然是不足以出个教程的。</p>
-<p>但相比我见过的所有人，我似乎是最受猫咪喜爱的，我能感觉到身上有种东西在吸引着各种见过的、没见过的猫咪，尤其是我和她们正面接触的时候，很少会有不理我的情况出现。</p>
-<p>我很难给不熟悉的人证明我上面这段话不是自恋，但事实就是这样，你看到了这些东西，就证明了我觉得你能理解。</p>
-<p>熟悉的猫，大家已经是朋友了，当然是想撸就撸。本文针对更多是初次见面的猫咪。</p>
-<span id="more"></span>
-
-<h2 id="撸猫的心态和动作"><a href="#撸猫的心态和动作" class="headerlink" title="撸猫的心态和动作"></a>撸猫的心态和动作</h2><p>这个应该是读者最想看的会有实际收获的内容吧。</p>
-<h3 id="心态"><a href="#心态" class="headerlink" title="心态"></a>心态</h3><p>首先撸猫的心态呢，不能是高高在上的，不能觉得自己是个人，就高猫一等，你得首先明白，你和她是平等的，你是想和她做朋友，想一起玩；她也是因为想和你一起玩，相信不会被你伤害而回应你的请求才同意被你撸的。</p>
-<p>不养猫的我，撸猫基本都是初次见面的猫，也有可能是见过几次已经很熟悉的猫，相对而言初次见面的猫我觉得对想被猫咪喜欢的人更有参考意义。</p>
-<p>就跟与人交往一样，你得友好，善良，平等，在一起就是为了开心，同时呢心中得有边界感，你得充分信任她，但是得做好被挠一下的心里和身体的准备，准备好在不对劲的时候随时逃跑。但是，相信我，猫的世界是很单纯的，相比于普通人，她们很容易信任别人。</p>
-<p>初次撸猫与人交往一样，我们是抱着友好的态度和想要亲近和被信任的欲望去尝试交流的，但是得清楚，要不要亲近，要不要信任是猫咪自己说了算，这不是你能左右的。所以不要抱太高期望，被回应了会特别开心；但被拒绝了也不要太遗憾，是很正常的事。</p>
-<p>猫咪很胆小，很调皮，喜欢亲近人啊狗啊其它猫啊，只要她觉得不会伤害她就好，她们内心很孤独的。当然，猫咪很爱面子的，最好不要让他觉得丢了面子，不然多半就不理你了。可以回忆一下，猫咪在摔倒或者撞到什么东西，或者恶作剧被无情揭穿，都会做的一件事就是舔爪子洗脸，掩饰尴尬。</p>
-<h3 id="动作"><a href="#动作" class="headerlink" title="动作"></a>动作</h3><p>有了正确的心态后，这些动作会让猫咪觉得很舒服：</p>
-<ol>
-<li>初次尝试交流的时候，内心完全释放你的善意和友好，不要有任何顾忌，你的气味会是善意的气味。我一直都觉得，味道是一切交往发生的前提，与猫咪，与小狗，与人都一样。</li>
-<li>完全释放善意，你脸部的表情和线条也会变得柔和，猫咪很喜欢这个，放松，自然发自内心的微笑，当然了，还有你没有任何警惕感的眼神，这个眼神可能需要练习，要温柔，要比平时对人的温柔时候睁得更小，相信我，有些猫咪甚至更希望你闭上眼睛。</li>
-<li>充分表达你想要被回应的心情，猫咪很善良的，通常在感受到以后，会主动靠过来，就算不是完全乐意，也绝对不会拒绝你靠近她的。</li>
-<li>尤其面对胆小的猫咪，要更有耐心一些，什么猫是想要和你玩但是不敢的，撸猫多了一眼就能看出来，面对他们，在她在回头看你，的时候，不妨多等等她，等她主动靠过来，只要她没有跑掉，都是可以等的。</li>
-<li>引起猫咪的注意有很多种方法，用嘴发出啧啧声，拍手，都可以，但不要太用力了，猫咪普遍很胆小，别吓到他们。只要她们的眼神注意到了你，就够了。</li>
-<li>猫咪很胆小的，理所当然，我们都会害怕比我们大得多的生物，所以如果可以的话，趴在地上是最好的，做得到的话，蹲下，然后尽量把头和身体放松，越低越好，在撸猫的时候，你的眼里应该只有他，没有别的路人的眼光，我觉得这是很容易做到的一件事，但或许对你来说不一定。</li>
-<li>不该摸猫咪的哪儿呢？首先不要逆着毛摸她，不要太用力了，当然了，面对初次认识的猫咪，也要避免触摸敏感部位，比如鼻子，耳朵，胸，腹部，生殖器附近，太不礼貌了。摸爪子和尾巴，猫咪一般会觉得你失礼，她会轻轻咬你一下，让你知道这样不礼貌，但是因为你不是猫咪所以就原谅你了，但被警告就不要继续了。</li>
-<li>怎么样的手法会让猫咪舒服呢?正常人的思路都是顺着毛摸脑袋和身体背部，因为这是猫咪直接暴露给你的，也是小时候经常被妈妈舔的地方。但是有个部位可以让你们关系迅速升温，就是脖子，下巴的哪个凹槽，有经验的人会直接顺着纹理从脖子到下巴撸这儿，猫咪会舒服的把头伸到最远，闭上眼睛，充分享受，甚至会发出呼噜声。</li>
-</ol>
-<h2 id="什么样的猫咪可以做朋友"><a href="#什么样的猫咪可以做朋友" class="headerlink" title="什么样的猫咪可以做朋友"></a>什么样的猫咪可以做朋友</h2><p>答案当然是什么样的都可以。</p>
-<p>不要因为她是流浪猫或者在翻垃圾就嫌弃她，人人都有自己的难处，如果我是一只猫，会不会也有流浪，被生活所迫，每天找不到吃的而去翻垃圾呢？很有可能吧。交朋友不该考虑那么多的，结束以后记得洗手就好啦。当然了也不要因为对方身份高贵，或者对方主人身份高贵而自卑，但我猜大多数人不会有这个问题吧。</p>
-<p>非常警惕的猫，或者心情不好的猫，自然是没有交流的机会的。</p>
-<p>只要他无所事事晒太阳，或者在闲逛，或者和别的猫一起玩，都可以试试。</p>
-<hr>
-<p>2021&#x2F;5&#x2F;21</p>
-<p>西走菜菜</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -1727,6 +1811,45 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>如何优雅的和猫咪玩耍</title>
+    <url>/2021/05/21/Play-with-cats-gracefully/</url>
+    <content><![CDATA[<p>本来想起名为撸猫教程，想了想实在太自大了，我能教谁呢？能教什么内容呢？撸什么猫呢？</p>
+<p>我自己不过是喜欢和不同的猫玩罢了，而且我23岁，人生中见过的猫其实很少，真要算的话，最多百十来只吧，这当然是不足以出个教程的。</p>
+<p>但相比我见过的所有人，我似乎是最受猫咪喜爱的，我能感觉到身上有种东西在吸引着各种见过的、没见过的猫咪，尤其是我和她们正面接触的时候，很少会有不理我的情况出现。</p>
+<p>我很难给不熟悉的人证明我上面这段话不是自恋，但事实就是这样，你看到了这些东西，就证明了我觉得你能理解。</p>
+<p>熟悉的猫，大家已经是朋友了，当然是想撸就撸。本文针对更多是初次见面的猫咪。</p>
+<span id="more"></span>
+
+<h2 id="撸猫的心态和动作"><a href="#撸猫的心态和动作" class="headerlink" title="撸猫的心态和动作"></a>撸猫的心态和动作</h2><p>这个应该是读者最想看的会有实际收获的内容吧。</p>
+<h3 id="心态"><a href="#心态" class="headerlink" title="心态"></a>心态</h3><p>首先撸猫的心态呢，不能是高高在上的，不能觉得自己是个人，就高猫一等，你得首先明白，你和她是平等的，你是想和她做朋友，想一起玩；她也是因为想和你一起玩，相信不会被你伤害而回应你的请求才同意被你撸的。</p>
+<p>不养猫的我，撸猫基本都是初次见面的猫，也有可能是见过几次已经很熟悉的猫，相对而言初次见面的猫我觉得对想被猫咪喜欢的人更有参考意义。</p>
+<p>就跟与人交往一样，你得友好，善良，平等，在一起就是为了开心，同时呢心中得有边界感，你得充分信任她，但是得做好被挠一下的心里和身体的准备，准备好在不对劲的时候随时逃跑。但是，相信我，猫的世界是很单纯的，相比于普通人，她们很容易信任别人。</p>
+<p>初次撸猫与人交往一样，我们是抱着友好的态度和想要亲近和被信任的欲望去尝试交流的，但是得清楚，要不要亲近，要不要信任是猫咪自己说了算，这不是你能左右的。所以不要抱太高期望，被回应了会特别开心；但被拒绝了也不要太遗憾，是很正常的事。</p>
+<p>猫咪很胆小，很调皮，喜欢亲近人啊狗啊其它猫啊，只要她觉得不会伤害她就好，她们内心很孤独的。当然，猫咪很爱面子的，最好不要让他觉得丢了面子，不然多半就不理你了。可以回忆一下，猫咪在摔倒或者撞到什么东西，或者恶作剧被无情揭穿，都会做的一件事就是舔爪子洗脸，掩饰尴尬。</p>
+<h3 id="动作"><a href="#动作" class="headerlink" title="动作"></a>动作</h3><p>有了正确的心态后，这些动作会让猫咪觉得很舒服：</p>
+<ol>
+<li>初次尝试交流的时候，内心完全释放你的善意和友好，不要有任何顾忌，你的气味会是善意的气味。我一直都觉得，味道是一切交往发生的前提，与猫咪，与小狗，与人都一样。</li>
+<li>完全释放善意，你脸部的表情和线条也会变得柔和，猫咪很喜欢这个，放松，自然发自内心的微笑，当然了，还有你没有任何警惕感的眼神，这个眼神可能需要练习，要温柔，要比平时对人的温柔时候睁得更小，相信我，有些猫咪甚至更希望你闭上眼睛。</li>
+<li>充分表达你想要被回应的心情，猫咪很善良的，通常在感受到以后，会主动靠过来，就算不是完全乐意，也绝对不会拒绝你靠近她的。</li>
+<li>尤其面对胆小的猫咪，要更有耐心一些，什么猫是想要和你玩但是不敢的，撸猫多了一眼就能看出来，面对他们，在她在回头看你，的时候，不妨多等等她，等她主动靠过来，只要她没有跑掉，都是可以等的。</li>
+<li>引起猫咪的注意有很多种方法，用嘴发出啧啧声，拍手，都可以，但不要太用力了，猫咪普遍很胆小，别吓到他们。只要她们的眼神注意到了你，就够了。</li>
+<li>猫咪很胆小的，理所当然，我们都会害怕比我们大得多的生物，所以如果可以的话，趴在地上是最好的，做得到的话，蹲下，然后尽量把头和身体放松，越低越好，在撸猫的时候，你的眼里应该只有他，没有别的路人的眼光，我觉得这是很容易做到的一件事，但或许对你来说不一定。</li>
+<li>不该摸猫咪的哪儿呢？首先不要逆着毛摸她，不要太用力了，当然了，面对初次认识的猫咪，也要避免触摸敏感部位，比如鼻子，耳朵，胸，腹部，生殖器附近，太不礼貌了。摸爪子和尾巴，猫咪一般会觉得你失礼，她会轻轻咬你一下，让你知道这样不礼貌，但是因为你不是猫咪所以就原谅你了，但被警告就不要继续了。</li>
+<li>怎么样的手法会让猫咪舒服呢?正常人的思路都是顺着毛摸脑袋和身体背部，因为这是猫咪直接暴露给你的，也是小时候经常被妈妈舔的地方。但是有个部位可以让你们关系迅速升温，就是脖子，下巴的哪个凹槽，有经验的人会直接顺着纹理从脖子到下巴撸这儿，猫咪会舒服的把头伸到最远，闭上眼睛，充分享受，甚至会发出呼噜声。</li>
+</ol>
+<h2 id="什么样的猫咪可以做朋友"><a href="#什么样的猫咪可以做朋友" class="headerlink" title="什么样的猫咪可以做朋友"></a>什么样的猫咪可以做朋友</h2><p>答案当然是什么样的都可以。</p>
+<p>不要因为她是流浪猫或者在翻垃圾就嫌弃她，人人都有自己的难处，如果我是一只猫，会不会也有流浪，被生活所迫，每天找不到吃的而去翻垃圾呢？很有可能吧。交朋友不该考虑那么多的，结束以后记得洗手就好啦。当然了也不要因为对方身份高贵，或者对方主人身份高贵而自卑，但我猜大多数人不会有这个问题吧。</p>
+<p>非常警惕的猫，或者心情不好的猫，自然是没有交流的机会的。</p>
+<p>只要他无所事事晒太阳，或者在闲逛，或者和别的猫一起玩，都可以试试。</p>
+<hr>
+<p>2021&#x2F;5&#x2F;21</p>
+<p>西走菜菜</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
     <title>我们真的有自己想象的那样了解现实吗</title>
     <url>/2022/03/27/Recognizing-reality/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -1769,48 +1892,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>高声大嗓</title>
-    <url>/2021/03/15/The-farmer/</url>
-    <content><![CDATA[<p>有这么一个农民，外号叫”高声大嗓”，这个外号，是爸妈取的。</p>
-<p>他从来没有进过我们家门，每次要不用自行车驮着纤维袋子鼓鼓囊囊装满的洋芋，要不洋芋拉在三轮车上，到了家门口，大声吆喝”取洋芋咯！”他从不担心我们会听不到，因为他的声音能轻松响彻巷子里所有的街坊邻居，轻松盖过各自家里的电视节目声音。这是已经搬迁了的巷子邻居的共同记忆。</p>
-<p>20多年前，他胃溃疡萎缩性胃炎严重，看了很多大夫都没用，生命垂危，我爸治好了他。但他只是我爸看无数病人中的一位普通病人。</p>
-<span id="more"></span>
-
-<p>因为感激爸爸的救命之恩，20多年来，每年自己种的洋芋成熟的时候，都会留一袋子比较好的用最低廉的价格给我们家送来，从来都没间断过，按我爸妈的话来说，他送的洋芋和市场上卖的区别很大，一点都不麻，又大又好吃。</p>
-<p>近些年年，”高声大嗓”说自己年龄大了，60多了，自行车骑不动了，三轮没上牌，城里管的很严去不了。但洋芋每年都给我们留着，要不就找人带，要不就我们自己去取。</p>
-<p>之前对此人的了解，只是停留在爸妈口中的人真的很好，现在这样的病人再也没有了，以及每年不用买的洋芋，因为自己在家几乎不做饭，而且从没见过，所以其实印象很浅。</p>
-<p>今年因为我回学校晚，为了练练车技，我们全家今天下午开车去他家，甘肃省定西市临洮县龙门镇大宅子村林家嘴，取洋芋。</p>
-<h2 id="路上"><a href="#路上" class="headerlink" title="路上"></a>路上</h2><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213535525.png" alt="image-20210315213535525" style="zoom: 50%;" />
-
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213608787.png" alt="image-20210315213608787"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203150950687.png" alt="image-20210315213626300"></p>
-<p>这路，是真的难走，走完盘旋山路，就是更难走的水泥硬化路，全程只能勉强两辆车通过，一侧山体一侧悬崖。再后来，从山上到山脚，索性连路都没有了，导航完全没用，只有拖拉机压出来的黄土，和土墙山坳，全程只允许我的一辆小型车勉强通过，坑洼不平，还有松软的泥泞。我尽可能防止挂到车辆底盘，仍在走错路田间掉头时，陷入了松土中，轮胎空转，爸妈下车推车，再上车时我们三个被轮胎的焦糊味熏得眼睛难受。到了以后，刹车片发烫。</p>
-<p>期间因为实在找不到路在哪儿，边走边问路，问了好多村民，最后因为遇上了放学的小学生，恰好也是去林家嘴的，载着她，这才找到庄子。</p>
-<p>趟着厚厚的黄土，迎着大风，摸摸索索终于找到了人家。</p>
-<p>面朝黄土背朝天，太贴切了。我妈说，如果她有女儿，绝不肯嫁到这种地方来，太苦了。</p>
-<h2 id="到了"><a href="#到了" class="headerlink" title="到了"></a>到了</h2><p>我昨晚喝了酒，早上没胃口，中午吃的有点少，开山路集中精力搞得我疲倦，我确实是又累又饿，有点低血糖头晕。</p>
-<p>到了以后，风很大土很大，我们三个蓬头垢面，嘴里都沙碌碌的。家里没人，果然去下地干活了，我和我妈都在埋怨为什么我爸不提前打电话。打了电话告知我们已经到了家门口，大爷大娘了然，大娘从山脚一路跑步到了我们面前，气喘吁吁，随后大爷的三轮也回来了。</p>
-<p>他们精瘦的体格，黝黑的，深深刻印了皱纹的干枯的皮肤，诉说着地地道道庄稼汉的苦。</p>
-<p>进去以后，房屋十分简单，养鸡种地，客厅堆了药材，所以只能去厨房一座。一进门，便是久违的，熟悉的，昏暗潮湿的霉味和炕味。</p>
-<p>大娘大爷显然没有料到我们会来，手足无措，按照他们的习惯应该劳作一天，天黑再回家做饭。此时竟不知道该拿什么来招待我们。想擀面做饭，想煮自己家的鸡肉，被爸妈拼命拦下，一来不想麻烦他们，二来太晚天黑了路太难走，太危险，回不去。</p>
-<p>所以只泡了茶，因为外出没有生火，当然也没有热水，就用电磁炉烧了敞口的壶。没有小块的冰糖，大块的用手掰不动，大娘只能用菜刀刀背在案板上敲开，结果碎的到处都是，取完整的小块冰糖和放在柜子里的铁罐里的碎茶叶泡了茶。</p>
-<p>一进门大娘就开始找所有能让我们带走的东西，找来找去，只找到了之前杀的鸡，和没吃的肉，全装袋子了。</p>
-<p>拿出自己种的粮食做的馍，就着这满是土腥味儿的茶，比普洱没洗的味道还要浓好多倍，我吃的十分香甜，真真切切能尝到粮食的香味。估计是看我吃的太投入，饿了。大娘用自己家的鸡蛋做点喝的，根本拦不住，切点小葱，飘在表面，我和我爸一人盛了三个荷包蛋。我觉得小葱很好吃，于是无所事事的我妈在案板下面帮我找了一根。</p>
-<p>大娘看到后，说喜欢葱的话还有更新鲜的！二话不说跑去近处的田里，摘了一把，回来洗净一根推搡给我，我已经吃完了，我这样吃不习惯葱的人只吃葱怎么可能吃得下啊。剩下没洗的说什么都要让装走，说吃不完种在盆里也行。看我吃饼吃的很香，又摸出今天带去田里干活还没来及吃的饼，也带走。盛情难却啊。</p>
-<p>我终于理解了为什么我爸不肯提前打电话告知了。</p>
-<p>天色渐晚，稍微果腹后，我们打算带着洋芋回去。大娘风风火火，不到半个小时庄子的人们都知道秦大夫来了，纷纷围了过来，在村头的路口，一个个都希望看看自己家里的病，其实都是些小病，很快开完药方后，被全庄一起簇拥着，热热闹闹各自说着家长里短，来到了停车的麦场。离开的时候，大爷大娘对我说爷爷死了没叫他们太遗憾了，我结婚的时候一定要叫啊。</p>
-<h2 id="离开了"><a href="#离开了" class="headerlink" title="离开了"></a>离开了</h2><p>吃饭的时候，吃完站在院子里逗猫的时候，我看着我爸在村头路上给大家看病的时候，我的眼睛湿润了很多次，尤其是经历过之前一段时间，我对人与人的信任感降到过最低，没想到我这辈子能亲眼见到，亲自感受到如此淳朴善良亲切的人们，没想到这样的人真的存在。我感觉到了从未有过的脚踏实地甚至深深扎根在黄土中的真实，心贴心的开心和感动，即便都是初次相见。我对我的追求产生了深深的动摇，金钱和地位应该可以给我虚荣的快感，更好的生活，更容易交到的朋友，但能给我这种感觉吗，不能。我非常心动，我想，如果纯粹为了这种感觉，而不是为了造福大众这种虚伪的理由，我真的愿意回来做个乡土干部。</p>
-<p>但是想了想，太不现实了，我已经出去了，想回来太难了。我能快乐感动一段时间，但是时间长了，我终究做不到没有物欲，此外太不方便和城市化导致住户一直在减少，只有剩下的老人在种田，这样的可爱的偏远的庄子最终还是会消失的，而且或许用不了多少年了。</p>
-<p>中国还有无数个这种小村庄，只有在自己最擅长的领域发光发热，为祖国的强大供能，才能最大限度帮助脱贫吧。</p>
-<p>多想以后和”人”相处累了，我还能在某个不知道是哪儿的地方找到这种感觉。</p>
-<hr>
-<p>2021&#x2F;3&#x2F;15</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -2113,6 +2194,48 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>高声大嗓</title>
+    <url>/2021/03/15/The-farmer/</url>
+    <content><![CDATA[<p>有这么一个农民，外号叫”高声大嗓”，这个外号，是爸妈取的。</p>
+<p>他从来没有进过我们家门，每次要不用自行车驮着纤维袋子鼓鼓囊囊装满的洋芋，要不洋芋拉在三轮车上，到了家门口，大声吆喝”取洋芋咯！”他从不担心我们会听不到，因为他的声音能轻松响彻巷子里所有的街坊邻居，轻松盖过各自家里的电视节目声音。这是已经搬迁了的巷子邻居的共同记忆。</p>
+<p>20多年前，他胃溃疡萎缩性胃炎严重，看了很多大夫都没用，生命垂危，我爸治好了他。但他只是我爸看无数病人中的一位普通病人。</p>
+<span id="more"></span>
+
+<p>因为感激爸爸的救命之恩，20多年来，每年自己种的洋芋成熟的时候，都会留一袋子比较好的用最低廉的价格给我们家送来，从来都没间断过，按我爸妈的话来说，他送的洋芋和市场上卖的区别很大，一点都不麻，又大又好吃。</p>
+<p>近些年年，”高声大嗓”说自己年龄大了，60多了，自行车骑不动了，三轮没上牌，城里管的很严去不了。但洋芋每年都给我们留着，要不就找人带，要不就我们自己去取。</p>
+<p>之前对此人的了解，只是停留在爸妈口中的人真的很好，现在这样的病人再也没有了，以及每年不用买的洋芋，因为自己在家几乎不做饭，而且从没见过，所以其实印象很浅。</p>
+<p>今年因为我回学校晚，为了练练车技，我们全家今天下午开车去他家，甘肃省定西市临洮县龙门镇大宅子村林家嘴，取洋芋。</p>
+<h2 id="路上"><a href="#路上" class="headerlink" title="路上"></a>路上</h2><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213535525.png" alt="image-20210315213535525" style="zoom: 50%;" />
+
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213608787.png" alt="image-20210315213608787"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203150950687.png" alt="image-20210315213626300"></p>
+<p>这路，是真的难走，走完盘旋山路，就是更难走的水泥硬化路，全程只能勉强两辆车通过，一侧山体一侧悬崖。再后来，从山上到山脚，索性连路都没有了，导航完全没用，只有拖拉机压出来的黄土，和土墙山坳，全程只允许我的一辆小型车勉强通过，坑洼不平，还有松软的泥泞。我尽可能防止挂到车辆底盘，仍在走错路田间掉头时，陷入了松土中，轮胎空转，爸妈下车推车，再上车时我们三个被轮胎的焦糊味熏得眼睛难受。到了以后，刹车片发烫。</p>
+<p>期间因为实在找不到路在哪儿，边走边问路，问了好多村民，最后因为遇上了放学的小学生，恰好也是去林家嘴的，载着她，这才找到庄子。</p>
+<p>趟着厚厚的黄土，迎着大风，摸摸索索终于找到了人家。</p>
+<p>面朝黄土背朝天，太贴切了。我妈说，如果她有女儿，绝不肯嫁到这种地方来，太苦了。</p>
+<h2 id="到了"><a href="#到了" class="headerlink" title="到了"></a>到了</h2><p>我昨晚喝了酒，早上没胃口，中午吃的有点少，开山路集中精力搞得我疲倦，我确实是又累又饿，有点低血糖头晕。</p>
+<p>到了以后，风很大土很大，我们三个蓬头垢面，嘴里都沙碌碌的。家里没人，果然去下地干活了，我和我妈都在埋怨为什么我爸不提前打电话。打了电话告知我们已经到了家门口，大爷大娘了然，大娘从山脚一路跑步到了我们面前，气喘吁吁，随后大爷的三轮也回来了。</p>
+<p>他们精瘦的体格，黝黑的，深深刻印了皱纹的干枯的皮肤，诉说着地地道道庄稼汉的苦。</p>
+<p>进去以后，房屋十分简单，养鸡种地，客厅堆了药材，所以只能去厨房一座。一进门，便是久违的，熟悉的，昏暗潮湿的霉味和炕味。</p>
+<p>大娘大爷显然没有料到我们会来，手足无措，按照他们的习惯应该劳作一天，天黑再回家做饭。此时竟不知道该拿什么来招待我们。想擀面做饭，想煮自己家的鸡肉，被爸妈拼命拦下，一来不想麻烦他们，二来太晚天黑了路太难走，太危险，回不去。</p>
+<p>所以只泡了茶，因为外出没有生火，当然也没有热水，就用电磁炉烧了敞口的壶。没有小块的冰糖，大块的用手掰不动，大娘只能用菜刀刀背在案板上敲开，结果碎的到处都是，取完整的小块冰糖和放在柜子里的铁罐里的碎茶叶泡了茶。</p>
+<p>一进门大娘就开始找所有能让我们带走的东西，找来找去，只找到了之前杀的鸡，和没吃的肉，全装袋子了。</p>
+<p>拿出自己种的粮食做的馍，就着这满是土腥味儿的茶，比普洱没洗的味道还要浓好多倍，我吃的十分香甜，真真切切能尝到粮食的香味。估计是看我吃的太投入，饿了。大娘用自己家的鸡蛋做点喝的，根本拦不住，切点小葱，飘在表面，我和我爸一人盛了三个荷包蛋。我觉得小葱很好吃，于是无所事事的我妈在案板下面帮我找了一根。</p>
+<p>大娘看到后，说喜欢葱的话还有更新鲜的！二话不说跑去近处的田里，摘了一把，回来洗净一根推搡给我，我已经吃完了，我这样吃不习惯葱的人只吃葱怎么可能吃得下啊。剩下没洗的说什么都要让装走，说吃不完种在盆里也行。看我吃饼吃的很香，又摸出今天带去田里干活还没来及吃的饼，也带走。盛情难却啊。</p>
+<p>我终于理解了为什么我爸不肯提前打电话告知了。</p>
+<p>天色渐晚，稍微果腹后，我们打算带着洋芋回去。大娘风风火火，不到半个小时庄子的人们都知道秦大夫来了，纷纷围了过来，在村头的路口，一个个都希望看看自己家里的病，其实都是些小病，很快开完药方后，被全庄一起簇拥着，热热闹闹各自说着家长里短，来到了停车的麦场。离开的时候，大爷大娘对我说爷爷死了没叫他们太遗憾了，我结婚的时候一定要叫啊。</p>
+<h2 id="离开了"><a href="#离开了" class="headerlink" title="离开了"></a>离开了</h2><p>吃饭的时候，吃完站在院子里逗猫的时候，我看着我爸在村头路上给大家看病的时候，我的眼睛湿润了很多次，尤其是经历过之前一段时间，我对人与人的信任感降到过最低，没想到我这辈子能亲眼见到，亲自感受到如此淳朴善良亲切的人们，没想到这样的人真的存在。我感觉到了从未有过的脚踏实地甚至深深扎根在黄土中的真实，心贴心的开心和感动，即便都是初次相见。我对我的追求产生了深深的动摇，金钱和地位应该可以给我虚荣的快感，更好的生活，更容易交到的朋友，但能给我这种感觉吗，不能。我非常心动，我想，如果纯粹为了这种感觉，而不是为了造福大众这种虚伪的理由，我真的愿意回来做个乡土干部。</p>
+<p>但是想了想，太不现实了，我已经出去了，想回来太难了。我能快乐感动一段时间，但是时间长了，我终究做不到没有物欲，此外太不方便和城市化导致住户一直在减少，只有剩下的老人在种田，这样的可爱的偏远的庄子最终还是会消失的，而且或许用不了多少年了。</p>
+<p>中国还有无数个这种小村庄，只有在自己最擅长的领域发光发热，为祖国的强大供能，才能最大限度帮助脱贫吧。</p>
+<p>多想以后和”人”相处累了，我还能在某个不知道是哪儿的地方找到这种感觉。</p>
+<hr>
+<p>2021&#x2F;3&#x2F;15</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Typora PicGo GitHub云图床(四)</title>
     <url>/2022/03/21/Typora+PicGo+GitHub/</url>
     <content><![CDATA[<p>前文已经讲述了<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a>，<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>，<a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a>。但是本地图床仍有遗失风险和难以跨设备查看的不足，为了避免图片遗失，增强分享和多端查看的便利性，本文将进一步增强网络图床的配置，实现更进一步的自动化，只需要简单的拖拽或者复制粘贴，一切都很优雅。</p>
@@ -2191,51 +2314,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>Typora的设置(三)</title>
-    <url>/2022/03/21/Typora-Setting/</url>
-    <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
-<span id="more"></span>
-
-<h1 id="1-下载Typora"><a href="#1-下载Typora" class="headerlink" title="1.下载Typora"></a>1.下载Typora</h1><p>百度搜索typora，源码在github，所以可能会慢，也可以挂梯子，either way is fine</p>
-<p><a href="https://www.typora.net/">Typora|Typora中文|typora下载|typora 主题</a>中文官网下载</p>
-<p><a href="http://yiting.pro/">Typora — a markdown editor, markdown reader. (yiting.pro)</a>原网页</p>
-<h1 id="2-Typora设置"><a href="#2-Typora设置" class="headerlink" title="2.Typora设置"></a>2.Typora设置</h1><p>安装完成后，这些是我的设置，我觉得非常顺手，按你的喜好来就行，直接进入<strong>偏好设置</strong>：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211135751.png" alt="982ba7245349cabf1c3b76bb9d37b29"></p>
-<p><strong>本地图床设置，很重要，否则有可能会因为移动文件夹或者电脑清理而遗失图片！</strong></p>
-<p>首先，养成良好的习惯，选择指定路径，把你的markdown集中保管。按照如图设置，在markdown管理的根目录下创建picture文件夹，然后当你拖拽或者复制粘贴图片进来的时候，typora会自动复制图片到这个文件夹去，然后把相对路径粘贴到你指定的文章位置，很方便。</p>
-<p>markdown作为文本标记语言，最头疼的就是管理图片，把它交给typora吧，你就不需要因管理图片而费心思了。</p>
-<p>到这儿你实现了图片管理自动化，但不能把包含图片的markdown或者其它导出格式分享给朋友，或者在别的地方查看，更方便的办法就是<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，不点击不影响本地配置。</p>
-<p>其它不太重要的设置：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211130280.png" alt="image-20220321113005083"></p>
-<p>设置 重新打开，自动保存，自动更新；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211131099.png" alt="b87520f2ce9005fd3881a5fc73d8c3d"></p>
-<p>我喜欢干净简洁，用一体化，侧边栏折叠，不然乱糟糟的；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211133783.png" alt="6dd2e2595d9eb940e03ea730a7a1c42"></p>
-<p>编辑器打开匹配Markdown就可以像写代码时候一样手不用离开键盘去碰鼠标了，这太恼人了，配合快捷键使用 链接；</p>
-<p>后面基本不需要什么设置了，保险起见还是贴出来。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142752.png" alt="59a29211aff71c75382498a8d20f4ac"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142846.png" alt="26559d405080171560fac7248d6e519"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142807.png" alt="e48bce4fcc0430357ed1b464b2599fd"></p>
-<h1 id="3-浏览器插件支持"><a href="#3-浏览器插件支持" class="headerlink" title="3.浏览器插件支持"></a>3.浏览器插件支持</h1><p>如果你用的是chrome或者chrome内核的edge，比如我，<a href="https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/immegcobaplfimdjgkabakodipaehfca">Copy as Markdown - Microsoft Edge Addons</a>插件是必装的，你的所有复制行为，自带markdown格式。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211147083.png" alt="image-20220321114716013"></p>
-<p>之后我专门出一期如何优雅的全设备使用edge。</p>
-<h3 id="恭喜你，到此你的Markdown已经本地化非常好用啦！"><a href="#恭喜你，到此你的Markdown已经本地化非常好用啦！" class="headerlink" title="恭喜你，到此你的Markdown已经本地化非常好用啦！"></a>恭喜你，到此你的Markdown已经本地化非常好用啦！</h3><h1 id="4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四"><a href="#4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四" class="headerlink" title="4.Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) "></a>4.<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></h1><hr>
-<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
-<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
-</ol>
-<hr>
-<p>2022&#x2F;3&#x2F;21</p>
-]]></content>
-      <categories>
-        <category>Markdown&amp;Blog</category>
-      </categories>
-  </entry>
-  <entry>
     <title>win快捷键</title>
     <url>/2022/03/20/Win10-shortcut-key/</url>
     <content><![CDATA[<h1 id="记录几个喜欢随手用的win快捷键"><a href="#记录几个喜欢随手用的win快捷键" class="headerlink" title="记录几个喜欢随手用的win快捷键"></a>记录几个喜欢随手用的win快捷键</h1><p>如果你和我一样是电脑小白，又很烦win10所有事情都强烈依赖鼠标，这些快捷键会让你的体验大幅度提升</p>
@@ -2285,6 +2363,51 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>小技巧&amp;快捷键&amp;命令</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Typora的设置(三)</title>
+    <url>/2022/03/21/Typora-Setting/</url>
+    <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
+<span id="more"></span>
+
+<h1 id="1-下载Typora"><a href="#1-下载Typora" class="headerlink" title="1.下载Typora"></a>1.下载Typora</h1><p>百度搜索typora，源码在github，所以可能会慢，也可以挂梯子，either way is fine</p>
+<p><a href="https://www.typora.net/">Typora|Typora中文|typora下载|typora 主题</a>中文官网下载</p>
+<p><a href="http://yiting.pro/">Typora — a markdown editor, markdown reader. (yiting.pro)</a>原网页</p>
+<h1 id="2-Typora设置"><a href="#2-Typora设置" class="headerlink" title="2.Typora设置"></a>2.Typora设置</h1><p>安装完成后，这些是我的设置，我觉得非常顺手，按你的喜好来就行，直接进入<strong>偏好设置</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211135751.png" alt="982ba7245349cabf1c3b76bb9d37b29"></p>
+<p><strong>本地图床设置，很重要，否则有可能会因为移动文件夹或者电脑清理而遗失图片！</strong></p>
+<p>首先，养成良好的习惯，选择指定路径，把你的markdown集中保管。按照如图设置，在markdown管理的根目录下创建picture文件夹，然后当你拖拽或者复制粘贴图片进来的时候，typora会自动复制图片到这个文件夹去，然后把相对路径粘贴到你指定的文章位置，很方便。</p>
+<p>markdown作为文本标记语言，最头疼的就是管理图片，把它交给typora吧，你就不需要因管理图片而费心思了。</p>
+<p>到这儿你实现了图片管理自动化，但不能把包含图片的markdown或者其它导出格式分享给朋友，或者在别的地方查看，更方便的办法就是<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，不点击不影响本地配置。</p>
+<p>其它不太重要的设置：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211130280.png" alt="image-20220321113005083"></p>
+<p>设置 重新打开，自动保存，自动更新；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211131099.png" alt="b87520f2ce9005fd3881a5fc73d8c3d"></p>
+<p>我喜欢干净简洁，用一体化，侧边栏折叠，不然乱糟糟的；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211133783.png" alt="6dd2e2595d9eb940e03ea730a7a1c42"></p>
+<p>编辑器打开匹配Markdown就可以像写代码时候一样手不用离开键盘去碰鼠标了，这太恼人了，配合快捷键使用 链接；</p>
+<p>后面基本不需要什么设置了，保险起见还是贴出来。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142752.png" alt="59a29211aff71c75382498a8d20f4ac"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142846.png" alt="26559d405080171560fac7248d6e519"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142807.png" alt="e48bce4fcc0430357ed1b464b2599fd"></p>
+<h1 id="3-浏览器插件支持"><a href="#3-浏览器插件支持" class="headerlink" title="3.浏览器插件支持"></a>3.浏览器插件支持</h1><p>如果你用的是chrome或者chrome内核的edge，比如我，<a href="https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/immegcobaplfimdjgkabakodipaehfca">Copy as Markdown - Microsoft Edge Addons</a>插件是必装的，你的所有复制行为，自带markdown格式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211147083.png" alt="image-20220321114716013"></p>
+<p>之后我专门出一期如何优雅的全设备使用edge。</p>
+<h3 id="恭喜你，到此你的Markdown已经本地化非常好用啦！"><a href="#恭喜你，到此你的Markdown已经本地化非常好用啦！" class="headerlink" title="恭喜你，到此你的Markdown已经本地化非常好用啦！"></a>恭喜你，到此你的Markdown已经本地化非常好用啦！</h3><h1 id="4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四"><a href="#4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四" class="headerlink" title="4.Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) "></a>4.<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></h1><hr>
+<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
+<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
+</ol>
+<hr>
+<p>2022&#x2F;3&#x2F;21</p>
+]]></content>
+      <categories>
+        <category>Markdown&amp;Blog</category>
       </categories>
   </entry>
   <entry>
