@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2022/03/20/Win10-shortcut-key/</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/03/21/Typora+PicGo+GitHub/</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/03/21/Typora-Setting/</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/11/15/Play-badminton-gracefully/</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/03/21/Latex/</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/12/28/Deep-Q-Learning-with-Keras-and-Gym/</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/03/15/Data-structure-API/</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/03/28/Html/</loc>
     
     <lastmod>2022-03-28</lastmod>
@@ -12,15 +75,6 @@
   
   <url>
     <loc>http://example.com/2022/03/21/Java-LeetCode/</loc>
-    
-    <lastmod>2022-03-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/03/21/Latex/</loc>
     
     <lastmod>2022-03-28</lastmod>
     
@@ -92,43 +146,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/03/21/Typora+PicGo+GitHub/</loc>
-    
-    <lastmod>2022-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2020/12/11/Introduction-of-Cloud-Computing/</loc>
-    
-    <lastmod>2022-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/03/20/Win10-shortcut-key/</loc>
-    
-    <lastmod>2022-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/03/21/Typora-Setting/</loc>
-    
-    <lastmod>2022-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/12/28/Deep-Q-Learning-with-Keras-and-Gym/</loc>
     
     <lastmod>2022-03-26</lastmod>
     
@@ -140,15 +158,6 @@
     <loc>http://example.com/2021/03/18/Blind-Willow&Sleeping-Woman/</loc>
     
     <lastmod>2022-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/11/15/Play-badminton-gracefully/</loc>
-    
-    <lastmod>2022-03-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -254,15 +263,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/03/15/Data-structure-API/</loc>
-    
-    <lastmod>2022-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2021/07/26/The-Hadoop-Distributed-File-System/</loc>
     
     <lastmod>2022-03-22</lastmod>
@@ -322,6 +322,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/categories/%E5%B0%8F%E4%BC%99%E4%BC%B4/</loc>
+    <lastmod>2022-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/categories/java/</loc>
     <lastmod>2022-03-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -337,13 +344,6 @@
   
   <url>
     <loc>http://example.com/categories/Cloud-Computing/</loc>
-    <lastmod>2022-03-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/%E5%B0%8F%E4%BC%99%E4%BC%B4/</loc>
     <lastmod>2022-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
