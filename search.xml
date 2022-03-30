@@ -554,6 +554,112 @@
       </categories>
   </entry>
   <entry>
+    <title>AIRL中遇到的问题</title>
+    <url>/2020/12/11/Difficulties-in-AIRL/</url>
+    <content><![CDATA[<p> 云调度和DRL论文中 <em>待解决</em> 思考：</p>
+<h2 id="1-网格计算-云计算前身"><a href="#1-网格计算-云计算前身" class="headerlink" title="1.网格计算[^云计算前身]"></a>1.网格计算[^<del>云计算前身</del>]</h2><p>这种计算模式是利用互联网把分散在不同地理位置的电脑组织成一个“虚拟的超级计算机”，其中每一台参与计算的计算机就是一个“节点”，而整个计算是由成千上万个“节点”组成的“一张网格”。</p>
+<p>网格计算的优势有两个：一个是数据处理能力超强；另一个是能充分利用网上的闲置处理能力。</p>
+<p>它研究如何把一个需要非常巨大的<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E8%83%BD%E5%8A%9B/4554810">计算能力</a>才能解决的问题分成许多小的部分，然后把这些部分分配给许多<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA/140338">计算机</a>进行处理，最后把这些计算结果综合起来得到最终结果。</p>
+<p><a href="https://zhidao.baidu.com/question/70675394.html">网格计算和云计算的概念和区别</a></p>
+<span id="more"></span>
+
+<h2 id="2-1-P-VS-NP-Nondeterministic-Polynomial-time"><a href="#2-1-P-VS-NP-Nondeterministic-Polynomial-time" class="headerlink" title="2.1 P VS. NP(Nondeterministic Polynomial time)"></a>2.1 P VS. NP(Nondeterministic Polynomial time)</h2><table>
+<thead>
+<tr>
+<th>P</th>
+<th>VS.</th>
+<th>NP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>能快速求解（易解）</td>
+<td></td>
+<td>不一定能快速求解（易验证）</td>
+</tr>
+<tr>
+<td>P一定是NP，易算易验证</td>
+<td></td>
+<td>NP则不一定是P，能验证不一定能计算，如质数分解</td>
+</tr>
+<tr>
+<td>P就是能在多项式时间内解决的问题(算的快)</td>
+<td></td>
+<td>NP就是能在多项式时间验证答案正确与否的问题(验证快)</td>
+</tr>
+</tbody></table>
+<p><em><strong>P&#x3D;NP?</strong></em>  </p>
+<p>N即不存在不能快速求解。P是否等于NP实质上就是在问，如果对于一个问题我能在多项式时间内验证其答案的正确性，那么我是否能在多项式时间内解决它？</p>
+<p><em><strong>NP-hardness（困难） 和 NP-completeness（完全）：</strong></em></p>
+<p>如果任意一个NP的问题都可以多项式[^归约]到L（L是转化后的问题，高级，困难），称问题L是NP-hard：</p>
+<ul>
+<li><p>显然NP-hard不一定是NP问题，NP-hard是个新问题。</p>
+</li>
+<li><p>如果一个NP-hard，即归约后问题L本身就是NP的，则称L是NP-completeness.(NPC最难，[^时间复杂度最高])</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934343.png" alt="这里写图片描述"></p>
+</li>
+</ul>
+<blockquote>
+<p>“P vs NP”问题：请问那些需要非确定性图灵机（超能力计算机）在多项式时间才能解决的问题，能够用确定性图灵机（普通计算机）在多项式时间解决吗？ <a href="http://www.yinwang.org/blog-cn/2019/07/21/pnp2">P vs NP不重要</a></p>
+</blockquote>
+<h3 id="2-2-维度诅咒"><a href="#2-2-维度诅咒" class="headerlink" title="2.2[^维度诅咒]"></a>2.2[^维度诅咒]</h3><p>当维度增加(太大)时,体积(难度)指数增加的难题.</p>
+<p><em><strong>分类器中：</strong></em></p>
+<p><img src="https://www.visiondummy.com/wp-content/uploads/2014/04/dimensionality_vs_performance.png" alt="img"></p>
+<p><strong>图2中</strong>随着维度的增加，分类器的性能会提高，直到达到最佳要素数。进一步增加维度而不增加训练样本的数量导致分类器性能的降低。 过拟合 ，</p>
+<p>维度的诅咒使得训练数据的 稀疏性 ，训练样本的密度呈指数下降。</p>
+<p>维度诅咒的另一个影响是，这种稀疏性不是均匀分布在搜索空间上。实际上，原点周围的数据（在超立方体的 中心 ）比搜索空间的 角落 中的数据要稀疏得多。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934531.png" alt="img"></p>
+<p>**图3.**随着维度的增加，更大比例的训练数据驻留在要素空间的 角落 中。</p>
+<p><em><strong>如何避免：</strong></em></p>
+<p>问题是 “太大” 意味着什么: [^特征的数量和样本数量有关]</p>
+<p><strong>特征选择方法：</strong>通常采用启发式(如<a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA算法</a>)(贪婪方法，最佳优先方法等）来定位最佳数量和特征组合</p>
+<p><strong>特征提取方法（降维）：</strong><a href="http://www.visiondummy.com/2014/05/feature-extraction-using-pca/">主成分分析（PCA）</a>，它产生原始N特征的不相关的线性组合。PCA试图找到较低维度的线性子空间，以便保持原始数据的最大方差（向着极大无关组出发）。但是，请注意，数据的最大差异不一定代表最具辨别力的信息。</p>
+<p><strong>交叉验证：</strong></p>
+<blockquote>
+<p>交叉验证方法将原始训练数据分成一个或多个训练子集。</p>
+<p>在分类器训练期间，一个子集用于 测试 所得分类器的准确度和精度，而其他子集用于 参数估计 (真实训练)。</p>
+<p>如果用于 训练 的子集的分类结果与用于 测试 的子集的结果大不相同，则过度拟合正在发挥作用。</p>
+<p>如果只有<strong>有限</strong>数量的训练数据可用，则可以使用几种类型的交叉验证，例如k折交叉验证和留一交叉验证。</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/K-fold_cross_validation_EN.jpg" alt="img"></p>
+<p><strong>Diagram of k-fold cross-validation with k&#x3D;4</strong></p>
+<h4 id="为什么说RL与深度神经网络结合可以避免维度之咒？"><a href="#为什么说RL与深度神经网络结合可以避免维度之咒？" class="headerlink" title="为什么说RL与深度神经网络结合可以避免维度之咒？"></a>为什么说RL与深度神经网络结合可以避免维度之咒？</h4><blockquote>
+<p>因为神经网络能够提取特征。</p>
+</blockquote>
+<p>Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
+<p>事实上，SVM及 神经网络 都可以看做是寻找一个合适的特征维度的过程。</p>
+<p>当数据的维度过小的时候，数据分布过于稠密，不能很好的进行区分，这时候可以通过带有核函数的SVM将低纬度的数据映射到高纬度。</p>
+<p>当样本的<strong>维度过大</strong>时，受限于样本的多少及计算机的计算能力，需要利用 神经网络 对样本的维度进行压缩，便于分类。</p>
+<p>两者目的都在于使得数据的维度达到一个合适的稠密程度，从而更方便找到分类超平面。这也决定了SVM适用于低维小样本数据，而神经网络适合于大规模高维数据。</p>
+<p>时间复杂度决定了模型的训练&#x2F;预测时间。如果复杂度过高，则会导致模型训练和预测耗费大量时间，既无法快速的验证想法和改善模型，也无法做到快速的预测。</p>
+<p><em><strong>空间复杂度</strong></em> 决定了模型的参数数量。</p>
+<p>由于<strong>维度诅咒的限制</strong>，模型的参数越多，训练模型所需的数据量就越大，而现实生活中的数据集通常不会太大，这会导致模型的训练更容易<strong>过拟合</strong>。</p>
+<p>空间复杂度（访存量），严格来讲包括两部分：总参数量 + 各层输出特征图。</p>
+<ul>
+<li><strong>参数量</strong>：模型所有带参数的层的权重参数总量（即<strong>模型体积</strong>，下式第一个求和表达式）</li>
+<li><strong>特征图</strong>：模型在实时运行过程中每层所计算出的输出特征图大小（下式第二个求和表达式）</li>
+</ul>
+<p><strong>公式来源</strong>：<a href="https://zhuanlan.zhihu.com/p/31575074">卷积神经网络复杂度分析</a></p>
+<p> <a href="%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%83%BD%E6%88%98%E8%83%9C%E7%BB%B4%E5%BA%A6%E7%9A%84%E8%AF%85%E5%92%92%E5%90%97%EF%BC%9F%E4%B8%80%E4%B8%AA%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%AE%AD%E7%BB%83%E8%A7%86%E8%A7%92.pdf">浅层神经网络能战胜维度的诅咒吗？一个平均场训练视角.pdf</a> </p>
+<h2 id="3-梯度下降和神经网络的关系"><a href="#3-梯度下降和神经网络的关系" class="headerlink" title="3.梯度下降和神经网络的关系"></a>3.梯度下降和神经网络的关系</h2><h4 id="深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com"><a href="#深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com" class="headerlink" title="[深入浅出–梯度下降法及其实现](深入浅出–梯度下降法及其实现 - 简书 (jianshu.com))"></a>[深入浅出–梯度下降法及其实现](<a href="https://www.jianshu.com/p/c7e642877b0e">深入浅出–梯度下降法及其实现 - 简书 (jianshu.com)</a>)</h4><h4 id="深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN"><a href="#深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN" class="headerlink" title="[深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)"></a>[<a href="https://www.jianshu.com/p/7251b03847f4">深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)</a></h4><h4 id="matplotlib模块数据可视化-3D图"><a href="#matplotlib模块数据可视化-3D图" class="headerlink" title="matplotlib模块数据可视化-3D图"></a><a href="https://blog.csdn.net/sinat_36772813/article/details/77365296">matplotlib模块数据可视化-3D图</a></h4><hr>
+<h2 id="4-核心困难：云计算中多目标资源调度QoS"><a href="#4-核心困难：云计算中多目标资源调度QoS" class="headerlink" title="4.核心困难：云计算中多目标资源调度QoS"></a>4.核心困难：云计算中多目标资源调度QoS</h2><h3 id="方法：某深度强化学习"><a href="#方法：某深度强化学习" class="headerlink" title="方法：某深度强化学习"></a>方法：某深度强化学习</h3><h3 id="传统方法的数学推导："><a href="#传统方法的数学推导：" class="headerlink" title="传统方法的数学推导："></a>传统方法的数学推导：</h3><h2 id="5-理论方法："><a href="#5-理论方法：" class="headerlink" title="5.理论方法："></a>5.理论方法：</h2><ol>
+<li>排队论</li>
+<li>控制论</li>
+<li>博弈论</li>
+</ol>
+<h2 id="6-启发式方法"><a href="#6-启发式方法" class="headerlink" title="6.启发式方法"></a>6.启发式方法</h2><ul>
+<li>Biological Inspiration (BI): Genetic Algorithm (<strong>GA</strong>)[8],[12], [18],[20] ,Memetic Algorithm (MA), Lion Algorithm (LA)[21], Imperialist Competitive Algorithm (ICA), etc.</li>
+<li>Swarm Intelligence (SI): Ant Colony Optimization (<strong>ACO</strong>)[9], [19]Particle Swarm Optimization (PSO)[11],[13],[14],[15], [16],[17]  Simulated Annealing (<strong>SA</strong>), Artificial Bee Colony (ABC)[22], Cat Swarm Optimization (CSO)[23], Bat Algorithm (BA), Wind Driven Optimization (WDO), etc.</li>
+</ul>
+<h3 id="新待看"><a href="#新待看" class="headerlink" title="新待看:"></a>新待看:</h3><p><a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA背后的直觉</a></p>
+<h2 id="注脚："><a href="#注脚：" class="headerlink" title="注脚："></a>注脚：</h2><p>[^归约]: polynomial-time Karp’ reduction；A转化成B问题，B至少不比A容易<br>[^时间复杂度最高]: 所以completeness 的直观解释就是，解决了它就可以解决所有同级别此类问题。<br>[^维度诅咒]: Moreover, to avoid the  curse of dimensionality  of traditional RL techniques, RL combined with deep neuralnetwork (i.e. DRL) is adopted in our work.<br>[^特征的数量和样本数量有关]: 如果N个训练样本足以覆盖单位区间大小的1D特征空间，则需要N ^ 2个样本来覆盖具有相同密度的2D特征空间，并且在3D特征空间中需要N ^ 3个样本。换句话说，所需的训练实例数量随着使用的维度数量呈指数增长。<br>[^<del>云计算前身</del>]: Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
+<hr>
+<p>2020&#x2F;12&#x2F;11</p>
+]]></content>
+      <categories>
+        <category>DRL</category>
+      </categories>
+  </entry>
+  <entry>
     <title>DQN with Keras and Gym</title>
     <url>/2020/12/28/Deep-Q-Learning-with-Keras-and-Gym/</url>
     <content><![CDATA[<h3 id="研究是因为有趣"><a href="#研究是因为有趣" class="headerlink" title="研究是因为有趣"></a>研究是因为<em>有趣</em></h3><p><a href="https://keon.github.io/deep-q-learning/">Deep Q-Learning with Keras and Gym · Keon’s Blog</a></p>
@@ -707,112 +813,6 @@
 
 <hr>
 <p>2020&#x2F;12&#x2F;28</p>
-]]></content>
-      <categories>
-        <category>DRL</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>AIRL中遇到的问题</title>
-    <url>/2020/12/11/Difficulties-in-AIRL/</url>
-    <content><![CDATA[<p> 云调度和DRL论文中 <em>待解决</em> 思考：</p>
-<h2 id="1-网格计算-云计算前身"><a href="#1-网格计算-云计算前身" class="headerlink" title="1.网格计算[^云计算前身]"></a>1.网格计算[^<del>云计算前身</del>]</h2><p>这种计算模式是利用互联网把分散在不同地理位置的电脑组织成一个“虚拟的超级计算机”，其中每一台参与计算的计算机就是一个“节点”，而整个计算是由成千上万个“节点”组成的“一张网格”。</p>
-<p>网格计算的优势有两个：一个是数据处理能力超强；另一个是能充分利用网上的闲置处理能力。</p>
-<p>它研究如何把一个需要非常巨大的<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E8%83%BD%E5%8A%9B/4554810">计算能力</a>才能解决的问题分成许多小的部分，然后把这些部分分配给许多<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA/140338">计算机</a>进行处理，最后把这些计算结果综合起来得到最终结果。</p>
-<p><a href="https://zhidao.baidu.com/question/70675394.html">网格计算和云计算的概念和区别</a></p>
-<span id="more"></span>
-
-<h2 id="2-1-P-VS-NP-Nondeterministic-Polynomial-time"><a href="#2-1-P-VS-NP-Nondeterministic-Polynomial-time" class="headerlink" title="2.1 P VS. NP(Nondeterministic Polynomial time)"></a>2.1 P VS. NP(Nondeterministic Polynomial time)</h2><table>
-<thead>
-<tr>
-<th>P</th>
-<th>VS.</th>
-<th>NP</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>能快速求解（易解）</td>
-<td></td>
-<td>不一定能快速求解（易验证）</td>
-</tr>
-<tr>
-<td>P一定是NP，易算易验证</td>
-<td></td>
-<td>NP则不一定是P，能验证不一定能计算，如质数分解</td>
-</tr>
-<tr>
-<td>P就是能在多项式时间内解决的问题(算的快)</td>
-<td></td>
-<td>NP就是能在多项式时间验证答案正确与否的问题(验证快)</td>
-</tr>
-</tbody></table>
-<p><em><strong>P&#x3D;NP?</strong></em>  </p>
-<p>N即不存在不能快速求解。P是否等于NP实质上就是在问，如果对于一个问题我能在多项式时间内验证其答案的正确性，那么我是否能在多项式时间内解决它？</p>
-<p><em><strong>NP-hardness（困难） 和 NP-completeness（完全）：</strong></em></p>
-<p>如果任意一个NP的问题都可以多项式[^归约]到L（L是转化后的问题，高级，困难），称问题L是NP-hard：</p>
-<ul>
-<li><p>显然NP-hard不一定是NP问题，NP-hard是个新问题。</p>
-</li>
-<li><p>如果一个NP-hard，即归约后问题L本身就是NP的，则称L是NP-completeness.(NPC最难，[^时间复杂度最高])</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934343.png" alt="这里写图片描述"></p>
-</li>
-</ul>
-<blockquote>
-<p>“P vs NP”问题：请问那些需要非确定性图灵机（超能力计算机）在多项式时间才能解决的问题，能够用确定性图灵机（普通计算机）在多项式时间解决吗？ <a href="http://www.yinwang.org/blog-cn/2019/07/21/pnp2">P vs NP不重要</a></p>
-</blockquote>
-<h3 id="2-2-维度诅咒"><a href="#2-2-维度诅咒" class="headerlink" title="2.2[^维度诅咒]"></a>2.2[^维度诅咒]</h3><p>当维度增加(太大)时,体积(难度)指数增加的难题.</p>
-<p><em><strong>分类器中：</strong></em></p>
-<p><img src="https://www.visiondummy.com/wp-content/uploads/2014/04/dimensionality_vs_performance.png" alt="img"></p>
-<p><strong>图2中</strong>随着维度的增加，分类器的性能会提高，直到达到最佳要素数。进一步增加维度而不增加训练样本的数量导致分类器性能的降低。 过拟合 ，</p>
-<p>维度的诅咒使得训练数据的 稀疏性 ，训练样本的密度呈指数下降。</p>
-<p>维度诅咒的另一个影响是，这种稀疏性不是均匀分布在搜索空间上。实际上，原点周围的数据（在超立方体的 中心 ）比搜索空间的 角落 中的数据要稀疏得多。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934531.png" alt="img"></p>
-<p>**图3.**随着维度的增加，更大比例的训练数据驻留在要素空间的 角落 中。</p>
-<p><em><strong>如何避免：</strong></em></p>
-<p>问题是 “太大” 意味着什么: [^特征的数量和样本数量有关]</p>
-<p><strong>特征选择方法：</strong>通常采用启发式(如<a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA算法</a>)(贪婪方法，最佳优先方法等）来定位最佳数量和特征组合</p>
-<p><strong>特征提取方法（降维）：</strong><a href="http://www.visiondummy.com/2014/05/feature-extraction-using-pca/">主成分分析（PCA）</a>，它产生原始N特征的不相关的线性组合。PCA试图找到较低维度的线性子空间，以便保持原始数据的最大方差（向着极大无关组出发）。但是，请注意，数据的最大差异不一定代表最具辨别力的信息。</p>
-<p><strong>交叉验证：</strong></p>
-<blockquote>
-<p>交叉验证方法将原始训练数据分成一个或多个训练子集。</p>
-<p>在分类器训练期间，一个子集用于 测试 所得分类器的准确度和精度，而其他子集用于 参数估计 (真实训练)。</p>
-<p>如果用于 训练 的子集的分类结果与用于 测试 的子集的结果大不相同，则过度拟合正在发挥作用。</p>
-<p>如果只有<strong>有限</strong>数量的训练数据可用，则可以使用几种类型的交叉验证，例如k折交叉验证和留一交叉验证。</p>
-</blockquote>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/K-fold_cross_validation_EN.jpg" alt="img"></p>
-<p><strong>Diagram of k-fold cross-validation with k&#x3D;4</strong></p>
-<h4 id="为什么说RL与深度神经网络结合可以避免维度之咒？"><a href="#为什么说RL与深度神经网络结合可以避免维度之咒？" class="headerlink" title="为什么说RL与深度神经网络结合可以避免维度之咒？"></a>为什么说RL与深度神经网络结合可以避免维度之咒？</h4><blockquote>
-<p>因为神经网络能够提取特征。</p>
-</blockquote>
-<p>Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
-<p>事实上，SVM及 神经网络 都可以看做是寻找一个合适的特征维度的过程。</p>
-<p>当数据的维度过小的时候，数据分布过于稠密，不能很好的进行区分，这时候可以通过带有核函数的SVM将低纬度的数据映射到高纬度。</p>
-<p>当样本的<strong>维度过大</strong>时，受限于样本的多少及计算机的计算能力，需要利用 神经网络 对样本的维度进行压缩，便于分类。</p>
-<p>两者目的都在于使得数据的维度达到一个合适的稠密程度，从而更方便找到分类超平面。这也决定了SVM适用于低维小样本数据，而神经网络适合于大规模高维数据。</p>
-<p>时间复杂度决定了模型的训练&#x2F;预测时间。如果复杂度过高，则会导致模型训练和预测耗费大量时间，既无法快速的验证想法和改善模型，也无法做到快速的预测。</p>
-<p><em><strong>空间复杂度</strong></em> 决定了模型的参数数量。</p>
-<p>由于<strong>维度诅咒的限制</strong>，模型的参数越多，训练模型所需的数据量就越大，而现实生活中的数据集通常不会太大，这会导致模型的训练更容易<strong>过拟合</strong>。</p>
-<p>空间复杂度（访存量），严格来讲包括两部分：总参数量 + 各层输出特征图。</p>
-<ul>
-<li><strong>参数量</strong>：模型所有带参数的层的权重参数总量（即<strong>模型体积</strong>，下式第一个求和表达式）</li>
-<li><strong>特征图</strong>：模型在实时运行过程中每层所计算出的输出特征图大小（下式第二个求和表达式）</li>
-</ul>
-<p><strong>公式来源</strong>：<a href="https://zhuanlan.zhihu.com/p/31575074">卷积神经网络复杂度分析</a></p>
-<p> <a href="%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%83%BD%E6%88%98%E8%83%9C%E7%BB%B4%E5%BA%A6%E7%9A%84%E8%AF%85%E5%92%92%E5%90%97%EF%BC%9F%E4%B8%80%E4%B8%AA%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%AE%AD%E7%BB%83%E8%A7%86%E8%A7%92.pdf">浅层神经网络能战胜维度的诅咒吗？一个平均场训练视角.pdf</a> </p>
-<h2 id="3-梯度下降和神经网络的关系"><a href="#3-梯度下降和神经网络的关系" class="headerlink" title="3.梯度下降和神经网络的关系"></a>3.梯度下降和神经网络的关系</h2><h4 id="深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com"><a href="#深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com" class="headerlink" title="[深入浅出–梯度下降法及其实现](深入浅出–梯度下降法及其实现 - 简书 (jianshu.com))"></a>[深入浅出–梯度下降法及其实现](<a href="https://www.jianshu.com/p/c7e642877b0e">深入浅出–梯度下降法及其实现 - 简书 (jianshu.com)</a>)</h4><h4 id="深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN"><a href="#深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN" class="headerlink" title="[深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)"></a>[<a href="https://www.jianshu.com/p/7251b03847f4">深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)</a></h4><h4 id="matplotlib模块数据可视化-3D图"><a href="#matplotlib模块数据可视化-3D图" class="headerlink" title="matplotlib模块数据可视化-3D图"></a><a href="https://blog.csdn.net/sinat_36772813/article/details/77365296">matplotlib模块数据可视化-3D图</a></h4><hr>
-<h2 id="4-核心困难：云计算中多目标资源调度QoS"><a href="#4-核心困难：云计算中多目标资源调度QoS" class="headerlink" title="4.核心困难：云计算中多目标资源调度QoS"></a>4.核心困难：云计算中多目标资源调度QoS</h2><h3 id="方法：某深度强化学习"><a href="#方法：某深度强化学习" class="headerlink" title="方法：某深度强化学习"></a>方法：某深度强化学习</h3><h3 id="传统方法的数学推导："><a href="#传统方法的数学推导：" class="headerlink" title="传统方法的数学推导："></a>传统方法的数学推导：</h3><h2 id="5-理论方法："><a href="#5-理论方法：" class="headerlink" title="5.理论方法："></a>5.理论方法：</h2><ol>
-<li>排队论</li>
-<li>控制论</li>
-<li>博弈论</li>
-</ol>
-<h2 id="6-启发式方法"><a href="#6-启发式方法" class="headerlink" title="6.启发式方法"></a>6.启发式方法</h2><ul>
-<li>Biological Inspiration (BI): Genetic Algorithm (<strong>GA</strong>)[8],[12], [18],[20] ,Memetic Algorithm (MA), Lion Algorithm (LA)[21], Imperialist Competitive Algorithm (ICA), etc.</li>
-<li>Swarm Intelligence (SI): Ant Colony Optimization (<strong>ACO</strong>)[9], [19]Particle Swarm Optimization (PSO)[11],[13],[14],[15], [16],[17]  Simulated Annealing (<strong>SA</strong>), Artificial Bee Colony (ABC)[22], Cat Swarm Optimization (CSO)[23], Bat Algorithm (BA), Wind Driven Optimization (WDO), etc.</li>
-</ul>
-<h3 id="新待看"><a href="#新待看" class="headerlink" title="新待看:"></a>新待看:</h3><p><a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA背后的直觉</a></p>
-<h2 id="注脚："><a href="#注脚：" class="headerlink" title="注脚："></a>注脚：</h2><p>[^归约]: polynomial-time Karp’ reduction；A转化成B问题，B至少不比A容易<br>[^时间复杂度最高]: 所以completeness 的直观解释就是，解决了它就可以解决所有同级别此类问题。<br>[^维度诅咒]: Moreover, to avoid the  curse of dimensionality  of traditional RL techniques, RL combined with deep neuralnetwork (i.e. DRL) is adopted in our work.<br>[^特征的数量和样本数量有关]: 如果N个训练样本足以覆盖单位区间大小的1D特征空间，则需要N ^ 2个样本来覆盖具有相同密度的2D特征空间，并且在3D特征空间中需要N ^ 3个样本。换句话说，所需的训练实例数量随着使用的维度数量呈指数增长。<br>[^<del>云计算前身</del>]: Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
-<hr>
-<p>2020&#x2F;12&#x2F;11</p>
 ]]></content>
       <categories>
         <category>DRL</category>
@@ -1363,86 +1363,6 @@ li {undefined
       </categories>
   </entry>
   <entry>
-    <title>Latex&amp;流程图(二)</title>
-    <url>/2022/03/21/Latex/</url>
-    <content><![CDATA[<h2 id="1-Latex支持"><a href="#1-Latex支持" class="headerlink" title="1. Latex支持"></a>1. Latex支持</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$J^&#123;wt&#125;_&#123;i&#125;$ </span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">&#123;\mathbb R&#125; = \sum_&#123;t=0&#125;^&#123;n&#125;&#123; &#123;\mathbb R_t&#125;\gamma^&#123;t&#125; &#125;</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>$J^{wt}_{i}$ </p>
-<p>$$<br>{\mathbb R} &#x3D; \sum_{t&#x3D;0}^{n}{ {\mathbb R_t}\gamma^{t} }<br>$$</p>
-<p>$$<br>\begin{equation}min_{\phi}\sum_{i&#x3D;1}^{|B|}(r_{t_{i} } + \gamma max_{\hat{a}\in\mathcal{A} }Q_{\phi^{target} }(s_{t_{i}+1},\hat{a}) - Q_{\phi}(s_{t_{i} },a_{t_{i} }))^2<br>\end{equation}<br>$$</p>
-<hr>
-<h2 id="2-流程图绘制"><a href="#2-流程图绘制" class="headerlink" title="2.流程图绘制"></a>2.流程图绘制</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//flow流程图</span></span><br><span class="line">st=&gt;start: Start|past:&gt;http:<span class="comment">//www.google.com[blank]</span></span><br><span class="line">e=&gt;end: End:&gt;http:<span class="comment">//www.google.com</span></span><br><span class="line">op1=&gt;operation: My Operation|past</span><br><span class="line">op2=&gt;operation: Stuff|current</span><br><span class="line">sub1=&gt;subroutine: My Subroutine|invalid</span><br><span class="line">cond=&gt;condition: Yes</span><br><span class="line">or No?|approved:&gt;http:<span class="comment">//www.google.com</span></span><br><span class="line">c2=&gt;condition: Good idea|rejected</span><br><span class="line">io=&gt;inputoutput: <span class="keyword">catch</span> something...|request</span><br><span class="line"></span><br><span class="line">st-&gt;op1(right)-&gt;cond</span><br><span class="line"><span class="title function_">cond</span><span class="params">(yes, right)</span>-&gt;c2</span><br><span class="line"><span class="title function_">cond</span><span class="params">(no)</span>-&gt;sub1(left)-&gt;op1</span><br><span class="line"><span class="title function_">c2</span><span class="params">(yes)</span>-&gt;io-&gt;e</span><br><span class="line"><span class="title function_">c2</span><span class="params">(no)</span>-&gt;op2-&gt;e</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<div id="flowchart-0" class="flow-chart"></div>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//mermaid流程图</span></span><br><span class="line">graph TD</span><br><span class="line">    <span class="title function_">B</span><span class="params">((开始)</span>) --&gt;C&#123;判断&#125;</span><br><span class="line">    C --  a=<span class="number">1</span> --&gt;D[执行语句<span class="number">1</span>]</span><br><span class="line">    C --  a=<span class="number">2</span>  --&gt;E[执行语句<span class="number">2</span>]</span><br><span class="line">    C --  a=<span class="number">3</span> --&gt;F[执行语句<span class="number">3</span>]</span><br><span class="line">    C -- a=<span class="number">4</span>  --&gt;G[执行语句<span class="number">4</span>]</span><br><span class="line">    D--&gt; AA((结束))</span><br><span class="line">    E--&gt; AA</span><br><span class="line">    F--&gt; AA</span><br><span class="line">   G--&gt; AA      </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<pre class="mermaid">
-graph TD
-    B((开始)) -->C{判断}
-    C --  a=1 -->D[执行语句1]
-    C --  a=2  -->E[执行语句2]
-    C --  a=3 -->F[执行语句3]
-    C -- a=4  -->G[执行语句4]
-    D--> AA((结束))
-    E--> AA
-    F--> AA
-   G--> AA</pre>
-
-<h2 id="3-回来的路-gt-如何优雅的编写Markdown-Markdown-amp-Blog笔记一"><a href="#3-回来的路-gt-如何优雅的编写Markdown-Markdown-amp-Blog笔记一" class="headerlink" title="3.回来的路-&gt;如何优雅的编写Markdown(Markdown&amp;Blog笔记一) "></a>3.回来的路-&gt;<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></h2><hr>
-<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
-<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
-</ol>
-<hr>
-<p>2022&#x2F;3&#x2F;21</p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start|past:>http://www.google.com[blank]
-e=>end: End:>http://www.google.com
-op1=>operation: My Operation|past
-op2=>operation: Stuff|current
-sub1=>subroutine: My Subroutine|invalid
-cond=>condition: Yes
-or No?|approved:>http://www.google.com
-c2=>condition: Good idea|rejected
-io=>inputoutput: catch something...|request
-
-st->op1(right)->cond
-cond(yes, right)->c2
-cond(no)->sub1(left)->op1
-c2(yes)->io->e
-c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>]]></content>
-      <categories>
-        <category>Markdown&amp;Blog</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>电影推荐</title>
-    <url>/2022/03/21/Movie-recommendation/</url>
-    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
-<hr>
-<span id="more"></span>
-
-<p>这是我的好朋友，买手机找他，便宜且很靠谱~我和家人换新机都找他。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211733922.jpg" alt="14452845a506cefc10220686ce97f8a"></p>
-<hr>
-<p>数码小王</p>
-<p>2022&#x2F;3&#x2F;21</p>
-]]></content>
-      <categories>
-        <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
     <title>java LeetCode(更)</title>
     <url>/2022/03/21/Java-LeetCode/</url>
     <content><![CDATA[<p><strong>大小写敏感</strong> </p>
@@ -1721,6 +1641,86 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 <h2 id="12-10大排序算法"><a href="#12-10大排序算法" class="headerlink" title="12 10大排序算法"></a>12 10大排序算法</h2><h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2>]]></content>
       <categories>
         <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Latex&amp;流程图(二)</title>
+    <url>/2022/03/21/Latex/</url>
+    <content><![CDATA[<h2 id="1-Latex支持"><a href="#1-Latex支持" class="headerlink" title="1. Latex支持"></a>1. Latex支持</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$J^&#123;wt&#125;_&#123;i&#125;$ </span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">&#123;\mathbb R&#125; = \sum_&#123;t=0&#125;^&#123;n&#125;&#123; &#123;\mathbb R_t&#125;\gamma^&#123;t&#125; &#125;</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>$J^{wt}_{i}$ </p>
+<p>$$<br>{\mathbb R} &#x3D; \sum_{t&#x3D;0}^{n}{ {\mathbb R_t}\gamma^{t} }<br>$$</p>
+<p>$$<br>\begin{equation}min_{\phi}\sum_{i&#x3D;1}^{|B|}(r_{t_{i} } + \gamma max_{\hat{a}\in\mathcal{A} }Q_{\phi^{target} }(s_{t_{i}+1},\hat{a}) - Q_{\phi}(s_{t_{i} },a_{t_{i} }))^2<br>\end{equation}<br>$$</p>
+<hr>
+<h2 id="2-流程图绘制"><a href="#2-流程图绘制" class="headerlink" title="2.流程图绘制"></a>2.流程图绘制</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//flow流程图</span></span><br><span class="line">st=&gt;start: Start|past:&gt;http:<span class="comment">//www.google.com[blank]</span></span><br><span class="line">e=&gt;end: End:&gt;http:<span class="comment">//www.google.com</span></span><br><span class="line">op1=&gt;operation: My Operation|past</span><br><span class="line">op2=&gt;operation: Stuff|current</span><br><span class="line">sub1=&gt;subroutine: My Subroutine|invalid</span><br><span class="line">cond=&gt;condition: Yes</span><br><span class="line">or No?|approved:&gt;http:<span class="comment">//www.google.com</span></span><br><span class="line">c2=&gt;condition: Good idea|rejected</span><br><span class="line">io=&gt;inputoutput: <span class="keyword">catch</span> something...|request</span><br><span class="line"></span><br><span class="line">st-&gt;op1(right)-&gt;cond</span><br><span class="line"><span class="title function_">cond</span><span class="params">(yes, right)</span>-&gt;c2</span><br><span class="line"><span class="title function_">cond</span><span class="params">(no)</span>-&gt;sub1(left)-&gt;op1</span><br><span class="line"><span class="title function_">c2</span><span class="params">(yes)</span>-&gt;io-&gt;e</span><br><span class="line"><span class="title function_">c2</span><span class="params">(no)</span>-&gt;op2-&gt;e</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<div id="flowchart-0" class="flow-chart"></div>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//mermaid流程图</span></span><br><span class="line">graph TD</span><br><span class="line">    <span class="title function_">B</span><span class="params">((开始)</span>) --&gt;C&#123;判断&#125;</span><br><span class="line">    C --  a=<span class="number">1</span> --&gt;D[执行语句<span class="number">1</span>]</span><br><span class="line">    C --  a=<span class="number">2</span>  --&gt;E[执行语句<span class="number">2</span>]</span><br><span class="line">    C --  a=<span class="number">3</span> --&gt;F[执行语句<span class="number">3</span>]</span><br><span class="line">    C -- a=<span class="number">4</span>  --&gt;G[执行语句<span class="number">4</span>]</span><br><span class="line">    D--&gt; AA((结束))</span><br><span class="line">    E--&gt; AA</span><br><span class="line">    F--&gt; AA</span><br><span class="line">   G--&gt; AA      </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre class="mermaid">
+graph TD
+    B((开始)) -->C{判断}
+    C --  a=1 -->D[执行语句1]
+    C --  a=2  -->E[执行语句2]
+    C --  a=3 -->F[执行语句3]
+    C -- a=4  -->G[执行语句4]
+    D--> AA((结束))
+    E--> AA
+    F--> AA
+   G--> AA</pre>
+
+<h2 id="3-回来的路-gt-如何优雅的编写Markdown-Markdown-amp-Blog笔记一"><a href="#3-回来的路-gt-如何优雅的编写Markdown-Markdown-amp-Blog笔记一" class="headerlink" title="3.回来的路-&gt;如何优雅的编写Markdown(Markdown&amp;Blog笔记一) "></a>3.回来的路-&gt;<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></h2><hr>
+<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
+<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
+</ol>
+<hr>
+<p>2022&#x2F;3&#x2F;21</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End:>http://www.google.com
+op1=>operation: My Operation|past
+op2=>operation: Stuff|current
+sub1=>subroutine: My Subroutine|invalid
+cond=>condition: Yes
+or No?|approved:>http://www.google.com
+c2=>condition: Good idea|rejected
+io=>inputoutput: catch something...|request
+
+st->op1(right)->cond
+cond(yes, right)->c2
+cond(no)->sub1(left)->op1
+c2(yes)->io->e
+c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>]]></content>
+      <categories>
+        <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>电影推荐</title>
+    <url>/2022/03/21/Movie-recommendation/</url>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
+<hr>
+<span id="more"></span>
+
+<p>这是我的好朋友，买手机找他，便宜且很靠谱~我和家人换新机都找他。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211733922.jpg" alt="14452845a506cefc10220686ce97f8a"></p>
+<hr>
+<p>数码小王</p>
+<p>2022&#x2F;3&#x2F;21</p>
+]]></content>
+      <categories>
+        <category>小伙伴</category>
       </categories>
   </entry>
   <entry>
@@ -2415,7 +2415,7 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 <li><p>设为默认图床。</p>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211459196.png" alt="image-20220321145957051"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203301624345.png" alt="image-20220330162435250"></p>
 <p>PicGo设置，打开更新，打开上传后自动复制URL，这是我们使用PicGo的原因。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211513795.png" alt="image-20220321151322675"></p>
 <p>Typora报错及推荐解决办法：</p>
@@ -2553,6 +2553,28 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2022/03/09/hello-world/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-surge">
+      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>博客测试</category>
+      </categories>
+  </entry>
+  <entry>
     <title>读《第一人称单数》</title>
     <url>/2022/03/26/first-person/</url>
     <content><![CDATA[<p>时隔六年村上春树又出新小说了，这是写于2018至2019年的一些短篇小说，可以说都是村上七十多岁写的东西了，但是在他的小说里，主人公永远是年轻人，一个不介意孤独的主角，能自己给自己找乐子，我对着这样的人有着莫名的亲近感。啊对了，村上本人也很健康很自律，给人一种活力充沛的印象，铁人三项的爱好者，果然爱运动的人都很有魅力呢。</p>
@@ -2598,28 +2620,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/03/09/hello-world/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-surge">
-      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>博客测试</category>
       </categories>
   </entry>
 </search>
