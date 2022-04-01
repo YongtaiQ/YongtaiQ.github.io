@@ -328,14 +328,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E6%97%A5%E6%9C%9F/</loc>
+    <loc>http://example.com/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/</loc>
+    <loc>http://example.com/categories/%E6%97%A5%E6%9C%9F/</loc>
     <lastmod>2022-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
