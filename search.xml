@@ -922,156 +922,6 @@
       </categories>
   </entry>
   <entry>
-    <title>hadoop+pyspark学习和部署</title>
-    <url>/2021/09/18/Hadoop+pyspark/</url>
-    <content><![CDATA[<p><a href="https://codingdict.com/article/8880">PySpark简介</a></p>
-<p>map reduce工具 将现有算法<strong>并行化</strong>  （执行平台）<strong>hadoop</strong>（java）上执行，其它如spark兼容python</p>
-<p>基础架构如hadoop-&gt;分析基础架构hive，hbase-&gt;高级工具</p>
-<p>mapreduce做并行化的几个应用方向：文本，图，关系型数据，机器学习（）</p>
-<p>并行化挑战：进程计算结果交换；程序共享资源</p>
-<span id="more"></span>
-
-<h3 id="函数式编程初探-阮一峰的网络日志"><a href="#函数式编程初探-阮一峰的网络日志" class="headerlink" title="函数式编程初探 - 阮一峰的网络日志"></a><a href="https://www.baidu.com/link?url=B9Nckg0KW9QLQnfwtG0ugkemDjOfjEwNqxYuDnMmPO20rwFL2_uOnV_0_XAH9c23JHMXtpJ-GfKxTDJ0g08lOALp5-klyO8Riqs6K_N9oxy&wd=&eqid=b45c6d5d00040e07000000036098f887"><em>函数式编程</em>初探 - 阮一峰的网络日志</a></h3><p><strong>PySpark完成实验：</strong> Spark+python；支持本地和分布式集群；程序运行平台，spark，hadoop都可以，迁移方便。具体看官方文档。</p>
-<hr>
-<p>逻辑视图：四个原语</p>
-<p>利用MapReduce框架对某个算法并行化</p>
-<p> map map <strong>map</strong> ，$f$函数</p>
-<p>fold (或<strong>reduce</strong>)汇总，有初始值，自动完成</p>
-<p>链式组合t数组.map.map.reduce</p>
-<p><code>map(k1,v1)-&gt;list(k2,v2) </code> kv对，k主码，v其它，key，value</p>
-<p><code>reduce(k2,list(v2)-&gt;list(k3,v3)</code></p>
-<p>数据切片，k作为主码，v是信息，<code>map</code>分派$f$，数据清洗，简单来说就是用关键字划分组，以此为依据，交给<code>reduce</code>，往往是数组，汇总。</p>
-<p><strong>MapReduce“Runtime”（运行时）</strong>,framework,底层软件，类似spark或者Hadoop，他来处理：处理任务调度，负载均衡，同步异步，灾害重建</p>
-<p>为了减少map与ruduce中间分布式排序时间，MRCP</p>
-<p>增加<code>partition(k,p)</code>,上层map的k下层p为reduce用哈希绕开分布式排序</p>
-<p>和<code>combine(k2,list(v2))</code> minireduce，本地统一组合一个虚拟机的不同分片</p>
-<p>t-&gt;map-&gt;combine-&gt;partition-按关键字分组排序-&gt;reduce</p>
-<p>map，reduce 输出<code>emit</code>交给分布式排序</p>
-<hr>
-<p> 物理视图：数据分片，分布式磁盘-&gt;给了VM,Map-&gt;本地保存到本地磁盘-&gt;分布式排序，有网络通讯，远程异地-&gt;VM做reduce-&gt;输出</p>
-<p>两次分配算法都由控制主机master控制：作业提交，分配map节点，reduce节点。</p>
-<p><strong>数据移动，作业调度 是几个矩阵？</strong></p>
-<ul>
-<li>分布式数据库到map虚拟机；</li>
-<li>map虚拟机到reduce虚拟机？</li>
-<li>master指派job给map，指派job给reduce虚拟机？计算效率？通信效率？这是不是task调度？</li>
-</ul>
-<p>多个机器，低性能。随机访问代价昂贵</p>
-<p>(hadoop)job提交：</p>
-<ul>
-<li>job分成map reduce等四个task</li>
-<li>每个task会有一个任务跟踪器</li>
-<li>多个job会形成有一个工作流</li>
-</ul>
-<p>数据现在很多是以kv对的形式存储计算的，不用中间格式转换，如mangodb</p>
-<p>Hadoop可以本地部署，本地调试好在部署到云，不然debug麻烦死。</p>
-<hr>
-<p>作业：安装pyspark实现个小例子。</p>
-<p>PySpark相关资料：</p>
-<p>1、Pyspark基础教程：rdd弹性数据集 datafree<br>      <a href="https://github.com/jadianes/spark-py-notebooks">https://github.com/jadianes/spark-py-notebooks</a><br>2、PySpark MLLib教程 ：<br>      <a href="https://github.com/susanli2016/PySpark-and-MLlib">https://github.com/susanli2016/PySpark-and-MLlib</a><br>3、项目实践：<br>      <a href="https://zhuanlan.zhihu.com/p/52753778">https://zhuanlan.zhihu.com/p/52753778</a>  （知乎）</p>
-<hr>
-<p>可视化工具据deck.gl，kepler.gl</p>
-<p>版本信息用<code>py36</code>环境搭建</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">py36   //菜菜</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==3.02</span><br><span class="line">hadoopp==3.2</span><br><span class="line">winutils==3.0.0</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.6.12</span><br><span class="line">pyspark==3.0.2</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//李敏</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==2.4.7</span><br><span class="line">hadoopp==2.7.7</span><br><span class="line">winutils==2.7.1</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.7.6</span><br><span class="line">pyspark==2.4.0</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>spark下的分布式启动sark方法：spark目录下，sbin目录，集群启动，start-all.sh脚本运行</p>
-<p>终端地址<a href="http://192.168.152.131:8080/">http://192.168.152.131:8080/</a></p>
-<p>会显示集群URL</p>
-<p>提供的是spark主机的URL即可加入</p>
-<hr>
-<p>打开终端<code>Ctrl+alt+T</code></p>
-<p>复制粘贴<code>ctrl + shift + c，ctrl + shift + v</code></p>
-<p>显示目录<code>ls  </code></p>
-<p>自动补全 <code>tab</code> <code>tab</code></p>
-<p>显示当前路径 <code>pwd</code></p>
-<p>vim</p>
-<p><code>i</code>插入</p>
-<p> <code>:</code> <code>q</code>是退出，<code>w</code>保存</p>
-<p><code>wq!</code>强制保存退出vim</p>
-<p>anaconda可视化界面</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/anaconda3/bin/activate root  </span><br></pre></td></tr></table></figure>
-
-<p>显示界面<code>anaconda-navigator</code></p>
-<p>显示jyputer notebook<code>jyputer book</code></p>
-<p>显示虚拟环境<code>conda info --envs</code></p>
-<p>conda创建虚拟环境<code>conda create -n your_name python=X.X（如2.7，3.6等）</code></p>
-<p>进入虚拟环境<code>source activate your_name</code></p>
-<p>退出虚拟环境 <code>source deactivate</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export SPARK_HOME=/home/qyt/Downloads/spark-3.0.2-bin-hadoop3.2</span><br><span class="line">export PATH=$PATH:$SPARK_HOME/bin</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/home/qyt/Downloads/hadoop-3.2.2</span><br><span class="line">export PATH=$&#123;HADOOP_HOME&#125;/bin:$PATH</span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p><code>vim /etc/profile</code>环境变量配置位置</p>
-<p><code>./</code>执行文件</p>
-<hr>
-<p>MRDP-&gt;spark 为什么？</p>
-<p>大数据表达能力不足；spark对MADP扩充到四十个，一类是map一类是reduce</p>
-<p>每次map reduce 都需要HDFS文件管理系统，需要大量的IO</p>
-<p>spark RDD弹性数据集，内存分布式，spark底层对RDD做高度的冗余</p>
-<p>Hadoop不支持中间HDFS换成RDD，spark可以。</p>
-<p>mapreduce基本指令集太少，太简单了；迭代过程中间的磁盘IO太大；</p>
-<p>spark弱化了map，reduce的成对性</p>
-<p>RDD数据类型</p>
-<p>transformationscc;action</p>
-<p>构建数据流图（谱系图）linage</p>
-<p>图论做优化</p>
-<hr>
-<p>如何对梯度下降进行并行化？</p>
-<p>梯度下降法并行化设计：</p>
-<p>机器学习：分类问题或者回归预测问题</p>
-<p>特征向量，标签找出$f:X\rightarrow Y$</p>
-<p>$\to \gets \theta$ 太熟了就不写了</p>
-<p>如何并行化？</p>
-<p>递归过程不能并行化，能并行化：$\Sigma$找梯度 由map完成。reduce做外层的一次加减。 </p>
-<p>logistiic 回归 $\to$分类，w向量求梯度，可以并行化</p>
-<hr>
-<p>如何并行快速处理大规模，复杂的图？</p>
-<p>图的并行算法设计总结：</p>
-<p>BFS在map reduce怎么表示？数据结构：K，V对：node n，结点对应临界列表和最短路径d。</p>
-<p>pagerank：d不一样。衡量一个网页的重要性，随机冲浪模型：概率（网址跳转+外链）；</p>
-<p>草原生态模型：湖有高度差和邻接河道，权重矩阵是概率转移矩阵$P$，迭代直到两个状态矩阵$\pi$相同，$\pi \cdot P&#x3D;\pi$, $\pi$就是PageRank，外链访问，网页重要程度.</p>
-<p>如果有蒸发下雨，$\alpha$蒸发, 绝对地址直接访问网页，$\pi&#x3D;\pi\cdot P \times\alpha+(1-\alpha)\cdot N$，N是湖泊（网页）个数</p>
-<p>出度 由map；入度求和由reduce；KV对排序</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>PageRank</th>
-<th>BFS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>map</td>
-<td>PR&#x2F;N</td>
-<td>d+1</td>
-</tr>
-<tr>
-<td>reduce</td>
-<td>sum</td>
-<td>min</td>
-</tr>
-</tbody></table>
-<hr>
-<p>作业：</p>
-<ol>
-<li>之前pyspark的实验搭建过程</li>
-<li>大作业 自拟题目</li>
-</ol>
-<p>题目1、请自拟题目，自选方向（电力方向尤佳），撰写一篇云计算在不同领域的最新应用的综述文章。（3000+）</p>
-<p>题目2、请自拟题目，自选一个已运用MapReduce实现过的算法（机器学习算法尤佳），撰写一篇分析运用MapReduce编程模型对传统算法进行并行化的文章。（2000-3000）</p>
-<p>题目3、请自拟题目，自选一个未运用MapReduce实现过的算法（电力方向的算法尤佳），运用MapReduce程模型对该算法进行并行化设计，采用Hadoop API实现该算法，并在Hadoop集群上运行测试，根据测试结果撰写一篇文章。（2000-3000）</p>
-<hr>
-<p>Towards Self-managing cloud storage with rl</p>
-<p><code>connectedpapers.com</code> 文献追踪</p>
-<hr>
-<p>2021&#x2F;9</p>
-]]></content>
-      <categories>
-        <category>Cloud Computing</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Html拓展(更)</title>
     <url>/2022/03/28/Html/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -1262,6 +1112,156 @@ li {undefined
       </categories>
   </entry>
   <entry>
+    <title>hadoop+pyspark学习和部署</title>
+    <url>/2021/09/18/Hadoop+pyspark/</url>
+    <content><![CDATA[<p><a href="https://codingdict.com/article/8880">PySpark简介</a></p>
+<p>map reduce工具 将现有算法<strong>并行化</strong>  （执行平台）<strong>hadoop</strong>（java）上执行，其它如spark兼容python</p>
+<p>基础架构如hadoop-&gt;分析基础架构hive，hbase-&gt;高级工具</p>
+<p>mapreduce做并行化的几个应用方向：文本，图，关系型数据，机器学习（）</p>
+<p>并行化挑战：进程计算结果交换；程序共享资源</p>
+<span id="more"></span>
+
+<h3 id="函数式编程初探-阮一峰的网络日志"><a href="#函数式编程初探-阮一峰的网络日志" class="headerlink" title="函数式编程初探 - 阮一峰的网络日志"></a><a href="https://www.baidu.com/link?url=B9Nckg0KW9QLQnfwtG0ugkemDjOfjEwNqxYuDnMmPO20rwFL2_uOnV_0_XAH9c23JHMXtpJ-GfKxTDJ0g08lOALp5-klyO8Riqs6K_N9oxy&wd=&eqid=b45c6d5d00040e07000000036098f887"><em>函数式编程</em>初探 - 阮一峰的网络日志</a></h3><p><strong>PySpark完成实验：</strong> Spark+python；支持本地和分布式集群；程序运行平台，spark，hadoop都可以，迁移方便。具体看官方文档。</p>
+<hr>
+<p>逻辑视图：四个原语</p>
+<p>利用MapReduce框架对某个算法并行化</p>
+<p> map map <strong>map</strong> ，$f$函数</p>
+<p>fold (或<strong>reduce</strong>)汇总，有初始值，自动完成</p>
+<p>链式组合t数组.map.map.reduce</p>
+<p><code>map(k1,v1)-&gt;list(k2,v2) </code> kv对，k主码，v其它，key，value</p>
+<p><code>reduce(k2,list(v2)-&gt;list(k3,v3)</code></p>
+<p>数据切片，k作为主码，v是信息，<code>map</code>分派$f$，数据清洗，简单来说就是用关键字划分组，以此为依据，交给<code>reduce</code>，往往是数组，汇总。</p>
+<p><strong>MapReduce“Runtime”（运行时）</strong>,framework,底层软件，类似spark或者Hadoop，他来处理：处理任务调度，负载均衡，同步异步，灾害重建</p>
+<p>为了减少map与ruduce中间分布式排序时间，MRCP</p>
+<p>增加<code>partition(k,p)</code>,上层map的k下层p为reduce用哈希绕开分布式排序</p>
+<p>和<code>combine(k2,list(v2))</code> minireduce，本地统一组合一个虚拟机的不同分片</p>
+<p>t-&gt;map-&gt;combine-&gt;partition-按关键字分组排序-&gt;reduce</p>
+<p>map，reduce 输出<code>emit</code>交给分布式排序</p>
+<hr>
+<p> 物理视图：数据分片，分布式磁盘-&gt;给了VM,Map-&gt;本地保存到本地磁盘-&gt;分布式排序，有网络通讯，远程异地-&gt;VM做reduce-&gt;输出</p>
+<p>两次分配算法都由控制主机master控制：作业提交，分配map节点，reduce节点。</p>
+<p><strong>数据移动，作业调度 是几个矩阵？</strong></p>
+<ul>
+<li>分布式数据库到map虚拟机；</li>
+<li>map虚拟机到reduce虚拟机？</li>
+<li>master指派job给map，指派job给reduce虚拟机？计算效率？通信效率？这是不是task调度？</li>
+</ul>
+<p>多个机器，低性能。随机访问代价昂贵</p>
+<p>(hadoop)job提交：</p>
+<ul>
+<li>job分成map reduce等四个task</li>
+<li>每个task会有一个任务跟踪器</li>
+<li>多个job会形成有一个工作流</li>
+</ul>
+<p>数据现在很多是以kv对的形式存储计算的，不用中间格式转换，如mangodb</p>
+<p>Hadoop可以本地部署，本地调试好在部署到云，不然debug麻烦死。</p>
+<hr>
+<p>作业：安装pyspark实现个小例子。</p>
+<p>PySpark相关资料：</p>
+<p>1、Pyspark基础教程：rdd弹性数据集 datafree<br>      <a href="https://github.com/jadianes/spark-py-notebooks">https://github.com/jadianes/spark-py-notebooks</a><br>2、PySpark MLLib教程 ：<br>      <a href="https://github.com/susanli2016/PySpark-and-MLlib">https://github.com/susanli2016/PySpark-and-MLlib</a><br>3、项目实践：<br>      <a href="https://zhuanlan.zhihu.com/p/52753778">https://zhuanlan.zhihu.com/p/52753778</a>  （知乎）</p>
+<hr>
+<p>可视化工具据deck.gl，kepler.gl</p>
+<p>版本信息用<code>py36</code>环境搭建</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">py36   //菜菜</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==3.02</span><br><span class="line">hadoopp==3.2</span><br><span class="line">winutils==3.0.0</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.6.12</span><br><span class="line">pyspark==3.0.2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//李敏</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==2.4.7</span><br><span class="line">hadoopp==2.7.7</span><br><span class="line">winutils==2.7.1</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.7.6</span><br><span class="line">pyspark==2.4.0</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>spark下的分布式启动sark方法：spark目录下，sbin目录，集群启动，start-all.sh脚本运行</p>
+<p>终端地址<a href="http://192.168.152.131:8080/">http://192.168.152.131:8080/</a></p>
+<p>会显示集群URL</p>
+<p>提供的是spark主机的URL即可加入</p>
+<hr>
+<p>打开终端<code>Ctrl+alt+T</code></p>
+<p>复制粘贴<code>ctrl + shift + c，ctrl + shift + v</code></p>
+<p>显示目录<code>ls  </code></p>
+<p>自动补全 <code>tab</code> <code>tab</code></p>
+<p>显示当前路径 <code>pwd</code></p>
+<p>vim</p>
+<p><code>i</code>插入</p>
+<p> <code>:</code> <code>q</code>是退出，<code>w</code>保存</p>
+<p><code>wq!</code>强制保存退出vim</p>
+<p>anaconda可视化界面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/anaconda3/bin/activate root  </span><br></pre></td></tr></table></figure>
+
+<p>显示界面<code>anaconda-navigator</code></p>
+<p>显示jyputer notebook<code>jyputer book</code></p>
+<p>显示虚拟环境<code>conda info --envs</code></p>
+<p>conda创建虚拟环境<code>conda create -n your_name python=X.X（如2.7，3.6等）</code></p>
+<p>进入虚拟环境<code>source activate your_name</code></p>
+<p>退出虚拟环境 <code>source deactivate</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export SPARK_HOME=/home/qyt/Downloads/spark-3.0.2-bin-hadoop3.2</span><br><span class="line">export PATH=$PATH:$SPARK_HOME/bin</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/home/qyt/Downloads/hadoop-3.2.2</span><br><span class="line">export PATH=$&#123;HADOOP_HOME&#125;/bin:$PATH</span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p><code>vim /etc/profile</code>环境变量配置位置</p>
+<p><code>./</code>执行文件</p>
+<hr>
+<p>MRDP-&gt;spark 为什么？</p>
+<p>大数据表达能力不足；spark对MADP扩充到四十个，一类是map一类是reduce</p>
+<p>每次map reduce 都需要HDFS文件管理系统，需要大量的IO</p>
+<p>spark RDD弹性数据集，内存分布式，spark底层对RDD做高度的冗余</p>
+<p>Hadoop不支持中间HDFS换成RDD，spark可以。</p>
+<p>mapreduce基本指令集太少，太简单了；迭代过程中间的磁盘IO太大；</p>
+<p>spark弱化了map，reduce的成对性</p>
+<p>RDD数据类型</p>
+<p>transformationscc;action</p>
+<p>构建数据流图（谱系图）linage</p>
+<p>图论做优化</p>
+<hr>
+<p>如何对梯度下降进行并行化？</p>
+<p>梯度下降法并行化设计：</p>
+<p>机器学习：分类问题或者回归预测问题</p>
+<p>特征向量，标签找出$f:X\rightarrow Y$</p>
+<p>$\to \gets \theta$ 太熟了就不写了</p>
+<p>如何并行化？</p>
+<p>递归过程不能并行化，能并行化：$\Sigma$找梯度 由map完成。reduce做外层的一次加减。 </p>
+<p>logistiic 回归 $\to$分类，w向量求梯度，可以并行化</p>
+<hr>
+<p>如何并行快速处理大规模，复杂的图？</p>
+<p>图的并行算法设计总结：</p>
+<p>BFS在map reduce怎么表示？数据结构：K，V对：node n，结点对应临界列表和最短路径d。</p>
+<p>pagerank：d不一样。衡量一个网页的重要性，随机冲浪模型：概率（网址跳转+外链）；</p>
+<p>草原生态模型：湖有高度差和邻接河道，权重矩阵是概率转移矩阵$P$，迭代直到两个状态矩阵$\pi$相同，$\pi \cdot P&#x3D;\pi$, $\pi$就是PageRank，外链访问，网页重要程度.</p>
+<p>如果有蒸发下雨，$\alpha$蒸发, 绝对地址直接访问网页，$\pi&#x3D;\pi\cdot P \times\alpha+(1-\alpha)\cdot N$，N是湖泊（网页）个数</p>
+<p>出度 由map；入度求和由reduce；KV对排序</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>PageRank</th>
+<th>BFS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>map</td>
+<td>PR&#x2F;N</td>
+<td>d+1</td>
+</tr>
+<tr>
+<td>reduce</td>
+<td>sum</td>
+<td>min</td>
+</tr>
+</tbody></table>
+<hr>
+<p>作业：</p>
+<ol>
+<li>之前pyspark的实验搭建过程</li>
+<li>大作业 自拟题目</li>
+</ol>
+<p>题目1、请自拟题目，自选方向（电力方向尤佳），撰写一篇云计算在不同领域的最新应用的综述文章。（3000+）</p>
+<p>题目2、请自拟题目，自选一个已运用MapReduce实现过的算法（机器学习算法尤佳），撰写一篇分析运用MapReduce编程模型对传统算法进行并行化的文章。（2000-3000）</p>
+<p>题目3、请自拟题目，自选一个未运用MapReduce实现过的算法（电力方向的算法尤佳），运用MapReduce程模型对该算法进行并行化设计，采用Hadoop API实现该算法，并在Hadoop集群上运行测试，根据测试结果撰写一篇文章。（2000-3000）</p>
+<hr>
+<p>Towards Self-managing cloud storage with rl</p>
+<p><code>connectedpapers.com</code> 文献追踪</p>
+<hr>
+<p>2021&#x2F;9</p>
+]]></content>
+      <categories>
+        <category>Cloud Computing</category>
+      </categories>
+  </entry>
+  <entry>
     <title>云计算通读</title>
     <url>/2020/12/11/Introduction-of-Cloud-Computing/</url>
     <content><![CDATA[<p>详情请见：<a href="http://c.biancheng.net/cloud_computing/">云计算技术与应用学习教程（精华版）</a></p>
@@ -1344,6 +1344,22 @@ li {undefined
 ]]></content>
       <categories>
         <category>Cloud Computing</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>读读纪伯伦的小诗吧</title>
+    <url>/2021/09/10/Kahlil-Gibran/</url>
+    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
+<span id="more"></span>
+
+<hr>
+<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
+<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
+<hr>
+<p>2021&#x2F;9&#x2F;10</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -1635,22 +1651,6 @@ li {undefined
 <h2 id="12-10大排序算法"><a href="#12-10大排序算法" class="headerlink" title="12 10大排序算法"></a>12 10大排序算法</h2><h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2>]]></content>
       <categories>
         <category>java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>读读纪伯伦的小诗吧</title>
-    <url>/2021/09/10/Kahlil-Gibran/</url>
-    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
-<span id="more"></span>
-
-<hr>
-<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
-<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
-<hr>
-<p>2021&#x2F;9&#x2F;10</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -2534,6 +2534,48 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>高声大嗓</title>
+    <url>/2021/03/15/The-farmer/</url>
+    <content><![CDATA[<p>有这么一个农民，外号叫”高声大嗓”，这个外号，是爸妈取的。</p>
+<p>他从来没有进过我们家门，每次要不用自行车驮着纤维袋子鼓鼓囊囊装满的洋芋，要不洋芋拉在三轮车上，到了家门口，大声吆喝”取洋芋咯！”他从不担心我们会听不到，因为他的声音能轻松响彻巷子里所有的街坊邻居，轻松盖过各自家里的电视节目声音。这是已经搬迁了的巷子邻居的共同记忆。</p>
+<p>20多年前，他胃溃疡萎缩性胃炎严重，看了很多大夫都没用，生命垂危，我爸治好了他。但他只是我爸看无数病人中的一位普通病人。</p>
+<span id="more"></span>
+
+<p>因为感激爸爸的救命之恩，20多年来，每年自己种的洋芋成熟的时候，都会留一袋子比较好的用最低廉的价格给我们家送来，从来都没间断过，按我爸妈的话来说，他送的洋芋和市场上卖的区别很大，一点都不麻，又大又好吃。</p>
+<p>近些年年，”高声大嗓”说自己年龄大了，60多了，自行车骑不动了，三轮没上牌，城里管的很严去不了。但洋芋每年都给我们留着，要不就找人带，要不就我们自己去取。</p>
+<p>之前对此人的了解，只是停留在爸妈口中的人真的很好，现在这样的病人再也没有了，以及每年不用买的洋芋，因为自己在家几乎不做饭，而且从没见过，所以其实印象很浅。</p>
+<p>今年因为我回学校晚，为了练练车技，我们全家今天下午开车去他家，甘肃省定西市临洮县龙门镇大宅子村林家嘴，取洋芋。</p>
+<h2 id="路上"><a href="#路上" class="headerlink" title="路上"></a>路上</h2><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213535525.png" alt="image-20210315213535525" style="zoom: 50%;" />
+
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213608787.png" alt="image-20210315213608787"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203150950687.png" alt="image-20210315213626300"></p>
+<p>这路，是真的难走，走完盘旋山路，就是更难走的水泥硬化路，全程只能勉强两辆车通过，一侧山体一侧悬崖。再后来，从山上到山脚，索性连路都没有了，导航完全没用，只有拖拉机压出来的黄土，和土墙山坳，全程只允许我的一辆小型车勉强通过，坑洼不平，还有松软的泥泞。我尽可能防止挂到车辆底盘，仍在走错路田间掉头时，陷入了松土中，轮胎空转，爸妈下车推车，再上车时我们三个被轮胎的焦糊味熏得眼睛难受。到了以后，刹车片发烫。</p>
+<p>期间因为实在找不到路在哪儿，边走边问路，问了好多村民，最后因为遇上了放学的小学生，恰好也是去林家嘴的，载着她，这才找到庄子。</p>
+<p>趟着厚厚的黄土，迎着大风，摸摸索索终于找到了人家。</p>
+<p>面朝黄土背朝天，太贴切了。我妈说，如果她有女儿，绝不肯嫁到这种地方来，太苦了。</p>
+<h2 id="到了"><a href="#到了" class="headerlink" title="到了"></a>到了</h2><p>我昨晚喝了酒，早上没胃口，中午吃的有点少，开山路集中精力搞得我疲倦，我确实是又累又饿，有点低血糖头晕。</p>
+<p>到了以后，风很大土很大，我们三个蓬头垢面，嘴里都沙碌碌的。家里没人，果然去下地干活了，我和我妈都在埋怨为什么我爸不提前打电话。打了电话告知我们已经到了家门口，大爷大娘了然，大娘从山脚一路跑步到了我们面前，气喘吁吁，随后大爷的三轮也回来了。</p>
+<p>他们精瘦的体格，黝黑的，深深刻印了皱纹的干枯的皮肤，诉说着地地道道庄稼汉的苦。</p>
+<p>进去以后，房屋十分简单，养鸡种地，客厅堆了药材，所以只能去厨房一座。一进门，便是久违的，熟悉的，昏暗潮湿的霉味和炕味。</p>
+<p>大娘大爷显然没有料到我们会来，手足无措，按照他们的习惯应该劳作一天，天黑再回家做饭。此时竟不知道该拿什么来招待我们。想擀面做饭，想煮自己家的鸡肉，被爸妈拼命拦下，一来不想麻烦他们，二来太晚天黑了路太难走，太危险，回不去。</p>
+<p>所以只泡了茶，因为外出没有生火，当然也没有热水，就用电磁炉烧了敞口的壶。没有小块的冰糖，大块的用手掰不动，大娘只能用菜刀刀背在案板上敲开，结果碎的到处都是，取完整的小块冰糖和放在柜子里的铁罐里的碎茶叶泡了茶。</p>
+<p>一进门大娘就开始找所有能让我们带走的东西，找来找去，只找到了之前杀的鸡，和没吃的肉，全装袋子了。</p>
+<p>拿出自己种的粮食做的馍，就着这满是土腥味儿的茶，比普洱没洗的味道还要浓好多倍，我吃的十分香甜，真真切切能尝到粮食的香味。估计是看我吃的太投入，饿了。大娘用自己家的鸡蛋做点喝的，根本拦不住，切点小葱，飘在表面，我和我爸一人盛了三个荷包蛋。我觉得小葱很好吃，于是无所事事的我妈在案板下面帮我找了一根。</p>
+<p>大娘看到后，说喜欢葱的话还有更新鲜的！二话不说跑去近处的田里，摘了一把，回来洗净一根推搡给我，我已经吃完了，我这样吃不习惯葱的人只吃葱怎么可能吃得下啊。剩下没洗的说什么都要让装走，说吃不完种在盆里也行。看我吃饼吃的很香，又摸出今天带去田里干活还没来及吃的饼，也带走。盛情难却啊。</p>
+<p>我终于理解了为什么我爸不肯提前打电话告知了。</p>
+<p>天色渐晚，稍微果腹后，我们打算带着洋芋回去。大娘风风火火，不到半个小时庄子的人们都知道秦大夫来了，纷纷围了过来，在村头的路口，一个个都希望看看自己家里的病，其实都是些小病，很快开完药方后，被全庄一起簇拥着，热热闹闹各自说着家长里短，来到了停车的麦场。离开的时候，大爷大娘对我说爷爷死了没叫他们太遗憾了，我结婚的时候一定要叫啊。</p>
+<h2 id="离开了"><a href="#离开了" class="headerlink" title="离开了"></a>离开了</h2><p>吃饭的时候，吃完站在院子里逗猫的时候，我看着我爸在村头路上给大家看病的时候，我的眼睛湿润了很多次，尤其是经历过之前一段时间，我对人与人的信任感降到过最低，没想到我这辈子能亲眼见到，亲自感受到如此淳朴善良亲切的人们，没想到这样的人真的存在。我感觉到了从未有过的脚踏实地甚至深深扎根在黄土中的真实，心贴心的开心和感动，即便都是初次相见。我对我的追求产生了深深的动摇，金钱和地位应该可以给我虚荣的快感，更好的生活，更容易交到的朋友，但能给我这种感觉吗，不能。我非常心动，我想，如果纯粹为了这种感觉，而不是为了造福大众这种虚伪的理由，我真的愿意回来做个乡土干部。</p>
+<p>但是想了想，太不现实了，我已经出去了，想回来太难了。我能快乐感动一段时间，但是时间长了，我终究做不到没有物欲，此外太不方便和城市化导致住户一直在减少，只有剩下的老人在种田，这样的可爱的偏远的庄子最终还是会消失的，而且或许用不了多少年了。</p>
+<p>中国还有无数个这种小村庄，只有在自己最擅长的领域发光发热，为祖国的强大供能，才能最大限度帮助脱贫吧。</p>
+<p>多想以后和”人”相处累了，我还能在某个不知道是哪儿的地方找到这种感觉。</p>
+<hr>
+<p>2021&#x2F;3&#x2F;15</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Typora PicGo GitHub云图床(四)</title>
     <url>/2022/03/21/Typora+PicGo+GitHub/</url>
     <content><![CDATA[<p>前文已经讲述了<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a>，<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>，<a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a>。但是本地图床仍有遗失风险和难以跨设备查看的不足，为了避免图片遗失，增强分享和多端查看的便利性，本文将进一步增强网络图床的配置，实现更进一步的自动化，只需要简单的拖拽或者复制粘贴，一切都很优雅。</p>
@@ -2609,48 +2651,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>Markdown&amp;Blog</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>高声大嗓</title>
-    <url>/2021/03/15/The-farmer/</url>
-    <content><![CDATA[<p>有这么一个农民，外号叫”高声大嗓”，这个外号，是爸妈取的。</p>
-<p>他从来没有进过我们家门，每次要不用自行车驮着纤维袋子鼓鼓囊囊装满的洋芋，要不洋芋拉在三轮车上，到了家门口，大声吆喝”取洋芋咯！”他从不担心我们会听不到，因为他的声音能轻松响彻巷子里所有的街坊邻居，轻松盖过各自家里的电视节目声音。这是已经搬迁了的巷子邻居的共同记忆。</p>
-<p>20多年前，他胃溃疡萎缩性胃炎严重，看了很多大夫都没用，生命垂危，我爸治好了他。但他只是我爸看无数病人中的一位普通病人。</p>
-<span id="more"></span>
-
-<p>因为感激爸爸的救命之恩，20多年来，每年自己种的洋芋成熟的时候，都会留一袋子比较好的用最低廉的价格给我们家送来，从来都没间断过，按我爸妈的话来说，他送的洋芋和市场上卖的区别很大，一点都不麻，又大又好吃。</p>
-<p>近些年年，”高声大嗓”说自己年龄大了，60多了，自行车骑不动了，三轮没上牌，城里管的很严去不了。但洋芋每年都给我们留着，要不就找人带，要不就我们自己去取。</p>
-<p>之前对此人的了解，只是停留在爸妈口中的人真的很好，现在这样的病人再也没有了，以及每年不用买的洋芋，因为自己在家几乎不做饭，而且从没见过，所以其实印象很浅。</p>
-<p>今年因为我回学校晚，为了练练车技，我们全家今天下午开车去他家，甘肃省定西市临洮县龙门镇大宅子村林家嘴，取洋芋。</p>
-<h2 id="路上"><a href="#路上" class="headerlink" title="路上"></a>路上</h2><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213535525.png" alt="image-20210315213535525" style="zoom: 50%;" />
-
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213608787.png" alt="image-20210315213608787"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203150950687.png" alt="image-20210315213626300"></p>
-<p>这路，是真的难走，走完盘旋山路，就是更难走的水泥硬化路，全程只能勉强两辆车通过，一侧山体一侧悬崖。再后来，从山上到山脚，索性连路都没有了，导航完全没用，只有拖拉机压出来的黄土，和土墙山坳，全程只允许我的一辆小型车勉强通过，坑洼不平，还有松软的泥泞。我尽可能防止挂到车辆底盘，仍在走错路田间掉头时，陷入了松土中，轮胎空转，爸妈下车推车，再上车时我们三个被轮胎的焦糊味熏得眼睛难受。到了以后，刹车片发烫。</p>
-<p>期间因为实在找不到路在哪儿，边走边问路，问了好多村民，最后因为遇上了放学的小学生，恰好也是去林家嘴的，载着她，这才找到庄子。</p>
-<p>趟着厚厚的黄土，迎着大风，摸摸索索终于找到了人家。</p>
-<p>面朝黄土背朝天，太贴切了。我妈说，如果她有女儿，绝不肯嫁到这种地方来，太苦了。</p>
-<h2 id="到了"><a href="#到了" class="headerlink" title="到了"></a>到了</h2><p>我昨晚喝了酒，早上没胃口，中午吃的有点少，开山路集中精力搞得我疲倦，我确实是又累又饿，有点低血糖头晕。</p>
-<p>到了以后，风很大土很大，我们三个蓬头垢面，嘴里都沙碌碌的。家里没人，果然去下地干活了，我和我妈都在埋怨为什么我爸不提前打电话。打了电话告知我们已经到了家门口，大爷大娘了然，大娘从山脚一路跑步到了我们面前，气喘吁吁，随后大爷的三轮也回来了。</p>
-<p>他们精瘦的体格，黝黑的，深深刻印了皱纹的干枯的皮肤，诉说着地地道道庄稼汉的苦。</p>
-<p>进去以后，房屋十分简单，养鸡种地，客厅堆了药材，所以只能去厨房一座。一进门，便是久违的，熟悉的，昏暗潮湿的霉味和炕味。</p>
-<p>大娘大爷显然没有料到我们会来，手足无措，按照他们的习惯应该劳作一天，天黑再回家做饭。此时竟不知道该拿什么来招待我们。想擀面做饭，想煮自己家的鸡肉，被爸妈拼命拦下，一来不想麻烦他们，二来太晚天黑了路太难走，太危险，回不去。</p>
-<p>所以只泡了茶，因为外出没有生火，当然也没有热水，就用电磁炉烧了敞口的壶。没有小块的冰糖，大块的用手掰不动，大娘只能用菜刀刀背在案板上敲开，结果碎的到处都是，取完整的小块冰糖和放在柜子里的铁罐里的碎茶叶泡了茶。</p>
-<p>一进门大娘就开始找所有能让我们带走的东西，找来找去，只找到了之前杀的鸡，和没吃的肉，全装袋子了。</p>
-<p>拿出自己种的粮食做的馍，就着这满是土腥味儿的茶，比普洱没洗的味道还要浓好多倍，我吃的十分香甜，真真切切能尝到粮食的香味。估计是看我吃的太投入，饿了。大娘用自己家的鸡蛋做点喝的，根本拦不住，切点小葱，飘在表面，我和我爸一人盛了三个荷包蛋。我觉得小葱很好吃，于是无所事事的我妈在案板下面帮我找了一根。</p>
-<p>大娘看到后，说喜欢葱的话还有更新鲜的！二话不说跑去近处的田里，摘了一把，回来洗净一根推搡给我，我已经吃完了，我这样吃不习惯葱的人只吃葱怎么可能吃得下啊。剩下没洗的说什么都要让装走，说吃不完种在盆里也行。看我吃饼吃的很香，又摸出今天带去田里干活还没来及吃的饼，也带走。盛情难却啊。</p>
-<p>我终于理解了为什么我爸不肯提前打电话告知了。</p>
-<p>天色渐晚，稍微果腹后，我们打算带着洋芋回去。大娘风风火火，不到半个小时庄子的人们都知道秦大夫来了，纷纷围了过来，在村头的路口，一个个都希望看看自己家里的病，其实都是些小病，很快开完药方后，被全庄一起簇拥着，热热闹闹各自说着家长里短，来到了停车的麦场。离开的时候，大爷大娘对我说爷爷死了没叫他们太遗憾了，我结婚的时候一定要叫啊。</p>
-<h2 id="离开了"><a href="#离开了" class="headerlink" title="离开了"></a>离开了</h2><p>吃饭的时候，吃完站在院子里逗猫的时候，我看着我爸在村头路上给大家看病的时候，我的眼睛湿润了很多次，尤其是经历过之前一段时间，我对人与人的信任感降到过最低，没想到我这辈子能亲眼见到，亲自感受到如此淳朴善良亲切的人们，没想到这样的人真的存在。我感觉到了从未有过的脚踏实地甚至深深扎根在黄土中的真实，心贴心的开心和感动，即便都是初次相见。我对我的追求产生了深深的动摇，金钱和地位应该可以给我虚荣的快感，更好的生活，更容易交到的朋友，但能给我这种感觉吗，不能。我非常心动，我想，如果纯粹为了这种感觉，而不是为了造福大众这种虚伪的理由，我真的愿意回来做个乡土干部。</p>
-<p>但是想了想，太不现实了，我已经出去了，想回来太难了。我能快乐感动一段时间，但是时间长了，我终究做不到没有物欲，此外太不方便和城市化导致住户一直在减少，只有剩下的老人在种田，这样的可爱的偏远的庄子最终还是会消失的，而且或许用不了多少年了。</p>
-<p>中国还有无数个这种小村庄，只有在自己最擅长的领域发光发热，为祖国的强大供能，才能最大限度帮助脱贫吧。</p>
-<p>多想以后和”人”相处累了，我还能在某个不知道是哪儿的地方找到这种感觉。</p>
-<hr>
-<p>2021&#x2F;3&#x2F;15</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
