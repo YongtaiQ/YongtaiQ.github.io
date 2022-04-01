@@ -445,6 +445,115 @@
       </categories>
   </entry>
   <entry>
+    <title>数据结构API</title>
+    <url>/2022/03/15/Data-structure-API/</url>
+    <content><![CDATA[<p>interface接口(申明后直接调用方法)-implement实现(不关心)</p>
+<h2 id="1-集合类-基本接口"><a href="#1-集合类-基本接口" class="headerlink" title="1. 集合类 基本接口"></a>1. 集合类 基本接口</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Collection&#123;</span><br><span class="line">    add(e);</span><br><span class="line">    iterator迭代器();&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="1-1-迭代器"><a href="#1-1-迭代器" class="headerlink" title="1.1 迭代器"></a>1.1 迭代器</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">iterator&#123;</span><br><span class="line">    next();</span><br><span class="line">    hasNext();</span><br><span class="line">    remove();&#125;</span><br></pre></td></tr></table></figure>
+
+<p> next最后会抛出异常，需要先hasNext;</p>
+<p>查找一个元素唯一个方法是next；</p>
+<h3 id="1-2删除-remove前必须先next，remove删除上次next返回的元素"><a href="#1-2删除-remove前必须先next，remove删除上次next返回的元素" class="headerlink" title="1.2删除 remove前必须先next，remove删除上次next返回的元素;"></a>1.2删除 remove前必须先next，remove删除上次next返回的元素;</h3><h2 id="1-3-Collection-泛型实用方法-所有都能用"><a href="#1-3-Collection-泛型实用方法-所有都能用" class="headerlink" title="1.3 Collection 泛型实用方法,所有都能用:"></a>1.3 Collection 泛型实用方法,所有都能用:</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collection&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">iterator</span><span class="params">()</span>;<span class="comment">//返回一个用于访问集合每个元素的迭代器    </span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">size</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object other)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(Object obj)</span>;<span class="comment">//有返回值</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">addAll</span><span class="params">(Collection&lt;? extends&gt; from)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">removeAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">retainAll</span><span class="params">(Collection&lt;?&gt; other)</span>;<span class="comment">//保留，既删除所有与other集合不一样的元素</span></span><br><span class="line">    </span><br><span class="line">Object[] toArray();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Iterator&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasNext</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">next</span><span class="params">()</span>;<span class="comment">//到达尾部报错</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">remove</span><span class="params">()</span>;<span class="comment">//删除上次访问对象，紧跟next，如果期间集合发生变化报错</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-具体集合"><a href="#2-具体集合" class="headerlink" title="2 具体集合"></a>2 具体集合</h2><p>map结尾的类以外都实现了Collection接口，map结尾的类实现map接口</p>
+<h3 id="2-1-链表LinkList"><a href="#2-1-链表LinkList" class="headerlink" title="2.1 链表LinkList"></a>2.1 链表LinkList</h3><p>数组列表，链表共有</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java,util.List&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">()</span>;<span class="comment">//列表迭代器，用来迭代</span></span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">(<span class="type">int</span> index)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> i,E element)</span>;<span class="comment">//在给定位置添加，无返回值，默认成功</span></span><br><span class="line"></span><br><span class="line">Void <span class="title function_">addAll</span><span class="params">(<span class="type">int</span> i,Collection&lt;? extends E&gt; elements)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//删除该位置元素并返回</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">get</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//get和set随机访问每一个元素只适用于数组列表，链表只能用迭代器提供的</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">set</span><span class="params">(<span class="type">int</span> i,E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(Object obj)</span>;<span class="comment">//如果没有返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(Object obj)</span>;<span class="comment">//返回列表中最后一次出现的元素，没有返回-1</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ListIterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(E newElement)</span>;<span class="comment">//当前位置</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">set</span><span class="params">(E newElement)</span>;<span class="comment">//修改next上次访问位置，如果列表在其间被修改了，会报错</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasPrevious</span><span class="params">()</span>;<span class="comment">//反向的hasNext</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">previous</span><span class="params">()</span>;<span class="comment">//头，抛出异常</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">nextIndex</span><span class="params">()</span>;<span class="comment">//下次调用next返回索引</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">prevIndex</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="链表专属独有"><a href="#链表专属独有" class="headerlink" title="链表专属独有"></a>链表专属独有</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">LinkedList();<span class="comment">//构造空链表</span></span><br><span class="line"></span><br><span class="line">LinkedList(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;<span class="comment">//在头或尾添加</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;<span class="comment">//返回头或尾元素</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-数组列表-ArryList-类-实现了List接口"><a href="#2-2-数组列表-ArryList-类-实现了List接口" class="headerlink" title="2.2 数组列表 ArryList 类 实现了List接口"></a>2.2 数组列表 ArryList 类 实现了List接口</h3><p>List接口（包含的迭代器）描述有顺序的集合，位置重要，两种协议：1get和set随机访问每一个元素只适用于数组列表，2链表只能用迭代器提供的。</p>
+<p>Victor同步，多线程同时访问安全；ArryList不同步，多个同时访问不安全。</p>
+<h3 id="2-3-散列集-HashSet"><a href="#2-3-散列集-HashSet" class="headerlink" title="2.3 散列集 HashSet"></a>2.3 散列集 HashSet</h3><p>无序</p>
+<p>HashTable 散列表用链表数组实现，每个列表 桶。</p>
+<p>散列表实现的数据类型如HashSet</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.HashSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">HashSet();</span><br><span class="line"></span><br><span class="line">HashSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity);<span class="comment">//构造指定桶的空散列集</span></span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor);<span class="comment">//填装因子，大于时再散列</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Object;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span>;<span class="comment">//返回哈希码</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-4-树集TreeSet，排序集"><a href="#2-4-树集TreeSet，排序集" class="headerlink" title="2.4 树集TreeSet，排序集"></a>2.4 树集TreeSet，排序集</h3><p>有排序的集合（sorted collection）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br></pre></td></tr></table></figure>
+
+<p>和比较紧密相关，因为是排序集合</p>
+<h3 id="2-5-排序集的-对象比较"><a href="#2-5-排序集的-对象比较" class="headerlink" title="2.5 排序集的 对象比较"></a>2.5 排序集的 对象比较</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Comparable&lt;T&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T other)</span>;<span class="comment">//将这个对象this与other比较，this在other之前，返回负值，之后返回正值，相同为0</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Comparator&lt;T&gt;;</span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T a,T b)</span>;<span class="comment">//a与b比较</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> E&gt; comparator();<span class="comment">//返回对元素排序的比较器？</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">first</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">last</span><span class="params">()</span>;<span class="comment">//返回排序集合的最小或最大</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.NavigableSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">higher</span><span class="params">(E value)</span>;<span class="comment">//返回大于value的最小元素或最大，没有返回null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">lower</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">ceiling</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">floor</span><span class="params">(E value)</span>;<span class="comment">//返回最大或最小，没有则null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//删除并返回这个排序集的最大或最小，空null</span></span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">descendingIterator</span><span class="params">()</span>;<span class="comment">//返回一个按递减顺序遍历集中元素的迭代器</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造树，用指定比较器对其中元素排序</span></span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);<span class="comment">//构造树，所有元素添加，与给定集相同元素的比较器</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-6-队列Queue与双端队列Deque"><a href="#2-6-队列Queue与双端队列Deque" class="headerlink" title="2.6 队列Queue与双端队列Deque"></a>2.6 队列Queue与双端队列Deque</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Queue&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offer</span><span class="params">(E element)</span>;<span class="comment">//如果队列没满，添加队尾返回true；满了add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">poll</span><span class="params">()</span>;<span class="comment">//队列不空，返回第一个并删除；空，remove报错，第二个null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">element</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//队列不空，返回头；空，element抛出异常，peek null</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Deque;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerLast</span><span class="params">(E element)</span>;<span class="comment">//如果满，add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFist</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//不空，删除并返回，空remove报错，poll null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekLast</span><span class="params">()</span>;<span class="comment">//返回头，空，get报错，peek null</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayDeque;</span><br><span class="line"></span><br><span class="line">ArrayDeque();</span><br><span class="line"></span><br><span class="line">ArrayDeque(<span class="type">int</span> initialCapacity);<span class="comment">//初始化16或给定容量双端队列</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-7-优先级队列PriorityQueue-最小-堆heap"><a href="#2-7-优先级队列PriorityQueue-最小-堆heap" class="headerlink" title="2.7 优先级队列PriorityQueue  (最小)堆heap"></a>2.7 优先级队列PriorityQueue  (最小)堆heap</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.PriorityQueue;</span><br><span class="line"></span><br><span class="line">PriorityQueue();</span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity);<span class="comment">//构造一个用于存放Comparable对象的优先级队列</span></span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity,Comparator&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造一个优先级队列，指定比较器排序</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-8映射表Map-lt-K-V-gt-泛型"><a href="#2-8映射表Map-lt-K-V-gt-泛型" class="headerlink" title="2.8映射表Map&lt;K,V&gt; 泛型"></a>2.8映射表Map&lt;K,V&gt; 泛型</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">get</span><span class="params">(Object Key)</span>;<span class="comment">//返回key对应value，没有null</span></span><br><span class="line"></span><br><span class="line">V <span class="title function_">put</span><span class="params">(K key,V value)</span>;插入，如果存在，取代，返回旧值；键可以为<span class="literal">null</span>值不能为<span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">putAll</span><span class="params">(Map&lt;? extends K, ? extends V&gt; entries)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsKey</span><span class="params">(Object key)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsValue</span><span class="params">(Object value)</span>;</span><br><span class="line"></span><br><span class="line">set&lt;Map.Entry&lt;K,V&gt; <span class="title function_">entrySet</span><span class="params">()</span>;<span class="comment">//返回Map.Entry的集视图，也就是映射表的KV对;可以从这儿删除元素，映射表也同步删除，不能添加</span></span><br><span class="line"></span><br><span class="line">Set&lt;K&gt; <span class="title function_">KeySet</span><span class="params">()</span>;<span class="comment">//映射表所有键的集视图，可删除不能添加</span></span><br><span class="line"></span><br><span class="line">Collection&lt;V&gt; <span class="title function_">values</span><span class="params">()</span>;<span class="comment">//映射表所有值的集视图，可删除不能添加</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map.Entry&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">getKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">getValue</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">setValue</span><span class="params">(V newValue)</span>;<span class="comment">//设置新值，返回旧值</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">HashMap();</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity);</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor)<span class="comment">//填装因子</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">TreeMap(Comparator&lt;? <span class="built_in">super</span> K&gt; c);<span class="comment">//构造树映射表，指定比较器排序</span></span><br><span class="line"></span><br><span class="line">TreeMap(Map&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//映射表全部添加到树映射表</span></span><br><span class="line"></span><br><span class="line">TreeMap(SortedMap&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//排序映射表添加到树映射表，用相同的比较器</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortedMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> K&gt; comparator);<span class="comment">//返回对K排序的比较器，compareto null</span></span><br><span class="line"></span><br><span class="line">K <span class="title function_">firstKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">lastKey</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-9-HashTable-Vector-enum-Stack"><a href="#2-9-HashTable-Vector-enum-Stack" class="headerlink" title="2.9 HashTable Vector enum Stack"></a>2.9 HashTable Vector enum Stack</h3><p>hashTable 与hashMap区别不大，不同是HashTable线程安全，同步访问；</p>
+<p>vector与ArrayList同理；</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Enumeration&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasMoreElement</span><span class="params">()</span>;有更多<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">nextElement</span><span class="params">()</span>;hasmore <span class="literal">false</span> 会报错</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Hashtable&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;K&gt; <span class="title function_">Keys</span><span class="params">()</span>;<span class="comment">//遍历 枚举</span></span><br><span class="line"></span><br><span class="line">Enumeration&lt;V&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Vector&lt;V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;E&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">push</span><span class="params">(E item)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pop</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//空会报错</span></span><br></pre></td></tr></table></figure>
+
+<p>位？</p>
+<h3 id="集合框架framework-展示Collection-Map两个接口的混用"><a href="#集合框架framework-展示Collection-Map两个接口的混用" class="headerlink" title="集合框架framework 展示Collection||Map两个接口的混用"></a>集合框架framework 展示Collection||Map两个接口的混用</h3><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713542.jpg" alt="5d21cab304c41c724c490927f5c531e" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713602.jpg" alt="cc74125cd2da1434cf19312dcaabde4" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151714149.jpg" alt="b246c578c263f40249028234ad8adca" style="zoom:50%;" />
+
+<hr>
+<p>2022&#x2F;3&#x2F;15</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>DQN with Keras and Gym</title>
     <url>/2020/12/28/Deep-Q-Learning-with-Keras-and-Gym/</url>
     <content><![CDATA[<h3 id="研究是因为有趣"><a href="#研究是因为有趣" class="headerlink" title="研究是因为有趣"></a>研究是因为<em>有趣</em></h3><p><a href="https://keon.github.io/deep-q-learning/">Deep Q-Learning with Keras and Gym · Keon’s Blog</a></p>
@@ -601,115 +710,6 @@
 ]]></content>
       <categories>
         <category>DRL</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>数据结构API</title>
-    <url>/2022/03/15/Data-structure-API/</url>
-    <content><![CDATA[<p>interface接口(申明后直接调用方法)-implement实现(不关心)</p>
-<h2 id="1-集合类-基本接口"><a href="#1-集合类-基本接口" class="headerlink" title="1. 集合类 基本接口"></a>1. 集合类 基本接口</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Collection&#123;</span><br><span class="line">    add(e);</span><br><span class="line">    iterator迭代器();&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="1-1-迭代器"><a href="#1-1-迭代器" class="headerlink" title="1.1 迭代器"></a>1.1 迭代器</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">iterator&#123;</span><br><span class="line">    next();</span><br><span class="line">    hasNext();</span><br><span class="line">    remove();&#125;</span><br></pre></td></tr></table></figure>
-
-<p> next最后会抛出异常，需要先hasNext;</p>
-<p>查找一个元素唯一个方法是next；</p>
-<h3 id="1-2删除-remove前必须先next，remove删除上次next返回的元素"><a href="#1-2删除-remove前必须先next，remove删除上次next返回的元素" class="headerlink" title="1.2删除 remove前必须先next，remove删除上次next返回的元素;"></a>1.2删除 remove前必须先next，remove删除上次next返回的元素;</h3><h2 id="1-3-Collection-泛型实用方法-所有都能用"><a href="#1-3-Collection-泛型实用方法-所有都能用" class="headerlink" title="1.3 Collection 泛型实用方法,所有都能用:"></a>1.3 Collection 泛型实用方法,所有都能用:</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collection&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">iterator</span><span class="params">()</span>;<span class="comment">//返回一个用于访问集合每个元素的迭代器    </span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">size</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object other)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(Object obj)</span>;<span class="comment">//有返回值</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">addAll</span><span class="params">(Collection&lt;? extends&gt; from)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">removeAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">retainAll</span><span class="params">(Collection&lt;?&gt; other)</span>;<span class="comment">//保留，既删除所有与other集合不一样的元素</span></span><br><span class="line">    </span><br><span class="line">Object[] toArray();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Iterator&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasNext</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">next</span><span class="params">()</span>;<span class="comment">//到达尾部报错</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">remove</span><span class="params">()</span>;<span class="comment">//删除上次访问对象，紧跟next，如果期间集合发生变化报错</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-具体集合"><a href="#2-具体集合" class="headerlink" title="2 具体集合"></a>2 具体集合</h2><p>map结尾的类以外都实现了Collection接口，map结尾的类实现map接口</p>
-<h3 id="2-1-链表LinkList"><a href="#2-1-链表LinkList" class="headerlink" title="2.1 链表LinkList"></a>2.1 链表LinkList</h3><p>数组列表，链表共有</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java,util.List&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">()</span>;<span class="comment">//列表迭代器，用来迭代</span></span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">(<span class="type">int</span> index)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> i,E element)</span>;<span class="comment">//在给定位置添加，无返回值，默认成功</span></span><br><span class="line"></span><br><span class="line">Void <span class="title function_">addAll</span><span class="params">(<span class="type">int</span> i,Collection&lt;? extends E&gt; elements)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//删除该位置元素并返回</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">get</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//get和set随机访问每一个元素只适用于数组列表，链表只能用迭代器提供的</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">set</span><span class="params">(<span class="type">int</span> i,E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(Object obj)</span>;<span class="comment">//如果没有返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(Object obj)</span>;<span class="comment">//返回列表中最后一次出现的元素，没有返回-1</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ListIterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(E newElement)</span>;<span class="comment">//当前位置</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">set</span><span class="params">(E newElement)</span>;<span class="comment">//修改next上次访问位置，如果列表在其间被修改了，会报错</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasPrevious</span><span class="params">()</span>;<span class="comment">//反向的hasNext</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">previous</span><span class="params">()</span>;<span class="comment">//头，抛出异常</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">nextIndex</span><span class="params">()</span>;<span class="comment">//下次调用next返回索引</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">prevIndex</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="链表专属独有"><a href="#链表专属独有" class="headerlink" title="链表专属独有"></a>链表专属独有</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">LinkedList();<span class="comment">//构造空链表</span></span><br><span class="line"></span><br><span class="line">LinkedList(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;<span class="comment">//在头或尾添加</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;<span class="comment">//返回头或尾元素</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-数组列表-ArryList-类-实现了List接口"><a href="#2-2-数组列表-ArryList-类-实现了List接口" class="headerlink" title="2.2 数组列表 ArryList 类 实现了List接口"></a>2.2 数组列表 ArryList 类 实现了List接口</h3><p>List接口（包含的迭代器）描述有顺序的集合，位置重要，两种协议：1get和set随机访问每一个元素只适用于数组列表，2链表只能用迭代器提供的。</p>
-<p>Victor同步，多线程同时访问安全；ArryList不同步，多个同时访问不安全。</p>
-<h3 id="2-3-散列集-HashSet"><a href="#2-3-散列集-HashSet" class="headerlink" title="2.3 散列集 HashSet"></a>2.3 散列集 HashSet</h3><p>无序</p>
-<p>HashTable 散列表用链表数组实现，每个列表 桶。</p>
-<p>散列表实现的数据类型如HashSet</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.HashSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">HashSet();</span><br><span class="line"></span><br><span class="line">HashSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity);<span class="comment">//构造指定桶的空散列集</span></span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor);<span class="comment">//填装因子，大于时再散列</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Object;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span>;<span class="comment">//返回哈希码</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-4-树集TreeSet，排序集"><a href="#2-4-树集TreeSet，排序集" class="headerlink" title="2.4 树集TreeSet，排序集"></a>2.4 树集TreeSet，排序集</h3><p>有排序的集合（sorted collection）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br></pre></td></tr></table></figure>
-
-<p>和比较紧密相关，因为是排序集合</p>
-<h3 id="2-5-排序集的-对象比较"><a href="#2-5-排序集的-对象比较" class="headerlink" title="2.5 排序集的 对象比较"></a>2.5 排序集的 对象比较</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Comparable&lt;T&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T other)</span>;<span class="comment">//将这个对象this与other比较，this在other之前，返回负值，之后返回正值，相同为0</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Comparator&lt;T&gt;;</span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T a,T b)</span>;<span class="comment">//a与b比较</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> E&gt; comparator();<span class="comment">//返回对元素排序的比较器？</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">first</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">last</span><span class="params">()</span>;<span class="comment">//返回排序集合的最小或最大</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.NavigableSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">higher</span><span class="params">(E value)</span>;<span class="comment">//返回大于value的最小元素或最大，没有返回null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">lower</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">ceiling</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">floor</span><span class="params">(E value)</span>;<span class="comment">//返回最大或最小，没有则null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//删除并返回这个排序集的最大或最小，空null</span></span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">descendingIterator</span><span class="params">()</span>;<span class="comment">//返回一个按递减顺序遍历集中元素的迭代器</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造树，用指定比较器对其中元素排序</span></span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);<span class="comment">//构造树，所有元素添加，与给定集相同元素的比较器</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-6-队列Queue与双端队列Deque"><a href="#2-6-队列Queue与双端队列Deque" class="headerlink" title="2.6 队列Queue与双端队列Deque"></a>2.6 队列Queue与双端队列Deque</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Queue&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offer</span><span class="params">(E element)</span>;<span class="comment">//如果队列没满，添加队尾返回true；满了add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">poll</span><span class="params">()</span>;<span class="comment">//队列不空，返回第一个并删除；空，remove报错，第二个null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">element</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//队列不空，返回头；空，element抛出异常，peek null</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Deque;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerLast</span><span class="params">(E element)</span>;<span class="comment">//如果满，add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFist</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//不空，删除并返回，空remove报错，poll null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekLast</span><span class="params">()</span>;<span class="comment">//返回头，空，get报错，peek null</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayDeque;</span><br><span class="line"></span><br><span class="line">ArrayDeque();</span><br><span class="line"></span><br><span class="line">ArrayDeque(<span class="type">int</span> initialCapacity);<span class="comment">//初始化16或给定容量双端队列</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-7-优先级队列PriorityQueue-最小-堆heap"><a href="#2-7-优先级队列PriorityQueue-最小-堆heap" class="headerlink" title="2.7 优先级队列PriorityQueue  (最小)堆heap"></a>2.7 优先级队列PriorityQueue  (最小)堆heap</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.PriorityQueue;</span><br><span class="line"></span><br><span class="line">PriorityQueue();</span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity);<span class="comment">//构造一个用于存放Comparable对象的优先级队列</span></span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity,Comparator&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造一个优先级队列，指定比较器排序</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-8映射表Map-lt-K-V-gt-泛型"><a href="#2-8映射表Map-lt-K-V-gt-泛型" class="headerlink" title="2.8映射表Map&lt;K,V&gt; 泛型"></a>2.8映射表Map&lt;K,V&gt; 泛型</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">get</span><span class="params">(Object Key)</span>;<span class="comment">//返回key对应value，没有null</span></span><br><span class="line"></span><br><span class="line">V <span class="title function_">put</span><span class="params">(K key,V value)</span>;插入，如果存在，取代，返回旧值；键可以为<span class="literal">null</span>值不能为<span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">putAll</span><span class="params">(Map&lt;? extends K, ? extends V&gt; entries)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsKey</span><span class="params">(Object key)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsValue</span><span class="params">(Object value)</span>;</span><br><span class="line"></span><br><span class="line">set&lt;Map.Entry&lt;K,V&gt; <span class="title function_">entrySet</span><span class="params">()</span>;<span class="comment">//返回Map.Entry的集视图，也就是映射表的KV对;可以从这儿删除元素，映射表也同步删除，不能添加</span></span><br><span class="line"></span><br><span class="line">Set&lt;K&gt; <span class="title function_">KeySet</span><span class="params">()</span>;<span class="comment">//映射表所有键的集视图，可删除不能添加</span></span><br><span class="line"></span><br><span class="line">Collection&lt;V&gt; <span class="title function_">values</span><span class="params">()</span>;<span class="comment">//映射表所有值的集视图，可删除不能添加</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map.Entry&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">getKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">getValue</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">setValue</span><span class="params">(V newValue)</span>;<span class="comment">//设置新值，返回旧值</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">HashMap();</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity);</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor)<span class="comment">//填装因子</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">TreeMap(Comparator&lt;? <span class="built_in">super</span> K&gt; c);<span class="comment">//构造树映射表，指定比较器排序</span></span><br><span class="line"></span><br><span class="line">TreeMap(Map&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//映射表全部添加到树映射表</span></span><br><span class="line"></span><br><span class="line">TreeMap(SortedMap&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//排序映射表添加到树映射表，用相同的比较器</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortedMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> K&gt; comparator);<span class="comment">//返回对K排序的比较器，compareto null</span></span><br><span class="line"></span><br><span class="line">K <span class="title function_">firstKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">lastKey</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-9-HashTable-Vector-enum-Stack"><a href="#2-9-HashTable-Vector-enum-Stack" class="headerlink" title="2.9 HashTable Vector enum Stack"></a>2.9 HashTable Vector enum Stack</h3><p>hashTable 与hashMap区别不大，不同是HashTable线程安全，同步访问；</p>
-<p>vector与ArrayList同理；</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Enumeration&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasMoreElement</span><span class="params">()</span>;有更多<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">nextElement</span><span class="params">()</span>;hasmore <span class="literal">false</span> 会报错</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Hashtable&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;K&gt; <span class="title function_">Keys</span><span class="params">()</span>;<span class="comment">//遍历 枚举</span></span><br><span class="line"></span><br><span class="line">Enumeration&lt;V&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Vector&lt;V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;E&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">push</span><span class="params">(E item)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pop</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//空会报错</span></span><br></pre></td></tr></table></figure>
-
-<p>位？</p>
-<h3 id="集合框架framework-展示Collection-Map两个接口的混用"><a href="#集合框架framework-展示Collection-Map两个接口的混用" class="headerlink" title="集合框架framework 展示Collection||Map两个接口的混用"></a>集合框架framework 展示Collection||Map两个接口的混用</h3><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713542.jpg" alt="5d21cab304c41c724c490927f5c531e" style="zoom:50%;" />
-
-<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713602.jpg" alt="cc74125cd2da1434cf19312dcaabde4" style="zoom:50%;" />
-
-<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151714149.jpg" alt="b246c578c263f40249028234ad8adca" style="zoom:50%;" />
-
-<hr>
-<p>2022&#x2F;3&#x2F;15</p>
-]]></content>
-      <categories>
-        <category>java</category>
       </categories>
   </entry>
   <entry>
@@ -2113,6 +2113,50 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>The Hadoop Distributed File System</title>
+    <url>/2021/07/26/The-Hadoop-Distributed-File-System/</url>
+    <content><![CDATA[<p>Hadoop的重要特点是数据在数千节点上分区存储和计算，并行执行应用程序的计算。</p>
+<p>HDFS和其他分布式文件系统(PVFS、Lustre、GFS)一样，分开存储文件系统元信息(NameNode)和应用程序数据(DataNodes)，服务器之间通过基于TCP的协议通信。</p>
+<p>DataNodes没有和PVFS一样使用数据保护机制(如RAID)来使文件持久存放，而是像GFS一样在多个DataNode冗余存放文件内容来实现可靠性。保证持久存放的同时也可以加速传输数据。</p>
+<span id="more"></span>
+
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211550034" alt="img"></p>
+<p>HDFS总体上采用了master&#x2F;slave架构，主要由以下几个组件构成：Client、NameNode、Secondary NameNode和DataNode。<br>NameNode管理文件系统的命名空间，维护文件系统树及整棵树内所有的文件和目录。这些信息以两个文件形式永久保存在本地磁盘上：命名空间镜像文件fsimage和编辑日志edits文件。NameNode也记录着每个文件中各个块所在的数据节点信息，但它并不永久保存块的位置信息，因为这些信息会在系统启动时由数据节点重建。<br>Secondary NameNode最重要的任务并不是为NameNode元数据进行热备份，而是定期合并fsimage和edits日志，并传输给NameNode。这里需要注意的是，为了减少NameNode的压力，NameNode并不会自己合并fsimage和edits，而是将文件存储到磁盘上，交由Secondary NameNode完成。<br>DataNode是文件系统的工作节点。它们根据需要存储并检索数据块(受客户端或NameNode调度)，并且定期向NameNode发送它们所存储的块的列表。<br>客户端(client)代表用户通过与NameNode和DataNode交互来访问整个文件系统。客户端提供一个类似于POSIX的文件系统接口，因此用户在编程时无需知道NameNode和DataNode也可以实现其功能。</p>
+<h3 id="NameNode"><a href="#NameNode" class="headerlink" title="NameNode"></a>NameNode</h3><p>HDFS命名空间是文件和目录的层级结构。文件和目录在NameNode上通过inodes表示，inodes记录了各种属性如：权限、修改和访问次数、命名空间、磁盘空间配额。</p>
+<h3 id="DataNodes"><a href="#DataNodes" class="headerlink" title="DataNodes"></a>DataNodes</h3><p>DataNode中的每个块副本通过两个原生文件来表示，一个包含数据本身，另一个是文件元数据(包括块数据校验和、块生成戳 generation stamp)。数据文件的大小等于实际块长度，不需要额外空间舍入到传统文件系统中的名义块大小，因此如果块是半满的，就在本地占一半的空间。</p>
+<h3 id="HDFS-Client"><a href="#HDFS-Client" class="headerlink" title="HDFS Client"></a>HDFS Client</h3><p>用户应用程序通过HDFS客户端访问文件系统，这是一个程序库，开放了HDFS文件系统接口。</p>
+<h3 id="Image-and-Journal"><a href="#Image-and-Journal" class="headerlink" title="Image and Journal"></a>Image and Journal</h3><p>命名空间的image就是文件系统的元数据，将应用数据以目录和文件的形式组织。一条被写入的image持久化记录叫做checkpoint。journal是提前写入的提交日志，是必须被持久化的文件系统修改情况。对于每个客户端启动的事务，所做的修改被记录在journal中，journal文件会在更改提交到HDFS客户端前刷新和同步。</p>
+<h3 id="CheckpointNode"><a href="#CheckpointNode" class="headerlink" title="CheckpointNode"></a>CheckpointNode</h3><p>HDFS的NameNode除了服务客户端之外，还可以扮演另外两个角色之一，即CheckpointNode或BackupNode，这在启动时指定。</p>
+<h3 id="BackupNode"><a href="#BackupNode" class="headerlink" title="BackupNode"></a>BackupNode</h3><p>和CHeckpointNode类似，BackupNode也有能力创建定期检查点，但除此之外还在内存中维护文件系统命名空间最新的image，这总是和NameNode的状态一起同步</p>
+<h3 id="Upgrades-File-System-Snapshots"><a href="#Upgrades-File-System-Snapshots" class="headerlink" title="Upgrades, File System Snapshots"></a>Upgrades, File System Snapshots</h3><p>在软件升级的时候，由于软件bug或人犯错导致系统崩溃的可能性会增加。在HDFS中创建快照的目的就是在升级期间，使对保存在系统中数据的潜在损伤最小化。</p>
+<h2 id="2-2-论文核心算法"><a href="#2-2-论文核心算法" class="headerlink" title="2.2 论文核心算法"></a>2.2 论文核心算法</h2><h4 id="The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎"><a href="#The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎" class="headerlink" title="The Hadoop Distributed File System (Yahoo!)笔记 - 知乎"></a><a href="https://www.baidu.com/link?url=zBpkij4sYNFP99V5k41zkLgAe9Wmz7B3pQWmKkRXXus2p_MxCO_UjL5iDo96zw_G&wd=&eqid=f23dd73f000b5b380000000360c7162a"><em>The</em> <em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em> (Yahoo!)笔记 - 知乎</a></h4><h4 id="HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…"><a href="#HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…" class="headerlink" title="HDFS(Hadoop Distributed File System)简介_Bob Liu的…_…"></a><a href="https://www.baidu.com/link?url=qdR7pYI7y85J3TqZwpB-UJFWfYABEGYypIuLmTtNmqsInxbtgnVKrQCfoUIHFDXKa3O0iKzkiOl7YNr37YeMaONRoCaRJXX5Ryz_MMH-P73&wd=&eqid=f23dd73f000b5b380000000360c7162a">HDFS(<em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em>)简介_Bob Liu的…_…</a></h4><p>这两个笔记我觉得写的挺好的，可以看看。</p>
+<p>当应用程序读一个文件：</p>
+<ol>
+<li>HDFS客户端要求NameNode提供托管文件块副本的DataNode列表，</li>
+<li>直接联系DataNode，并请求需要传送的块</li>
+</ol>
+<p>当客户端写文件：</p>
+<ol>
+<li>要求NameNode选择几个DataNode托管第一个文件块的副本</li>
+<li>客户端组织node-to-node流水线，并传送数据</li>
+<li>当第一个块填入后，客户端要求新的DataNodes来托管下一个块的副本</li>
+<li>组织新的流水线，传送数据，每次倾向选择不同的DataNodes</li>
+</ol>
+<p>客户端、NameNode、DataNodes的交互如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600459.jpeg" alt="img"></p>
+<p>客户端通过把路径传给NameNode来创建一个新文件，NameNode为文件的每个块返回DataNode列表来托管块的副本。客户端然后通过流水线把数据传给选定的DataNodes，这些DataNodes最终将创建块副本的确认信息告诉NameNode。</p>
+<p>一个HDFS文件是由块组成的。需要新块时，NameNode会分配一个具有unique block ID的块，并且决策出一个DataNodes列表来处理块副本。DataNodes组成一个管道，其顺序使客户端到最后一个DataNode的总网络距离最小。字节作为分组序列（sequence of packets）被推入流水线。应用程序在客户端写入第一个缓冲区，填充完一个缓冲区（通常64KB）后，数据被推送到流水线。在接收到先前数据包的确认信息之前，可以将下一个分组推送到流水线。未完成分组的数量受客户端未完成分组的窗口大小的限制。</p>
+<p>在数据被写入HDFS文件后，HDFS不保证数据对新reader可见，直到文件被关闭。如果用户应用需要这种可见性保证，可以显式调用 <em>hflush</em> 操作。这样当前的分组会立即推送到流水线，hflush操作会等待所有的DataNode确认已经成功传输了分组。所有之前写入的数据就会理所应当地对reader可见。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600752.jpeg" alt="img"></p>
+<p>如果没有错误发生，block construction会像上图一样发生。图2展示了一个有三个DataNodes的管道和5个分组的块。粗线表示数据分组，虚线表示确认信息，细线表示设置和关闭流水线的控制信息。垂直线表示客户端和三个DataNode的活动，时间从上到下依次进行。t0到t1是流水线设置阶段。t1到t2是数据流阶段，t1是首次传输分组的时间，t2是收到最后一个分组确认信息的时间。这里hflush操作将传输第二个分组。hflush指示数据分组传输不是一个分离的操作。t2到t3是流水线关闭阶段。</p>
+<hr>
+<p>2021&#x2F;7</p>
+]]></content>
+      <categories>
+        <category>Cloud Computing</category>
+      </categories>
+  </entry>
+  <entry>
     <title>小王子</title>
     <url>/2021/01/12/The-Little-Prince/</url>
     <content><![CDATA[<p>阅读原文请点击<a href="https://www.ppzuowen.com/book/xiaowangzi/">小王子</a> .</p>
@@ -2410,50 +2454,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>The Hadoop Distributed File System</title>
-    <url>/2021/07/26/The-Hadoop-Distributed-File-System/</url>
-    <content><![CDATA[<p>Hadoop的重要特点是数据在数千节点上分区存储和计算，并行执行应用程序的计算。</p>
-<p>HDFS和其他分布式文件系统(PVFS、Lustre、GFS)一样，分开存储文件系统元信息(NameNode)和应用程序数据(DataNodes)，服务器之间通过基于TCP的协议通信。</p>
-<p>DataNodes没有和PVFS一样使用数据保护机制(如RAID)来使文件持久存放，而是像GFS一样在多个DataNode冗余存放文件内容来实现可靠性。保证持久存放的同时也可以加速传输数据。</p>
-<span id="more"></span>
-
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211550034" alt="img"></p>
-<p>HDFS总体上采用了master&#x2F;slave架构，主要由以下几个组件构成：Client、NameNode、Secondary NameNode和DataNode。<br>NameNode管理文件系统的命名空间，维护文件系统树及整棵树内所有的文件和目录。这些信息以两个文件形式永久保存在本地磁盘上：命名空间镜像文件fsimage和编辑日志edits文件。NameNode也记录着每个文件中各个块所在的数据节点信息，但它并不永久保存块的位置信息，因为这些信息会在系统启动时由数据节点重建。<br>Secondary NameNode最重要的任务并不是为NameNode元数据进行热备份，而是定期合并fsimage和edits日志，并传输给NameNode。这里需要注意的是，为了减少NameNode的压力，NameNode并不会自己合并fsimage和edits，而是将文件存储到磁盘上，交由Secondary NameNode完成。<br>DataNode是文件系统的工作节点。它们根据需要存储并检索数据块(受客户端或NameNode调度)，并且定期向NameNode发送它们所存储的块的列表。<br>客户端(client)代表用户通过与NameNode和DataNode交互来访问整个文件系统。客户端提供一个类似于POSIX的文件系统接口，因此用户在编程时无需知道NameNode和DataNode也可以实现其功能。</p>
-<h3 id="NameNode"><a href="#NameNode" class="headerlink" title="NameNode"></a>NameNode</h3><p>HDFS命名空间是文件和目录的层级结构。文件和目录在NameNode上通过inodes表示，inodes记录了各种属性如：权限、修改和访问次数、命名空间、磁盘空间配额。</p>
-<h3 id="DataNodes"><a href="#DataNodes" class="headerlink" title="DataNodes"></a>DataNodes</h3><p>DataNode中的每个块副本通过两个原生文件来表示，一个包含数据本身，另一个是文件元数据(包括块数据校验和、块生成戳 generation stamp)。数据文件的大小等于实际块长度，不需要额外空间舍入到传统文件系统中的名义块大小，因此如果块是半满的，就在本地占一半的空间。</p>
-<h3 id="HDFS-Client"><a href="#HDFS-Client" class="headerlink" title="HDFS Client"></a>HDFS Client</h3><p>用户应用程序通过HDFS客户端访问文件系统，这是一个程序库，开放了HDFS文件系统接口。</p>
-<h3 id="Image-and-Journal"><a href="#Image-and-Journal" class="headerlink" title="Image and Journal"></a>Image and Journal</h3><p>命名空间的image就是文件系统的元数据，将应用数据以目录和文件的形式组织。一条被写入的image持久化记录叫做checkpoint。journal是提前写入的提交日志，是必须被持久化的文件系统修改情况。对于每个客户端启动的事务，所做的修改被记录在journal中，journal文件会在更改提交到HDFS客户端前刷新和同步。</p>
-<h3 id="CheckpointNode"><a href="#CheckpointNode" class="headerlink" title="CheckpointNode"></a>CheckpointNode</h3><p>HDFS的NameNode除了服务客户端之外，还可以扮演另外两个角色之一，即CheckpointNode或BackupNode，这在启动时指定。</p>
-<h3 id="BackupNode"><a href="#BackupNode" class="headerlink" title="BackupNode"></a>BackupNode</h3><p>和CHeckpointNode类似，BackupNode也有能力创建定期检查点，但除此之外还在内存中维护文件系统命名空间最新的image，这总是和NameNode的状态一起同步</p>
-<h3 id="Upgrades-File-System-Snapshots"><a href="#Upgrades-File-System-Snapshots" class="headerlink" title="Upgrades, File System Snapshots"></a>Upgrades, File System Snapshots</h3><p>在软件升级的时候，由于软件bug或人犯错导致系统崩溃的可能性会增加。在HDFS中创建快照的目的就是在升级期间，使对保存在系统中数据的潜在损伤最小化。</p>
-<h2 id="2-2-论文核心算法"><a href="#2-2-论文核心算法" class="headerlink" title="2.2 论文核心算法"></a>2.2 论文核心算法</h2><h4 id="The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎"><a href="#The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎" class="headerlink" title="The Hadoop Distributed File System (Yahoo!)笔记 - 知乎"></a><a href="https://www.baidu.com/link?url=zBpkij4sYNFP99V5k41zkLgAe9Wmz7B3pQWmKkRXXus2p_MxCO_UjL5iDo96zw_G&wd=&eqid=f23dd73f000b5b380000000360c7162a"><em>The</em> <em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em> (Yahoo!)笔记 - 知乎</a></h4><h4 id="HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…"><a href="#HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…" class="headerlink" title="HDFS(Hadoop Distributed File System)简介_Bob Liu的…_…"></a><a href="https://www.baidu.com/link?url=qdR7pYI7y85J3TqZwpB-UJFWfYABEGYypIuLmTtNmqsInxbtgnVKrQCfoUIHFDXKa3O0iKzkiOl7YNr37YeMaONRoCaRJXX5Ryz_MMH-P73&wd=&eqid=f23dd73f000b5b380000000360c7162a">HDFS(<em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em>)简介_Bob Liu的…_…</a></h4><p>这两个笔记我觉得写的挺好的，可以看看。</p>
-<p>当应用程序读一个文件：</p>
-<ol>
-<li>HDFS客户端要求NameNode提供托管文件块副本的DataNode列表，</li>
-<li>直接联系DataNode，并请求需要传送的块</li>
-</ol>
-<p>当客户端写文件：</p>
-<ol>
-<li>要求NameNode选择几个DataNode托管第一个文件块的副本</li>
-<li>客户端组织node-to-node流水线，并传送数据</li>
-<li>当第一个块填入后，客户端要求新的DataNodes来托管下一个块的副本</li>
-<li>组织新的流水线，传送数据，每次倾向选择不同的DataNodes</li>
-</ol>
-<p>客户端、NameNode、DataNodes的交互如下图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600459.jpeg" alt="img"></p>
-<p>客户端通过把路径传给NameNode来创建一个新文件，NameNode为文件的每个块返回DataNode列表来托管块的副本。客户端然后通过流水线把数据传给选定的DataNodes，这些DataNodes最终将创建块副本的确认信息告诉NameNode。</p>
-<p>一个HDFS文件是由块组成的。需要新块时，NameNode会分配一个具有unique block ID的块，并且决策出一个DataNodes列表来处理块副本。DataNodes组成一个管道，其顺序使客户端到最后一个DataNode的总网络距离最小。字节作为分组序列（sequence of packets）被推入流水线。应用程序在客户端写入第一个缓冲区，填充完一个缓冲区（通常64KB）后，数据被推送到流水线。在接收到先前数据包的确认信息之前，可以将下一个分组推送到流水线。未完成分组的数量受客户端未完成分组的窗口大小的限制。</p>
-<p>在数据被写入HDFS文件后，HDFS不保证数据对新reader可见，直到文件被关闭。如果用户应用需要这种可见性保证，可以显式调用 <em>hflush</em> 操作。这样当前的分组会立即推送到流水线，hflush操作会等待所有的DataNode确认已经成功传输了分组。所有之前写入的数据就会理所应当地对reader可见。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600752.jpeg" alt="img"></p>
-<p>如果没有错误发生，block construction会像上图一样发生。图2展示了一个有三个DataNodes的管道和5个分组的块。粗线表示数据分组，虚线表示确认信息，细线表示设置和关闭流水线的控制信息。垂直线表示客户端和三个DataNode的活动，时间从上到下依次进行。t0到t1是流水线设置阶段。t1到t2是数据流阶段，t1是首次传输分组的时间，t2是收到最后一个分组确认信息的时间。这里hflush操作将传输第二个分组。hflush指示数据分组传输不是一个分离的操作。t2到t3是流水线关闭阶段。</p>
-<hr>
-<p>2021&#x2F;7</p>
-]]></content>
-      <categories>
-        <category>Cloud Computing</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Typora PicGo GitHub云图床(四)</title>
     <url>/2022/03/21/Typora+PicGo+GitHub/</url>
     <content><![CDATA[<p>前文已经讲述了<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a>，<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>，<a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a>。但是本地图床仍有遗失风险和难以跨设备查看的不足，为了避免图片遗失，增强分享和多端查看的便利性，本文将进一步增强网络图床的配置，实现更进一步的自动化，只需要简单的拖拽或者复制粘贴，一切都很优雅。</p>
@@ -2532,6 +2532,51 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>Typora的设置(三)</title>
+    <url>/2022/03/21/Typora-Setting/</url>
+    <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
+<span id="more"></span>
+
+<h2 id="1-下载Typora"><a href="#1-下载Typora" class="headerlink" title="1.下载Typora"></a>1.下载Typora</h2><p>百度搜索typora，源码在github，所以可能会慢，也可以挂梯子，either way is fine</p>
+<p><a href="https://www.typora.net/">Typora|Typora中文|typora下载|typora 主题</a>中文官网下载</p>
+<p><a href="http://yiting.pro/">Typora — a markdown editor, markdown reader. (yiting.pro)</a>原网页</p>
+<h2 id="2-Typora设置"><a href="#2-Typora设置" class="headerlink" title="2.Typora设置"></a>2.Typora设置</h2><p>安装完成后，这些是我的设置，我觉得非常顺手，按你的喜好来就行，直接进入<strong>偏好设置</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211135751.png" alt="982ba7245349cabf1c3b76bb9d37b29"></p>
+<p><strong>本地图床设置，很重要，否则有可能会因为移动文件夹或者电脑清理而遗失图片！</strong></p>
+<p>首先，养成良好的习惯，选择指定路径，把你的markdown集中保管。按照如图设置，在markdown管理的根目录下创建picture文件夹，然后当你拖拽或者复制粘贴图片进来的时候，typora会自动复制图片到这个文件夹去，然后把相对路径粘贴到你指定的文章位置，很方便。</p>
+<p>markdown作为文本标记语言，最头疼的就是管理图片，把它交给typora吧，你就不需要因管理图片而费心思了。</p>
+<p>到这儿你实现了图片管理自动化，但不能把包含图片的markdown或者其它导出格式分享给朋友，或者在别的地方查看，更方便的办法就是<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，不点击不影响本地配置。</p>
+<p>其它不太重要的设置：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211130280.png" alt="image-20220321113005083"></p>
+<p>设置 重新打开，自动保存，自动更新；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211131099.png" alt="b87520f2ce9005fd3881a5fc73d8c3d"></p>
+<p>我喜欢干净简洁，用一体化，侧边栏折叠，不然乱糟糟的；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211133783.png" alt="6dd2e2595d9eb940e03ea730a7a1c42"></p>
+<p>编辑器打开匹配Markdown就可以像写代码时候一样手不用离开键盘去碰鼠标了，这太恼人了，配合快捷键使用 链接；</p>
+<p>后面基本不需要什么设置了，保险起见还是贴出来。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142752.png" alt="59a29211aff71c75382498a8d20f4ac"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142846.png" alt="26559d405080171560fac7248d6e519"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142807.png" alt="e48bce4fcc0430357ed1b464b2599fd"></p>
+<h2 id="3-浏览器插件支持"><a href="#3-浏览器插件支持" class="headerlink" title="3.浏览器插件支持"></a>3.浏览器插件支持</h2><p>如果你用的是chrome或者chrome内核的edge，比如我，<a href="https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/immegcobaplfimdjgkabakodipaehfca">Copy as Markdown - Microsoft Edge Addons</a>插件是必装的，你的所有复制行为，自带markdown格式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211147083.png" alt="image-20220321114716013"></p>
+<p>之后我专门出一期如何优雅的全设备使用edge。</p>
+<h3 id="恭喜你，到此你的Markdown已经本地化非常好用啦！"><a href="#恭喜你，到此你的Markdown已经本地化非常好用啦！" class="headerlink" title="恭喜你，到此你的Markdown已经本地化非常好用啦！"></a>恭喜你，到此你的Markdown已经本地化非常好用啦！</h3><h2 id="4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四"><a href="#4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四" class="headerlink" title="4.Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) "></a>4.<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></h2><hr>
+<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
+<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
+</ol>
+<hr>
+<p>2022&#x2F;3&#x2F;21</p>
+]]></content>
+      <categories>
+        <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
     <title>win快捷键</title>
     <url>/2022/03/20/Win10-shortcut-key/</url>
     <content><![CDATA[<p>如果你和我一样是电脑小白，又很烦win10所有事情都强烈依赖鼠标，这些快捷键会让你的体验大幅度提升</p>
@@ -2581,51 +2626,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>小技巧&amp;快捷键&amp;命令</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Typora的设置(三)</title>
-    <url>/2022/03/21/Typora-Setting/</url>
-    <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
-<span id="more"></span>
-
-<h2 id="1-下载Typora"><a href="#1-下载Typora" class="headerlink" title="1.下载Typora"></a>1.下载Typora</h2><p>百度搜索typora，源码在github，所以可能会慢，也可以挂梯子，either way is fine</p>
-<p><a href="https://www.typora.net/">Typora|Typora中文|typora下载|typora 主题</a>中文官网下载</p>
-<p><a href="http://yiting.pro/">Typora — a markdown editor, markdown reader. (yiting.pro)</a>原网页</p>
-<h2 id="2-Typora设置"><a href="#2-Typora设置" class="headerlink" title="2.Typora设置"></a>2.Typora设置</h2><p>安装完成后，这些是我的设置，我觉得非常顺手，按你的喜好来就行，直接进入<strong>偏好设置</strong>：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211135751.png" alt="982ba7245349cabf1c3b76bb9d37b29"></p>
-<p><strong>本地图床设置，很重要，否则有可能会因为移动文件夹或者电脑清理而遗失图片！</strong></p>
-<p>首先，养成良好的习惯，选择指定路径，把你的markdown集中保管。按照如图设置，在markdown管理的根目录下创建picture文件夹，然后当你拖拽或者复制粘贴图片进来的时候，typora会自动复制图片到这个文件夹去，然后把相对路径粘贴到你指定的文章位置，很方便。</p>
-<p>markdown作为文本标记语言，最头疼的就是管理图片，把它交给typora吧，你就不需要因管理图片而费心思了。</p>
-<p>到这儿你实现了图片管理自动化，但不能把包含图片的markdown或者其它导出格式分享给朋友，或者在别的地方查看，更方便的办法就是<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，不点击不影响本地配置。</p>
-<p>其它不太重要的设置：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211130280.png" alt="image-20220321113005083"></p>
-<p>设置 重新打开，自动保存，自动更新；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211131099.png" alt="b87520f2ce9005fd3881a5fc73d8c3d"></p>
-<p>我喜欢干净简洁，用一体化，侧边栏折叠，不然乱糟糟的；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211133783.png" alt="6dd2e2595d9eb940e03ea730a7a1c42"></p>
-<p>编辑器打开匹配Markdown就可以像写代码时候一样手不用离开键盘去碰鼠标了，这太恼人了，配合快捷键使用 链接；</p>
-<p>后面基本不需要什么设置了，保险起见还是贴出来。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142752.png" alt="59a29211aff71c75382498a8d20f4ac"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142846.png" alt="26559d405080171560fac7248d6e519"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142807.png" alt="e48bce4fcc0430357ed1b464b2599fd"></p>
-<h2 id="3-浏览器插件支持"><a href="#3-浏览器插件支持" class="headerlink" title="3.浏览器插件支持"></a>3.浏览器插件支持</h2><p>如果你用的是chrome或者chrome内核的edge，比如我，<a href="https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/immegcobaplfimdjgkabakodipaehfca">Copy as Markdown - Microsoft Edge Addons</a>插件是必装的，你的所有复制行为，自带markdown格式。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211147083.png" alt="image-20220321114716013"></p>
-<p>之后我专门出一期如何优雅的全设备使用edge。</p>
-<h3 id="恭喜你，到此你的Markdown已经本地化非常好用啦！"><a href="#恭喜你，到此你的Markdown已经本地化非常好用啦！" class="headerlink" title="恭喜你，到此你的Markdown已经本地化非常好用啦！"></a>恭喜你，到此你的Markdown已经本地化非常好用啦！</h3><h2 id="4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四"><a href="#4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四" class="headerlink" title="4.Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) "></a>4.<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></h2><hr>
-<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
-<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
-</ol>
-<hr>
-<p>2022&#x2F;3&#x2F;21</p>
-]]></content>
-      <categories>
-        <category>Markdown&amp;Blog</category>
       </categories>
   </entry>
   <entry>
