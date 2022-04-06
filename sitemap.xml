@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>http://example.com/2022/03/28/Html/</loc>
+    
+    <lastmod>2022-04-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/03/27/Recognizing-reality/</loc>
     
     <lastmod>2022-04-06</lastmod>
@@ -120,15 +129,6 @@
   
   <url>
     <loc>http://example.com/2022/03/21/Typora+PicGo+GitHub/</loc>
-    
-    <lastmod>2022-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/03/28/Html/</loc>
     
     <lastmod>2022-03-30</lastmod>
     
