@@ -9,6 +9,10 @@
     <lastmod>2022-04-07</lastmod>
   </url>
   <url>
+    <loc>http://example.com/2022/03/21/Java-LeetCode/</loc>
+    <lastmod>2022-04-07</lastmod>
+  </url>
+  <url>
     <loc>http://example.com/2022/04/05/Kafka-by-the-Sea/</loc>
     <lastmod>2022-04-06</lastmod>
   </url>
@@ -43,10 +47,6 @@
   <url>
     <loc>http://example.com/2022/03/31/Monthly-reports/</loc>
     <lastmod>2022-03-31</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2022/03/21/Java-LeetCode/</loc>
-    <lastmod>2022-03-30</lastmod>
   </url>
   <url>
     <loc>http://example.com/2022/03/21/Typora+PicGo+GitHub/</loc>
