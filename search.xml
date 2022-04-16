@@ -306,6 +306,26 @@
       </categories>
   </entry>
   <entry>
+    <title>周恩来在文艺工作座谈会和故事片创作会议上的讲话</title>
+    <url>/2022/04/16/Chairzhou/</url>
+    <content><![CDATA[<blockquote>
+<p>山的那边</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="周恩来在文艺工作座谈会和故事片创作会议上的讲话"><a href="#周恩来在文艺工作座谈会和故事片创作会议上的讲话" class="headerlink" title="周恩来在文艺工作座谈会和故事片创作会议上的讲话"></a>周恩来在文艺工作座谈会和故事片创作会议上的讲话</h2><p>人民喜闻乐见，你不喜欢，你算老几？上海人喜爱评弹、淮剧、越剧，要你北京人去批准干什么？领导人可以有喜好，有人爱看戏，有人爱看画，有人爱古董，这有什么关系？我们看了戏说好，不一定就好，我们的话靠不住，各人有各人的爱好，怎能作为标准？艺术是要人民批准的。只要人民爱好，就有价值；不是反党、反社会主义的，就许可存在，没有权力去禁演。艺术家要面对人民，而不是只面对领导。 </p>
+<p>艺术是要人民批准的。只要人民爱好，就有价值；不是反党、反社会主义的，就许可存在，没有权力去禁演。艺术家要面对人民，而不是只面对领导。这是不是主张反对领导呢？不是的。领导在政治上有权提意见，要政治挂帅，但政治挂帅主要是看它是香花还是毒草，是否反党反社会主义，政治上的敏锐要放在这个方面。至于艺术方面，我们懂得很少。 </p>
+<p>在座的同志都是做领导的人，希望你们干涉少些，当然不是要你们不负责任。第一，要负责任；第二，要干涉少些。负责任主要指政治上，不要放任毒草，放任修正主义。但是一定要区分清楚，不要把什么都说成是修正主义。有人问我：文艺的教育作用和娱乐作用是不是统一的？是辩证的统一。群众看戏、看电影是要从中得到娱乐和休息，你通过典型化的形象表演，教育寓于其中，寓于娱乐之中。当然要多样化，不能老是打仗。朱德同志说，我打了一辈子仗，想看点不打仗的片子。如果天天让人家看打仗的片子，人家就不爱看，就要去看香港片，这只能说明电影局的工作没做好；反之，一个打仗的片子也没有，让青年丧失战斗性，也不好。现代片多少，历史片多少，要大体上有个比例。至于题材，完全可以允许作者自由选择。 </p>
+<p>周恩来在文艺工作座谈会和故事片创作会议上的讲话（一九六一年六月十九日） </p>
+<hr>
+<h2 id="【有的人】-──纪念鲁迅有感"><a href="#【有的人】-──纪念鲁迅有感" class="headerlink" title="【有的人】 ──纪念鲁迅有感"></a>【有的人】 ──纪念鲁迅有感</h2><p>有的人活着，<br>他已经死了；<br>有的人死了，<br>他还活着。<br>有的人<br>骑在人民头上：“呵，我多么伟大！”<br>有的人<br>俯下身子给人民当牛马。<br>有的人<br>把名字刻入石头，想“不朽”；<br>有的人<br>情愿作野草，<br>等着地下的火燃烧。<br>有的人<br>他活着别人就不能活；<br>有的人<br>他活着为了多数人更好地活。<br>骑在人民头上的<br>人民把他摔倒；<br>给人民作牛马的<br>人民永远记住他！<br>把名字刻在石头上的<br>名字比尸首烂得更早；<br>只要春风吹到的地方<br>到处是青青的野草。<br>他活着别人就不能活的人，<br>他的下场可以看到；<br>他活着为了多数人更好地活着的人，<br>群众把他抬举得很高，很高。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
     <title>如何优雅的编写Markdown(一)</title>
     <url>/2020/12/03/Code-Markdown-gracefully/</url>
     <content><![CDATA[<p><strong>答案是Typora PicGo GitHub Blog Hexo</strong></p>
@@ -442,115 +462,6 @@
 ]]></content>
       <categories>
         <category>Markdown&amp;Blog</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>数据结构API</title>
-    <url>/2022/03/15/Data-structure-API/</url>
-    <content><![CDATA[<p>interface接口(申明后直接调用方法)-implement实现(不关心)</p>
-<h2 id="1-集合类-基本接口"><a href="#1-集合类-基本接口" class="headerlink" title="1. 集合类 基本接口"></a>1. 集合类 基本接口</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Collection&#123;</span><br><span class="line">    add(e);</span><br><span class="line">    iterator迭代器();&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="1-1-迭代器"><a href="#1-1-迭代器" class="headerlink" title="1.1 迭代器"></a>1.1 迭代器</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">iterator&#123;</span><br><span class="line">    next();</span><br><span class="line">    hasNext();</span><br><span class="line">    remove();&#125;</span><br></pre></td></tr></table></figure>
-
-<p> next最后会抛出异常，需要先hasNext;</p>
-<p>查找一个元素唯一个方法是next；</p>
-<h3 id="1-2删除-remove前必须先next，remove删除上次next返回的元素"><a href="#1-2删除-remove前必须先next，remove删除上次next返回的元素" class="headerlink" title="1.2删除 remove前必须先next，remove删除上次next返回的元素;"></a>1.2删除 remove前必须先next，remove删除上次next返回的元素;</h3><h2 id="1-3-Collection-泛型实用方法-所有都能用"><a href="#1-3-Collection-泛型实用方法-所有都能用" class="headerlink" title="1.3 Collection 泛型实用方法,所有都能用:"></a>1.3 Collection 泛型实用方法,所有都能用:</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collection&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">iterator</span><span class="params">()</span>;<span class="comment">//返回一个用于访问集合每个元素的迭代器    </span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">size</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object other)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(Object obj)</span>;<span class="comment">//有返回值</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">addAll</span><span class="params">(Collection&lt;? extends&gt; from)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">removeAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">retainAll</span><span class="params">(Collection&lt;?&gt; other)</span>;<span class="comment">//保留，既删除所有与other集合不一样的元素</span></span><br><span class="line">    </span><br><span class="line">Object[] toArray();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Iterator&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasNext</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">next</span><span class="params">()</span>;<span class="comment">//到达尾部报错</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">remove</span><span class="params">()</span>;<span class="comment">//删除上次访问对象，紧跟next，如果期间集合发生变化报错</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-具体集合"><a href="#2-具体集合" class="headerlink" title="2 具体集合"></a>2 具体集合</h2><p>map结尾的类以外都实现了Collection接口，map结尾的类实现map接口</p>
-<h3 id="2-1-链表LinkList"><a href="#2-1-链表LinkList" class="headerlink" title="2.1 链表LinkList"></a>2.1 链表LinkList</h3><p>数组列表，链表共有</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java,util.List&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">()</span>;<span class="comment">//列表迭代器，用来迭代</span></span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">(<span class="type">int</span> index)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> i,E element)</span>;<span class="comment">//在给定位置添加，无返回值，默认成功</span></span><br><span class="line"></span><br><span class="line">Void <span class="title function_">addAll</span><span class="params">(<span class="type">int</span> i,Collection&lt;? extends E&gt; elements)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//删除该位置元素并返回</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">get</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//get和set随机访问每一个元素只适用于数组列表，链表只能用迭代器提供的</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">set</span><span class="params">(<span class="type">int</span> i,E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(Object obj)</span>;<span class="comment">//如果没有返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(Object obj)</span>;<span class="comment">//返回列表中最后一次出现的元素，没有返回-1</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ListIterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(E newElement)</span>;<span class="comment">//当前位置</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">set</span><span class="params">(E newElement)</span>;<span class="comment">//修改next上次访问位置，如果列表在其间被修改了，会报错</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasPrevious</span><span class="params">()</span>;<span class="comment">//反向的hasNext</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">previous</span><span class="params">()</span>;<span class="comment">//头，抛出异常</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">nextIndex</span><span class="params">()</span>;<span class="comment">//下次调用next返回索引</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">prevIndex</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="链表专属独有"><a href="#链表专属独有" class="headerlink" title="链表专属独有"></a>链表专属独有</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">LinkedList();<span class="comment">//构造空链表</span></span><br><span class="line"></span><br><span class="line">LinkedList(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;<span class="comment">//在头或尾添加</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;<span class="comment">//返回头或尾元素</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-数组列表-ArryList-类-实现了List接口"><a href="#2-2-数组列表-ArryList-类-实现了List接口" class="headerlink" title="2.2 数组列表 ArryList 类 实现了List接口"></a>2.2 数组列表 ArryList 类 实现了List接口</h3><p>List接口（包含的迭代器）描述有顺序的集合，位置重要，两种协议：1get和set随机访问每一个元素只适用于数组列表，2链表只能用迭代器提供的。</p>
-<p>Victor同步，多线程同时访问安全；ArryList不同步，多个同时访问不安全。</p>
-<h3 id="2-3-散列集-HashSet"><a href="#2-3-散列集-HashSet" class="headerlink" title="2.3 散列集 HashSet"></a>2.3 散列集 HashSet</h3><p>无序</p>
-<p>HashTable 散列表用链表数组实现，每个列表 桶。</p>
-<p>散列表实现的数据类型如HashSet</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.HashSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">HashSet();</span><br><span class="line"></span><br><span class="line">HashSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity);<span class="comment">//构造指定桶的空散列集</span></span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor);<span class="comment">//填装因子，大于时再散列</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Object;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span>;<span class="comment">//返回哈希码</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-4-树集TreeSet，排序集"><a href="#2-4-树集TreeSet，排序集" class="headerlink" title="2.4 树集TreeSet，排序集"></a>2.4 树集TreeSet，排序集</h3><p>有排序的集合（sorted collection）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br></pre></td></tr></table></figure>
-
-<p>和比较紧密相关，因为是排序集合</p>
-<h3 id="2-5-排序集的-对象比较"><a href="#2-5-排序集的-对象比较" class="headerlink" title="2.5 排序集的 对象比较"></a>2.5 排序集的 对象比较</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Comparable&lt;T&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T other)</span>;<span class="comment">//将这个对象this与other比较，this在other之前，返回负值，之后返回正值，相同为0</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Comparator&lt;T&gt;;</span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T a,T b)</span>;<span class="comment">//a与b比较</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> E&gt; comparator();<span class="comment">//返回对元素排序的比较器？</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">first</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">last</span><span class="params">()</span>;<span class="comment">//返回排序集合的最小或最大</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.NavigableSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">higher</span><span class="params">(E value)</span>;<span class="comment">//返回大于value的最小元素或最大，没有返回null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">lower</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">ceiling</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">floor</span><span class="params">(E value)</span>;<span class="comment">//返回最大或最小，没有则null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//删除并返回这个排序集的最大或最小，空null</span></span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">descendingIterator</span><span class="params">()</span>;<span class="comment">//返回一个按递减顺序遍历集中元素的迭代器</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造树，用指定比较器对其中元素排序</span></span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);<span class="comment">//构造树，所有元素添加，与给定集相同元素的比较器</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-6-队列Queue与双端队列Deque"><a href="#2-6-队列Queue与双端队列Deque" class="headerlink" title="2.6 队列Queue与双端队列Deque"></a>2.6 队列Queue与双端队列Deque</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Queue&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offer</span><span class="params">(E element)</span>;<span class="comment">//如果队列没满，添加队尾返回true；满了add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">poll</span><span class="params">()</span>;<span class="comment">//队列不空，返回第一个并删除；空，remove报错，第二个null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">element</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//队列不空，返回头；空，element抛出异常，peek null</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Deque;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerLast</span><span class="params">(E element)</span>;<span class="comment">//如果满，add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFist</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//不空，删除并返回，空remove报错，poll null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekLast</span><span class="params">()</span>;<span class="comment">//返回头，空，get报错，peek null</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayDeque;</span><br><span class="line"></span><br><span class="line">ArrayDeque();</span><br><span class="line"></span><br><span class="line">ArrayDeque(<span class="type">int</span> initialCapacity);<span class="comment">//初始化16或给定容量双端队列</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-7-优先级队列PriorityQueue-最小-堆heap"><a href="#2-7-优先级队列PriorityQueue-最小-堆heap" class="headerlink" title="2.7 优先级队列PriorityQueue  (最小)堆heap"></a>2.7 优先级队列PriorityQueue  (最小)堆heap</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.PriorityQueue;</span><br><span class="line"></span><br><span class="line">PriorityQueue();</span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity);<span class="comment">//构造一个用于存放Comparable对象的优先级队列</span></span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity,Comparator&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造一个优先级队列，指定比较器排序</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-8映射表Map-lt-K-V-gt-泛型"><a href="#2-8映射表Map-lt-K-V-gt-泛型" class="headerlink" title="2.8映射表Map&lt;K,V&gt; 泛型"></a>2.8映射表Map&lt;K,V&gt; 泛型</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">get</span><span class="params">(Object Key)</span>;<span class="comment">//返回key对应value，没有null</span></span><br><span class="line"></span><br><span class="line">V <span class="title function_">put</span><span class="params">(K key,V value)</span>;插入，如果存在，取代，返回旧值；键可以为<span class="literal">null</span>值不能为<span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">putAll</span><span class="params">(Map&lt;? extends K, ? extends V&gt; entries)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsKey</span><span class="params">(Object key)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsValue</span><span class="params">(Object value)</span>;</span><br><span class="line"></span><br><span class="line">set&lt;Map.Entry&lt;K,V&gt; <span class="title function_">entrySet</span><span class="params">()</span>;<span class="comment">//返回Map.Entry的集视图，也就是映射表的KV对;可以从这儿删除元素，映射表也同步删除，不能添加</span></span><br><span class="line"></span><br><span class="line">Set&lt;K&gt; <span class="title function_">KeySet</span><span class="params">()</span>;<span class="comment">//映射表所有键的集视图，可删除不能添加</span></span><br><span class="line"></span><br><span class="line">Collection&lt;V&gt; <span class="title function_">values</span><span class="params">()</span>;<span class="comment">//映射表所有值的集视图，可删除不能添加</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map.Entry&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">getKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">getValue</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">setValue</span><span class="params">(V newValue)</span>;<span class="comment">//设置新值，返回旧值</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">HashMap();</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity);</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor)<span class="comment">//填装因子</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">TreeMap(Comparator&lt;? <span class="built_in">super</span> K&gt; c);<span class="comment">//构造树映射表，指定比较器排序</span></span><br><span class="line"></span><br><span class="line">TreeMap(Map&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//映射表全部添加到树映射表</span></span><br><span class="line"></span><br><span class="line">TreeMap(SortedMap&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//排序映射表添加到树映射表，用相同的比较器</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortedMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> K&gt; comparator);<span class="comment">//返回对K排序的比较器，compareto null</span></span><br><span class="line"></span><br><span class="line">K <span class="title function_">firstKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">lastKey</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-9-HashTable-Vector-enum-Stack"><a href="#2-9-HashTable-Vector-enum-Stack" class="headerlink" title="2.9 HashTable Vector enum Stack"></a>2.9 HashTable Vector enum Stack</h3><p>hashTable 与hashMap区别不大，不同是HashTable线程安全，同步访问；</p>
-<p>vector与ArrayList同理；</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Enumeration&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasMoreElement</span><span class="params">()</span>;有更多<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">nextElement</span><span class="params">()</span>;hasmore <span class="literal">false</span> 会报错</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Hashtable&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;K&gt; <span class="title function_">Keys</span><span class="params">()</span>;<span class="comment">//遍历 枚举</span></span><br><span class="line"></span><br><span class="line">Enumeration&lt;V&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Vector&lt;V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;E&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">push</span><span class="params">(E item)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pop</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//空会报错</span></span><br></pre></td></tr></table></figure>
-
-<p>位？</p>
-<h3 id="集合框架framework-展示Collection-Map两个接口的混用"><a href="#集合框架framework-展示Collection-Map两个接口的混用" class="headerlink" title="集合框架framework 展示Collection||Map两个接口的混用"></a>集合框架framework 展示Collection||Map两个接口的混用</h3><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713542.jpg" alt="5d21cab304c41c724c490927f5c531e" style="zoom:50%;" />
-
-<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713602.jpg" alt="cc74125cd2da1434cf19312dcaabde4" style="zoom:50%;" />
-
-<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151714149.jpg" alt="b246c578c263f40249028234ad8adca" style="zoom:50%;" />
-
-<hr>
-<p>2022&#x2F;3&#x2F;15</p>
-]]></content>
-      <categories>
-        <category>java</category>
       </categories>
   </entry>
   <entry>
@@ -713,109 +624,112 @@
       </categories>
   </entry>
   <entry>
-    <title>AIRL中遇到的问题</title>
-    <url>/2020/12/11/Difficulties-in-AIRL/</url>
-    <content><![CDATA[<p> 云调度和DRL论文中 <em>待解决</em> 思考：</p>
-<h2 id="1-网格计算-云计算前身"><a href="#1-网格计算-云计算前身" class="headerlink" title="1.网格计算[^云计算前身]"></a>1.网格计算[^<del>云计算前身</del>]</h2><p>这种计算模式是利用互联网把分散在不同地理位置的电脑组织成一个“虚拟的超级计算机”，其中每一台参与计算的计算机就是一个“节点”，而整个计算是由成千上万个“节点”组成的“一张网格”。</p>
-<p>网格计算的优势有两个：一个是数据处理能力超强；另一个是能充分利用网上的闲置处理能力。</p>
-<p>它研究如何把一个需要非常巨大的<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E8%83%BD%E5%8A%9B/4554810">计算能力</a>才能解决的问题分成许多小的部分，然后把这些部分分配给许多<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA/140338">计算机</a>进行处理，最后把这些计算结果综合起来得到最终结果。</p>
-<p><a href="https://zhidao.baidu.com/question/70675394.html">网格计算和云计算的概念和区别</a></p>
+    <title>数据结构API</title>
+    <url>/2022/03/15/Data-structure-API/</url>
+    <content><![CDATA[<p>interface接口(申明后直接调用方法)-implement实现(不关心)</p>
+<h2 id="1-集合类-基本接口"><a href="#1-集合类-基本接口" class="headerlink" title="1. 集合类 基本接口"></a>1. 集合类 基本接口</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Collection&#123;</span><br><span class="line">    add(e);</span><br><span class="line">    iterator迭代器();&#125;</span><br></pre></td></tr></table></figure>
+
 <span id="more"></span>
 
-<h2 id="2-1-P-VS-NP-Nondeterministic-Polynomial-time"><a href="#2-1-P-VS-NP-Nondeterministic-Polynomial-time" class="headerlink" title="2.1 P VS. NP(Nondeterministic Polynomial time)"></a>2.1 P VS. NP(Nondeterministic Polynomial time)</h2><table>
-<thead>
-<tr>
-<th>P</th>
-<th>VS.</th>
-<th>NP</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>能快速求解（易解）</td>
-<td></td>
-<td>不一定能快速求解（易验证）</td>
-</tr>
-<tr>
-<td>P一定是NP，易算易验证</td>
-<td></td>
-<td>NP则不一定是P，能验证不一定能计算，如质数分解</td>
-</tr>
-<tr>
-<td>P就是能在多项式时间内解决的问题(算的快)</td>
-<td></td>
-<td>NP就是能在多项式时间验证答案正确与否的问题(验证快)</td>
-</tr>
-</tbody></table>
-<p><em><strong>P&#x3D;NP?</strong></em>  </p>
-<p>N即不存在不能快速求解。P是否等于NP实质上就是在问，如果对于一个问题我能在多项式时间内验证其答案的正确性，那么我是否能在多项式时间内解决它？</p>
-<p><em><strong>NP-hardness（困难） 和 NP-completeness（完全）：</strong></em></p>
-<p>如果任意一个NP的问题都可以多项式[^归约]到L（L是转化后的问题，高级，困难），称问题L是NP-hard：</p>
-<ul>
-<li><p>显然NP-hard不一定是NP问题，NP-hard是个新问题。</p>
-</li>
-<li><p>如果一个NP-hard，即归约后问题L本身就是NP的，则称L是NP-completeness.(NPC最难，[^时间复杂度最高])</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934343.png" alt="这里写图片描述"></p>
-</li>
-</ul>
-<blockquote>
-<p>“P vs NP”问题：请问那些需要非确定性图灵机（超能力计算机）在多项式时间才能解决的问题，能够用确定性图灵机（普通计算机）在多项式时间解决吗？ <a href="http://www.yinwang.org/blog-cn/2019/07/21/pnp2">P vs NP不重要</a></p>
-</blockquote>
-<h3 id="2-2-维度诅咒"><a href="#2-2-维度诅咒" class="headerlink" title="2.2[^维度诅咒]"></a>2.2[^维度诅咒]</h3><p>当维度增加(太大)时,体积(难度)指数增加的难题.</p>
-<p><em><strong>分类器中：</strong></em></p>
-<p><img src="https://www.visiondummy.com/wp-content/uploads/2014/04/dimensionality_vs_performance.png" alt="img"></p>
-<p><strong>图2中</strong>随着维度的增加，分类器的性能会提高，直到达到最佳要素数。进一步增加维度而不增加训练样本的数量导致分类器性能的降低。 过拟合 ，</p>
-<p>维度的诅咒使得训练数据的 稀疏性 ，训练样本的密度呈指数下降。</p>
-<p>维度诅咒的另一个影响是，这种稀疏性不是均匀分布在搜索空间上。实际上，原点周围的数据（在超立方体的 中心 ）比搜索空间的 角落 中的数据要稀疏得多。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934531.png" alt="img"></p>
-<p>**图3.**随着维度的增加，更大比例的训练数据驻留在要素空间的 角落 中。</p>
-<p><em><strong>如何避免：</strong></em></p>
-<p>问题是 “太大” 意味着什么: [^特征的数量和样本数量有关]</p>
-<p><strong>特征选择方法：</strong>通常采用启发式(如<a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA算法</a>)(贪婪方法，最佳优先方法等）来定位最佳数量和特征组合</p>
-<p><strong>特征提取方法（降维）：</strong><a href="http://www.visiondummy.com/2014/05/feature-extraction-using-pca/">主成分分析（PCA）</a>，它产生原始N特征的不相关的线性组合。PCA试图找到较低维度的线性子空间，以便保持原始数据的最大方差（向着极大无关组出发）。但是，请注意，数据的最大差异不一定代表最具辨别力的信息。</p>
-<p><strong>交叉验证：</strong></p>
-<blockquote>
-<p>交叉验证方法将原始训练数据分成一个或多个训练子集。</p>
-<p>在分类器训练期间，一个子集用于 测试 所得分类器的准确度和精度，而其他子集用于 参数估计 (真实训练)。</p>
-<p>如果用于 训练 的子集的分类结果与用于 测试 的子集的结果大不相同，则过度拟合正在发挥作用。</p>
-<p>如果只有<strong>有限</strong>数量的训练数据可用，则可以使用几种类型的交叉验证，例如k折交叉验证和留一交叉验证。</p>
-</blockquote>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/K-fold_cross_validation_EN.jpg" alt="img"></p>
-<p><strong>Diagram of k-fold cross-validation with k&#x3D;4</strong></p>
-<h4 id="为什么说RL与深度神经网络结合可以避免维度之咒？"><a href="#为什么说RL与深度神经网络结合可以避免维度之咒？" class="headerlink" title="为什么说RL与深度神经网络结合可以避免维度之咒？"></a>为什么说RL与深度神经网络结合可以避免维度之咒？</h4><blockquote>
-<p>因为神经网络能够提取特征。</p>
-</blockquote>
-<p>Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
-<p>事实上，SVM及 神经网络 都可以看做是寻找一个合适的特征维度的过程。</p>
-<p>当数据的维度过小的时候，数据分布过于稠密，不能很好的进行区分，这时候可以通过带有核函数的SVM将低纬度的数据映射到高纬度。</p>
-<p>当样本的<strong>维度过大</strong>时，受限于样本的多少及计算机的计算能力，需要利用 神经网络 对样本的维度进行压缩，便于分类。</p>
-<p>两者目的都在于使得数据的维度达到一个合适的稠密程度，从而更方便找到分类超平面。这也决定了SVM适用于低维小样本数据，而神经网络适合于大规模高维数据。</p>
-<p>时间复杂度决定了模型的训练&#x2F;预测时间。如果复杂度过高，则会导致模型训练和预测耗费大量时间，既无法快速的验证想法和改善模型，也无法做到快速的预测。</p>
-<p><em><strong>空间复杂度</strong></em> 决定了模型的参数数量。</p>
-<p>由于<strong>维度诅咒的限制</strong>，模型的参数越多，训练模型所需的数据量就越大，而现实生活中的数据集通常不会太大，这会导致模型的训练更容易<strong>过拟合</strong>。</p>
-<p>空间复杂度（访存量），严格来讲包括两部分：总参数量 + 各层输出特征图。</p>
-<ul>
-<li><strong>参数量</strong>：模型所有带参数的层的权重参数总量（即<strong>模型体积</strong>，下式第一个求和表达式）</li>
-<li><strong>特征图</strong>：模型在实时运行过程中每层所计算出的输出特征图大小（下式第二个求和表达式）</li>
-</ul>
-<p><strong>公式来源</strong>：<a href="https://zhuanlan.zhihu.com/p/31575074">卷积神经网络复杂度分析</a></p>
-<p> <a href="%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%83%BD%E6%88%98%E8%83%9C%E7%BB%B4%E5%BA%A6%E7%9A%84%E8%AF%85%E5%92%92%E5%90%97%EF%BC%9F%E4%B8%80%E4%B8%AA%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%AE%AD%E7%BB%83%E8%A7%86%E8%A7%92.pdf">浅层神经网络能战胜维度的诅咒吗？一个平均场训练视角.pdf</a> </p>
-<h2 id="3-梯度下降和神经网络的关系"><a href="#3-梯度下降和神经网络的关系" class="headerlink" title="3.梯度下降和神经网络的关系"></a>3.梯度下降和神经网络的关系</h2><h4 id="深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com"><a href="#深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com" class="headerlink" title="[深入浅出–梯度下降法及其实现](深入浅出–梯度下降法及其实现 - 简书 (jianshu.com))"></a>[深入浅出–梯度下降法及其实现](<a href="https://www.jianshu.com/p/c7e642877b0e">深入浅出–梯度下降法及其实现 - 简书 (jianshu.com)</a>)</h4><h4 id="深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN"><a href="#深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN" class="headerlink" title="[深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)"></a>[<a href="https://www.jianshu.com/p/7251b03847f4">深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)</a></h4><h4 id="matplotlib模块数据可视化-3D图"><a href="#matplotlib模块数据可视化-3D图" class="headerlink" title="matplotlib模块数据可视化-3D图"></a><a href="https://blog.csdn.net/sinat_36772813/article/details/77365296">matplotlib模块数据可视化-3D图</a></h4><hr>
-<h2 id="4-核心困难：云计算中多目标资源调度QoS"><a href="#4-核心困难：云计算中多目标资源调度QoS" class="headerlink" title="4.核心困难：云计算中多目标资源调度QoS"></a>4.核心困难：云计算中多目标资源调度QoS</h2><h3 id="方法：某深度强化学习"><a href="#方法：某深度强化学习" class="headerlink" title="方法：某深度强化学习"></a>方法：某深度强化学习</h3><h3 id="传统方法的数学推导："><a href="#传统方法的数学推导：" class="headerlink" title="传统方法的数学推导："></a>传统方法的数学推导：</h3><h2 id="5-理论方法："><a href="#5-理论方法：" class="headerlink" title="5.理论方法："></a>5.理论方法：</h2><ol>
-<li>排队论</li>
-<li>控制论</li>
-<li>博弈论</li>
-</ol>
-<h2 id="6-启发式方法"><a href="#6-启发式方法" class="headerlink" title="6.启发式方法"></a>6.启发式方法</h2><ul>
-<li>Biological Inspiration (BI): Genetic Algorithm (<strong>GA</strong>)[8],[12], [18],[20] ,Memetic Algorithm (MA), Lion Algorithm (LA)[21], Imperialist Competitive Algorithm (ICA), etc.</li>
-<li>Swarm Intelligence (SI): Ant Colony Optimization (<strong>ACO</strong>)[9], [19]Particle Swarm Optimization (PSO)[11],[13],[14],[15], [16],[17]  Simulated Annealing (<strong>SA</strong>), Artificial Bee Colony (ABC)[22], Cat Swarm Optimization (CSO)[23], Bat Algorithm (BA), Wind Driven Optimization (WDO), etc.</li>
-</ul>
-<h3 id="新待看"><a href="#新待看" class="headerlink" title="新待看:"></a>新待看:</h3><p><a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA背后的直觉</a></p>
-<h2 id="注脚："><a href="#注脚：" class="headerlink" title="注脚："></a>注脚：</h2><p>[^归约]: polynomial-time Karp’ reduction；A转化成B问题，B至少不比A容易<br>[^时间复杂度最高]: 所以completeness 的直观解释就是，解决了它就可以解决所有同级别此类问题。<br>[^维度诅咒]: Moreover, to avoid the  curse of dimensionality  of traditional RL techniques, RL combined with deep neuralnetwork (i.e. DRL) is adopted in our work.<br>[^特征的数量和样本数量有关]: 如果N个训练样本足以覆盖单位区间大小的1D特征空间，则需要N ^ 2个样本来覆盖具有相同密度的2D特征空间，并且在3D特征空间中需要N ^ 3个样本。换句话说，所需的训练实例数量随着使用的维度数量呈指数增长。<br>[^<del>云计算前身</del>]: Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
+<h3 id="1-1-迭代器"><a href="#1-1-迭代器" class="headerlink" title="1.1 迭代器"></a>1.1 迭代器</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">iterator&#123;</span><br><span class="line">    next();</span><br><span class="line">    hasNext();</span><br><span class="line">    remove();&#125;</span><br></pre></td></tr></table></figure>
+
+<p> next最后会抛出异常，需要先hasNext;</p>
+<p>查找一个元素唯一个方法是next；</p>
+<h3 id="1-2删除-remove前必须先next，remove删除上次next返回的元素"><a href="#1-2删除-remove前必须先next，remove删除上次next返回的元素" class="headerlink" title="1.2删除 remove前必须先next，remove删除上次next返回的元素;"></a>1.2删除 remove前必须先next，remove删除上次next返回的元素;</h3><h2 id="1-3-Collection-泛型实用方法-所有都能用"><a href="#1-3-Collection-泛型实用方法-所有都能用" class="headerlink" title="1.3 Collection 泛型实用方法,所有都能用:"></a>1.3 Collection 泛型实用方法,所有都能用:</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collection&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">iterator</span><span class="params">()</span>;<span class="comment">//返回一个用于访问集合每个元素的迭代器    </span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">size</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object other)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(Object obj)</span>;<span class="comment">//有返回值</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">addAll</span><span class="params">(Collection&lt;? extends&gt; from)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">removeAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">retainAll</span><span class="params">(Collection&lt;?&gt; other)</span>;<span class="comment">//保留，既删除所有与other集合不一样的元素</span></span><br><span class="line">    </span><br><span class="line">Object[] toArray();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Iterator&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasNext</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">next</span><span class="params">()</span>;<span class="comment">//到达尾部报错</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">remove</span><span class="params">()</span>;<span class="comment">//删除上次访问对象，紧跟next，如果期间集合发生变化报错</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-具体集合"><a href="#2-具体集合" class="headerlink" title="2 具体集合"></a>2 具体集合</h2><p>map结尾的类以外都实现了Collection接口，map结尾的类实现map接口</p>
+<h3 id="2-1-链表LinkList"><a href="#2-1-链表LinkList" class="headerlink" title="2.1 链表LinkList"></a>2.1 链表LinkList</h3><p>数组列表，链表共有</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java,util.List&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">()</span>;<span class="comment">//列表迭代器，用来迭代</span></span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">(<span class="type">int</span> index)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> i,E element)</span>;<span class="comment">//在给定位置添加，无返回值，默认成功</span></span><br><span class="line"></span><br><span class="line">Void <span class="title function_">addAll</span><span class="params">(<span class="type">int</span> i,Collection&lt;? extends E&gt; elements)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//删除该位置元素并返回</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">get</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//get和set随机访问每一个元素只适用于数组列表，链表只能用迭代器提供的</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">set</span><span class="params">(<span class="type">int</span> i,E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(Object obj)</span>;<span class="comment">//如果没有返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(Object obj)</span>;<span class="comment">//返回列表中最后一次出现的元素，没有返回-1</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ListIterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(E newElement)</span>;<span class="comment">//当前位置</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">set</span><span class="params">(E newElement)</span>;<span class="comment">//修改next上次访问位置，如果列表在其间被修改了，会报错</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasPrevious</span><span class="params">()</span>;<span class="comment">//反向的hasNext</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">previous</span><span class="params">()</span>;<span class="comment">//头，抛出异常</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">nextIndex</span><span class="params">()</span>;<span class="comment">//下次调用next返回索引</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">prevIndex</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="链表专属独有"><a href="#链表专属独有" class="headerlink" title="链表专属独有"></a>链表专属独有</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">LinkedList();<span class="comment">//构造空链表</span></span><br><span class="line"></span><br><span class="line">LinkedList(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;<span class="comment">//在头或尾添加</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;<span class="comment">//返回头或尾元素</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-数组列表-ArryList-类-实现了List接口"><a href="#2-2-数组列表-ArryList-类-实现了List接口" class="headerlink" title="2.2 数组列表 ArryList 类 实现了List接口"></a>2.2 数组列表 ArryList 类 实现了List接口</h3><p>List接口（包含的迭代器）描述有顺序的集合，位置重要，两种协议：1get和set随机访问每一个元素只适用于数组列表，2链表只能用迭代器提供的。</p>
+<p>Victor同步，多线程同时访问安全；ArryList不同步，多个同时访问不安全。</p>
+<h3 id="2-3-散列集-HashSet"><a href="#2-3-散列集-HashSet" class="headerlink" title="2.3 散列集 HashSet"></a>2.3 散列集 HashSet</h3><p>无序</p>
+<p>HashTable 散列表用链表数组实现，每个列表 桶。</p>
+<p>散列表实现的数据类型如HashSet</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.HashSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">HashSet();</span><br><span class="line"></span><br><span class="line">HashSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity);<span class="comment">//构造指定桶的空散列集</span></span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor);<span class="comment">//填装因子，大于时再散列</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Object;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span>;<span class="comment">//返回哈希码</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-4-树集TreeSet，排序集"><a href="#2-4-树集TreeSet，排序集" class="headerlink" title="2.4 树集TreeSet，排序集"></a>2.4 树集TreeSet，排序集</h3><p>有排序的集合（sorted collection）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br></pre></td></tr></table></figure>
+
+<p>和比较紧密相关，因为是排序集合</p>
+<h3 id="2-5-排序集的-对象比较"><a href="#2-5-排序集的-对象比较" class="headerlink" title="2.5 排序集的 对象比较"></a>2.5 排序集的 对象比较</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Comparable&lt;T&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T other)</span>;<span class="comment">//将这个对象this与other比较，this在other之前，返回负值，之后返回正值，相同为0</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Comparator&lt;T&gt;;</span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T a,T b)</span>;<span class="comment">//a与b比较</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> E&gt; comparator();<span class="comment">//返回对元素排序的比较器？</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">first</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">last</span><span class="params">()</span>;<span class="comment">//返回排序集合的最小或最大</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.NavigableSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">higher</span><span class="params">(E value)</span>;<span class="comment">//返回大于value的最小元素或最大，没有返回null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">lower</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">ceiling</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">floor</span><span class="params">(E value)</span>;<span class="comment">//返回最大或最小，没有则null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//删除并返回这个排序集的最大或最小，空null</span></span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">descendingIterator</span><span class="params">()</span>;<span class="comment">//返回一个按递减顺序遍历集中元素的迭代器</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造树，用指定比较器对其中元素排序</span></span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);<span class="comment">//构造树，所有元素添加，与给定集相同元素的比较器</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-6-队列Queue与双端队列Deque"><a href="#2-6-队列Queue与双端队列Deque" class="headerlink" title="2.6 队列Queue与双端队列Deque"></a>2.6 队列Queue与双端队列Deque</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Queue&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offer</span><span class="params">(E element)</span>;<span class="comment">//如果队列没满，添加队尾返回true；满了add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">poll</span><span class="params">()</span>;<span class="comment">//队列不空，返回第一个并删除；空，remove报错，第二个null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">element</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//队列不空，返回头；空，element抛出异常，peek null</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Deque;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerLast</span><span class="params">(E element)</span>;<span class="comment">//如果满，add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFist</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//不空，删除并返回，空remove报错，poll null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekLast</span><span class="params">()</span>;<span class="comment">//返回头，空，get报错，peek null</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayDeque;</span><br><span class="line"></span><br><span class="line">ArrayDeque();</span><br><span class="line"></span><br><span class="line">ArrayDeque(<span class="type">int</span> initialCapacity);<span class="comment">//初始化16或给定容量双端队列</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-7-优先级队列PriorityQueue-最小-堆heap"><a href="#2-7-优先级队列PriorityQueue-最小-堆heap" class="headerlink" title="2.7 优先级队列PriorityQueue  (最小)堆heap"></a>2.7 优先级队列PriorityQueue  (最小)堆heap</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.PriorityQueue;</span><br><span class="line"></span><br><span class="line">PriorityQueue();</span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity);<span class="comment">//构造一个用于存放Comparable对象的优先级队列</span></span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity,Comparator&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造一个优先级队列，指定比较器排序</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-8映射表Map-lt-K-V-gt-泛型"><a href="#2-8映射表Map-lt-K-V-gt-泛型" class="headerlink" title="2.8映射表Map&lt;K,V&gt; 泛型"></a>2.8映射表Map&lt;K,V&gt; 泛型</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">get</span><span class="params">(Object Key)</span>;<span class="comment">//返回key对应value，没有null</span></span><br><span class="line"></span><br><span class="line">V <span class="title function_">put</span><span class="params">(K key,V value)</span>;插入，如果存在，取代，返回旧值；键可以为<span class="literal">null</span>值不能为<span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">putAll</span><span class="params">(Map&lt;? extends K, ? extends V&gt; entries)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsKey</span><span class="params">(Object key)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsValue</span><span class="params">(Object value)</span>;</span><br><span class="line"></span><br><span class="line">set&lt;Map.Entry&lt;K,V&gt; <span class="title function_">entrySet</span><span class="params">()</span>;<span class="comment">//返回Map.Entry的集视图，也就是映射表的KV对;可以从这儿删除元素，映射表也同步删除，不能添加</span></span><br><span class="line"></span><br><span class="line">Set&lt;K&gt; <span class="title function_">KeySet</span><span class="params">()</span>;<span class="comment">//映射表所有键的集视图，可删除不能添加</span></span><br><span class="line"></span><br><span class="line">Collection&lt;V&gt; <span class="title function_">values</span><span class="params">()</span>;<span class="comment">//映射表所有值的集视图，可删除不能添加</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map.Entry&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">getKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">getValue</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">setValue</span><span class="params">(V newValue)</span>;<span class="comment">//设置新值，返回旧值</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">HashMap();</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity);</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor)<span class="comment">//填装因子</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">TreeMap(Comparator&lt;? <span class="built_in">super</span> K&gt; c);<span class="comment">//构造树映射表，指定比较器排序</span></span><br><span class="line"></span><br><span class="line">TreeMap(Map&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//映射表全部添加到树映射表</span></span><br><span class="line"></span><br><span class="line">TreeMap(SortedMap&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//排序映射表添加到树映射表，用相同的比较器</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortedMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> K&gt; comparator);<span class="comment">//返回对K排序的比较器，compareto null</span></span><br><span class="line"></span><br><span class="line">K <span class="title function_">firstKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">lastKey</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-9-HashTable-Vector-enum-Stack"><a href="#2-9-HashTable-Vector-enum-Stack" class="headerlink" title="2.9 HashTable Vector enum Stack"></a>2.9 HashTable Vector enum Stack</h3><p>hashTable 与hashMap区别不大，不同是HashTable线程安全，同步访问；</p>
+<p>vector与ArrayList同理；</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Enumeration&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasMoreElement</span><span class="params">()</span>;有更多<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">nextElement</span><span class="params">()</span>;hasmore <span class="literal">false</span> 会报错</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Hashtable&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;K&gt; <span class="title function_">Keys</span><span class="params">()</span>;<span class="comment">//遍历 枚举</span></span><br><span class="line"></span><br><span class="line">Enumeration&lt;V&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Vector&lt;V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;E&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">push</span><span class="params">(E item)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pop</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//空会报错</span></span><br></pre></td></tr></table></figure>
+
+<p>位？</p>
+<h3 id="集合框架framework-展示Collection-Map两个接口的混用"><a href="#集合框架framework-展示Collection-Map两个接口的混用" class="headerlink" title="集合框架framework 展示Collection||Map两个接口的混用"></a>集合框架framework 展示Collection||Map两个接口的混用</h3><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713542.jpg" alt="5d21cab304c41c724c490927f5c531e" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713602.jpg" alt="cc74125cd2da1434cf19312dcaabde4" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151714149.jpg" alt="b246c578c263f40249028234ad8adca" style="zoom:50%;" />
+
 <hr>
-<p>2020&#x2F;12&#x2F;11</p>
+<p>2022&#x2F;3&#x2F;15</p>
 ]]></content>
       <categories>
-        <category>DRL</category>
+        <category>java</category>
       </categories>
   </entry>
   <entry>
@@ -919,6 +833,112 @@
 ]]></content>
       <categories>
         <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>AIRL中遇到的问题</title>
+    <url>/2020/12/11/Difficulties-in-AIRL/</url>
+    <content><![CDATA[<p> 云调度和DRL论文中 <em>待解决</em> 思考：</p>
+<h2 id="1-网格计算-云计算前身"><a href="#1-网格计算-云计算前身" class="headerlink" title="1.网格计算[^云计算前身]"></a>1.网格计算[^<del>云计算前身</del>]</h2><p>这种计算模式是利用互联网把分散在不同地理位置的电脑组织成一个“虚拟的超级计算机”，其中每一台参与计算的计算机就是一个“节点”，而整个计算是由成千上万个“节点”组成的“一张网格”。</p>
+<p>网格计算的优势有两个：一个是数据处理能力超强；另一个是能充分利用网上的闲置处理能力。</p>
+<p>它研究如何把一个需要非常巨大的<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E8%83%BD%E5%8A%9B/4554810">计算能力</a>才能解决的问题分成许多小的部分，然后把这些部分分配给许多<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA/140338">计算机</a>进行处理，最后把这些计算结果综合起来得到最终结果。</p>
+<p><a href="https://zhidao.baidu.com/question/70675394.html">网格计算和云计算的概念和区别</a></p>
+<span id="more"></span>
+
+<h2 id="2-1-P-VS-NP-Nondeterministic-Polynomial-time"><a href="#2-1-P-VS-NP-Nondeterministic-Polynomial-time" class="headerlink" title="2.1 P VS. NP(Nondeterministic Polynomial time)"></a>2.1 P VS. NP(Nondeterministic Polynomial time)</h2><table>
+<thead>
+<tr>
+<th>P</th>
+<th>VS.</th>
+<th>NP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>能快速求解（易解）</td>
+<td></td>
+<td>不一定能快速求解（易验证）</td>
+</tr>
+<tr>
+<td>P一定是NP，易算易验证</td>
+<td></td>
+<td>NP则不一定是P，能验证不一定能计算，如质数分解</td>
+</tr>
+<tr>
+<td>P就是能在多项式时间内解决的问题(算的快)</td>
+<td></td>
+<td>NP就是能在多项式时间验证答案正确与否的问题(验证快)</td>
+</tr>
+</tbody></table>
+<p><em><strong>P&#x3D;NP?</strong></em>  </p>
+<p>N即不存在不能快速求解。P是否等于NP实质上就是在问，如果对于一个问题我能在多项式时间内验证其答案的正确性，那么我是否能在多项式时间内解决它？</p>
+<p><em><strong>NP-hardness（困难） 和 NP-completeness（完全）：</strong></em></p>
+<p>如果任意一个NP的问题都可以多项式[^归约]到L（L是转化后的问题，高级，困难），称问题L是NP-hard：</p>
+<ul>
+<li><p>显然NP-hard不一定是NP问题，NP-hard是个新问题。</p>
+</li>
+<li><p>如果一个NP-hard，即归约后问题L本身就是NP的，则称L是NP-completeness.(NPC最难，[^时间复杂度最高])</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934343.png" alt="这里写图片描述"></p>
+</li>
+</ul>
+<blockquote>
+<p>“P vs NP”问题：请问那些需要非确定性图灵机（超能力计算机）在多项式时间才能解决的问题，能够用确定性图灵机（普通计算机）在多项式时间解决吗？ <a href="http://www.yinwang.org/blog-cn/2019/07/21/pnp2">P vs NP不重要</a></p>
+</blockquote>
+<h3 id="2-2-维度诅咒"><a href="#2-2-维度诅咒" class="headerlink" title="2.2[^维度诅咒]"></a>2.2[^维度诅咒]</h3><p>当维度增加(太大)时,体积(难度)指数增加的难题.</p>
+<p><em><strong>分类器中：</strong></em></p>
+<p><img src="https://www.visiondummy.com/wp-content/uploads/2014/04/dimensionality_vs_performance.png" alt="img"></p>
+<p><strong>图2中</strong>随着维度的增加，分类器的性能会提高，直到达到最佳要素数。进一步增加维度而不增加训练样本的数量导致分类器性能的降低。 过拟合 ，</p>
+<p>维度的诅咒使得训练数据的 稀疏性 ，训练样本的密度呈指数下降。</p>
+<p>维度诅咒的另一个影响是，这种稀疏性不是均匀分布在搜索空间上。实际上，原点周围的数据（在超立方体的 中心 ）比搜索空间的 角落 中的数据要稀疏得多。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203210934531.png" alt="img"></p>
+<p>**图3.**随着维度的增加，更大比例的训练数据驻留在要素空间的 角落 中。</p>
+<p><em><strong>如何避免：</strong></em></p>
+<p>问题是 “太大” 意味着什么: [^特征的数量和样本数量有关]</p>
+<p><strong>特征选择方法：</strong>通常采用启发式(如<a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA算法</a>)(贪婪方法，最佳优先方法等）来定位最佳数量和特征组合</p>
+<p><strong>特征提取方法（降维）：</strong><a href="http://www.visiondummy.com/2014/05/feature-extraction-using-pca/">主成分分析（PCA）</a>，它产生原始N特征的不相关的线性组合。PCA试图找到较低维度的线性子空间，以便保持原始数据的最大方差（向着极大无关组出发）。但是，请注意，数据的最大差异不一定代表最具辨别力的信息。</p>
+<p><strong>交叉验证：</strong></p>
+<blockquote>
+<p>交叉验证方法将原始训练数据分成一个或多个训练子集。</p>
+<p>在分类器训练期间，一个子集用于 测试 所得分类器的准确度和精度，而其他子集用于 参数估计 (真实训练)。</p>
+<p>如果用于 训练 的子集的分类结果与用于 测试 的子集的结果大不相同，则过度拟合正在发挥作用。</p>
+<p>如果只有<strong>有限</strong>数量的训练数据可用，则可以使用几种类型的交叉验证，例如k折交叉验证和留一交叉验证。</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/K-fold_cross_validation_EN.jpg" alt="img"></p>
+<p><strong>Diagram of k-fold cross-validation with k&#x3D;4</strong></p>
+<h4 id="为什么说RL与深度神经网络结合可以避免维度之咒？"><a href="#为什么说RL与深度神经网络结合可以避免维度之咒？" class="headerlink" title="为什么说RL与深度神经网络结合可以避免维度之咒？"></a>为什么说RL与深度神经网络结合可以避免维度之咒？</h4><blockquote>
+<p>因为神经网络能够提取特征。</p>
+</blockquote>
+<p>Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
+<p>事实上，SVM及 神经网络 都可以看做是寻找一个合适的特征维度的过程。</p>
+<p>当数据的维度过小的时候，数据分布过于稠密，不能很好的进行区分，这时候可以通过带有核函数的SVM将低纬度的数据映射到高纬度。</p>
+<p>当样本的<strong>维度过大</strong>时，受限于样本的多少及计算机的计算能力，需要利用 神经网络 对样本的维度进行压缩，便于分类。</p>
+<p>两者目的都在于使得数据的维度达到一个合适的稠密程度，从而更方便找到分类超平面。这也决定了SVM适用于低维小样本数据，而神经网络适合于大规模高维数据。</p>
+<p>时间复杂度决定了模型的训练&#x2F;预测时间。如果复杂度过高，则会导致模型训练和预测耗费大量时间，既无法快速的验证想法和改善模型，也无法做到快速的预测。</p>
+<p><em><strong>空间复杂度</strong></em> 决定了模型的参数数量。</p>
+<p>由于<strong>维度诅咒的限制</strong>，模型的参数越多，训练模型所需的数据量就越大，而现实生活中的数据集通常不会太大，这会导致模型的训练更容易<strong>过拟合</strong>。</p>
+<p>空间复杂度（访存量），严格来讲包括两部分：总参数量 + 各层输出特征图。</p>
+<ul>
+<li><strong>参数量</strong>：模型所有带参数的层的权重参数总量（即<strong>模型体积</strong>，下式第一个求和表达式）</li>
+<li><strong>特征图</strong>：模型在实时运行过程中每层所计算出的输出特征图大小（下式第二个求和表达式）</li>
+</ul>
+<p><strong>公式来源</strong>：<a href="https://zhuanlan.zhihu.com/p/31575074">卷积神经网络复杂度分析</a></p>
+<p> <a href="%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%83%BD%E6%88%98%E8%83%9C%E7%BB%B4%E5%BA%A6%E7%9A%84%E8%AF%85%E5%92%92%E5%90%97%EF%BC%9F%E4%B8%80%E4%B8%AA%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%AE%AD%E7%BB%83%E8%A7%86%E8%A7%92.pdf">浅层神经网络能战胜维度的诅咒吗？一个平均场训练视角.pdf</a> </p>
+<h2 id="3-梯度下降和神经网络的关系"><a href="#3-梯度下降和神经网络的关系" class="headerlink" title="3.梯度下降和神经网络的关系"></a>3.梯度下降和神经网络的关系</h2><h4 id="深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com"><a href="#深入浅出–梯度下降法及其实现-深入浅出–梯度下降法及其实现-简书-jianshu-com" class="headerlink" title="[深入浅出–梯度下降法及其实现](深入浅出–梯度下降法及其实现 - 简书 (jianshu.com))"></a>[深入浅出–梯度下降法及其实现](<a href="https://www.jianshu.com/p/c7e642877b0e">深入浅出–梯度下降法及其实现 - 简书 (jianshu.com)</a>)</h4><h4 id="深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN"><a href="#深度学习-梯度下降-用代码一步步理解梯度下降和神经网络-ANN" class="headerlink" title="[深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)"></a>[<a href="https://www.jianshu.com/p/7251b03847f4">深度学习] [梯度下降]用代码一步步理解梯度下降和神经网络(ANN)</a></h4><h4 id="matplotlib模块数据可视化-3D图"><a href="#matplotlib模块数据可视化-3D图" class="headerlink" title="matplotlib模块数据可视化-3D图"></a><a href="https://blog.csdn.net/sinat_36772813/article/details/77365296">matplotlib模块数据可视化-3D图</a></h4><hr>
+<h2 id="4-核心困难：云计算中多目标资源调度QoS"><a href="#4-核心困难：云计算中多目标资源调度QoS" class="headerlink" title="4.核心困难：云计算中多目标资源调度QoS"></a>4.核心困难：云计算中多目标资源调度QoS</h2><h3 id="方法：某深度强化学习"><a href="#方法：某深度强化学习" class="headerlink" title="方法：某深度强化学习"></a>方法：某深度强化学习</h3><h3 id="传统方法的数学推导："><a href="#传统方法的数学推导：" class="headerlink" title="传统方法的数学推导："></a>传统方法的数学推导：</h3><h2 id="5-理论方法："><a href="#5-理论方法：" class="headerlink" title="5.理论方法："></a>5.理论方法：</h2><ol>
+<li>排队论</li>
+<li>控制论</li>
+<li>博弈论</li>
+</ol>
+<h2 id="6-启发式方法"><a href="#6-启发式方法" class="headerlink" title="6.启发式方法"></a>6.启发式方法</h2><ul>
+<li>Biological Inspiration (BI): Genetic Algorithm (<strong>GA</strong>)[8],[12], [18],[20] ,Memetic Algorithm (MA), Lion Algorithm (LA)[21], Imperialist Competitive Algorithm (ICA), etc.</li>
+<li>Swarm Intelligence (SI): Ant Colony Optimization (<strong>ACO</strong>)[9], [19]Particle Swarm Optimization (PSO)[11],[13],[14],[15], [16],[17]  Simulated Annealing (<strong>SA</strong>), Artificial Bee Colony (ABC)[22], Cat Swarm Optimization (CSO)[23], Bat Algorithm (BA), Wind Driven Optimization (WDO), etc.</li>
+</ul>
+<h3 id="新待看"><a href="#新待看" class="headerlink" title="新待看:"></a>新待看:</h3><p><a href="http://www.obitko.com/tutorials/genetic-algorithms/">GA背后的直觉</a></p>
+<h2 id="注脚："><a href="#注脚：" class="headerlink" title="注脚："></a>注脚：</h2><p>[^归约]: polynomial-time Karp’ reduction；A转化成B问题，B至少不比A容易<br>[^时间复杂度最高]: 所以completeness 的直观解释就是，解决了它就可以解决所有同级别此类问题。<br>[^维度诅咒]: Moreover, to avoid the  curse of dimensionality  of traditional RL techniques, RL combined with deep neuralnetwork (i.e. DRL) is adopted in our work.<br>[^特征的数量和样本数量有关]: 如果N个训练样本足以覆盖单位区间大小的1D特征空间，则需要N ^ 2个样本来覆盖具有相同密度的2D特征空间，并且在3D特征空间中需要N ^ 3个样本。换句话说，所需的训练实例数量随着使用的维度数量呈指数增长。<br>[^<del>云计算前身</del>]: Particularly in cloud computing, similar to its predecessors such as grid computing, various job assignment algorithms and approaches have been proposed [7], [8].</p>
+<hr>
+<p>2020&#x2F;12&#x2F;11</p>
+]]></content>
+      <categories>
+        <category>DRL</category>
       </categories>
   </entry>
   <entry>
@@ -1678,6 +1698,22 @@ li {undefined
       </categories>
   </entry>
   <entry>
+    <title>读读纪伯伦的小诗吧</title>
+    <url>/2021/09/10/Kahlil-Gibran/</url>
+    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
+<span id="more"></span>
+
+<hr>
+<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
+<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
+<hr>
+<p>2021&#x2F;9&#x2F;10</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
     <title>《海边的卡夫卡》随笔</title>
     <url>/2022/04/05/Kafka-by-the-Sea/</url>
     <content><![CDATA[<p>读村上春树有个好玩的点，这也是之前听方所杨照先生讲座启发的，就是书中隐藏着各种下一步做什么的“指示”,比如找来杨纳切克的<em>sinfonietta</em>来听吧（出自《1Q84》开头）。</p>
@@ -1748,22 +1784,6 @@ li {undefined
 ]]></content>
       <categories>
         <category>Sherry</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>读读纪伯伦的小诗吧</title>
-    <url>/2021/09/10/Kahlil-Gibran/</url>
-    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
-<span id="more"></span>
-
-<hr>
-<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
-<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
-<hr>
-<p>2021&#x2F;9&#x2F;10</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -1854,44 +1874,27 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>月报</title>
-    <url>/2022/03/31/Monthly-reports/</url>
-    <content><![CDATA[<p>这个帖子只谈自己的发展，注意力只集中在眼前和毕业找工作。</p>
+    <title>地球上的星星</title>
+    <url>/2022/04/11/Movie-home-loneliness/</url>
+    <content><![CDATA[<p>我看到孩子天生对世界充满了好奇心和探索欲，一个天真的生命原本就具有对其他生命的体察，对自然、对美的感知，他会非常专注地沉浸在自己看到的、觉察到的世界中，这些都是孩子十分可贵的品质。</p>
 <span id="more"></span>
 
-<h2 id="2022-x2F-3-x2F-31"><a href="#2022-x2F-3-x2F-31" class="headerlink" title="2022&#x2F;3&#x2F;31"></a>2022&#x2F;3&#x2F;31</h2><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354659540&auto=1&height=32"></iframe>
-
-<p>转眼研二下了，时间所剩不多了，之前大把的时间画在碰壁，走弯路，和自己的调整上，回顾都觉得太苦了，苦到不敢回想。收获就是现在整个人更麻木，情绪很难有大的起伏（反正除了自己放弃怎么都能赖活着），更认清自己了，知道自己很脆弱，看到适合自己的路。</p>
-<p>时间很紧，必须得开始追进度了。</p>
-<p>也因为项目必须的实验和师兄们毕业的焦虑，只能放下了之前因被程过河拆桥被夺走论文而对DRL和论文产生的畏惧，下决心想想写几篇水一水，达到毕业条件，只有自己才能救自己啊。也因此，想写这篇月结看看进度，重新开始督促懒散成习惯的自己。</p>
-<h3 id="未完成的目标："><a href="#未完成的目标：" class="headerlink" title="未完成的目标："></a>未完成的目标：</h3><ul>
-<li>2022年7月，小论文；</li>
-<li>项目论文；</li>
-<li>毕业论文；</li>
-<li>工作：力扣，八股文。</li>
-</ul>
+<p>他从不被条条框框束缚，尽情发挥自己的奇思妙想，拥有无穷的想象力和创造力，拥有一个丰富的、充盈的内心世界。</p>
+<p>那么他是怎么变成大人眼中的“坏孩子”的呢？因为他从没有被理解、被尊重过，没有人去发现他的天赋和才能，只看到他不符合标准的部分，只用成绩衡量，只看结果，从来不寻找原因，一味指责、专制、武断，不断地否定他，指望自己的恐吓、暴力能成功教育好一个孩子，在流水线上用成功的模板打造他的样子，也不将孩子视为独立的生命体，而是作为自己生命的延伸，将自己的期望和想法强加到孩子身上。这样的行为并不是真正的关心和爱，要明白每个孩子都是特别的，都有自己的天分，都会按照自己的步调成长，不是大人以为的千篇一律，强行纠正只能扼杀孩子原本的天分、限制孩子的发展，我们要做的是真正的关爱、观察、耐心倾听、理解、尊重、引导、鼓励、肯定以及因材施教。我们需要在他人生的初始阶段，提供适宜他成长的环境，用积极的教育态度，激发他内在的生命力，这些时光是促进他的完整人格发展的基础，将成为他一生宝贵的精神财富，未来无论他处于何地，面对什么问题，他都能从中汲取勇气和动力，支撑着他渡过难关，最终能够自我发展、自我实现，过有价值的人生。</p>
 <hr>
-<h3 id="回顾3月："><a href="#回顾3月：" class="headerlink" title="回顾3月："></a>回顾3月：</h3><ol>
-<li>项目论文实验：过去几周，做出了实验，就到此为止，剩余实验工作：1实验图像美化，2论文图片重画，3细扣模型参数，实验设置合理性。</li>
-<li>工作方面：草草过了1.5遍java，力扣刷了70来题，一轮都没完，刚刷完树层次遍历，费劲，不过能感觉到写代码的乐趣，不看题解自己写出来、提交后收到超过别人百分比鼓励、自己总结给别人写写题解想到可能能帮到别人，都挺快乐的，之前从未有过，还挺好的；八股文最近断断续续过了java基础，发现很多coding不理解的东西八股文里有写。</li>
-<li>博客方面：目前的效果我很满意，每天的乐趣来源就是给博客加加新功能。从0到1，学了浅浅的前端和markdown，对了配了GitHub图床，或许会成为未来的铺垫吧。</li>
-<li>毕业和论文方面：近度为0。</li>
-<li>游戏和其它：日常封校，在地平线4里开开车挺好的，就是太累人了，想看看电影电视剧又没什么好看的，羽毛球现在提不起兴趣。给电脑升级了1t的固态和电池，跑代码，看视频，搭环境什么都很舒服，毕业前放心coding。</li>
-<li>心理状态：恢复了，不迷茫了，忙点累点挺好的，我太闲了会出问题。变化的因为是，受了刺激，太想和莹莹走到一起，所以必须得靠自己克服异地这个巨大的困难，具体的解决路线(专注自身)：解决异地问题-&gt;赚钱余额支撑安全感-&gt;工作赚钱-&gt;毕业条件。所以现在满脑子都是毕业和工作，之前绕过的弯路太多了，所以现在时间特赶，对校园生活和社交完全失去了兴趣，也不想在实验室或者和导师的人际关系上消耗任何时间精力。只跑主线。效率！效率！效率！</li>
-</ol>
+<p>Rosa:<br>地球上的星星</p>
+<p>Rosa:<br>很让人感动的一个电影</p>
+<p>Rosa:<br>我相信每一个人都会有自己触动的点，在这个电影里面</p>
+<p>Rosa:<br>可以把这个电影的链接还有观后感放在你的那个网站</p>
+<p>Rosa:<br>还有体检报告出来了，不容乐观</p>
 <hr>
-<h3 id="之后计划："><a href="#之后计划：" class="headerlink" title="之后计划："></a>之后计划：</h3><ol>
-<li><strong>项目论文写作</strong>：没有参考的就东拼西凑硬着头皮写，项目的东西，收起自己的强迫症，一切以合理有说服力为标准，而不是让自己满意或者提升自己之类的。写出来完事！</li>
-<li><strong>工作方面</strong>：力扣，八股文，一轮继续，暂时顾不上做java的项目，先不管了。</li>
-<li>博客方面：看心情更新，可能还能给我充一段时间的电。</li>
-<li>毕业和论文方面：小论文理论梳理一下，好好思考一年前的复杂优化到最后为什么会失败，克服恐惧的办法就是面对恐惧。试试实验，万一运气好出来了。应用背景方面，有些迷茫。<strong>思考一下也先水出一篇达到毕业条件。</strong></li>
-<li>其它：没什么大问题，经常忘记吃饭不太好。还是每周重新一规划。</li>
-</ol>
+<p>–来自百度网盘超级会员V6的分享<br>hi，这是我用百度网盘分享的内容~复制这段内容打开「百度网盘」APP即可获取<br>链接:<a href="https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841">https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841</a><br>提取码:8841</p>
 <hr>
-<p>对了，博客评论，不知道是我手机运营商的问题还是什么，手机流量不加载评论，但是WiFi可以。</p>
+<p>小伙伴Rosa被一个人隔离在广州了，真不容易。</p>
+<p>2022&#x2F;4&#x2F;11</p>
 ]]></content>
       <categories>
-        <category>生活和诗歌</category>
+        <category>小伙伴</category>
       </categories>
   </entry>
   <entry>
@@ -2673,91 +2676,44 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>地球上的星星</title>
-    <url>/2022/04/11/Movie-home-loneliness/</url>
-    <content><![CDATA[<p>我看到孩子天生对世界充满了好奇心和探索欲，一个天真的生命原本就具有对其他生命的体察，对自然、对美的感知，他会非常专注地沉浸在自己看到的、觉察到的世界中，这些都是孩子十分可贵的品质。</p>
+    <title>月报</title>
+    <url>/2022/03/31/Monthly-reports/</url>
+    <content><![CDATA[<p>这个帖子只谈自己的发展，注意力只集中在眼前和毕业找工作。</p>
 <span id="more"></span>
 
-<p>他从不被条条框框束缚，尽情发挥自己的奇思妙想，拥有无穷的想象力和创造力，拥有一个丰富的、充盈的内心世界。</p>
-<p>那么他是怎么变成大人眼中的“坏孩子”的呢？因为他从没有被理解、被尊重过，没有人去发现他的天赋和才能，只看到他不符合标准的部分，只用成绩衡量，只看结果，从来不寻找原因，一味指责、专制、武断，不断地否定他，指望自己的恐吓、暴力能成功教育好一个孩子，在流水线上用成功的模板打造他的样子，也不将孩子视为独立的生命体，而是作为自己生命的延伸，将自己的期望和想法强加到孩子身上。这样的行为并不是真正的关心和爱，要明白每个孩子都是特别的，都有自己的天分，都会按照自己的步调成长，不是大人以为的千篇一律，强行纠正只能扼杀孩子原本的天分、限制孩子的发展，我们要做的是真正的关爱、观察、耐心倾听、理解、尊重、引导、鼓励、肯定以及因材施教。我们需要在他人生的初始阶段，提供适宜他成长的环境，用积极的教育态度，激发他内在的生命力，这些时光是促进他的完整人格发展的基础，将成为他一生宝贵的精神财富，未来无论他处于何地，面对什么问题，他都能从中汲取勇气和动力，支撑着他渡过难关，最终能够自我发展、自我实现，过有价值的人生。</p>
+<h2 id="2022-x2F-3-x2F-31"><a href="#2022-x2F-3-x2F-31" class="headerlink" title="2022&#x2F;3&#x2F;31"></a>2022&#x2F;3&#x2F;31</h2><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354659540&auto=1&height=32"></iframe>
+
+<p>转眼研二下了，时间所剩不多了，之前大把的时间画在碰壁，走弯路，和自己的调整上，回顾都觉得太苦了，苦到不敢回想。收获就是现在整个人更麻木，情绪很难有大的起伏（反正除了自己放弃怎么都能赖活着），更认清自己了，知道自己很脆弱，看到适合自己的路。</p>
+<p>时间很紧，必须得开始追进度了。</p>
+<p>也因为项目必须的实验和师兄们毕业的焦虑，只能放下了之前因被程过河拆桥被夺走论文而对DRL和论文产生的畏惧，下决心想想写几篇水一水，达到毕业条件，只有自己才能救自己啊。也因此，想写这篇月结看看进度，重新开始督促懒散成习惯的自己。</p>
+<h3 id="未完成的目标："><a href="#未完成的目标：" class="headerlink" title="未完成的目标："></a>未完成的目标：</h3><ul>
+<li>2022年7月，小论文；</li>
+<li>项目论文；</li>
+<li>毕业论文；</li>
+<li>工作：力扣，八股文。</li>
+</ul>
 <hr>
-<p>Rosa:<br>地球上的星星</p>
-<p>Rosa:<br>很让人感动的一个电影</p>
-<p>Rosa:<br>我相信每一个人都会有自己触动的点，在这个电影里面</p>
-<p>Rosa:<br>可以把这个电影的链接还有观后感放在你的那个网站</p>
-<p>Rosa:<br>还有体检报告出来了，不容乐观</p>
+<h3 id="回顾3月："><a href="#回顾3月：" class="headerlink" title="回顾3月："></a>回顾3月：</h3><ol>
+<li>项目论文实验：过去几周，做出了实验，就到此为止，剩余实验工作：1实验图像美化，2论文图片重画，3细扣模型参数，实验设置合理性。</li>
+<li>工作方面：草草过了1.5遍java，力扣刷了70来题，一轮都没完，刚刷完树层次遍历，费劲，不过能感觉到写代码的乐趣，不看题解自己写出来、提交后收到超过别人百分比鼓励、自己总结给别人写写题解想到可能能帮到别人，都挺快乐的，之前从未有过，还挺好的；八股文最近断断续续过了java基础，发现很多coding不理解的东西八股文里有写。</li>
+<li>博客方面：目前的效果我很满意，每天的乐趣来源就是给博客加加新功能。从0到1，学了浅浅的前端和markdown，对了配了GitHub图床，或许会成为未来的铺垫吧。</li>
+<li>毕业和论文方面：近度为0。</li>
+<li>游戏和其它：日常封校，在地平线4里开开车挺好的，就是太累人了，想看看电影电视剧又没什么好看的，羽毛球现在提不起兴趣。给电脑升级了1t的固态和电池，跑代码，看视频，搭环境什么都很舒服，毕业前放心coding。</li>
+<li>心理状态：恢复了，不迷茫了，忙点累点挺好的，我太闲了会出问题。变化的因为是，受了刺激，太想和莹莹走到一起，所以必须得靠自己克服异地这个巨大的困难，具体的解决路线(专注自身)：解决异地问题-&gt;赚钱余额支撑安全感-&gt;工作赚钱-&gt;毕业条件。所以现在满脑子都是毕业和工作，之前绕过的弯路太多了，所以现在时间特赶，对校园生活和社交完全失去了兴趣，也不想在实验室或者和导师的人际关系上消耗任何时间精力。只跑主线。效率！效率！效率！</li>
+</ol>
 <hr>
-<p>–来自百度网盘超级会员V6的分享<br>hi，这是我用百度网盘分享的内容~复制这段内容打开「百度网盘」APP即可获取<br>链接:<a href="https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841">https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841</a><br>提取码:8841</p>
+<h3 id="之后计划："><a href="#之后计划：" class="headerlink" title="之后计划："></a>之后计划：</h3><ol>
+<li><strong>项目论文写作</strong>：没有参考的就东拼西凑硬着头皮写，项目的东西，收起自己的强迫症，一切以合理有说服力为标准，而不是让自己满意或者提升自己之类的。写出来完事！</li>
+<li><strong>工作方面</strong>：力扣，八股文，一轮继续，暂时顾不上做java的项目，先不管了。</li>
+<li>博客方面：看心情更新，可能还能给我充一段时间的电。</li>
+<li>毕业和论文方面：小论文理论梳理一下，好好思考一年前的复杂优化到最后为什么会失败，克服恐惧的办法就是面对恐惧。试试实验，万一运气好出来了。应用背景方面，有些迷茫。<strong>思考一下也先水出一篇达到毕业条件。</strong></li>
+<li>其它：没什么大问题，经常忘记吃饭不太好。还是每周重新一规划。</li>
+</ol>
 <hr>
-<p>小伙伴Rosa被一个人隔离在广州了，真不容易。</p>
-<p>2022&#x2F;4&#x2F;11</p>
+<p>对了，博客评论，不知道是我手机运营商的问题还是什么，手机流量不加载评论，但是WiFi可以。</p>
 ]]></content>
       <categories>
-        <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>电影推荐</title>
-    <url>/2022/03/21/Movie-recommendation/</url>
-    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
-<hr>
-<span id="more"></span>
-
-<p>这是我的好朋友，买手机找他，便宜且很靠谱~我和家人换新机都找他。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211733922.jpg" alt="14452845a506cefc10220686ce97f8a"></p>
-<hr>
-<p>数码小王</p>
-<p>2022&#x2F;3&#x2F;21</p>
-]]></content>
-      <categories>
-        <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>音乐贴(更)</title>
-    <url>/2022/03/29/Music/</url>
-    <content><![CDATA[<h2 id="来听歌吧"><a href="#来听歌吧" class="headerlink" title="来听歌吧~"></a>来听歌吧~</h2><p>在评论区留言音乐或者任何形式，随意点，我会把它加到帖子里并@你，<strong>如果有什么想说的，或者图片，那再好不过了，毕竟只有声音太干瘪了，灵魂是讲故事和听故事的人赋予的。</strong>我一定会一并贴上去。</p>
-<span id="more"></span>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=7357321749&auto=1&height=430"></iframe>
-
-<p>突然意识到一件事，既然都是用网易云音乐外链，而且这篇帖子专门放出来一起分享取乐的，干嘛不直接外链个歌单呢？</p>
-<p>另外新增了音乐的菜单栏，enjoy~</p>
-<p>我创建了共享歌单《博客音乐贴》<a href="http://music.163.com/m/playlist?app_version=8.7.01&amp;id=7357321749&amp;userid=132004956&amp;creatorId=132004956&amp;&amp;sharedId=ha1ZWdKD4Rr4SAk78M18St%EF%BC%8C%E9%82%80%E8%AF%B7%E4%BD%A0%E4%B8%80%E8%B5%B7%E7%AE%A1%E7%90%86%E5%93%A6~%EF%BC%88@%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%EF%BC%89">http://music.163.com/m/playlist?app_version=8.7.01&amp;id=7357321749&amp;userid=132004956&amp;creatorId=132004956&amp;&amp;sharedId=ha1ZWdKD4Rr4SAk78M18St，邀请你一起管理哦~（@网易云音乐）</a></p>
-<p>需要手机点开，直接加入歌单编辑吧，目前暂不清楚人数上限。</p>
-<p>也算是份回忆吧。</p>
-<p>之后这个歌单。如果转化成博客背景音乐也方便很多。</p>
-<hr>
-<p>2022&#x2F;3&#x2F;30</p>
-<p>如果博客留言的话，</p>
-<p>注意直接留言音乐外链，不会成功。</p>
-<p>需要不是VIP的音乐，再次谴责违背互联网开源精神。</p>
-<p>实现方式可以参考<a href="https://yongtaiq.github.io/2022/03/28/Html/">Html拓展</a>中的网易云外链章节。</p>
-<hr>
-<p>@西走菜菜</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=3025139&auto=0&height=32"></iframe>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=22656515&auto=0&height=32"></iframe>
-
-
-<hr>
-<p>2022&#x2F;3&#x2F;29</p>
-<p>@Sherry </p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=36199955&auto=0&height=32"></iframe>
-
-<blockquote>
-<p>马孔多的雨还在下</p>
-</blockquote>
-<p>@慕雪</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1821805042&auto=0&height=32"></iframe>
-
-<blockquote>
-<p>要加油呀！要永远相信，美好的事情终将发生。<br>2:49开始，感觉，无论遇到什么，都要相信，一切都会有转机，向前看。<br>3:14开始又回归主旋律，但却要温柔很多。<br>愿所有温柔之人都能被这世界温柔以待。</p>
-</blockquote>
-<hr>
-]]></content>
-      <categories>
-        <category>Markdown&amp;Blog</category>
+        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -2944,6 +2900,70 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>电影推荐</title>
+    <url>/2022/03/21/Movie-recommendation/</url>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
+<hr>
+<span id="more"></span>
+
+<p>这是我的好朋友，买手机找他，便宜且很靠谱~我和家人换新机都找他。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211733922.jpg" alt="14452845a506cefc10220686ce97f8a"></p>
+<hr>
+<p>数码小王</p>
+<p>2022&#x2F;3&#x2F;21</p>
+]]></content>
+      <categories>
+        <category>小伙伴</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>音乐贴(更)</title>
+    <url>/2022/03/29/Music/</url>
+    <content><![CDATA[<h2 id="来听歌吧"><a href="#来听歌吧" class="headerlink" title="来听歌吧~"></a>来听歌吧~</h2><p>在评论区留言音乐或者任何形式，随意点，我会把它加到帖子里并@你，<strong>如果有什么想说的，或者图片，那再好不过了，毕竟只有声音太干瘪了，灵魂是讲故事和听故事的人赋予的。</strong>我一定会一并贴上去。</p>
+<span id="more"></span>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=7357321749&auto=1&height=430"></iframe>
+
+<p>突然意识到一件事，既然都是用网易云音乐外链，而且这篇帖子专门放出来一起分享取乐的，干嘛不直接外链个歌单呢？</p>
+<p>另外新增了音乐的菜单栏，enjoy~</p>
+<p>我创建了共享歌单《博客音乐贴》<a href="http://music.163.com/m/playlist?app_version=8.7.01&amp;id=7357321749&amp;userid=132004956&amp;creatorId=132004956&amp;&amp;sharedId=ha1ZWdKD4Rr4SAk78M18St%EF%BC%8C%E9%82%80%E8%AF%B7%E4%BD%A0%E4%B8%80%E8%B5%B7%E7%AE%A1%E7%90%86%E5%93%A6~%EF%BC%88@%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%EF%BC%89">http://music.163.com/m/playlist?app_version=8.7.01&amp;id=7357321749&amp;userid=132004956&amp;creatorId=132004956&amp;&amp;sharedId=ha1ZWdKD4Rr4SAk78M18St，邀请你一起管理哦~（@网易云音乐）</a></p>
+<p>需要手机点开，直接加入歌单编辑吧，目前暂不清楚人数上限。</p>
+<p>也算是份回忆吧。</p>
+<p>之后这个歌单。如果转化成博客背景音乐也方便很多。</p>
+<hr>
+<p>2022&#x2F;3&#x2F;30</p>
+<p>如果博客留言的话，</p>
+<p>注意直接留言音乐外链，不会成功。</p>
+<p>需要不是VIP的音乐，再次谴责违背互联网开源精神。</p>
+<p>实现方式可以参考<a href="https://yongtaiq.github.io/2022/03/28/Html/">Html拓展</a>中的网易云外链章节。</p>
+<hr>
+<p>@西走菜菜</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=3025139&auto=0&height=32"></iframe>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=22656515&auto=0&height=32"></iframe>
+
+
+<hr>
+<p>2022&#x2F;3&#x2F;29</p>
+<p>@Sherry </p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=36199955&auto=0&height=32"></iframe>
+
+<blockquote>
+<p>马孔多的雨还在下</p>
+</blockquote>
+<p>@慕雪</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1821805042&auto=0&height=32"></iframe>
+
+<blockquote>
+<p>要加油呀！要永远相信，美好的事情终将发生。<br>2:49开始，感觉，无论遇到什么，都要相信，一切都会有转机，向前看。<br>3:14开始又回归主旋律，但却要温柔很多。<br>愿所有温柔之人都能被这世界温柔以待。</p>
+</blockquote>
+<hr>
+]]></content>
+      <categories>
+        <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
     <title>如何优雅的和猫咪玩耍</title>
     <url>/2021/05/21/Play-with-cats-gracefully/</url>
     <content><![CDATA[<p>本来想起名为撸猫教程，想了想实在太自大了，我能教谁呢？能教什么内容呢？撸什么猫呢？</p>
@@ -2980,6 +3000,51 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>我们真的有自己想象的那样了解现实吗</title>
+    <url>/2022/03/27/Recognizing-reality/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>读《博闻强记的富内斯》</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<p>这个小短篇出自博尔赫斯的《虚构集》，博尔赫斯是最近发现的一位宝藏作家，作品短小精美，一般都是把一些哲学方面的思考和奇思妙想结合起来，有我以前看《苏菲的世界》那味了。目前读过的三篇短篇小说都是以无限为主题，读完第一感觉就是人是有限的，偶然的。</p>
+<span id="more"></span>
+
+<p>《博文强记的富内斯》的剧情是这样的，“我”是一个家境殷实的知识分子，在和表哥去乡下探亲时认识了不看钟表就能准确报时的年轻人富内斯，虽然只是短短一面，但是却给我留下了一些印象。后来富内斯在骑马时不小心从马背上摔下来瘫痪了，此时正赶上我在学习拉丁文，富内斯听说后，写一封信想让我给他一本拉丁文写的书和辞典，他想自学拉丁文，我当时觉得就靠一本字典学拉丁文太自大了，所以寄去了两本比较晦涩的拉丁文以及一本字典，之后我就忘了这事了。一段时间后，我的父亲病重，我回乡看父亲，偶然想起给富内斯借去的两本书便去了富内斯家，没想到这一晚的见面闲聊震撼了我的认知。刚去时富内斯在大声背诵其中一本拉丁文的一个章节，我却没怎么听出来，富内斯告诉我，自从他从马背摔下来后，理解力和记忆力好得不能再好了，无论以前再遥远，再细小的事情他都记得十分清晰。</p>
+<blockquote>
+<p>我们一眼望去，可以看到放在桌子上的三个酒杯；富内斯却能看到一株葡萄藤所有的枝条、一串串的果实和每一颗葡萄。他记得1882年4月30日黎明时南面朝霞的形状，并且在记忆中同他只见过一次的一本皮面精装书的纹理比较，同凯布拉卓暴乱前夕船桨在内格罗河激起的涟漪比较。那些并不是单纯的回忆；每一个视觉形象都和肌肉、寒暖等等的感觉有联系。他能够再现所有的梦境。他曾经两三次再现一整天的情况；从不含糊，但每次都需要一整天时间。他对我说：我一个人的回忆抵得上开天辟地以来所有人的回忆的总和。又说：我睡觉时就像你们清醒时一样。天将亮时，他说：我的记忆正如垃圾倾倒场。我们能够充分直感的形象是黑板上的一个圆圈、一个直角三角形、一个菱形；伊雷内奥却能直感马匹飞扬的鬃毛、山同上牲口的后腿直立、千变万化的火焰和无数的灰烬，以及长时间守灵时死者的种种面貌。我不知道他看到天上有多少星星。</p>
+</blockquote>
+<p>听完富内斯描述的一切，我看着清晨阳光照亮他的脸庞，觉得他像一尊青铜雕像，比埃及更古老。之后富内斯便因为肺部充血去世了。就是这么一个故事。</p>
+<p>富内斯的世界感受与普通人截然不同，他应该没有时间分隔的概念。普通人有过去，现在，未来的感受，富内斯那里过去和现在一样清晰可见。如今的我想想昨天发生的事情，或者很久没见的一个人，我知道是什么，但是总体来说很模糊，大部分细节都无可辨别。如今我坐在桌前，能清晰看到电脑左下角边框的蓝色颜料渍，或者玻璃水杯内壁那细小的气泡。清晰可辨的是现在，模糊的是过去，对富内斯而言，一切都是清晰可见的。从这个角度来看，在富内斯眼里我们也许是怪物，因为我们认为过去已经消逝，世界只存在于现在。</p>
+<p>这让我想起哲学上的第二大问题，世界是可知的吗？毕竟普通人头脑太弱记不住东西，假如普通人的感知更接近现实，那么真理也就不妨说是人的真理。爱因斯坦和泰戈尔曾经有关这个问题进行过辩论。</p>
+<blockquote>
+<p>泰戈尔：我们称之为真理的那个东西，存在于实在的主观和客观这两者的和谐之中，你会看到，决定这两者的，是我们万能的人。</p>
+<p>爱因斯坦：然而，从我们的日常生活经验中可以看到，即便人离开了，我们用的那些物品也依旧存在。举个例子来说，某个房间中空无一人，却有一张桌子，莫非这张桌子就因为人的不存在而不存在？我们之所以有这种想法，就是想找到一种合理的方式，对我们感官所提供的各种材料之间的相互关系加以确定。</p>
+<p>泰戈尔：不错，即便人不在了，那张桌子依旧存在。然而，你把万能的精神忽略了，对我所感受的那个桌子有所感受的人，必然有着跟我一样的精神，他必然知道桌子的存在。</p>
+</blockquote>
+<p>我觉得泰戈尔的意思是真理有一定的人为色彩，但是这并不违背客观实际，就像泰勒公式一样，它是对现实的一种极限逼近。人不可能理解宇宙中所有的客观存在，那些不在我们经验范畴，和人毫无关系的东西不会被人表达出来，最后也不在真理的范畴了。感觉这么一想自己好像成了主观唯心的人了。</p>
+<blockquote>
+<p>泰戈尔：桌子是一种外观，实际上就是一堆木头。也就是说，一种认为是桌子的那种东西存在于人的精神之中，人类若是消失了，人的精神若是没有了，显然它也就会随之消失。科学已经证实了这一点。并且，就物理实在性（物理属性）而言，桌子仅仅是众多单独的、旋转着的引力中心，而这些中心也一样在人的精神中存在着。</p>
+</blockquote>
+<p>是的，桌子的概念存在于人类的精神之中，现在在我桌上蹦蹦跳跳的小飞虫肯定不会把桌子之类的当真理了。</p>
+<p>另外一个小说里我觉得有意思的点是下面这段：</p>
+<blockquote>
+<p>我们能够充分直感的形象是黑板上的一个圆圈、一个直角三角形、一个菱形；富内斯却能直感马匹飞扬的鬃毛、山同上牲口的后腿直立、千变万化的火焰和无数的灰烬，以及长时间守灵时死者的种种面貌。我不知道他看到天上有多少星星。</p>
+</blockquote>
+<p>这该是一种什么奇特的感觉，我拿起笔能在纸上精确画出三角形，锐角的，钝角的，直角的，细节分明准确。但让我同样精确描摹火焰，马的鬃毛根本不可能，这些东西都太复杂了，变化多到数不胜数，富内斯却能像普通人描绘三角形一样描绘出来，普通人只能采用简笔画的形式描出大概。这里我感受到了人的有限性，仔细想想，人的认知都是由简化的概念组成的，文学，数学，艺术的复杂性都是简单细节的有序组合。富内斯是直接简单粗暴得理解复杂性，他的大脑是一根大水管，一股脑得把所有得信息收归其中，普通人是小吸管，只能接受很小很小的一部分信息量，所以需要抽象概括。人，实在是太有限了。</p>
+<p>我觉得富内斯像一台计算机，他没有抽象能力，计算机看到一个图像，需要借助灰度值和像素值来编号记忆，说到底就是基于统计，和人看世界的感觉截然不同。富内斯没法理解狗的概念，他不理解可以用一个词指代那么多千变万化的个体。人类的认识与认知真偶然，可见光波长，文化倾向，脑容量大小这些好多好多制约决定了我们看到的世界的样子，跳出这些制约的世界我们无从得知，再想想自己身边这些枷锁，又怎么能说是理所当然，一旦制约条件有所变化，所谓正确的知识也会变化。</p>
+<p>要说想成为富内斯那样的人我是完全不敢的，我觉得他丢失了对世界基本的理解性。但是要达到可理解性又是以丢失细节为代价的，世界上的许多概念有些简单粗暴，大家不如说都在框架之内。</p>
+<hr>
+<p>Sherry</p>
+<p>2022&#x2F;3&#x2F;27</p>
+]]></content>
+      <categories>
+        <category>Sherry</category>
       </categories>
   </entry>
   <entry>
@@ -3105,51 +3170,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>我们真的有自己想象的那样了解现实吗</title>
-    <url>/2022/03/27/Recognizing-reality/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>读《博闻强记的富内斯》</p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote>
-
-<p>这个小短篇出自博尔赫斯的《虚构集》，博尔赫斯是最近发现的一位宝藏作家，作品短小精美，一般都是把一些哲学方面的思考和奇思妙想结合起来，有我以前看《苏菲的世界》那味了。目前读过的三篇短篇小说都是以无限为主题，读完第一感觉就是人是有限的，偶然的。</p>
-<span id="more"></span>
-
-<p>《博文强记的富内斯》的剧情是这样的，“我”是一个家境殷实的知识分子，在和表哥去乡下探亲时认识了不看钟表就能准确报时的年轻人富内斯，虽然只是短短一面，但是却给我留下了一些印象。后来富内斯在骑马时不小心从马背上摔下来瘫痪了，此时正赶上我在学习拉丁文，富内斯听说后，写一封信想让我给他一本拉丁文写的书和辞典，他想自学拉丁文，我当时觉得就靠一本字典学拉丁文太自大了，所以寄去了两本比较晦涩的拉丁文以及一本字典，之后我就忘了这事了。一段时间后，我的父亲病重，我回乡看父亲，偶然想起给富内斯借去的两本书便去了富内斯家，没想到这一晚的见面闲聊震撼了我的认知。刚去时富内斯在大声背诵其中一本拉丁文的一个章节，我却没怎么听出来，富内斯告诉我，自从他从马背摔下来后，理解力和记忆力好得不能再好了，无论以前再遥远，再细小的事情他都记得十分清晰。</p>
-<blockquote>
-<p>我们一眼望去，可以看到放在桌子上的三个酒杯；富内斯却能看到一株葡萄藤所有的枝条、一串串的果实和每一颗葡萄。他记得1882年4月30日黎明时南面朝霞的形状，并且在记忆中同他只见过一次的一本皮面精装书的纹理比较，同凯布拉卓暴乱前夕船桨在内格罗河激起的涟漪比较。那些并不是单纯的回忆；每一个视觉形象都和肌肉、寒暖等等的感觉有联系。他能够再现所有的梦境。他曾经两三次再现一整天的情况；从不含糊，但每次都需要一整天时间。他对我说：我一个人的回忆抵得上开天辟地以来所有人的回忆的总和。又说：我睡觉时就像你们清醒时一样。天将亮时，他说：我的记忆正如垃圾倾倒场。我们能够充分直感的形象是黑板上的一个圆圈、一个直角三角形、一个菱形；伊雷内奥却能直感马匹飞扬的鬃毛、山同上牲口的后腿直立、千变万化的火焰和无数的灰烬，以及长时间守灵时死者的种种面貌。我不知道他看到天上有多少星星。</p>
-</blockquote>
-<p>听完富内斯描述的一切，我看着清晨阳光照亮他的脸庞，觉得他像一尊青铜雕像，比埃及更古老。之后富内斯便因为肺部充血去世了。就是这么一个故事。</p>
-<p>富内斯的世界感受与普通人截然不同，他应该没有时间分隔的概念。普通人有过去，现在，未来的感受，富内斯那里过去和现在一样清晰可见。如今的我想想昨天发生的事情，或者很久没见的一个人，我知道是什么，但是总体来说很模糊，大部分细节都无可辨别。如今我坐在桌前，能清晰看到电脑左下角边框的蓝色颜料渍，或者玻璃水杯内壁那细小的气泡。清晰可辨的是现在，模糊的是过去，对富内斯而言，一切都是清晰可见的。从这个角度来看，在富内斯眼里我们也许是怪物，因为我们认为过去已经消逝，世界只存在于现在。</p>
-<p>这让我想起哲学上的第二大问题，世界是可知的吗？毕竟普通人头脑太弱记不住东西，假如普通人的感知更接近现实，那么真理也就不妨说是人的真理。爱因斯坦和泰戈尔曾经有关这个问题进行过辩论。</p>
-<blockquote>
-<p>泰戈尔：我们称之为真理的那个东西，存在于实在的主观和客观这两者的和谐之中，你会看到，决定这两者的，是我们万能的人。</p>
-<p>爱因斯坦：然而，从我们的日常生活经验中可以看到，即便人离开了，我们用的那些物品也依旧存在。举个例子来说，某个房间中空无一人，却有一张桌子，莫非这张桌子就因为人的不存在而不存在？我们之所以有这种想法，就是想找到一种合理的方式，对我们感官所提供的各种材料之间的相互关系加以确定。</p>
-<p>泰戈尔：不错，即便人不在了，那张桌子依旧存在。然而，你把万能的精神忽略了，对我所感受的那个桌子有所感受的人，必然有着跟我一样的精神，他必然知道桌子的存在。</p>
-</blockquote>
-<p>我觉得泰戈尔的意思是真理有一定的人为色彩，但是这并不违背客观实际，就像泰勒公式一样，它是对现实的一种极限逼近。人不可能理解宇宙中所有的客观存在，那些不在我们经验范畴，和人毫无关系的东西不会被人表达出来，最后也不在真理的范畴了。感觉这么一想自己好像成了主观唯心的人了。</p>
-<blockquote>
-<p>泰戈尔：桌子是一种外观，实际上就是一堆木头。也就是说，一种认为是桌子的那种东西存在于人的精神之中，人类若是消失了，人的精神若是没有了，显然它也就会随之消失。科学已经证实了这一点。并且，就物理实在性（物理属性）而言，桌子仅仅是众多单独的、旋转着的引力中心，而这些中心也一样在人的精神中存在着。</p>
-</blockquote>
-<p>是的，桌子的概念存在于人类的精神之中，现在在我桌上蹦蹦跳跳的小飞虫肯定不会把桌子之类的当真理了。</p>
-<p>另外一个小说里我觉得有意思的点是下面这段：</p>
-<blockquote>
-<p>我们能够充分直感的形象是黑板上的一个圆圈、一个直角三角形、一个菱形；富内斯却能直感马匹飞扬的鬃毛、山同上牲口的后腿直立、千变万化的火焰和无数的灰烬，以及长时间守灵时死者的种种面貌。我不知道他看到天上有多少星星。</p>
-</blockquote>
-<p>这该是一种什么奇特的感觉，我拿起笔能在纸上精确画出三角形，锐角的，钝角的，直角的，细节分明准确。但让我同样精确描摹火焰，马的鬃毛根本不可能，这些东西都太复杂了，变化多到数不胜数，富内斯却能像普通人描绘三角形一样描绘出来，普通人只能采用简笔画的形式描出大概。这里我感受到了人的有限性，仔细想想，人的认知都是由简化的概念组成的，文学，数学，艺术的复杂性都是简单细节的有序组合。富内斯是直接简单粗暴得理解复杂性，他的大脑是一根大水管，一股脑得把所有得信息收归其中，普通人是小吸管，只能接受很小很小的一部分信息量，所以需要抽象概括。人，实在是太有限了。</p>
-<p>我觉得富内斯像一台计算机，他没有抽象能力，计算机看到一个图像，需要借助灰度值和像素值来编号记忆，说到底就是基于统计，和人看世界的感觉截然不同。富内斯没法理解狗的概念，他不理解可以用一个词指代那么多千变万化的个体。人类的认识与认知真偶然，可见光波长，文化倾向，脑容量大小这些好多好多制约决定了我们看到的世界的样子，跳出这些制约的世界我们无从得知，再想想自己身边这些枷锁，又怎么能说是理所当然，一旦制约条件有所变化，所谓正确的知识也会变化。</p>
-<p>要说想成为富内斯那样的人我是完全不敢的，我觉得他丢失了对世界基本的理解性。但是要达到可理解性又是以丢失细节为代价的，世界上的许多概念有些简单粗暴，大家不如说都在框架之内。</p>
-<hr>
-<p>Sherry</p>
-<p>2022&#x2F;3&#x2F;27</p>
-]]></content>
-      <categories>
-        <category>Sherry</category>
-      </categories>
-  </entry>
-  <entry>
     <title>分红合同</title>
     <url>/2021/03/27/Shares/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -3172,47 +3192,45 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>The Hadoop Distributed File System</title>
-    <url>/2021/07/26/The-Hadoop-Distributed-File-System/</url>
-    <content><![CDATA[<p>Hadoop的重要特点是数据在数千节点上分区存储和计算，并行执行应用程序的计算。</p>
-<p>HDFS和其他分布式文件系统(PVFS、Lustre、GFS)一样，分开存储文件系统元信息(NameNode)和应用程序数据(DataNodes)，服务器之间通过基于TCP的协议通信。</p>
-<p>DataNodes没有和PVFS一样使用数据保护机制(如RAID)来使文件持久存放，而是像GFS一样在多个DataNode冗余存放文件内容来实现可靠性。保证持久存放的同时也可以加速传输数据。</p>
+    <title>高声大嗓</title>
+    <url>/2021/03/15/The-farmer/</url>
+    <content><![CDATA[<p>有这么一个农民，外号叫”高声大嗓”，这个外号，是爸妈取的。</p>
+<p>他从来没有进过我们家门，每次要不用自行车驮着纤维袋子鼓鼓囊囊装满的洋芋，要不洋芋拉在三轮车上，到了家门口，大声吆喝”取洋芋咯！”他从不担心我们会听不到，因为他的声音能轻松响彻巷子里所有的街坊邻居，轻松盖过各自家里的电视节目声音。这是已经搬迁了的巷子邻居的共同记忆。</p>
+<p>20多年前，他胃溃疡萎缩性胃炎严重，看了很多大夫都没用，生命垂危，我爸治好了他。但他只是我爸看无数病人中的一位普通病人。</p>
 <span id="more"></span>
 
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211550034" alt="img"></p>
-<p>HDFS总体上采用了master&#x2F;slave架构，主要由以下几个组件构成：Client、NameNode、Secondary NameNode和DataNode。<br>NameNode管理文件系统的命名空间，维护文件系统树及整棵树内所有的文件和目录。这些信息以两个文件形式永久保存在本地磁盘上：命名空间镜像文件fsimage和编辑日志edits文件。NameNode也记录着每个文件中各个块所在的数据节点信息，但它并不永久保存块的位置信息，因为这些信息会在系统启动时由数据节点重建。<br>Secondary NameNode最重要的任务并不是为NameNode元数据进行热备份，而是定期合并fsimage和edits日志，并传输给NameNode。这里需要注意的是，为了减少NameNode的压力，NameNode并不会自己合并fsimage和edits，而是将文件存储到磁盘上，交由Secondary NameNode完成。<br>DataNode是文件系统的工作节点。它们根据需要存储并检索数据块(受客户端或NameNode调度)，并且定期向NameNode发送它们所存储的块的列表。<br>客户端(client)代表用户通过与NameNode和DataNode交互来访问整个文件系统。客户端提供一个类似于POSIX的文件系统接口，因此用户在编程时无需知道NameNode和DataNode也可以实现其功能。</p>
-<h3 id="NameNode"><a href="#NameNode" class="headerlink" title="NameNode"></a>NameNode</h3><p>HDFS命名空间是文件和目录的层级结构。文件和目录在NameNode上通过inodes表示，inodes记录了各种属性如：权限、修改和访问次数、命名空间、磁盘空间配额。</p>
-<h3 id="DataNodes"><a href="#DataNodes" class="headerlink" title="DataNodes"></a>DataNodes</h3><p>DataNode中的每个块副本通过两个原生文件来表示，一个包含数据本身，另一个是文件元数据(包括块数据校验和、块生成戳 generation stamp)。数据文件的大小等于实际块长度，不需要额外空间舍入到传统文件系统中的名义块大小，因此如果块是半满的，就在本地占一半的空间。</p>
-<h3 id="HDFS-Client"><a href="#HDFS-Client" class="headerlink" title="HDFS Client"></a>HDFS Client</h3><p>用户应用程序通过HDFS客户端访问文件系统，这是一个程序库，开放了HDFS文件系统接口。</p>
-<h3 id="Image-and-Journal"><a href="#Image-and-Journal" class="headerlink" title="Image and Journal"></a>Image and Journal</h3><p>命名空间的image就是文件系统的元数据，将应用数据以目录和文件的形式组织。一条被写入的image持久化记录叫做checkpoint。journal是提前写入的提交日志，是必须被持久化的文件系统修改情况。对于每个客户端启动的事务，所做的修改被记录在journal中，journal文件会在更改提交到HDFS客户端前刷新和同步。</p>
-<h3 id="CheckpointNode"><a href="#CheckpointNode" class="headerlink" title="CheckpointNode"></a>CheckpointNode</h3><p>HDFS的NameNode除了服务客户端之外，还可以扮演另外两个角色之一，即CheckpointNode或BackupNode，这在启动时指定。</p>
-<h3 id="BackupNode"><a href="#BackupNode" class="headerlink" title="BackupNode"></a>BackupNode</h3><p>和CHeckpointNode类似，BackupNode也有能力创建定期检查点，但除此之外还在内存中维护文件系统命名空间最新的image，这总是和NameNode的状态一起同步</p>
-<h3 id="Upgrades-File-System-Snapshots"><a href="#Upgrades-File-System-Snapshots" class="headerlink" title="Upgrades, File System Snapshots"></a>Upgrades, File System Snapshots</h3><p>在软件升级的时候，由于软件bug或人犯错导致系统崩溃的可能性会增加。在HDFS中创建快照的目的就是在升级期间，使对保存在系统中数据的潜在损伤最小化。</p>
-<h2 id="2-2-论文核心算法"><a href="#2-2-论文核心算法" class="headerlink" title="2.2 论文核心算法"></a>2.2 论文核心算法</h2><h4 id="The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎"><a href="#The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎" class="headerlink" title="The Hadoop Distributed File System (Yahoo!)笔记 - 知乎"></a><a href="https://www.baidu.com/link?url=zBpkij4sYNFP99V5k41zkLgAe9Wmz7B3pQWmKkRXXus2p_MxCO_UjL5iDo96zw_G&wd=&eqid=f23dd73f000b5b380000000360c7162a"><em>The</em> <em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em> (Yahoo!)笔记 - 知乎</a></h4><h4 id="HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…"><a href="#HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…" class="headerlink" title="HDFS(Hadoop Distributed File System)简介_Bob Liu的…_…"></a><a href="https://www.baidu.com/link?url=qdR7pYI7y85J3TqZwpB-UJFWfYABEGYypIuLmTtNmqsInxbtgnVKrQCfoUIHFDXKa3O0iKzkiOl7YNr37YeMaONRoCaRJXX5Ryz_MMH-P73&wd=&eqid=f23dd73f000b5b380000000360c7162a">HDFS(<em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em>)简介_Bob Liu的…_…</a></h4><p>这两个笔记我觉得写的挺好的，可以看看。</p>
-<p>当应用程序读一个文件：</p>
-<ol>
-<li>HDFS客户端要求NameNode提供托管文件块副本的DataNode列表，</li>
-<li>直接联系DataNode，并请求需要传送的块</li>
-</ol>
-<p>当客户端写文件：</p>
-<ol>
-<li>要求NameNode选择几个DataNode托管第一个文件块的副本</li>
-<li>客户端组织node-to-node流水线，并传送数据</li>
-<li>当第一个块填入后，客户端要求新的DataNodes来托管下一个块的副本</li>
-<li>组织新的流水线，传送数据，每次倾向选择不同的DataNodes</li>
-</ol>
-<p>客户端、NameNode、DataNodes的交互如下图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600459.jpeg" alt="img"></p>
-<p>客户端通过把路径传给NameNode来创建一个新文件，NameNode为文件的每个块返回DataNode列表来托管块的副本。客户端然后通过流水线把数据传给选定的DataNodes，这些DataNodes最终将创建块副本的确认信息告诉NameNode。</p>
-<p>一个HDFS文件是由块组成的。需要新块时，NameNode会分配一个具有unique block ID的块，并且决策出一个DataNodes列表来处理块副本。DataNodes组成一个管道，其顺序使客户端到最后一个DataNode的总网络距离最小。字节作为分组序列（sequence of packets）被推入流水线。应用程序在客户端写入第一个缓冲区，填充完一个缓冲区（通常64KB）后，数据被推送到流水线。在接收到先前数据包的确认信息之前，可以将下一个分组推送到流水线。未完成分组的数量受客户端未完成分组的窗口大小的限制。</p>
-<p>在数据被写入HDFS文件后，HDFS不保证数据对新reader可见，直到文件被关闭。如果用户应用需要这种可见性保证，可以显式调用 <em>hflush</em> 操作。这样当前的分组会立即推送到流水线，hflush操作会等待所有的DataNode确认已经成功传输了分组。所有之前写入的数据就会理所应当地对reader可见。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600752.jpeg" alt="img"></p>
-<p>如果没有错误发生，block construction会像上图一样发生。图2展示了一个有三个DataNodes的管道和5个分组的块。粗线表示数据分组，虚线表示确认信息，细线表示设置和关闭流水线的控制信息。垂直线表示客户端和三个DataNode的活动，时间从上到下依次进行。t0到t1是流水线设置阶段。t1到t2是数据流阶段，t1是首次传输分组的时间，t2是收到最后一个分组确认信息的时间。这里hflush操作将传输第二个分组。hflush指示数据分组传输不是一个分离的操作。t2到t3是流水线关闭阶段。</p>
+<p>因为感激爸爸的救命之恩，20多年来，每年自己种的洋芋成熟的时候，都会留一袋子比较好的用最低廉的价格给我们家送来，从来都没间断过，按我爸妈的话来说，他送的洋芋和市场上卖的区别很大，一点都不麻，又大又好吃。</p>
+<p>近些年年，”高声大嗓”说自己年龄大了，60多了，自行车骑不动了，三轮没上牌，城里管的很严去不了。但洋芋每年都给我们留着，要不就找人带，要不就我们自己去取。</p>
+<p>之前对此人的了解，只是停留在爸妈口中的人真的很好，现在这样的病人再也没有了，以及每年不用买的洋芋，因为自己在家几乎不做饭，而且从没见过，所以其实印象很浅。</p>
+<p>今年因为我回学校晚，为了练练车技，我们全家今天下午开车去他家，甘肃省定西市临洮县龙门镇大宅子村林家嘴，取洋芋。</p>
+<h2 id="路上"><a href="#路上" class="headerlink" title="路上"></a>路上</h2><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213535525.png" alt="image-20210315213535525" style="zoom: 50%;" />
+
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213608787.png" alt="image-20210315213608787"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203150950687.png" alt="image-20210315213626300"></p>
+<p>这路，是真的难走，走完盘旋山路，就是更难走的水泥硬化路，全程只能勉强两辆车通过，一侧山体一侧悬崖。再后来，从山上到山脚，索性连路都没有了，导航完全没用，只有拖拉机压出来的黄土，和土墙山坳，全程只允许我的一辆小型车勉强通过，坑洼不平，还有松软的泥泞。我尽可能防止挂到车辆底盘，仍在走错路田间掉头时，陷入了松土中，轮胎空转，爸妈下车推车，再上车时我们三个被轮胎的焦糊味熏得眼睛难受。到了以后，刹车片发烫。</p>
+<p>期间因为实在找不到路在哪儿，边走边问路，问了好多村民，最后因为遇上了放学的小学生，恰好也是去林家嘴的，载着她，这才找到庄子。</p>
+<p>趟着厚厚的黄土，迎着大风，摸摸索索终于找到了人家。</p>
+<p>面朝黄土背朝天，太贴切了。我妈说，如果她有女儿，绝不肯嫁到这种地方来，太苦了。</p>
+<h2 id="到了"><a href="#到了" class="headerlink" title="到了"></a>到了</h2><p>我昨晚喝了酒，早上没胃口，中午吃的有点少，开山路集中精力搞得我疲倦，我确实是又累又饿，有点低血糖头晕。</p>
+<p>到了以后，风很大土很大，我们三个蓬头垢面，嘴里都沙碌碌的。家里没人，果然去下地干活了，我和我妈都在埋怨为什么我爸不提前打电话。打了电话告知我们已经到了家门口，大爷大娘了然，大娘从山脚一路跑步到了我们面前，气喘吁吁，随后大爷的三轮也回来了。</p>
+<p>他们精瘦的体格，黝黑的，深深刻印了皱纹的干枯的皮肤，诉说着地地道道庄稼汉的苦。</p>
+<p>进去以后，房屋十分简单，养鸡种地，客厅堆了药材，所以只能去厨房一座。一进门，便是久违的，熟悉的，昏暗潮湿的霉味和炕味。</p>
+<p>大娘大爷显然没有料到我们会来，手足无措，按照他们的习惯应该劳作一天，天黑再回家做饭。此时竟不知道该拿什么来招待我们。想擀面做饭，想煮自己家的鸡肉，被爸妈拼命拦下，一来不想麻烦他们，二来太晚天黑了路太难走，太危险，回不去。</p>
+<p>所以只泡了茶，因为外出没有生火，当然也没有热水，就用电磁炉烧了敞口的壶。没有小块的冰糖，大块的用手掰不动，大娘只能用菜刀刀背在案板上敲开，结果碎的到处都是，取完整的小块冰糖和放在柜子里的铁罐里的碎茶叶泡了茶。</p>
+<p>一进门大娘就开始找所有能让我们带走的东西，找来找去，只找到了之前杀的鸡，和没吃的肉，全装袋子了。</p>
+<p>拿出自己种的粮食做的馍，就着这满是土腥味儿的茶，比普洱没洗的味道还要浓好多倍，我吃的十分香甜，真真切切能尝到粮食的香味。估计是看我吃的太投入，饿了。大娘用自己家的鸡蛋做点喝的，根本拦不住，切点小葱，飘在表面，我和我爸一人盛了三个荷包蛋。我觉得小葱很好吃，于是无所事事的我妈在案板下面帮我找了一根。</p>
+<p>大娘看到后，说喜欢葱的话还有更新鲜的！二话不说跑去近处的田里，摘了一把，回来洗净一根推搡给我，我已经吃完了，我这样吃不习惯葱的人只吃葱怎么可能吃得下啊。剩下没洗的说什么都要让装走，说吃不完种在盆里也行。看我吃饼吃的很香，又摸出今天带去田里干活还没来及吃的饼，也带走。盛情难却啊。</p>
+<p>我终于理解了为什么我爸不肯提前打电话告知了。</p>
+<p>天色渐晚，稍微果腹后，我们打算带着洋芋回去。大娘风风火火，不到半个小时庄子的人们都知道秦大夫来了，纷纷围了过来，在村头的路口，一个个都希望看看自己家里的病，其实都是些小病，很快开完药方后，被全庄一起簇拥着，热热闹闹各自说着家长里短，来到了停车的麦场。离开的时候，大爷大娘对我说爷爷死了没叫他们太遗憾了，我结婚的时候一定要叫啊。</p>
+<h2 id="离开了"><a href="#离开了" class="headerlink" title="离开了"></a>离开了</h2><p>吃饭的时候，吃完站在院子里逗猫的时候，我看着我爸在村头路上给大家看病的时候，我的眼睛湿润了很多次，尤其是经历过之前一段时间，我对人与人的信任感降到过最低，没想到我这辈子能亲眼见到，亲自感受到如此淳朴善良亲切的人们，没想到这样的人真的存在。我感觉到了从未有过的脚踏实地甚至深深扎根在黄土中的真实，心贴心的开心和感动，即便都是初次相见。我对我的追求产生了深深的动摇，金钱和地位应该可以给我虚荣的快感，更好的生活，更容易交到的朋友，但能给我这种感觉吗，不能。我非常心动，我想，如果纯粹为了这种感觉，而不是为了造福大众这种虚伪的理由，我真的愿意回来做个乡土干部。</p>
+<p>但是想了想，太不现实了，我已经出去了，想回来太难了。我能快乐感动一段时间，但是时间长了，我终究做不到没有物欲，此外太不方便和城市化导致住户一直在减少，只有剩下的老人在种田，这样的可爱的偏远的庄子最终还是会消失的，而且或许用不了多少年了。</p>
+<p>中国还有无数个这种小村庄，只有在自己最擅长的领域发光发热，为祖国的强大供能，才能最大限度帮助脱贫吧。</p>
+<p>多想以后和”人”相处累了，我还能在某个不知道是哪儿的地方找到这种感觉。</p>
 <hr>
-<p>2021&#x2F;7</p>
+<p>2021&#x2F;3&#x2F;15</p>
 ]]></content>
       <categories>
-        <category>Cloud Computing</category>
+        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -3471,48 +3489,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>高声大嗓</title>
-    <url>/2021/03/15/The-farmer/</url>
-    <content><![CDATA[<p>有这么一个农民，外号叫”高声大嗓”，这个外号，是爸妈取的。</p>
-<p>他从来没有进过我们家门，每次要不用自行车驮着纤维袋子鼓鼓囊囊装满的洋芋，要不洋芋拉在三轮车上，到了家门口，大声吆喝”取洋芋咯！”他从不担心我们会听不到，因为他的声音能轻松响彻巷子里所有的街坊邻居，轻松盖过各自家里的电视节目声音。这是已经搬迁了的巷子邻居的共同记忆。</p>
-<p>20多年前，他胃溃疡萎缩性胃炎严重，看了很多大夫都没用，生命垂危，我爸治好了他。但他只是我爸看无数病人中的一位普通病人。</p>
-<span id="more"></span>
-
-<p>因为感激爸爸的救命之恩，20多年来，每年自己种的洋芋成熟的时候，都会留一袋子比较好的用最低廉的价格给我们家送来，从来都没间断过，按我爸妈的话来说，他送的洋芋和市场上卖的区别很大，一点都不麻，又大又好吃。</p>
-<p>近些年年，”高声大嗓”说自己年龄大了，60多了，自行车骑不动了，三轮没上牌，城里管的很严去不了。但洋芋每年都给我们留着，要不就找人带，要不就我们自己去取。</p>
-<p>之前对此人的了解，只是停留在爸妈口中的人真的很好，现在这样的病人再也没有了，以及每年不用买的洋芋，因为自己在家几乎不做饭，而且从没见过，所以其实印象很浅。</p>
-<p>今年因为我回学校晚，为了练练车技，我们全家今天下午开车去他家，甘肃省定西市临洮县龙门镇大宅子村林家嘴，取洋芋。</p>
-<h2 id="路上"><a href="#路上" class="headerlink" title="路上"></a>路上</h2><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213535525.png" alt="image-20210315213535525" style="zoom: 50%;" />
-
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213608787.png" alt="image-20210315213608787"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203150950687.png" alt="image-20210315213626300"></p>
-<p>这路，是真的难走，走完盘旋山路，就是更难走的水泥硬化路，全程只能勉强两辆车通过，一侧山体一侧悬崖。再后来，从山上到山脚，索性连路都没有了，导航完全没用，只有拖拉机压出来的黄土，和土墙山坳，全程只允许我的一辆小型车勉强通过，坑洼不平，还有松软的泥泞。我尽可能防止挂到车辆底盘，仍在走错路田间掉头时，陷入了松土中，轮胎空转，爸妈下车推车，再上车时我们三个被轮胎的焦糊味熏得眼睛难受。到了以后，刹车片发烫。</p>
-<p>期间因为实在找不到路在哪儿，边走边问路，问了好多村民，最后因为遇上了放学的小学生，恰好也是去林家嘴的，载着她，这才找到庄子。</p>
-<p>趟着厚厚的黄土，迎着大风，摸摸索索终于找到了人家。</p>
-<p>面朝黄土背朝天，太贴切了。我妈说，如果她有女儿，绝不肯嫁到这种地方来，太苦了。</p>
-<h2 id="到了"><a href="#到了" class="headerlink" title="到了"></a>到了</h2><p>我昨晚喝了酒，早上没胃口，中午吃的有点少，开山路集中精力搞得我疲倦，我确实是又累又饿，有点低血糖头晕。</p>
-<p>到了以后，风很大土很大，我们三个蓬头垢面，嘴里都沙碌碌的。家里没人，果然去下地干活了，我和我妈都在埋怨为什么我爸不提前打电话。打了电话告知我们已经到了家门口，大爷大娘了然，大娘从山脚一路跑步到了我们面前，气喘吁吁，随后大爷的三轮也回来了。</p>
-<p>他们精瘦的体格，黝黑的，深深刻印了皱纹的干枯的皮肤，诉说着地地道道庄稼汉的苦。</p>
-<p>进去以后，房屋十分简单，养鸡种地，客厅堆了药材，所以只能去厨房一座。一进门，便是久违的，熟悉的，昏暗潮湿的霉味和炕味。</p>
-<p>大娘大爷显然没有料到我们会来，手足无措，按照他们的习惯应该劳作一天，天黑再回家做饭。此时竟不知道该拿什么来招待我们。想擀面做饭，想煮自己家的鸡肉，被爸妈拼命拦下，一来不想麻烦他们，二来太晚天黑了路太难走，太危险，回不去。</p>
-<p>所以只泡了茶，因为外出没有生火，当然也没有热水，就用电磁炉烧了敞口的壶。没有小块的冰糖，大块的用手掰不动，大娘只能用菜刀刀背在案板上敲开，结果碎的到处都是，取完整的小块冰糖和放在柜子里的铁罐里的碎茶叶泡了茶。</p>
-<p>一进门大娘就开始找所有能让我们带走的东西，找来找去，只找到了之前杀的鸡，和没吃的肉，全装袋子了。</p>
-<p>拿出自己种的粮食做的馍，就着这满是土腥味儿的茶，比普洱没洗的味道还要浓好多倍，我吃的十分香甜，真真切切能尝到粮食的香味。估计是看我吃的太投入，饿了。大娘用自己家的鸡蛋做点喝的，根本拦不住，切点小葱，飘在表面，我和我爸一人盛了三个荷包蛋。我觉得小葱很好吃，于是无所事事的我妈在案板下面帮我找了一根。</p>
-<p>大娘看到后，说喜欢葱的话还有更新鲜的！二话不说跑去近处的田里，摘了一把，回来洗净一根推搡给我，我已经吃完了，我这样吃不习惯葱的人只吃葱怎么可能吃得下啊。剩下没洗的说什么都要让装走，说吃不完种在盆里也行。看我吃饼吃的很香，又摸出今天带去田里干活还没来及吃的饼，也带走。盛情难却啊。</p>
-<p>我终于理解了为什么我爸不肯提前打电话告知了。</p>
-<p>天色渐晚，稍微果腹后，我们打算带着洋芋回去。大娘风风火火，不到半个小时庄子的人们都知道秦大夫来了，纷纷围了过来，在村头的路口，一个个都希望看看自己家里的病，其实都是些小病，很快开完药方后，被全庄一起簇拥着，热热闹闹各自说着家长里短，来到了停车的麦场。离开的时候，大爷大娘对我说爷爷死了没叫他们太遗憾了，我结婚的时候一定要叫啊。</p>
-<h2 id="离开了"><a href="#离开了" class="headerlink" title="离开了"></a>离开了</h2><p>吃饭的时候，吃完站在院子里逗猫的时候，我看着我爸在村头路上给大家看病的时候，我的眼睛湿润了很多次，尤其是经历过之前一段时间，我对人与人的信任感降到过最低，没想到我这辈子能亲眼见到，亲自感受到如此淳朴善良亲切的人们，没想到这样的人真的存在。我感觉到了从未有过的脚踏实地甚至深深扎根在黄土中的真实，心贴心的开心和感动，即便都是初次相见。我对我的追求产生了深深的动摇，金钱和地位应该可以给我虚荣的快感，更好的生活，更容易交到的朋友，但能给我这种感觉吗，不能。我非常心动，我想，如果纯粹为了这种感觉，而不是为了造福大众这种虚伪的理由，我真的愿意回来做个乡土干部。</p>
-<p>但是想了想，太不现实了，我已经出去了，想回来太难了。我能快乐感动一段时间，但是时间长了，我终究做不到没有物欲，此外太不方便和城市化导致住户一直在减少，只有剩下的老人在种田，这样的可爱的偏远的庄子最终还是会消失的，而且或许用不了多少年了。</p>
-<p>中国还有无数个这种小村庄，只有在自己最擅长的领域发光发热，为祖国的强大供能，才能最大限度帮助脱贫吧。</p>
-<p>多想以后和”人”相处累了，我还能在某个不知道是哪儿的地方找到这种感觉。</p>
-<hr>
-<p>2021&#x2F;3&#x2F;15</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Typora PicGo GitHub云图床(四)</title>
     <url>/2022/03/21/Typora+PicGo+GitHub/</url>
     <content><![CDATA[<p>前文已经讲述了<a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a>，<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>，<a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a>。但是本地图床仍有遗失风险和难以跨设备查看的不足，为了避免图片遗失，增强分享和多端查看的便利性，本文将进一步增强网络图床的配置，实现更进一步的自动化，只需要简单的拖拽或者复制粘贴，一切都很优雅。</p>
@@ -3591,48 +3567,25 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>Typora的设置(三)</title>
-    <url>/2022/03/21/Typora-Setting/</url>
-    <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
-<span id="more"></span>
-
-<h2 id="1-下载Typora"><a href="#1-下载Typora" class="headerlink" title="1.下载Typora"></a>1.下载Typora</h2><p>百度搜索typora，源码在github，所以可能会慢，也可以挂梯子，either way is fine</p>
-<p><a href="https://www.typora.net/">Typora|Typora中文|typora下载|typora 主题</a>中文官网下载</p>
-<p><a href="http://yiting.pro/">Typora — a markdown editor, markdown reader. (yiting.pro)</a>原网页</p>
-<h2 id="2-Typora设置"><a href="#2-Typora设置" class="headerlink" title="2.Typora设置"></a>2.Typora设置</h2><p>安装完成后，这些是我的设置，我觉得非常顺手，按你的喜好来就行，直接进入<strong>偏好设置</strong>：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211135751.png" alt="982ba7245349cabf1c3b76bb9d37b29"></p>
-<p><strong>本地图床设置，很重要，否则有可能会因为移动文件夹或者电脑清理而遗失图片！</strong></p>
-<p>首先，养成良好的习惯，选择指定路径，把你的markdown集中保管。按照如图设置，在markdown管理的根目录下创建picture文件夹，然后当你拖拽或者复制粘贴图片进来的时候，typora会自动复制图片到这个文件夹去，然后把相对路径粘贴到你指定的文章位置，很方便。</p>
-<p>markdown作为文本标记语言，最头疼的就是管理图片，把它交给typora吧，你就不需要因管理图片而费心思了。</p>
-<p>到这儿你实现了图片管理自动化，但不能把包含图片的markdown或者其它导出格式分享给朋友，或者在别的地方查看，更方便的办法就是<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，不点击不影响本地配置。</p>
-<p>其它不太重要的设置：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211130280.png" alt="image-20220321113005083"></p>
-<p>设置 重新打开，自动保存，自动更新；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211131099.png" alt="b87520f2ce9005fd3881a5fc73d8c3d"></p>
-<p>我喜欢干净简洁，用一体化，侧边栏折叠，不然乱糟糟的；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211133783.png" alt="6dd2e2595d9eb940e03ea730a7a1c42"></p>
-<p>编辑器打开匹配Markdown就可以像写代码时候一样手不用离开键盘去碰鼠标了，这太恼人了，配合快捷键使用 链接；</p>
-<p>后面基本不需要什么设置了，保险起见还是贴出来。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142752.png" alt="59a29211aff71c75382498a8d20f4ac"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142846.png" alt="26559d405080171560fac7248d6e519"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142807.png" alt="e48bce4fcc0430357ed1b464b2599fd"></p>
-<h2 id="3-浏览器插件支持"><a href="#3-浏览器插件支持" class="headerlink" title="3.浏览器插件支持"></a>3.浏览器插件支持</h2><p>如果你用的是chrome或者chrome内核的edge，比如我，<a href="https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/immegcobaplfimdjgkabakodipaehfca">Copy as Markdown - Microsoft Edge Addons</a>插件是必装的，你的所有复制行为，自带markdown格式。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211147083.png" alt="image-20220321114716013"></p>
-<p>之后我专门出一期如何优雅的全设备使用edge。</p>
-<h3 id="恭喜你，到此你的Markdown已经本地化非常好用啦！"><a href="#恭喜你，到此你的Markdown已经本地化非常好用啦！" class="headerlink" title="恭喜你，到此你的Markdown已经本地化非常好用啦！"></a>恭喜你，到此你的Markdown已经本地化非常好用啦！</h3><h2 id="4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四"><a href="#4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四" class="headerlink" title="4.Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) "></a>4.<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></h2><hr>
-<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
-<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
-</ol>
-<hr>
-<p>2022&#x2F;3&#x2F;21</p>
-]]></content>
+    <title>Hello World</title>
+    <url>/2022/03/09/hello-world/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-surge">
+      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>Markdown&amp;Blog</category>
+        <category>博客测试</category>
       </categories>
   </entry>
   <entry>
@@ -3736,25 +3689,92 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/03/09/hello-world/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-surge">
-      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>Typora的设置(三)</title>
+    <url>/2022/03/21/Typora-Setting/</url>
+    <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
+<span id="more"></span>
+
+<h2 id="1-下载Typora"><a href="#1-下载Typora" class="headerlink" title="1.下载Typora"></a>1.下载Typora</h2><p>百度搜索typora，源码在github，所以可能会慢，也可以挂梯子，either way is fine</p>
+<p><a href="https://www.typora.net/">Typora|Typora中文|typora下载|typora 主题</a>中文官网下载</p>
+<p><a href="http://yiting.pro/">Typora — a markdown editor, markdown reader. (yiting.pro)</a>原网页</p>
+<h2 id="2-Typora设置"><a href="#2-Typora设置" class="headerlink" title="2.Typora设置"></a>2.Typora设置</h2><p>安装完成后，这些是我的设置，我觉得非常顺手，按你的喜好来就行，直接进入<strong>偏好设置</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211135751.png" alt="982ba7245349cabf1c3b76bb9d37b29"></p>
+<p><strong>本地图床设置，很重要，否则有可能会因为移动文件夹或者电脑清理而遗失图片！</strong></p>
+<p>首先，养成良好的习惯，选择指定路径，把你的markdown集中保管。按照如图设置，在markdown管理的根目录下创建picture文件夹，然后当你拖拽或者复制粘贴图片进来的时候，typora会自动复制图片到这个文件夹去，然后把相对路径粘贴到你指定的文章位置，很方便。</p>
+<p>markdown作为文本标记语言，最头疼的就是管理图片，把它交给typora吧，你就不需要因管理图片而费心思了。</p>
+<p>到这儿你实现了图片管理自动化，但不能把包含图片的markdown或者其它导出格式分享给朋友，或者在别的地方查看，更方便的办法就是<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，不点击不影响本地配置。</p>
+<p>其它不太重要的设置：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211130280.png" alt="image-20220321113005083"></p>
+<p>设置 重新打开，自动保存，自动更新；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211131099.png" alt="b87520f2ce9005fd3881a5fc73d8c3d"></p>
+<p>我喜欢干净简洁，用一体化，侧边栏折叠，不然乱糟糟的；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211133783.png" alt="6dd2e2595d9eb940e03ea730a7a1c42"></p>
+<p>编辑器打开匹配Markdown就可以像写代码时候一样手不用离开键盘去碰鼠标了，这太恼人了，配合快捷键使用 链接；</p>
+<p>后面基本不需要什么设置了，保险起见还是贴出来。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142752.png" alt="59a29211aff71c75382498a8d20f4ac"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142846.png" alt="26559d405080171560fac7248d6e519"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142807.png" alt="e48bce4fcc0430357ed1b464b2599fd"></p>
+<h2 id="3-浏览器插件支持"><a href="#3-浏览器插件支持" class="headerlink" title="3.浏览器插件支持"></a>3.浏览器插件支持</h2><p>如果你用的是chrome或者chrome内核的edge，比如我，<a href="https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/immegcobaplfimdjgkabakodipaehfca">Copy as Markdown - Microsoft Edge Addons</a>插件是必装的，你的所有复制行为，自带markdown格式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211147083.png" alt="image-20220321114716013"></p>
+<p>之后我专门出一期如何优雅的全设备使用edge。</p>
+<h3 id="恭喜你，到此你的Markdown已经本地化非常好用啦！"><a href="#恭喜你，到此你的Markdown已经本地化非常好用啦！" class="headerlink" title="恭喜你，到此你的Markdown已经本地化非常好用啦！"></a>恭喜你，到此你的Markdown已经本地化非常好用啦！</h3><h2 id="4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四"><a href="#4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四" class="headerlink" title="4.Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) "></a>4.<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></h2><hr>
+<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
+<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
+</ol>
+<hr>
+<p>2022&#x2F;3&#x2F;21</p>
+]]></content>
       <categories>
-        <category>博客测试</category>
+        <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>The Hadoop Distributed File System</title>
+    <url>/2021/07/26/The-Hadoop-Distributed-File-System/</url>
+    <content><![CDATA[<p>Hadoop的重要特点是数据在数千节点上分区存储和计算，并行执行应用程序的计算。</p>
+<p>HDFS和其他分布式文件系统(PVFS、Lustre、GFS)一样，分开存储文件系统元信息(NameNode)和应用程序数据(DataNodes)，服务器之间通过基于TCP的协议通信。</p>
+<p>DataNodes没有和PVFS一样使用数据保护机制(如RAID)来使文件持久存放，而是像GFS一样在多个DataNode冗余存放文件内容来实现可靠性。保证持久存放的同时也可以加速传输数据。</p>
+<span id="more"></span>
+
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211550034" alt="img"></p>
+<p>HDFS总体上采用了master&#x2F;slave架构，主要由以下几个组件构成：Client、NameNode、Secondary NameNode和DataNode。<br>NameNode管理文件系统的命名空间，维护文件系统树及整棵树内所有的文件和目录。这些信息以两个文件形式永久保存在本地磁盘上：命名空间镜像文件fsimage和编辑日志edits文件。NameNode也记录着每个文件中各个块所在的数据节点信息，但它并不永久保存块的位置信息，因为这些信息会在系统启动时由数据节点重建。<br>Secondary NameNode最重要的任务并不是为NameNode元数据进行热备份，而是定期合并fsimage和edits日志，并传输给NameNode。这里需要注意的是，为了减少NameNode的压力，NameNode并不会自己合并fsimage和edits，而是将文件存储到磁盘上，交由Secondary NameNode完成。<br>DataNode是文件系统的工作节点。它们根据需要存储并检索数据块(受客户端或NameNode调度)，并且定期向NameNode发送它们所存储的块的列表。<br>客户端(client)代表用户通过与NameNode和DataNode交互来访问整个文件系统。客户端提供一个类似于POSIX的文件系统接口，因此用户在编程时无需知道NameNode和DataNode也可以实现其功能。</p>
+<h3 id="NameNode"><a href="#NameNode" class="headerlink" title="NameNode"></a>NameNode</h3><p>HDFS命名空间是文件和目录的层级结构。文件和目录在NameNode上通过inodes表示，inodes记录了各种属性如：权限、修改和访问次数、命名空间、磁盘空间配额。</p>
+<h3 id="DataNodes"><a href="#DataNodes" class="headerlink" title="DataNodes"></a>DataNodes</h3><p>DataNode中的每个块副本通过两个原生文件来表示，一个包含数据本身，另一个是文件元数据(包括块数据校验和、块生成戳 generation stamp)。数据文件的大小等于实际块长度，不需要额外空间舍入到传统文件系统中的名义块大小，因此如果块是半满的，就在本地占一半的空间。</p>
+<h3 id="HDFS-Client"><a href="#HDFS-Client" class="headerlink" title="HDFS Client"></a>HDFS Client</h3><p>用户应用程序通过HDFS客户端访问文件系统，这是一个程序库，开放了HDFS文件系统接口。</p>
+<h3 id="Image-and-Journal"><a href="#Image-and-Journal" class="headerlink" title="Image and Journal"></a>Image and Journal</h3><p>命名空间的image就是文件系统的元数据，将应用数据以目录和文件的形式组织。一条被写入的image持久化记录叫做checkpoint。journal是提前写入的提交日志，是必须被持久化的文件系统修改情况。对于每个客户端启动的事务，所做的修改被记录在journal中，journal文件会在更改提交到HDFS客户端前刷新和同步。</p>
+<h3 id="CheckpointNode"><a href="#CheckpointNode" class="headerlink" title="CheckpointNode"></a>CheckpointNode</h3><p>HDFS的NameNode除了服务客户端之外，还可以扮演另外两个角色之一，即CheckpointNode或BackupNode，这在启动时指定。</p>
+<h3 id="BackupNode"><a href="#BackupNode" class="headerlink" title="BackupNode"></a>BackupNode</h3><p>和CHeckpointNode类似，BackupNode也有能力创建定期检查点，但除此之外还在内存中维护文件系统命名空间最新的image，这总是和NameNode的状态一起同步</p>
+<h3 id="Upgrades-File-System-Snapshots"><a href="#Upgrades-File-System-Snapshots" class="headerlink" title="Upgrades, File System Snapshots"></a>Upgrades, File System Snapshots</h3><p>在软件升级的时候，由于软件bug或人犯错导致系统崩溃的可能性会增加。在HDFS中创建快照的目的就是在升级期间，使对保存在系统中数据的潜在损伤最小化。</p>
+<h2 id="2-2-论文核心算法"><a href="#2-2-论文核心算法" class="headerlink" title="2.2 论文核心算法"></a>2.2 论文核心算法</h2><h4 id="The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎"><a href="#The-Hadoop-Distributed-File-System-Yahoo-笔记-知乎" class="headerlink" title="The Hadoop Distributed File System (Yahoo!)笔记 - 知乎"></a><a href="https://www.baidu.com/link?url=zBpkij4sYNFP99V5k41zkLgAe9Wmz7B3pQWmKkRXXus2p_MxCO_UjL5iDo96zw_G&wd=&eqid=f23dd73f000b5b380000000360c7162a"><em>The</em> <em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em> (Yahoo!)笔记 - 知乎</a></h4><h4 id="HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…"><a href="#HDFS-Hadoop-Distributed-File-System-简介-Bob-Liu的…-…" class="headerlink" title="HDFS(Hadoop Distributed File System)简介_Bob Liu的…_…"></a><a href="https://www.baidu.com/link?url=qdR7pYI7y85J3TqZwpB-UJFWfYABEGYypIuLmTtNmqsInxbtgnVKrQCfoUIHFDXKa3O0iKzkiOl7YNr37YeMaONRoCaRJXX5Ryz_MMH-P73&wd=&eqid=f23dd73f000b5b380000000360c7162a">HDFS(<em>Hadoop</em> <em>Distributed</em> <em>File</em> <em>System</em>)简介_Bob Liu的…_…</a></h4><p>这两个笔记我觉得写的挺好的，可以看看。</p>
+<p>当应用程序读一个文件：</p>
+<ol>
+<li>HDFS客户端要求NameNode提供托管文件块副本的DataNode列表，</li>
+<li>直接联系DataNode，并请求需要传送的块</li>
+</ol>
+<p>当客户端写文件：</p>
+<ol>
+<li>要求NameNode选择几个DataNode托管第一个文件块的副本</li>
+<li>客户端组织node-to-node流水线，并传送数据</li>
+<li>当第一个块填入后，客户端要求新的DataNodes来托管下一个块的副本</li>
+<li>组织新的流水线，传送数据，每次倾向选择不同的DataNodes</li>
+</ol>
+<p>客户端、NameNode、DataNodes的交互如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600459.jpeg" alt="img"></p>
+<p>客户端通过把路径传给NameNode来创建一个新文件，NameNode为文件的每个块返回DataNode列表来托管块的副本。客户端然后通过流水线把数据传给选定的DataNodes，这些DataNodes最终将创建块副本的确认信息告诉NameNode。</p>
+<p>一个HDFS文件是由块组成的。需要新块时，NameNode会分配一个具有unique block ID的块，并且决策出一个DataNodes列表来处理块副本。DataNodes组成一个管道，其顺序使客户端到最后一个DataNode的总网络距离最小。字节作为分组序列（sequence of packets）被推入流水线。应用程序在客户端写入第一个缓冲区，填充完一个缓冲区（通常64KB）后，数据被推送到流水线。在接收到先前数据包的确认信息之前，可以将下一个分组推送到流水线。未完成分组的数量受客户端未完成分组的窗口大小的限制。</p>
+<p>在数据被写入HDFS文件后，HDFS不保证数据对新reader可见，直到文件被关闭。如果用户应用需要这种可见性保证，可以显式调用 <em>hflush</em> 操作。这样当前的分组会立即推送到流水线，hflush操作会等待所有的DataNode确认已经成功传输了分组。所有之前写入的数据就会理所应当地对reader可见。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211600752.jpeg" alt="img"></p>
+<p>如果没有错误发生，block construction会像上图一样发生。图2展示了一个有三个DataNodes的管道和5个分组的块。粗线表示数据分组，虚线表示确认信息，细线表示设置和关闭流水线的控制信息。垂直线表示客户端和三个DataNode的活动，时间从上到下依次进行。t0到t1是流水线设置阶段。t1到t2是数据流阶段，t1是首次传输分组的时间，t2是收到最后一个分组确认信息的时间。这里hflush操作将传输第二个分组。hflush指示数据分组传输不是一个分离的操作。t2到t3是流水线关闭阶段。</p>
+<hr>
+<p>2021&#x2F;7</p>
+]]></content>
+      <categories>
+        <category>Cloud Computing</category>
       </categories>
   </entry>
   <entry>
