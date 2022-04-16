@@ -407,14 +407,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/</loc>
+    <loc>http://example.com/categories/Markdown-Blog/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Markdown-Blog/</loc>
+    <loc>http://example.com/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -428,14 +428,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/DRL/</loc>
+    <loc>http://example.com/categories/java/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/java/</loc>
+    <loc>http://example.com/categories/DRL/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -456,14 +456,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://example.com/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7-%E5%BF%AB%E6%8D%B7%E9%94%AE-%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7-%E5%BF%AB%E6%8D%B7%E9%94%AE-%E5%91%BD%E4%BB%A4/</loc>
+    <loc>http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
