@@ -1000,6 +1000,156 @@
       </categories>
   </entry>
   <entry>
+    <title>hadoop+pyspark学习和部署</title>
+    <url>/2021/09/18/Hadoop+pyspark/</url>
+    <content><![CDATA[<p><a href="https://codingdict.com/article/8880">PySpark简介</a></p>
+<p>map reduce工具 将现有算法<strong>并行化</strong>  （执行平台）<strong>hadoop</strong>（java）上执行，其它如spark兼容python</p>
+<p>基础架构如hadoop-&gt;分析基础架构hive，hbase-&gt;高级工具</p>
+<p>mapreduce做并行化的几个应用方向：文本，图，关系型数据，机器学习（）</p>
+<p>并行化挑战：进程计算结果交换；程序共享资源</p>
+<span id="more"></span>
+
+<h3 id="函数式编程初探-阮一峰的网络日志"><a href="#函数式编程初探-阮一峰的网络日志" class="headerlink" title="函数式编程初探 - 阮一峰的网络日志"></a><a href="https://www.baidu.com/link?url=B9Nckg0KW9QLQnfwtG0ugkemDjOfjEwNqxYuDnMmPO20rwFL2_uOnV_0_XAH9c23JHMXtpJ-GfKxTDJ0g08lOALp5-klyO8Riqs6K_N9oxy&wd=&eqid=b45c6d5d00040e07000000036098f887"><em>函数式编程</em>初探 - 阮一峰的网络日志</a></h3><p><strong>PySpark完成实验：</strong> Spark+python；支持本地和分布式集群；程序运行平台，spark，hadoop都可以，迁移方便。具体看官方文档。</p>
+<hr>
+<p>逻辑视图：四个原语</p>
+<p>利用MapReduce框架对某个算法并行化</p>
+<p> map map <strong>map</strong> ，$f$函数</p>
+<p>fold (或<strong>reduce</strong>)汇总，有初始值，自动完成</p>
+<p>链式组合t数组.map.map.reduce</p>
+<p><code>map(k1,v1)-&gt;list(k2,v2) </code> kv对，k主码，v其它，key，value</p>
+<p><code>reduce(k2,list(v2)-&gt;list(k3,v3)</code></p>
+<p>数据切片，k作为主码，v是信息，<code>map</code>分派$f$，数据清洗，简单来说就是用关键字划分组，以此为依据，交给<code>reduce</code>，往往是数组，汇总。</p>
+<p><strong>MapReduce“Runtime”（运行时）</strong>,framework,底层软件，类似spark或者Hadoop，他来处理：处理任务调度，负载均衡，同步异步，灾害重建</p>
+<p>为了减少map与ruduce中间分布式排序时间，MRCP</p>
+<p>增加<code>partition(k,p)</code>,上层map的k下层p为reduce用哈希绕开分布式排序</p>
+<p>和<code>combine(k2,list(v2))</code> minireduce，本地统一组合一个虚拟机的不同分片</p>
+<p>t-&gt;map-&gt;combine-&gt;partition-按关键字分组排序-&gt;reduce</p>
+<p>map，reduce 输出<code>emit</code>交给分布式排序</p>
+<hr>
+<p> 物理视图：数据分片，分布式磁盘-&gt;给了VM,Map-&gt;本地保存到本地磁盘-&gt;分布式排序，有网络通讯，远程异地-&gt;VM做reduce-&gt;输出</p>
+<p>两次分配算法都由控制主机master控制：作业提交，分配map节点，reduce节点。</p>
+<p><strong>数据移动，作业调度 是几个矩阵？</strong></p>
+<ul>
+<li>分布式数据库到map虚拟机；</li>
+<li>map虚拟机到reduce虚拟机？</li>
+<li>master指派job给map，指派job给reduce虚拟机？计算效率？通信效率？这是不是task调度？</li>
+</ul>
+<p>多个机器，低性能。随机访问代价昂贵</p>
+<p>(hadoop)job提交：</p>
+<ul>
+<li>job分成map reduce等四个task</li>
+<li>每个task会有一个任务跟踪器</li>
+<li>多个job会形成有一个工作流</li>
+</ul>
+<p>数据现在很多是以kv对的形式存储计算的，不用中间格式转换，如mangodb</p>
+<p>Hadoop可以本地部署，本地调试好在部署到云，不然debug麻烦死。</p>
+<hr>
+<p>作业：安装pyspark实现个小例子。</p>
+<p>PySpark相关资料：</p>
+<p>1、Pyspark基础教程：rdd弹性数据集 datafree<br>      <a href="https://github.com/jadianes/spark-py-notebooks">https://github.com/jadianes/spark-py-notebooks</a><br>2、PySpark MLLib教程 ：<br>      <a href="https://github.com/susanli2016/PySpark-and-MLlib">https://github.com/susanli2016/PySpark-and-MLlib</a><br>3、项目实践：<br>      <a href="https://zhuanlan.zhihu.com/p/52753778">https://zhuanlan.zhihu.com/p/52753778</a>  （知乎）</p>
+<hr>
+<p>可视化工具据deck.gl，kepler.gl</p>
+<p>版本信息用<code>py36</code>环境搭建</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">py36   //菜菜</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==3.02</span><br><span class="line">hadoopp==3.2</span><br><span class="line">winutils==3.0.0</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.6.12</span><br><span class="line">pyspark==3.0.2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//李敏</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==2.4.7</span><br><span class="line">hadoopp==2.7.7</span><br><span class="line">winutils==2.7.1</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.7.6</span><br><span class="line">pyspark==2.4.0</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>spark下的分布式启动sark方法：spark目录下，sbin目录，集群启动，start-all.sh脚本运行</p>
+<p>终端地址<a href="http://192.168.152.131:8080/">http://192.168.152.131:8080/</a></p>
+<p>会显示集群URL</p>
+<p>提供的是spark主机的URL即可加入</p>
+<hr>
+<p>打开终端<code>Ctrl+alt+T</code></p>
+<p>复制粘贴<code>ctrl + shift + c，ctrl + shift + v</code></p>
+<p>显示目录<code>ls  </code></p>
+<p>自动补全 <code>tab</code> <code>tab</code></p>
+<p>显示当前路径 <code>pwd</code></p>
+<p>vim</p>
+<p><code>i</code>插入</p>
+<p> <code>:</code> <code>q</code>是退出，<code>w</code>保存</p>
+<p><code>wq!</code>强制保存退出vim</p>
+<p>anaconda可视化界面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/anaconda3/bin/activate root  </span><br></pre></td></tr></table></figure>
+
+<p>显示界面<code>anaconda-navigator</code></p>
+<p>显示jyputer notebook<code>jyputer book</code></p>
+<p>显示虚拟环境<code>conda info --envs</code></p>
+<p>conda创建虚拟环境<code>conda create -n your_name python=X.X（如2.7，3.6等）</code></p>
+<p>进入虚拟环境<code>source activate your_name</code></p>
+<p>退出虚拟环境 <code>source deactivate</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export SPARK_HOME=/home/qyt/Downloads/spark-3.0.2-bin-hadoop3.2</span><br><span class="line">export PATH=$PATH:$SPARK_HOME/bin</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/home/qyt/Downloads/hadoop-3.2.2</span><br><span class="line">export PATH=$&#123;HADOOP_HOME&#125;/bin:$PATH</span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p><code>vim /etc/profile</code>环境变量配置位置</p>
+<p><code>./</code>执行文件</p>
+<hr>
+<p>MRDP-&gt;spark 为什么？</p>
+<p>大数据表达能力不足；spark对MADP扩充到四十个，一类是map一类是reduce</p>
+<p>每次map reduce 都需要HDFS文件管理系统，需要大量的IO</p>
+<p>spark RDD弹性数据集，内存分布式，spark底层对RDD做高度的冗余</p>
+<p>Hadoop不支持中间HDFS换成RDD，spark可以。</p>
+<p>mapreduce基本指令集太少，太简单了；迭代过程中间的磁盘IO太大；</p>
+<p>spark弱化了map，reduce的成对性</p>
+<p>RDD数据类型</p>
+<p>transformationscc;action</p>
+<p>构建数据流图（谱系图）linage</p>
+<p>图论做优化</p>
+<hr>
+<p>如何对梯度下降进行并行化？</p>
+<p>梯度下降法并行化设计：</p>
+<p>机器学习：分类问题或者回归预测问题</p>
+<p>特征向量，标签找出$f:X\rightarrow Y$</p>
+<p>$\to \gets \theta$ 太熟了就不写了</p>
+<p>如何并行化？</p>
+<p>递归过程不能并行化，能并行化：$\Sigma$找梯度 由map完成。reduce做外层的一次加减。 </p>
+<p>logistiic 回归 $\to$分类，w向量求梯度，可以并行化</p>
+<hr>
+<p>如何并行快速处理大规模，复杂的图？</p>
+<p>图的并行算法设计总结：</p>
+<p>BFS在map reduce怎么表示？数据结构：K，V对：node n，结点对应临界列表和最短路径d。</p>
+<p>pagerank：d不一样。衡量一个网页的重要性，随机冲浪模型：概率（网址跳转+外链）；</p>
+<p>草原生态模型：湖有高度差和邻接河道，权重矩阵是概率转移矩阵$P$，迭代直到两个状态矩阵$\pi$相同，$\pi \cdot P&#x3D;\pi$, $\pi$就是PageRank，外链访问，网页重要程度.</p>
+<p>如果有蒸发下雨，$\alpha$蒸发, 绝对地址直接访问网页，$\pi&#x3D;\pi\cdot P \times\alpha+(1-\alpha)\cdot N$，N是湖泊（网页）个数</p>
+<p>出度 由map；入度求和由reduce；KV对排序</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>PageRank</th>
+<th>BFS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>map</td>
+<td>PR&#x2F;N</td>
+<td>d+1</td>
+</tr>
+<tr>
+<td>reduce</td>
+<td>sum</td>
+<td>min</td>
+</tr>
+</tbody></table>
+<hr>
+<p>作业：</p>
+<ol>
+<li>之前pyspark的实验搭建过程</li>
+<li>大作业 自拟题目</li>
+</ol>
+<p>题目1、请自拟题目，自选方向（电力方向尤佳），撰写一篇云计算在不同领域的最新应用的综述文章。（3000+）</p>
+<p>题目2、请自拟题目，自选一个已运用MapReduce实现过的算法（机器学习算法尤佳），撰写一篇分析运用MapReduce编程模型对传统算法进行并行化的文章。（2000-3000）</p>
+<p>题目3、请自拟题目，自选一个未运用MapReduce实现过的算法（电力方向的算法尤佳），运用MapReduce程模型对该算法进行并行化设计，采用Hadoop API实现该算法，并在Hadoop集群上运行测试，根据测试结果撰写一篇文章。（2000-3000）</p>
+<hr>
+<p>Towards Self-managing cloud storage with rl</p>
+<p><code>connectedpapers.com</code> 文献追踪</p>
+<hr>
+<p>2021&#x2F;9</p>
+]]></content>
+      <categories>
+        <category>Cloud Computing</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Html拓展(更)</title>
     <url>/2022/03/28/Html/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -1187,156 +1337,6 @@ li {undefined
 ]]></content>
       <categories>
         <category>Markdown&amp;Blog</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>hadoop+pyspark学习和部署</title>
-    <url>/2021/09/18/Hadoop+pyspark/</url>
-    <content><![CDATA[<p><a href="https://codingdict.com/article/8880">PySpark简介</a></p>
-<p>map reduce工具 将现有算法<strong>并行化</strong>  （执行平台）<strong>hadoop</strong>（java）上执行，其它如spark兼容python</p>
-<p>基础架构如hadoop-&gt;分析基础架构hive，hbase-&gt;高级工具</p>
-<p>mapreduce做并行化的几个应用方向：文本，图，关系型数据，机器学习（）</p>
-<p>并行化挑战：进程计算结果交换；程序共享资源</p>
-<span id="more"></span>
-
-<h3 id="函数式编程初探-阮一峰的网络日志"><a href="#函数式编程初探-阮一峰的网络日志" class="headerlink" title="函数式编程初探 - 阮一峰的网络日志"></a><a href="https://www.baidu.com/link?url=B9Nckg0KW9QLQnfwtG0ugkemDjOfjEwNqxYuDnMmPO20rwFL2_uOnV_0_XAH9c23JHMXtpJ-GfKxTDJ0g08lOALp5-klyO8Riqs6K_N9oxy&wd=&eqid=b45c6d5d00040e07000000036098f887"><em>函数式编程</em>初探 - 阮一峰的网络日志</a></h3><p><strong>PySpark完成实验：</strong> Spark+python；支持本地和分布式集群；程序运行平台，spark，hadoop都可以，迁移方便。具体看官方文档。</p>
-<hr>
-<p>逻辑视图：四个原语</p>
-<p>利用MapReduce框架对某个算法并行化</p>
-<p> map map <strong>map</strong> ，$f$函数</p>
-<p>fold (或<strong>reduce</strong>)汇总，有初始值，自动完成</p>
-<p>链式组合t数组.map.map.reduce</p>
-<p><code>map(k1,v1)-&gt;list(k2,v2) </code> kv对，k主码，v其它，key，value</p>
-<p><code>reduce(k2,list(v2)-&gt;list(k3,v3)</code></p>
-<p>数据切片，k作为主码，v是信息，<code>map</code>分派$f$，数据清洗，简单来说就是用关键字划分组，以此为依据，交给<code>reduce</code>，往往是数组，汇总。</p>
-<p><strong>MapReduce“Runtime”（运行时）</strong>,framework,底层软件，类似spark或者Hadoop，他来处理：处理任务调度，负载均衡，同步异步，灾害重建</p>
-<p>为了减少map与ruduce中间分布式排序时间，MRCP</p>
-<p>增加<code>partition(k,p)</code>,上层map的k下层p为reduce用哈希绕开分布式排序</p>
-<p>和<code>combine(k2,list(v2))</code> minireduce，本地统一组合一个虚拟机的不同分片</p>
-<p>t-&gt;map-&gt;combine-&gt;partition-按关键字分组排序-&gt;reduce</p>
-<p>map，reduce 输出<code>emit</code>交给分布式排序</p>
-<hr>
-<p> 物理视图：数据分片，分布式磁盘-&gt;给了VM,Map-&gt;本地保存到本地磁盘-&gt;分布式排序，有网络通讯，远程异地-&gt;VM做reduce-&gt;输出</p>
-<p>两次分配算法都由控制主机master控制：作业提交，分配map节点，reduce节点。</p>
-<p><strong>数据移动，作业调度 是几个矩阵？</strong></p>
-<ul>
-<li>分布式数据库到map虚拟机；</li>
-<li>map虚拟机到reduce虚拟机？</li>
-<li>master指派job给map，指派job给reduce虚拟机？计算效率？通信效率？这是不是task调度？</li>
-</ul>
-<p>多个机器，低性能。随机访问代价昂贵</p>
-<p>(hadoop)job提交：</p>
-<ul>
-<li>job分成map reduce等四个task</li>
-<li>每个task会有一个任务跟踪器</li>
-<li>多个job会形成有一个工作流</li>
-</ul>
-<p>数据现在很多是以kv对的形式存储计算的，不用中间格式转换，如mangodb</p>
-<p>Hadoop可以本地部署，本地调试好在部署到云，不然debug麻烦死。</p>
-<hr>
-<p>作业：安装pyspark实现个小例子。</p>
-<p>PySpark相关资料：</p>
-<p>1、Pyspark基础教程：rdd弹性数据集 datafree<br>      <a href="https://github.com/jadianes/spark-py-notebooks">https://github.com/jadianes/spark-py-notebooks</a><br>2、PySpark MLLib教程 ：<br>      <a href="https://github.com/susanli2016/PySpark-and-MLlib">https://github.com/susanli2016/PySpark-and-MLlib</a><br>3、项目实践：<br>      <a href="https://zhuanlan.zhihu.com/p/52753778">https://zhuanlan.zhihu.com/p/52753778</a>  （知乎）</p>
-<hr>
-<p>可视化工具据deck.gl，kepler.gl</p>
-<p>版本信息用<code>py36</code>环境搭建</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">py36   //菜菜</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==3.02</span><br><span class="line">hadoopp==3.2</span><br><span class="line">winutils==3.0.0</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.6.12</span><br><span class="line">pyspark==3.0.2</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//李敏</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==2.4.7</span><br><span class="line">hadoopp==2.7.7</span><br><span class="line">winutils==2.7.1</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.7.6</span><br><span class="line">pyspark==2.4.0</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>spark下的分布式启动sark方法：spark目录下，sbin目录，集群启动，start-all.sh脚本运行</p>
-<p>终端地址<a href="http://192.168.152.131:8080/">http://192.168.152.131:8080/</a></p>
-<p>会显示集群URL</p>
-<p>提供的是spark主机的URL即可加入</p>
-<hr>
-<p>打开终端<code>Ctrl+alt+T</code></p>
-<p>复制粘贴<code>ctrl + shift + c，ctrl + shift + v</code></p>
-<p>显示目录<code>ls  </code></p>
-<p>自动补全 <code>tab</code> <code>tab</code></p>
-<p>显示当前路径 <code>pwd</code></p>
-<p>vim</p>
-<p><code>i</code>插入</p>
-<p> <code>:</code> <code>q</code>是退出，<code>w</code>保存</p>
-<p><code>wq!</code>强制保存退出vim</p>
-<p>anaconda可视化界面</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/anaconda3/bin/activate root  </span><br></pre></td></tr></table></figure>
-
-<p>显示界面<code>anaconda-navigator</code></p>
-<p>显示jyputer notebook<code>jyputer book</code></p>
-<p>显示虚拟环境<code>conda info --envs</code></p>
-<p>conda创建虚拟环境<code>conda create -n your_name python=X.X（如2.7，3.6等）</code></p>
-<p>进入虚拟环境<code>source activate your_name</code></p>
-<p>退出虚拟环境 <code>source deactivate</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export SPARK_HOME=/home/qyt/Downloads/spark-3.0.2-bin-hadoop3.2</span><br><span class="line">export PATH=$PATH:$SPARK_HOME/bin</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/home/qyt/Downloads/hadoop-3.2.2</span><br><span class="line">export PATH=$&#123;HADOOP_HOME&#125;/bin:$PATH</span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p><code>vim /etc/profile</code>环境变量配置位置</p>
-<p><code>./</code>执行文件</p>
-<hr>
-<p>MRDP-&gt;spark 为什么？</p>
-<p>大数据表达能力不足；spark对MADP扩充到四十个，一类是map一类是reduce</p>
-<p>每次map reduce 都需要HDFS文件管理系统，需要大量的IO</p>
-<p>spark RDD弹性数据集，内存分布式，spark底层对RDD做高度的冗余</p>
-<p>Hadoop不支持中间HDFS换成RDD，spark可以。</p>
-<p>mapreduce基本指令集太少，太简单了；迭代过程中间的磁盘IO太大；</p>
-<p>spark弱化了map，reduce的成对性</p>
-<p>RDD数据类型</p>
-<p>transformationscc;action</p>
-<p>构建数据流图（谱系图）linage</p>
-<p>图论做优化</p>
-<hr>
-<p>如何对梯度下降进行并行化？</p>
-<p>梯度下降法并行化设计：</p>
-<p>机器学习：分类问题或者回归预测问题</p>
-<p>特征向量，标签找出$f:X\rightarrow Y$</p>
-<p>$\to \gets \theta$ 太熟了就不写了</p>
-<p>如何并行化？</p>
-<p>递归过程不能并行化，能并行化：$\Sigma$找梯度 由map完成。reduce做外层的一次加减。 </p>
-<p>logistiic 回归 $\to$分类，w向量求梯度，可以并行化</p>
-<hr>
-<p>如何并行快速处理大规模，复杂的图？</p>
-<p>图的并行算法设计总结：</p>
-<p>BFS在map reduce怎么表示？数据结构：K，V对：node n，结点对应临界列表和最短路径d。</p>
-<p>pagerank：d不一样。衡量一个网页的重要性，随机冲浪模型：概率（网址跳转+外链）；</p>
-<p>草原生态模型：湖有高度差和邻接河道，权重矩阵是概率转移矩阵$P$，迭代直到两个状态矩阵$\pi$相同，$\pi \cdot P&#x3D;\pi$, $\pi$就是PageRank，外链访问，网页重要程度.</p>
-<p>如果有蒸发下雨，$\alpha$蒸发, 绝对地址直接访问网页，$\pi&#x3D;\pi\cdot P \times\alpha+(1-\alpha)\cdot N$，N是湖泊（网页）个数</p>
-<p>出度 由map；入度求和由reduce；KV对排序</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>PageRank</th>
-<th>BFS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>map</td>
-<td>PR&#x2F;N</td>
-<td>d+1</td>
-</tr>
-<tr>
-<td>reduce</td>
-<td>sum</td>
-<td>min</td>
-</tr>
-</tbody></table>
-<hr>
-<p>作业：</p>
-<ol>
-<li>之前pyspark的实验搭建过程</li>
-<li>大作业 自拟题目</li>
-</ol>
-<p>题目1、请自拟题目，自选方向（电力方向尤佳），撰写一篇云计算在不同领域的最新应用的综述文章。（3000+）</p>
-<p>题目2、请自拟题目，自选一个已运用MapReduce实现过的算法（机器学习算法尤佳），撰写一篇分析运用MapReduce编程模型对传统算法进行并行化的文章。（2000-3000）</p>
-<p>题目3、请自拟题目，自选一个未运用MapReduce实现过的算法（电力方向的算法尤佳），运用MapReduce程模型对该算法进行并行化设计，采用Hadoop API实现该算法，并在Hadoop集群上运行测试，根据测试结果撰写一篇文章。（2000-3000）</p>
-<hr>
-<p>Towards Self-managing cloud storage with rl</p>
-<p><code>connectedpapers.com</code> 文献追踪</p>
-<hr>
-<p>2021&#x2F;9</p>
-]]></content>
-      <categories>
-        <category>Cloud Computing</category>
       </categories>
   </entry>
   <entry>
@@ -1829,6 +1829,22 @@ li {undefined
       </categories>
   </entry>
   <entry>
+    <title>读读纪伯伦的小诗吧</title>
+    <url>/2021/09/10/Kahlil-Gibran/</url>
+    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
+<span id="more"></span>
+
+<hr>
+<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
+<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
+<hr>
+<p>2021&#x2F;9&#x2F;10</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Latex&amp;mermaid(二)</title>
     <url>/2022/03/21/Latex/</url>
     <content><![CDATA[<h2 id="1-Latex支持"><a href="#1-Latex支持" class="headerlink" title="1. Latex支持"></a>1. Latex支持</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$J^&#123;wt&#125;_&#123;i&#125;$ </span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">&#123;\mathbb R&#125; = \sum_&#123;t=0&#125;^&#123;n&#125;&#123; &#123;\mathbb R_t&#125;\gamma^&#123;t&#125; &#125;</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -1916,84 +1932,29 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>读读纪伯伦的小诗吧</title>
-    <url>/2021/09/10/Kahlil-Gibran/</url>
-    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
+    <title>幸福来得太突然</title>
+    <url>/2022/04/21/Mid-Platform/</url>
+    <content><![CDATA[<p>撞了狗屎运了，激动的发说说，对了，以后没有说说，只有博客~</p>
+<p>另外，博客评论区已经支持邮件提醒功能，留下邮箱别人回复你，你就能收到邮件提醒。</p>
 <span id="more"></span>
 
+<h2 id="项目成果成了毕业条件？"><a href="#项目成果成了毕业条件？" class="headerlink" title="项目成果成了毕业条件？"></a>项目成果成了毕业条件？</h2><p>本来都没指望文章能加我名字，突然就达到毕业条件了？？？</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211513778.png" alt="image-20220421151325684"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211513211.png" alt="image-20220421151353138"></p>
+<h2 id="时间管理"><a href="#时间管理" class="headerlink" title="时间管理"></a>时间管理</h2><p>之前小猫咪问我杂事很多，特别忙的时候是怎么管理时间的。</p>
+<p>我是个懒狗，能量时而充沛时而一丝不剩，低效是常态。</p>
+<h3 id="deadline管理"><a href="#deadline管理" class="headerlink" title="deadline管理"></a>deadline管理</h3><p><a href="http://chs.desktopcal.com/chs/">桌面日历 (desktopcal.com)</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211520088.png" alt="image-20220421151959103"></p>
+<h3 id="每日进度"><a href="#每日进度" class="headerlink" title="每日进度"></a>每日进度</h3><p>每日或者每隔几天规划一下待办事项，随手写，边做边规划，这是这篇论文的历程，我还没来得及扔掉。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211523521.jpg" alt="7a43e5b50e4853c34cd320f15a0147c"></p>
+<h3 id="周期进度"><a href="#周期进度" class="headerlink" title="周期进度"></a>周期进度</h3><p>我一般直接贴墙上，写起来方便。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211524778.jpg" alt="f9a3f3bbd55a8e90c67af2f6c0f0ac3"></p>
 <hr>
-<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
-<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
-<hr>
-<p>2021&#x2F;9&#x2F;10</p>
+<p>2022&#x2F;4&#x2F;21</p>
+<p>西走菜菜</p>
 ]]></content>
       <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>月报</title>
-    <url>/2022/03/31/Monthly-reports/</url>
-    <content><![CDATA[<p>这个帖子只谈自己的发展，注意力只集中在眼前和毕业找工作。</p>
-<span id="more"></span>
-
-<h2 id="2022-x2F-3-x2F-31"><a href="#2022-x2F-3-x2F-31" class="headerlink" title="2022&#x2F;3&#x2F;31"></a>2022&#x2F;3&#x2F;31</h2><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354659540&auto=1&height=32"></iframe>
-
-<p>转眼研二下了，时间所剩不多了，之前大把的时间画在碰壁，走弯路，和自己的调整上，回顾都觉得太苦了，苦到不敢回想。收获就是现在整个人更麻木，情绪很难有大的起伏（反正除了自己放弃怎么都能赖活着），更认清自己了，知道自己很脆弱，看到适合自己的路。</p>
-<p>时间很紧，必须得开始追进度了。</p>
-<p>也因为项目必须的实验和师兄们毕业的焦虑，只能放下了之前因被程过河拆桥被夺走论文而对DRL和论文产生的畏惧，下决心想想写几篇水一水，达到毕业条件，只有自己才能救自己啊。也因此，想写这篇月结看看进度，重新开始督促懒散成习惯的自己。</p>
-<h3 id="未完成的目标："><a href="#未完成的目标：" class="headerlink" title="未完成的目标："></a>未完成的目标：</h3><ul>
-<li>2022年7月，小论文；</li>
-<li>项目论文；</li>
-<li>毕业论文；</li>
-<li>工作：力扣，八股文。</li>
-</ul>
-<hr>
-<h3 id="回顾3月："><a href="#回顾3月：" class="headerlink" title="回顾3月："></a>回顾3月：</h3><ol>
-<li>项目论文实验：过去几周，做出了实验，就到此为止，剩余实验工作：1实验图像美化，2论文图片重画，3细扣模型参数，实验设置合理性。</li>
-<li>工作方面：草草过了1.5遍java，力扣刷了70来题，一轮都没完，刚刷完树层次遍历，费劲，不过能感觉到写代码的乐趣，不看题解自己写出来、提交后收到超过别人百分比鼓励、自己总结给别人写写题解想到可能能帮到别人，都挺快乐的，之前从未有过，还挺好的；八股文最近断断续续过了java基础，发现很多coding不理解的东西八股文里有写。</li>
-<li>博客方面：目前的效果我很满意，每天的乐趣来源就是给博客加加新功能。从0到1，学了浅浅的前端和markdown，对了配了GitHub图床，或许会成为未来的铺垫吧。</li>
-<li>毕业和论文方面：近度为0。</li>
-<li>游戏和其它：日常封校，在地平线4里开开车挺好的，就是太累人了，想看看电影电视剧又没什么好看的，羽毛球现在提不起兴趣。给电脑升级了1t的固态和电池，跑代码，看视频，搭环境什么都很舒服，毕业前放心coding。</li>
-<li>心理状态：恢复了，不迷茫了，忙点累点挺好的，我太闲了会出问题。变化的因为是，受了刺激，太想和莹莹走到一起，所以必须得靠自己克服异地这个巨大的困难，具体的解决路线(专注自身)：解决异地问题-&gt;赚钱余额支撑安全感-&gt;工作赚钱-&gt;毕业条件。所以现在满脑子都是毕业和工作，之前绕过的弯路太多了，所以现在时间特赶，对校园生活和社交完全失去了兴趣，也不想在实验室或者和导师的人际关系上消耗任何时间精力。只跑主线。效率！效率！效率！</li>
-</ol>
-<hr>
-<h3 id="之后计划："><a href="#之后计划：" class="headerlink" title="之后计划："></a>之后计划：</h3><ol>
-<li><strong>项目论文写作</strong>：没有参考的就东拼西凑硬着头皮写，项目的东西，收起自己的强迫症，一切以合理有说服力为标准，而不是让自己满意或者提升自己之类的。写出来完事！</li>
-<li><strong>工作方面</strong>：力扣，八股文，一轮继续，暂时顾不上做java的项目，先不管了。</li>
-<li>博客方面：看心情更新，可能还能给我充一段时间的电。</li>
-<li>毕业和论文方面：小论文理论梳理一下，好好思考一年前的复杂优化到最后为什么会失败，克服恐惧的办法就是面对恐惧。试试实验，万一运气好出来了。应用背景方面，有些迷茫。<strong>思考一下也先水出一篇达到毕业条件。</strong></li>
-<li>其它：没什么大问题，经常忘记吃饭不太好。还是每周重新一规划。</li>
-</ol>
-<hr>
-<p>对了，博客评论，不知道是我手机运营商的问题还是什么，手机流量不加载评论，但是WiFi可以。</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>地球上的星星</title>
-    <url>/2022/04/11/Movie-home-loneliness/</url>
-    <content><![CDATA[<p>我看到孩子天生对世界充满了好奇心和探索欲，一个天真的生命原本就具有对其他生命的体察，对自然、对美的感知，他会非常专注地沉浸在自己看到的、觉察到的世界中，这些都是孩子十分可贵的品质。</p>
-<span id="more"></span>
-
-<p>他从不被条条框框束缚，尽情发挥自己的奇思妙想，拥有无穷的想象力和创造力，拥有一个丰富的、充盈的内心世界。</p>
-<p>那么他是怎么变成大人眼中的“坏孩子”的呢？因为他从没有被理解、被尊重过，没有人去发现他的天赋和才能，只看到他不符合标准的部分，只用成绩衡量，只看结果，从来不寻找原因，一味指责、专制、武断，不断地否定他，指望自己的恐吓、暴力能成功教育好一个孩子，在流水线上用成功的模板打造他的样子，也不将孩子视为独立的生命体，而是作为自己生命的延伸，将自己的期望和想法强加到孩子身上。这样的行为并不是真正的关心和爱，要明白每个孩子都是特别的，都有自己的天分，都会按照自己的步调成长，不是大人以为的千篇一律，强行纠正只能扼杀孩子原本的天分、限制孩子的发展，我们要做的是真正的关爱、观察、耐心倾听、理解、尊重、引导、鼓励、肯定以及因材施教。我们需要在他人生的初始阶段，提供适宜他成长的环境，用积极的教育态度，激发他内在的生命力，这些时光是促进他的完整人格发展的基础，将成为他一生宝贵的精神财富，未来无论他处于何地，面对什么问题，他都能从中汲取勇气和动力，支撑着他渡过难关，最终能够自我发展、自我实现，过有价值的人生。</p>
-<hr>
-<p>Rosa:<br>地球上的星星</p>
-<p>Rosa:<br>很让人感动的一个电影</p>
-<p>Rosa:<br>我相信每一个人都会有自己触动的点，在这个电影里面</p>
-<p>Rosa:<br>可以把这个电影的链接还有观后感放在你的那个网站</p>
-<p>Rosa:<br>还有体检报告出来了，不容乐观</p>
-<hr>
-<p>–来自百度网盘超级会员V6的分享<br>hi，这是我用百度网盘分享的内容~复制这段内容打开「百度网盘」APP即可获取<br>链接:<a href="https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841">https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841</a><br>提取码:8841</p>
-<hr>
-<p>小伙伴Rosa被一个人隔离在广州了，真不容易。</p>
-<p>2022&#x2F;4&#x2F;11</p>
-]]></content>
-      <categories>
-        <category>小伙伴</category>
+        <category>Mid-Platform</category>
       </categories>
   </entry>
   <entry>
@@ -2775,6 +2736,71 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>月报</title>
+    <url>/2022/03/31/Monthly-reports/</url>
+    <content><![CDATA[<p>这个帖子只谈自己的发展，注意力只集中在眼前和毕业找工作。</p>
+<span id="more"></span>
+
+<h2 id="2022-x2F-3-x2F-31"><a href="#2022-x2F-3-x2F-31" class="headerlink" title="2022&#x2F;3&#x2F;31"></a>2022&#x2F;3&#x2F;31</h2><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354659540&auto=1&height=32"></iframe>
+
+<p>转眼研二下了，时间所剩不多了，之前大把的时间画在碰壁，走弯路，和自己的调整上，回顾都觉得太苦了，苦到不敢回想。收获就是现在整个人更麻木，情绪很难有大的起伏（反正除了自己放弃怎么都能赖活着），更认清自己了，知道自己很脆弱，看到适合自己的路。</p>
+<p>时间很紧，必须得开始追进度了。</p>
+<p>也因为项目必须的实验和师兄们毕业的焦虑，只能放下了之前因被程过河拆桥被夺走论文而对DRL和论文产生的畏惧，下决心想想写几篇水一水，达到毕业条件，只有自己才能救自己啊。也因此，想写这篇月结看看进度，重新开始督促懒散成习惯的自己。</p>
+<h3 id="未完成的目标："><a href="#未完成的目标：" class="headerlink" title="未完成的目标："></a>未完成的目标：</h3><ul>
+<li>2022年7月，小论文；</li>
+<li>项目论文；</li>
+<li>毕业论文；</li>
+<li>工作：力扣，八股文。</li>
+</ul>
+<hr>
+<h3 id="回顾3月："><a href="#回顾3月：" class="headerlink" title="回顾3月："></a>回顾3月：</h3><ol>
+<li>项目论文实验：过去几周，做出了实验，就到此为止，剩余实验工作：1实验图像美化，2论文图片重画，3细扣模型参数，实验设置合理性。</li>
+<li>工作方面：草草过了1.5遍java，力扣刷了70来题，一轮都没完，刚刷完树层次遍历，费劲，不过能感觉到写代码的乐趣，不看题解自己写出来、提交后收到超过别人百分比鼓励、自己总结给别人写写题解想到可能能帮到别人，都挺快乐的，之前从未有过，还挺好的；八股文最近断断续续过了java基础，发现很多coding不理解的东西八股文里有写。</li>
+<li>博客方面：目前的效果我很满意，每天的乐趣来源就是给博客加加新功能。从0到1，学了浅浅的前端和markdown，对了配了GitHub图床，或许会成为未来的铺垫吧。</li>
+<li>毕业和论文方面：近度为0。</li>
+<li>游戏和其它：日常封校，在地平线4里开开车挺好的，就是太累人了，想看看电影电视剧又没什么好看的，羽毛球现在提不起兴趣。给电脑升级了1t的固态和电池，跑代码，看视频，搭环境什么都很舒服，毕业前放心coding。</li>
+<li>心理状态：恢复了，不迷茫了，忙点累点挺好的，我太闲了会出问题。变化的因为是，受了刺激，太想和莹莹走到一起，所以必须得靠自己克服异地这个巨大的困难，具体的解决路线(专注自身)：解决异地问题-&gt;赚钱余额支撑安全感-&gt;工作赚钱-&gt;毕业条件。所以现在满脑子都是毕业和工作，之前绕过的弯路太多了，所以现在时间特赶，对校园生活和社交完全失去了兴趣，也不想在实验室或者和导师的人际关系上消耗任何时间精力。只跑主线。效率！效率！效率！</li>
+</ol>
+<hr>
+<h3 id="之后计划："><a href="#之后计划：" class="headerlink" title="之后计划："></a>之后计划：</h3><ol>
+<li><strong>项目论文写作</strong>：没有参考的就东拼西凑硬着头皮写，项目的东西，收起自己的强迫症，一切以合理有说服力为标准，而不是让自己满意或者提升自己之类的。写出来完事！</li>
+<li><strong>工作方面</strong>：力扣，八股文，一轮继续，暂时顾不上做java的项目，先不管了。</li>
+<li>博客方面：看心情更新，可能还能给我充一段时间的电。</li>
+<li>毕业和论文方面：小论文理论梳理一下，好好思考一年前的复杂优化到最后为什么会失败，克服恐惧的办法就是面对恐惧。试试实验，万一运气好出来了。应用背景方面，有些迷茫。<strong>思考一下也先水出一篇达到毕业条件。</strong></li>
+<li>其它：没什么大问题，经常忘记吃饭不太好。还是每周重新一规划。</li>
+</ol>
+<hr>
+<p>对了，博客评论，不知道是我手机运营商的问题还是什么，手机流量不加载评论，但是WiFi可以。</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>地球上的星星</title>
+    <url>/2022/04/11/Movie-home-loneliness/</url>
+    <content><![CDATA[<p>我看到孩子天生对世界充满了好奇心和探索欲，一个天真的生命原本就具有对其他生命的体察，对自然、对美的感知，他会非常专注地沉浸在自己看到的、觉察到的世界中，这些都是孩子十分可贵的品质。</p>
+<span id="more"></span>
+
+<p>他从不被条条框框束缚，尽情发挥自己的奇思妙想，拥有无穷的想象力和创造力，拥有一个丰富的、充盈的内心世界。</p>
+<p>那么他是怎么变成大人眼中的“坏孩子”的呢？因为他从没有被理解、被尊重过，没有人去发现他的天赋和才能，只看到他不符合标准的部分，只用成绩衡量，只看结果，从来不寻找原因，一味指责、专制、武断，不断地否定他，指望自己的恐吓、暴力能成功教育好一个孩子，在流水线上用成功的模板打造他的样子，也不将孩子视为独立的生命体，而是作为自己生命的延伸，将自己的期望和想法强加到孩子身上。这样的行为并不是真正的关心和爱，要明白每个孩子都是特别的，都有自己的天分，都会按照自己的步调成长，不是大人以为的千篇一律，强行纠正只能扼杀孩子原本的天分、限制孩子的发展，我们要做的是真正的关爱、观察、耐心倾听、理解、尊重、引导、鼓励、肯定以及因材施教。我们需要在他人生的初始阶段，提供适宜他成长的环境，用积极的教育态度，激发他内在的生命力，这些时光是促进他的完整人格发展的基础，将成为他一生宝贵的精神财富，未来无论他处于何地，面对什么问题，他都能从中汲取勇气和动力，支撑着他渡过难关，最终能够自我发展、自我实现，过有价值的人生。</p>
+<hr>
+<p>Rosa:<br>地球上的星星</p>
+<p>Rosa:<br>很让人感动的一个电影</p>
+<p>Rosa:<br>我相信每一个人都会有自己触动的点，在这个电影里面</p>
+<p>Rosa:<br>可以把这个电影的链接还有观后感放在你的那个网站</p>
+<p>Rosa:<br>还有体检报告出来了，不容乐观</p>
+<hr>
+<p>–来自百度网盘超级会员V6的分享<br>hi，这是我用百度网盘分享的内容~复制这段内容打开「百度网盘」APP即可获取<br>链接:<a href="https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841">https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841</a><br>提取码:8841</p>
+<hr>
+<p>小伙伴Rosa被一个人隔离在广州了，真不容易。</p>
+<p>2022&#x2F;4&#x2F;11</p>
+]]></content>
+      <categories>
+        <category>小伙伴</category>
+      </categories>
+  </entry>
+  <entry>
     <title>电影推荐</title>
     <url>/2022/03/21/Movie-recommendation/</url>
     <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
@@ -3228,6 +3254,28 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>分红合同</title>
+    <url>/2021/03/27/Shares/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="39c155809188357793ba709fc126d19274c5cd94c98c149fe296ba95de5cd0b9">2a1fcbdcb7eb03b565a95d6de79a00028a36b8b1c5aaa935fdbb222768ee8109adbced5bb7c4d59e2bf8a0923471171d2a75a5049cdd44c0cb39ca07d8266900f126343c02bec7505abe10b88c09860dd6b29df243fe114ee7e686f2a5fcf9a3f807056fc6ea2e0ff82c7e65bbebdbef754643a103b893f4f07ee908b66c10846ad0f8ff5663307ef7754d13e0747b38079aa4aec1beaa7aaf1d86b37eea6530b8b6a8f66ffdfdb5454204cc4685c6b53280edb7bb2e2ca2ff137cde9a56492aaeea5bb7b97e58db285713f246c0947f033078c2155bd4596d655a4fa857435e541a5b442a98b250534f1a476f7abe926ced62e4a203ae244665e02d6c88264f313946f67d79ce09f2e69ca990118b220c37337c0c8563e093da16ea441881f9aece2507bb436d7f65fbe295e6e65dab5513bad63e730c63f6301581e7abb1b32c96b3af9805e0b8ed30f175e72c911f5712e860b2c2b66f0fec1e1a74335e7763ce618eaa0f126af8dd1042876953f212a62820c352dfd66237909ed03ff523c8406d828cd006aa420e59567b4140bb2069d2ba8724046fa60cb753a75be00bb06ce0196d50bd39f430990b6bdb7167e74e48c6276e584b7597e0a8477ae1d62c8d3d2b0e4dd8783f274106157102c47504170eb52139bace7665b3b4d60d26b434f207e34b1d8e341ce77ad080ba8b6a3f762bf892d170bf1e592760f5e633cc95e3a04517203b0f3d7b5ad3ffdba6032901902726764d113f7f94b846005ffe588c1833c335cff16e8a4c3c07fb05241ec0c6e3229146cb718de80c7d520c94721e58a9d9e36e8cf3404c61faeb584b3a139f521b67a37033028a4d316ab3f34ede2e8c751a2feafe600b5fa6060c</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-surge">
+      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>日期</category>
+      </categories>
+  </entry>
+  <entry>
     <title>The Hadoop Distributed File System</title>
     <url>/2021/07/26/The-Hadoop-Distributed-File-System/</url>
     <content><![CDATA[<p>Hadoop的重要特点是数据在数千节点上分区存储和计算，并行执行应用程序的计算。</p>
@@ -3269,28 +3317,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>Cloud Computing</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>分红合同</title>
-    <url>/2021/03/27/Shares/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="39c155809188357793ba709fc126d19274c5cd94c98c149fe296ba95de5cd0b9">2a1fcbdcb7eb03b565a95d6de79a00028a36b8b1c5aaa935fdbb222768ee8109adbced5bb7c4d59e2bf8a0923471171d2a75a5049cdd44c0cb39ca07d8266900f126343c02bec7505abe10b88c09860dd6b29df243fe114ee7e686f2a5fcf9a3f807056fc6ea2e0ff82c7e65bbebdbef754643a103b893f4f07ee908b66c10846ad0f8ff5663307ef7754d13e0747b38079aa4aec1beaa7aaf1d86b37eea6530b8b6a8f66ffdfdb5454204cc4685c6b53280edb7bb2e2ca2ff137cde9a56492aaeea5bb7b97e58db285713f246c0947f033078c2155bd4596d655a4fa857435e541a5b442a98b250534f1a476f7abe926ced62e4a203ae244665e02d6c88264f313946f67d79ce09f2e69ca990118b220c37337c0c8563e093da16ea441881f9aece2507bb436d7f65fbe295e6e65dab5513bad63e730c63f6301581e7abb1b32c96b3af9805e0b8ed30f175e72c911f5712e860b2c2b66f0fec1e1a74335e7763ce618eaa0f126af8dd1042876953f212a62820c352dfd66237909ed03ff523c8406d828cd006aa420e59567b4140bb2069d2ba8724046fa60cb753a75be00bb06ce0196d50bd39f430990b6bdb7167e74e48c6276e584b7597e0a8477ae1d62c8d3d2b0e4dd8783f274106157102c47504170eb52139bace7665b3b4d60d26b434f207e34b1d8e341ce77ad080ba8b6a3f762bf892d170bf1e592760f5e633cc95e3a04517203b0f3d7b5ad3ffdba6032901902726764d113f7f94b846005ffe588c1833c335cff16e8a4c3c07fb05241ec0c6e3229146cb718de80c7d520c94721e58a9d9e36e8cf3404c61faeb584b3a139f521b67a37033028a4d316ab3f34ede2e8c751a2feafe600b5fa6060c</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-surge">
-      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>日期</category>
       </categories>
   </entry>
   <entry>
