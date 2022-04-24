@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yongtaiq.github.io/2022/04/24/School/</loc>
+    
+    <lastmod>2022-04-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yongtaiq.github.io/2022/04/24/dell7559/</loc>
     
     <lastmod>2022-04-24</lastmod>
@@ -470,14 +479,14 @@
   </url>
   
   <url>
-    <loc>https://yongtaiq.github.io/categories/%E6%97%A5%E6%9C%9F/</loc>
+    <loc>https://yongtaiq.github.io/categories/Sherry/</loc>
     <lastmod>2022-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yongtaiq.github.io/categories/Sherry/</loc>
+    <loc>https://yongtaiq.github.io/categories/%E6%97%A5%E6%9C%9F/</loc>
     <lastmod>2022-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
