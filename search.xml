@@ -2,6 +2,40 @@
 <search>
   <entry>
     <title>杂谈</title>
+    <url>/2022/04/18/2022-4-18/</url>
+    <content><![CDATA[<blockquote>
+<p>没必要把事情想得太糟糕；</p>
+<p>没必要担心还没发生的事情。</p>
+</blockquote>
+<span id="more"></span>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=673422&auto=0&height=32"></iframe>
+
+<ol>
+<li>上周项目论文费老劲赶出来了，可惜不能加自己的名字(苦笑)，组会后躺了两天。毕业条件还得写一篇，还是没什么方向。作自己不感兴趣的事，真的太被动了，如果不是有ddl逼着，真的一点都不想做。</li>
+<li>本周四前完成项目论文的修改和字句梳理，翻译一下，1.6w字，费劲，今天得规划规划时间。结了后再东拼西凑写一篇，先写出来再说，边写边做实验。</li>
+<li>copilot感觉蛮有意思，申请了到现在没给我发邮件，急；发现叫Logseq，Obsidian，思源笔记的工具，写的markdown插件很多，功能如果用HTML实现的话很麻烦。博客捣鼓到现在，前端了解了一些，不过已经懒得弄了，因为我发现，相比于形式，产出是一件更困难的事，我想表达的是，真正在写的时候会有江郎才尽之类的感觉。对于这些工具也一样，能用够用就够了，在掌握细节上面花太多功夫实在是没必要，毕竟我是个连画图都懒得画喜欢手画拍照上传的人。</li>
+<li>我觉得这样的任务栏很好看<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204181511523.png" alt="f7207564982d1201a8b78dc5b4c9401"></li>
+<li>阿里云不限速很棒，在线功能很友好。</li>
+<li>很久之前想说一直忘记，键盘最后一排全部倒着安装真的很舒服，完全不咯手，很符合我的手型和打字习惯，掌托完全是妥协的产物嘛，这么简单的布局，厂商为什么不这么做呢？到底是因为跟风和行业标准太重要了，还是能轻易妥协的用户体验不重要呢？<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204181509986.jpg" alt="1e84d6b880cbd9e9edd1e32e5ab3c83"></li>
+<li>羽毛球：昨天突然想试试羽毛球，太久没运动，生疏+社恐，过了会儿就适应了，融入别人的圈子是一件很容易的事情，只要我内心真的想要融入。</li>
+<li>以前穿线都是几把拍子一起穿，昨天发现弓11很真的看重穿线师的手法，一个半月前家乡穿的现在掉磅到根本没法打，更渔网一样打不远，另外差不多时间两把北京穿的900i都挺合适的，没来没想用900i的，负担重，怕旧伤未愈。太久没动了，以前对拉都是我体能拉爆别人，昨天5分钟自己站都站不稳，今天浑身疼。校队恢复训练了，我想每天先简单跑5公里恢复一下，另外伤没好，都半年了，唉。</li>
+<li>从小身边的家人朋友都告诉我要提前规划，要为自己负责。我说了我去年的情况，导师开导我说人总有适合自己的活法，不见得开发或者在北京、在美国有多适合我，我的条件已经很好的。另外有两句对我说的话，难得让我觉得很受感动，写下来，不然就忘掉了。</li>
+</ol>
+<blockquote>
+<p>没必要把事情想得太糟糕；</p>
+<p>没必要担心还没发生的事情。</p>
+</blockquote>
+<hr>
+<p>西走菜菜</p>
+<p>2022&#x2F;4&#x2F;18</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>杂谈&amp;恼人的HEVC,FFmpeg,过时的960M</title>
     <url>/2022/04/30/2022-4-30/</url>
     <content><![CDATA[<p>疫情五一不放假也出不了校门，还三天两头<code>不许动</code>、核酸检测。</p>
 <p>今天太无聊了。</p>
@@ -75,6 +109,131 @@
 <p>看来视频修复优化、AI模型训练、win是真的不行，还得Linux或者基于L的mic，环境问题简直莫名其妙，另外不太了解Linux的转码生态是怎么回事。</p>
 <p>不玩了，除非大规模推出HEVC视频，否则老老实实用吧。主流是什么用什么就完事了，自己用小笔记本训练太费劲了，还独显加速不起来。</p>
 <p>要不用Linux去转码，要不等一波win一系列专业视频软件升级到能顺畅支持我的显卡，应该也就是下下个版本的事了，再自己捣鼓玩，毕竟HEVC相对新，但是高码率视频必然淘汰avc h264。</p>
+<hr>
+<p>CPU集显独自奋战一夜，效果良好，我对迟暮的英雄表示心疼，翻阅格式工厂发现其内核是FFmpeg，决定直接上FFmpeg，实现GPU加速。</p>
+<p>下载，配置环境变量，FFmpeg跑通。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ffmpeg -i 输入的影音文件路径 -vcodec libx265 -x265-params lossless=1 -preset placebo 输出的影音文件路径</span><br><span class="line"></span><br><span class="line">ffmpeg -i input.mp4 -c:v libx265 output.mp4 </span><br><span class="line"></span><br><span class="line">ffmpeg -i 输入 -c:v libx265 输出</span><br><span class="line"></span><br><span class="line">ffmpeg -hwaccel cuda -hwaccel_output_format cuda -i 输入 -c:v h264_nvenc -preset slow </span><br></pre></td></tr></table></figure>
+
+
+<p>ffmpeg -i 命令这篇有解释，他的系列文章写得挺好的<a href="https://www.bilibili.com/read/cv4425794/">https://www.bilibili.com/read/cv4425794/</a></p>
+<p>这里有篇博客写的很全没详细读，先mark一下<a href="https://magiclen.org/ffmpeg-h265/">如何用FFmpeg将影像转成H.265&#x2F;HEVC格式？ | MagicLen</a></p>
+<p>貌似对症下药<a href="https://www.csdn.net/tags/MtTaEg4sNDQyMDgxLWJsb2cO0O0O.html">https://www.csdn.net/tags/MtTaEg4sNDQyMDgxLWJsb2cO0O0O.html</a></p>
+<p>官方文档最详细<a href="https://developer.nvidia.com/blog/nvidia-ffmpeg-transcoding-guide/">https://developer.nvidia.com/blog/nvidia-ffmpeg-transcoding-guide/</a></p>
+<hr>
+<p>没搞明白，libx的cpu没问题，nvenc独显跑不起来。</p>
+<p>尝试更新显卡驱动，更新CUDA，摧毁了我的旧DRL环境5555，有点毁心态了。</p>
+<p><code>nvidia-smi</code></p>
+<p>Sun May  1 14:19:43 2022<br>+—————————————————————————–+<br>| NVIDIA-SMI 512.59       Driver Version: 512.59       CUDA Version: 11.6     |</p>
+<p>配置完成，测试h264_nvenc还是不行。</p>
+<p>看Video Encode and Decode GPU Support Matrix文档</p>
+<p><a href="https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new">https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">BOARD</th>
+<th align="left">FAMILY</th>
+<th align="left">CHIP</th>
+<th align="left">NVENC Generation</th>
+<th align="left">Desktop&#x2F; Mobile</th>
+<th align="left"># OF CHIPS</th>
+<th align="left"># OF NVENC &#x2F;CHIP</th>
+<th align="left">Total # of NVENC</th>
+<th align="left">Max # of concurrent sessions</th>
+<th align="left">H.264 (AVCHD) YUV 4:2:0</th>
+<th align="left">H.264 (AVCHD) YUV 4:4:4</th>
+<th align="left">H.264 (AVCHD) Lossless</th>
+<th align="left">H.265 (HEVC) 4K YUV 4:2:0</th>
+<th align="left">H.265 (HEVC) 4K YUV 4:4:4</th>
+<th align="left">H.265 (HEVC) 4K Lossless</th>
+<th align="left">H.265 (HEVC) 8k</th>
+<th align="left">HEVC 10-bit support</th>
+<th align="left">HEVC B Frame support</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">GeForce GTX 745 &gt; 750 Ti</td>
+<td align="left">Maxwell (1st Gen)</td>
+<td align="left">GM107</td>
+<td align="left">4th Gen</td>
+<td align="left">D</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">3</td>
+<td align="left">YES</td>
+<td align="left">YES</td>
+<td align="left">YES</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+</tr>
+<tr>
+<td align="left">GeForce 845M &#x2F; 940M &#x2F; 940MX &#x2F; 945M</td>
+<td align="left">Maxwell (1st Gen)</td>
+<td align="left">GM107</td>
+<td align="left">4th Gen</td>
+<td align="left">M</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">3</td>
+<td align="left">YES</td>
+<td align="left">YES</td>
+<td align="left">YES</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+</tr>
+<tr>
+<td align="left">GeForce GTX 850A &gt; 960A</td>
+<td align="left">Maxwell (1st Gen)</td>
+<td align="left">GM107</td>
+<td align="left">4th Gen</td>
+<td align="left">M</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">3</td>
+<td align="left">YES</td>
+<td align="left">YES</td>
+<td align="left">YES</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+</tr>
+<tr>
+<td align="left">GeForce GTX 850M &gt; 960M</td>
+<td align="left">Maxwell (1st Gen)</td>
+<td align="left">GM107</td>
+<td align="left">4th Gen</td>
+<td align="left">M</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">3</td>
+<td align="left">YES</td>
+<td align="left">YES</td>
+<td align="left">YES</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+<td align="left">NO</td>
+</tr>
+</tbody></table>
+<p>被戏耍了，很烦，瞬间苍老，原因找到了，就是硬件不支持，960M据然太老不支持HEVC编码、解码；心态崩了。</p>
+<hr>
+<p>2022&#x2F;5&#x2F;1</p>
 ]]></content>
       <categories>
         <category>生活和诗歌</category>
@@ -100,40 +259,6 @@
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>Sherry</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>杂谈</title>
-    <url>/2022/04/18/2022-4-18/</url>
-    <content><![CDATA[<blockquote>
-<p>没必要把事情想得太糟糕；</p>
-<p>没必要担心还没发生的事情。</p>
-</blockquote>
-<span id="more"></span>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=673422&auto=0&height=32"></iframe>
-
-<ol>
-<li>上周项目论文费老劲赶出来了，可惜不能加自己的名字(苦笑)，组会后躺了两天。毕业条件还得写一篇，还是没什么方向。作自己不感兴趣的事，真的太被动了，如果不是有ddl逼着，真的一点都不想做。</li>
-<li>本周四前完成项目论文的修改和字句梳理，翻译一下，1.6w字，费劲，今天得规划规划时间。结了后再东拼西凑写一篇，先写出来再说，边写边做实验。</li>
-<li>copilot感觉蛮有意思，申请了到现在没给我发邮件，急；发现叫Logseq，Obsidian，思源笔记的工具，写的markdown插件很多，功能如果用HTML实现的话很麻烦。博客捣鼓到现在，前端了解了一些，不过已经懒得弄了，因为我发现，相比于形式，产出是一件更困难的事，我想表达的是，真正在写的时候会有江郎才尽之类的感觉。对于这些工具也一样，能用够用就够了，在掌握细节上面花太多功夫实在是没必要，毕竟我是个连画图都懒得画喜欢手画拍照上传的人。</li>
-<li>我觉得这样的任务栏很好看<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204181511523.png" alt="f7207564982d1201a8b78dc5b4c9401"></li>
-<li>阿里云不限速很棒，在线功能很友好。</li>
-<li>很久之前想说一直忘记，键盘最后一排全部倒着安装真的很舒服，完全不咯手，很符合我的手型和打字习惯，掌托完全是妥协的产物嘛，这么简单的布局，厂商为什么不这么做呢？到底是因为跟风和行业标准太重要了，还是能轻易妥协的用户体验不重要呢？<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204181509986.jpg" alt="1e84d6b880cbd9e9edd1e32e5ab3c83"></li>
-<li>羽毛球：昨天突然想试试羽毛球，太久没运动，生疏+社恐，过了会儿就适应了，融入别人的圈子是一件很容易的事情，只要我内心真的想要融入。</li>
-<li>以前穿线都是几把拍子一起穿，昨天发现弓11很真的看重穿线师的手法，一个半月前家乡穿的现在掉磅到根本没法打，更渔网一样打不远，另外差不多时间两把北京穿的900i都挺合适的，没来没想用900i的，负担重，怕旧伤未愈。太久没动了，以前对拉都是我体能拉爆别人，昨天5分钟自己站都站不稳，今天浑身疼。校队恢复训练了，我想每天先简单跑5公里恢复一下，另外伤没好，都半年了，唉。</li>
-<li>从小身边的家人朋友都告诉我要提前规划，要为自己负责。我说了我去年的情况，导师开导我说人总有适合自己的活法，不见得开发或者在北京、在美国有多适合我，我的条件已经很好的。另外有两句对我说的话，难得让我觉得很受感动，写下来，不然就忘掉了。</li>
-</ol>
-<blockquote>
-<p>没必要把事情想得太糟糕；</p>
-<p>没必要担心还没发生的事情。</p>
-</blockquote>
-<hr>
-<p>西走菜菜</p>
-<p>2022&#x2F;4&#x2F;18</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -1527,6 +1652,79 @@ li {undefined
       </categories>
   </entry>
   <entry>
+    <title>《海边的卡夫卡》随笔</title>
+    <url>/2022/04/05/Kafka-by-the-Sea/</url>
+    <content><![CDATA[<p>读村上春树有个好玩的点，这也是之前听方所杨照先生讲座启发的，就是书中隐藏着各种下一步做什么的“指示”,比如找来杨纳切克的<em>sinfonietta</em>来听吧（出自《1Q84》开头）。</p>
+<span id="more"></span>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1384830266&auto=0&height=32"></iframe>
+
+<p>或者去看看《浮士德》吧（来自于《多崎作和他的巡礼之年》的隐喻），我记得大二看挪威的森林不自觉买了甲壳虫的那张专辑<a href="https://music.163.com/album?id=438028">Rubber Soul (Remastered)</a>（无vip<a href="https://music.163.com/album?id=92593453">Rubber Soul</a>）。这是一种奇特的阅读体验，不是一行一行读过去，而是读一阵发现一个宝藏。之前有过这种体验的还是读《红楼梦》的时候。所以第一遍看故事情节，主线，第二遍我就停留下来看看这些橱窗里面都有些什么好东西。</p>
+<p>卡夫卡这个长篇小说，第一次读，印象深刻的有杀猫者，肯德基老爷爷拉皮条，俄狄浦斯情结的隐喻，再次读深深感受到了责任这一主题：人要为自己负责。</p>
+<p>在所涵盖的知识量上，<a href="https://www.baidu.com/link?url=6Qg-Fnq3MCwiuQit2dkvbOyqiz6N036obbaB89bdce3xJOYKtq9dfGGWnLQ826_a33xi9W2N-lbPcTrhwp5nEK&wd=&eqid=bb4ff91d0003c9ed00000003624d5df9"><em>《海边的卡夫卡》</em></a>应该算长篇小说中最纷繁复杂的橱窗了。</p>
+<h2 id="村上春树的创作背景"><a href="#村上春树的创作背景" class="headerlink" title="村上春树的创作背景"></a>村上春树的创作背景</h2><p>自1955年起，日本发生了两起安保斗争，第一起发生在安保条约签订时，第二起发生在安保条约到期是否要续约时。这里提一下安保条约，简单来说，就是由美国负责保护日本的国土安全，<strong>日本同意永久解除武装</strong>。安保条约是很多战后日本年轻人难以接受的现实，因为战后日本经济复苏，拥有了比以前更加强大的国家自信，日本年轻人都期盼着国家的独立，摆脱美国的约束。</p>
+<p>矛盾的是，日本青年的抗争需要从欧美社会那里获取精神资源，所以日本青年很分裂，一方面热切拥抱美国，学习美国，另一方面用学习来的反抗精神反抗美国。这种抗争不单单是对外，还有自我怀疑，自我抗争的部分。</p>
+<p>村上春树进早稻田大学戏剧系没多久，安保斗争就在校园大面积爆发了。村上在现场经历了一切，但是他没参与。因此，首先他见过大场面，体会过革命的轰轰烈烈；同时他又是局外人，因此他能很快看出、承认革命的徒劳无功。由于这一场革命的关系，村上春树始终对日本人抱着一股疏离感，上面这个背景贯穿了他所有小说的主题。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kasahara-MAY/MarkdownPicture/img/202204052236645.jpeg" alt="img"></p>
+<h2 id="村上小说的主题"><a href="#村上小说的主题" class="headerlink" title="村上小说的主题"></a>村上小说的主题</h2><h3 id="人与自由的关系"><a href="#人与自由的关系" class="headerlink" title="人与自由的关系"></a>人与自由的关系</h3><p>拥有自由之后并不是那么容易，相反情况会更复杂。村上在小说《电视人》和《国境以南，太阳以西》都曾探讨过人被解开束缚后会变成什么。</p>
+<p>两个模范生恋爱了，笨拙得亲吻，爱抚。女生却一直坚信，只有结婚才可献出处子之身。</p>
+<blockquote>
+<p>然而，她却站在完全不同的观点来看待这件事。她咬住嘴唇，轻轻地摇摇头。“我非常喜欢你。可是，我想保持处女之身，直到结婚为止。“她以十分平静的语气 说。然后，不论他再怎么说话，极力说服她，她都不为所动。“我很爱你，非常地爱你！可是，那个和这个完全是两回事。对我而言，这是早就决定好的。我觉得很抱歉，但是，请你忍耐。如果你真心爱我，应该可以忍耐吧！</p>
+<p>……</p>
+</blockquote>
+<p>他们后来都读了很好的大学，男生在东京，女生在神户，男孩再一次提出性需求，女孩再一次拒绝，她甚至说自己如果结婚了就可以做爱了，请等到那时候。</p>
+<blockquote>
+<p>等她终于止住哭泣之后，她说了一段很奇怪的话。</p>
+<p>“嗳，如果……，我是说如果我和你分丰了，我还是会永远记得你。真的！我绝对不会忘了你！我真的好爱你！你是我第一个爱上的人，而且，只要和你在一起，我 就觉得很快乐。希望一你了解这一点。可是，那个和这个是两回事。如果你希望我保证对你的爱，那我们就在此约定。我会和你上床。不过，现在还不行。等我和某 人结婚以后，我再和你上床。我不骗你！我保证！”</p>
+<p>……</p>
+</blockquote>
+<p>他们真的分手了，女孩后来和别人结婚了，有一天她给男孩打电话，男孩知道女孩的意思，犹豫了一下便去了，但是现实是两个人并没有做爱，互相爱抚和以前一样，两个人都觉得这是最好的方式。结束后各自说了再见，确实是最后一面了。男人出门找了妓女，这是他第一次招妓。</p>
+<p>处女身体是女孩自己无法打破的框架，限制了她的自由，60年的日本还是相对保守的，打破处女框架的办法只有结婚，所以她觉得自己的自由只有结婚后才能获得。她结婚后，这种自由终于来了，但小说讲的是没有了框架，没有了处女之身的限制，比在框架之内想象自由的情况要复杂得多。缺乏自由的时候想象自由是相对简单的，毕竟很清楚当下的匮乏，但真的有了自由情况就复杂，困难了。女孩结婚，婚姻何尝又不是一种新的框架呢，婚姻生活，家庭生活的框架只能更复杂更紧密。</p>
+<p>难过的事实就是，自由来了，人却没办法拿到自己原来想要的东西，因为不想要了。不过这也没什么可难过的吧，顶多是遗憾，真到那时候，之前想要的东西也就不重要了，就是说那种觉得做到什么什么，获得自由之后我就解脱了，轻松了之类的想法还是不要有的好，自由来临的那一刻，自己亲身经历的，感受过的回忆说不定更重要呢。毕竟那是自己最熟悉的，真切的，无可取代的。</p>
+<p>村上的小说也一直在问：人打破了约束自己的框架，会做些什么？</p>
+<h3 id="人与人之间的疏离"><a href="#人与人之间的疏离" class="headerlink" title="人与人之间的疏离"></a>人与人之间的疏离</h3><p>莫名奇妙是村上小说里面一个很直观的感觉，《寻羊冒险记》里，那个”羊男“让人摸不着头脑，它到底是”羊“还是”男“完全搞不清楚。但是主人公好像完全不在意，简简单单把这玩意当作现实接受下来了，作者的描写让我感觉男主不过是看见了桌上的一个苹果一样稀松平常。</p>
+<img src="https://cdn.jsdelivr.net/gh/Kasahara-MAY/MarkdownPicture/img/202204052235181.webp" alt="img" style="zoom:50%;" />
+
+<p>其实这也是村上创造的角色的魅力，对莫名其妙的事情容忍度出奇得高。这种感觉和我看《局外人》相似，默尔索是一个只看现象的人，对莫名其妙得现象既不惊讶，也不追问。对别人一点也不好奇，算某种程度的选择了和别人疏离吧，说来惭愧，我目前的状态或多或少就是这样，我觉得自己连自己都搞不明白，在不了解自己的情况下，对别人的好奇心真的很少。我之前看豆瓣上《局外人》的书评，很多人认为默尔索很麻木，我对这么麻木讨厌不起来，甚至村上笔下这种麻木可爱起来了。说到这想到个事，大学时候，我可爱的室友总喜欢逗我，比如对着我唱情歌，我大部分时间总说：好的，我知道了。舍友就会哈哈大笑。还有一次，我穿了很日系风的JK服，舍友说很少见我打扮这么可爱，我几乎脱口而出：我也很少见。大抵就是这种可爱的麻木吧。</p>
+<p>说起这么麻木，我还想到爸爸了，他比我有着更强壮的神经，面对这个世界时，比我有着更大的包容力。我几乎很少看他露出惊讶的样子，他也不一定会去探究我觉得莫名其妙的东西。</p>
+<h3 id="两个世界并行交错"><a href="#两个世界并行交错" class="headerlink" title="两个世界并行交错"></a>两个世界并行交错</h3><p>从《世界尽头与冷酷仙境》的目录可以一瞥，世界尽头和冷酷仙境两个世界各占一章，互相交织。还有《海边的卡夫卡》中那个在森林中走着走着进到了二战老兵的世界。每当现实性的东西开始摇摆，世界就要变动了，除了《挪威的森林》，几乎所有的长篇都描写了不止一个世界。</p>
+<blockquote>
+<p><strong>目录</strong></p>
+<ol>
+<li>冷酷仙境电梯、无声、肥胖</li>
+<li>世界尽头金毛兽</li>
+<li>冷酷仙境雨衣、夜鬼、分类运算</li>
+<li>世界尽头图书馆</li>
+<li>冷酷仙境计算、进化、性欲</li>
+<li>世界尽头影子</li>
+<li>冷酷仙境头骨、劳伦·巴考尔、图书馆</li>
+<li>世界尽头大校</li>
+<li>冷酷仙境食欲、失意、列宁格勒</li>
+<li>世界尽头围墙</li>
+<li>冷酷仙境穿衣、西瓜、混沌</li>
+<li>世界尽头世界尽头的地图</li>
+<li>冷酷仙境法兰克福、门、独立组织</li>
+<li>世界尽头森林</li>
+</ol>
+</blockquote>
+<p>这三个特点特别完美涵盖了村上的所有小说，能总结得如此精炼也很感谢发条鸟文艺沙龙里面小伙伴的观点，基本上所有小说都是这三个特点的自由组合。</p>
+<h2 id="逛《海边的卡夫卡》里面的橱窗"><a href="#逛《海边的卡夫卡》里面的橱窗" class="headerlink" title="逛《海边的卡夫卡》里面的橱窗"></a>逛《海边的卡夫卡》里面的橱窗</h2><p>村上春树写小说很会藏典故，但是我对美国文学了解很少，就看过《漫长的告别》和《了不起的盖茨比》，所以兴趣来了我会自己去研究研究他里面所谓的典故，当然，这很费时间。</p>
+<h3 id="俄狄浦斯王"><a href="#俄狄浦斯王" class="headerlink" title="俄狄浦斯王"></a>俄狄浦斯王</h3><p>俄狄浦斯王讲了一个弑父娶母的故事，故事里每个人都在想方设法得逃脱自己的命运，结果却是被完完全全拉进命运里了。《海边的卡夫卡》中的少年田村卡夫卡也被下了弑父娶母的诅咒，但是一开始村上的态度就和俄狄浦斯王截然相反：</p>
+<blockquote>
+<p>有时候所谓命运这东西，就像不断改变前进方向的区域沙尘暴一样。你想要避开他而改变脚步，结果，风暴也好像配合你似的改变脚步。你再次改变脚步，于是风暴也同样再度改变脚步。好几次好几次，简直像黎明前和死神所跳的不祥舞步一样，不断的重复又重复。你要问为什么？因为那风暴并不是从远方吹来的和你无关的什么，换句话说那就是你自己。那就是你心中的什么。所以说你能够做的就是放弃挣扎，往那风暴中笔直地踏步走进去，把眼睛和鼻子严严实实得遮住不让风暴进去，一步一步穿过去就可以了。那里面可能既没有太阳，也没有月亮，更没有方向。有时甚至连正常的时间也没有，那里只有如同粉碎得骨头般细细得白沙在高空中飞舞。要想象这样的风暴。</p>
+</blockquote>
+<p>这个其实很好理解了，村上的意思是俄狄浦斯王里面的大家都在逃避自己的命运，直面命运，直面恐惧，才有可能摆脱命运的控制。人的有意识得活着和无意识得活着是两种不同得状态，即便从客观来看结果都差不多，明知有悲惨结局，还是坚持对抗，终于走入悲惨结局，这种态度的核心观点是人要为自己负责。一个抗拒命运的人，即便失败，也是为自己做了决定，为自己的决定负责。</p>
+<p>另外关于俄狄浦斯王，村上春树在对应的田村卡夫卡那里写了他和自己母亲的关系，卡夫卡对母亲的抛弃一直质问，悲哀。俄狄浦斯其实也是同样的经历，刚生下的小孩脚被打了钉子送走了，俄狄浦斯之后刺瞎双眼自我放逐是否也有过对父母的不甘呢。</p>
+<h3 id="卡夫卡"><a href="#卡夫卡" class="headerlink" title="卡夫卡"></a>卡夫卡</h3><p>小说里，在田村卡夫卡和大岛的眼中，卡夫卡最负盛名的小说是《在流放地》。</p>
+<hr>
+<p>Sherry</p>
+<p>2022-4-5</p>
+]]></content>
+      <categories>
+        <category>Sherry</category>
+      </categories>
+  </entry>
+  <entry>
     <title>java LeetCode(更)</title>
     <url>/2022/03/21/Java-LeetCode/</url>
     <content><![CDATA[<p><strong>大小写敏感</strong> </p>
@@ -1858,79 +2056,6 @@ li {undefined
       </categories>
   </entry>
   <entry>
-    <title>《海边的卡夫卡》随笔</title>
-    <url>/2022/04/05/Kafka-by-the-Sea/</url>
-    <content><![CDATA[<p>读村上春树有个好玩的点，这也是之前听方所杨照先生讲座启发的，就是书中隐藏着各种下一步做什么的“指示”,比如找来杨纳切克的<em>sinfonietta</em>来听吧（出自《1Q84》开头）。</p>
-<span id="more"></span>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1384830266&auto=0&height=32"></iframe>
-
-<p>或者去看看《浮士德》吧（来自于《多崎作和他的巡礼之年》的隐喻），我记得大二看挪威的森林不自觉买了甲壳虫的那张专辑<a href="https://music.163.com/album?id=438028">Rubber Soul (Remastered)</a>（无vip<a href="https://music.163.com/album?id=92593453">Rubber Soul</a>）。这是一种奇特的阅读体验，不是一行一行读过去，而是读一阵发现一个宝藏。之前有过这种体验的还是读《红楼梦》的时候。所以第一遍看故事情节，主线，第二遍我就停留下来看看这些橱窗里面都有些什么好东西。</p>
-<p>卡夫卡这个长篇小说，第一次读，印象深刻的有杀猫者，肯德基老爷爷拉皮条，俄狄浦斯情结的隐喻，再次读深深感受到了责任这一主题：人要为自己负责。</p>
-<p>在所涵盖的知识量上，<a href="https://www.baidu.com/link?url=6Qg-Fnq3MCwiuQit2dkvbOyqiz6N036obbaB89bdce3xJOYKtq9dfGGWnLQ826_a33xi9W2N-lbPcTrhwp5nEK&wd=&eqid=bb4ff91d0003c9ed00000003624d5df9"><em>《海边的卡夫卡》</em></a>应该算长篇小说中最纷繁复杂的橱窗了。</p>
-<h2 id="村上春树的创作背景"><a href="#村上春树的创作背景" class="headerlink" title="村上春树的创作背景"></a>村上春树的创作背景</h2><p>自1955年起，日本发生了两起安保斗争，第一起发生在安保条约签订时，第二起发生在安保条约到期是否要续约时。这里提一下安保条约，简单来说，就是由美国负责保护日本的国土安全，<strong>日本同意永久解除武装</strong>。安保条约是很多战后日本年轻人难以接受的现实，因为战后日本经济复苏，拥有了比以前更加强大的国家自信，日本年轻人都期盼着国家的独立，摆脱美国的约束。</p>
-<p>矛盾的是，日本青年的抗争需要从欧美社会那里获取精神资源，所以日本青年很分裂，一方面热切拥抱美国，学习美国，另一方面用学习来的反抗精神反抗美国。这种抗争不单单是对外，还有自我怀疑，自我抗争的部分。</p>
-<p>村上春树进早稻田大学戏剧系没多久，安保斗争就在校园大面积爆发了。村上在现场经历了一切，但是他没参与。因此，首先他见过大场面，体会过革命的轰轰烈烈；同时他又是局外人，因此他能很快看出、承认革命的徒劳无功。由于这一场革命的关系，村上春树始终对日本人抱着一股疏离感，上面这个背景贯穿了他所有小说的主题。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kasahara-MAY/MarkdownPicture/img/202204052236645.jpeg" alt="img"></p>
-<h2 id="村上小说的主题"><a href="#村上小说的主题" class="headerlink" title="村上小说的主题"></a>村上小说的主题</h2><h3 id="人与自由的关系"><a href="#人与自由的关系" class="headerlink" title="人与自由的关系"></a>人与自由的关系</h3><p>拥有自由之后并不是那么容易，相反情况会更复杂。村上在小说《电视人》和《国境以南，太阳以西》都曾探讨过人被解开束缚后会变成什么。</p>
-<p>两个模范生恋爱了，笨拙得亲吻，爱抚。女生却一直坚信，只有结婚才可献出处子之身。</p>
-<blockquote>
-<p>然而，她却站在完全不同的观点来看待这件事。她咬住嘴唇，轻轻地摇摇头。“我非常喜欢你。可是，我想保持处女之身，直到结婚为止。“她以十分平静的语气 说。然后，不论他再怎么说话，极力说服她，她都不为所动。“我很爱你，非常地爱你！可是，那个和这个完全是两回事。对我而言，这是早就决定好的。我觉得很抱歉，但是，请你忍耐。如果你真心爱我，应该可以忍耐吧！</p>
-<p>……</p>
-</blockquote>
-<p>他们后来都读了很好的大学，男生在东京，女生在神户，男孩再一次提出性需求，女孩再一次拒绝，她甚至说自己如果结婚了就可以做爱了，请等到那时候。</p>
-<blockquote>
-<p>等她终于止住哭泣之后，她说了一段很奇怪的话。</p>
-<p>“嗳，如果……，我是说如果我和你分丰了，我还是会永远记得你。真的！我绝对不会忘了你！我真的好爱你！你是我第一个爱上的人，而且，只要和你在一起，我 就觉得很快乐。希望一你了解这一点。可是，那个和这个是两回事。如果你希望我保证对你的爱，那我们就在此约定。我会和你上床。不过，现在还不行。等我和某 人结婚以后，我再和你上床。我不骗你！我保证！”</p>
-<p>……</p>
-</blockquote>
-<p>他们真的分手了，女孩后来和别人结婚了，有一天她给男孩打电话，男孩知道女孩的意思，犹豫了一下便去了，但是现实是两个人并没有做爱，互相爱抚和以前一样，两个人都觉得这是最好的方式。结束后各自说了再见，确实是最后一面了。男人出门找了妓女，这是他第一次招妓。</p>
-<p>处女身体是女孩自己无法打破的框架，限制了她的自由，60年的日本还是相对保守的，打破处女框架的办法只有结婚，所以她觉得自己的自由只有结婚后才能获得。她结婚后，这种自由终于来了，但小说讲的是没有了框架，没有了处女之身的限制，比在框架之内想象自由的情况要复杂得多。缺乏自由的时候想象自由是相对简单的，毕竟很清楚当下的匮乏，但真的有了自由情况就复杂，困难了。女孩结婚，婚姻何尝又不是一种新的框架呢，婚姻生活，家庭生活的框架只能更复杂更紧密。</p>
-<p>难过的事实就是，自由来了，人却没办法拿到自己原来想要的东西，因为不想要了。不过这也没什么可难过的吧，顶多是遗憾，真到那时候，之前想要的东西也就不重要了，就是说那种觉得做到什么什么，获得自由之后我就解脱了，轻松了之类的想法还是不要有的好，自由来临的那一刻，自己亲身经历的，感受过的回忆说不定更重要呢。毕竟那是自己最熟悉的，真切的，无可取代的。</p>
-<p>村上的小说也一直在问：人打破了约束自己的框架，会做些什么？</p>
-<h3 id="人与人之间的疏离"><a href="#人与人之间的疏离" class="headerlink" title="人与人之间的疏离"></a>人与人之间的疏离</h3><p>莫名奇妙是村上小说里面一个很直观的感觉，《寻羊冒险记》里，那个”羊男“让人摸不着头脑，它到底是”羊“还是”男“完全搞不清楚。但是主人公好像完全不在意，简简单单把这玩意当作现实接受下来了，作者的描写让我感觉男主不过是看见了桌上的一个苹果一样稀松平常。</p>
-<img src="https://cdn.jsdelivr.net/gh/Kasahara-MAY/MarkdownPicture/img/202204052235181.webp" alt="img" style="zoom:50%;" />
-
-<p>其实这也是村上创造的角色的魅力，对莫名其妙的事情容忍度出奇得高。这种感觉和我看《局外人》相似，默尔索是一个只看现象的人，对莫名其妙得现象既不惊讶，也不追问。对别人一点也不好奇，算某种程度的选择了和别人疏离吧，说来惭愧，我目前的状态或多或少就是这样，我觉得自己连自己都搞不明白，在不了解自己的情况下，对别人的好奇心真的很少。我之前看豆瓣上《局外人》的书评，很多人认为默尔索很麻木，我对这么麻木讨厌不起来，甚至村上笔下这种麻木可爱起来了。说到这想到个事，大学时候，我可爱的室友总喜欢逗我，比如对着我唱情歌，我大部分时间总说：好的，我知道了。舍友就会哈哈大笑。还有一次，我穿了很日系风的JK服，舍友说很少见我打扮这么可爱，我几乎脱口而出：我也很少见。大抵就是这种可爱的麻木吧。</p>
-<p>说起这么麻木，我还想到爸爸了，他比我有着更强壮的神经，面对这个世界时，比我有着更大的包容力。我几乎很少看他露出惊讶的样子，他也不一定会去探究我觉得莫名其妙的东西。</p>
-<h3 id="两个世界并行交错"><a href="#两个世界并行交错" class="headerlink" title="两个世界并行交错"></a>两个世界并行交错</h3><p>从《世界尽头与冷酷仙境》的目录可以一瞥，世界尽头和冷酷仙境两个世界各占一章，互相交织。还有《海边的卡夫卡》中那个在森林中走着走着进到了二战老兵的世界。每当现实性的东西开始摇摆，世界就要变动了，除了《挪威的森林》，几乎所有的长篇都描写了不止一个世界。</p>
-<blockquote>
-<p><strong>目录</strong></p>
-<ol>
-<li>冷酷仙境电梯、无声、肥胖</li>
-<li>世界尽头金毛兽</li>
-<li>冷酷仙境雨衣、夜鬼、分类运算</li>
-<li>世界尽头图书馆</li>
-<li>冷酷仙境计算、进化、性欲</li>
-<li>世界尽头影子</li>
-<li>冷酷仙境头骨、劳伦·巴考尔、图书馆</li>
-<li>世界尽头大校</li>
-<li>冷酷仙境食欲、失意、列宁格勒</li>
-<li>世界尽头围墙</li>
-<li>冷酷仙境穿衣、西瓜、混沌</li>
-<li>世界尽头世界尽头的地图</li>
-<li>冷酷仙境法兰克福、门、独立组织</li>
-<li>世界尽头森林</li>
-</ol>
-</blockquote>
-<p>这三个特点特别完美涵盖了村上的所有小说，能总结得如此精炼也很感谢发条鸟文艺沙龙里面小伙伴的观点，基本上所有小说都是这三个特点的自由组合。</p>
-<h2 id="逛《海边的卡夫卡》里面的橱窗"><a href="#逛《海边的卡夫卡》里面的橱窗" class="headerlink" title="逛《海边的卡夫卡》里面的橱窗"></a>逛《海边的卡夫卡》里面的橱窗</h2><p>村上春树写小说很会藏典故，但是我对美国文学了解很少，就看过《漫长的告别》和《了不起的盖茨比》，所以兴趣来了我会自己去研究研究他里面所谓的典故，当然，这很费时间。</p>
-<h3 id="俄狄浦斯王"><a href="#俄狄浦斯王" class="headerlink" title="俄狄浦斯王"></a>俄狄浦斯王</h3><p>俄狄浦斯王讲了一个弑父娶母的故事，故事里每个人都在想方设法得逃脱自己的命运，结果却是被完完全全拉进命运里了。《海边的卡夫卡》中的少年田村卡夫卡也被下了弑父娶母的诅咒，但是一开始村上的态度就和俄狄浦斯王截然相反：</p>
-<blockquote>
-<p>有时候所谓命运这东西，就像不断改变前进方向的区域沙尘暴一样。你想要避开他而改变脚步，结果，风暴也好像配合你似的改变脚步。你再次改变脚步，于是风暴也同样再度改变脚步。好几次好几次，简直像黎明前和死神所跳的不祥舞步一样，不断的重复又重复。你要问为什么？因为那风暴并不是从远方吹来的和你无关的什么，换句话说那就是你自己。那就是你心中的什么。所以说你能够做的就是放弃挣扎，往那风暴中笔直地踏步走进去，把眼睛和鼻子严严实实得遮住不让风暴进去，一步一步穿过去就可以了。那里面可能既没有太阳，也没有月亮，更没有方向。有时甚至连正常的时间也没有，那里只有如同粉碎得骨头般细细得白沙在高空中飞舞。要想象这样的风暴。</p>
-</blockquote>
-<p>这个其实很好理解了，村上的意思是俄狄浦斯王里面的大家都在逃避自己的命运，直面命运，直面恐惧，才有可能摆脱命运的控制。人的有意识得活着和无意识得活着是两种不同得状态，即便从客观来看结果都差不多，明知有悲惨结局，还是坚持对抗，终于走入悲惨结局，这种态度的核心观点是人要为自己负责。一个抗拒命运的人，即便失败，也是为自己做了决定，为自己的决定负责。</p>
-<p>另外关于俄狄浦斯王，村上春树在对应的田村卡夫卡那里写了他和自己母亲的关系，卡夫卡对母亲的抛弃一直质问，悲哀。俄狄浦斯其实也是同样的经历，刚生下的小孩脚被打了钉子送走了，俄狄浦斯之后刺瞎双眼自我放逐是否也有过对父母的不甘呢。</p>
-<h3 id="卡夫卡"><a href="#卡夫卡" class="headerlink" title="卡夫卡"></a>卡夫卡</h3><p>小说里，在田村卡夫卡和大岛的眼中，卡夫卡最负盛名的小说是《在流放地》。</p>
-<hr>
-<p>Sherry</p>
-<p>2022-4-5</p>
-]]></content>
-      <categories>
-        <category>Sherry</category>
-      </categories>
-  </entry>
-  <entry>
     <title>读读纪伯伦的小诗吧</title>
     <url>/2021/09/10/Kahlil-Gibran/</url>
     <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
@@ -2136,6 +2261,137 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>Sherry</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>幸福来得太突然</title>
+    <url>/2022/04/21/Mid-Platform/</url>
+    <content><![CDATA[<p>撞了狗屎运了，激动的发说说，对了，以后没有说说，只有博客~</p>
+<p>另外，博客评论区已经支持邮件提醒功能，留下邮箱别人回复你，你就能收到邮件提醒。</p>
+<span id="more"></span>
+
+<p>宝藏专辑</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=7388968725&auto=0&height=430"></iframe>
+
+<h2 id="项目成果成了毕业条件？"><a href="#项目成果成了毕业条件？" class="headerlink" title="项目成果成了毕业条件？"></a>项目成果成了毕业条件？</h2><p>本来都没指望文章能加我名字，突然就达到毕业条件了？？？</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211513778.png" alt="image-20220421151325684"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211513211.png" alt="image-20220421151353138"></p>
+<h2 id="时间管理"><a href="#时间管理" class="headerlink" title="时间管理"></a>时间管理</h2><p>之前小猫咪问我杂事很多，特别忙的时候是怎么管理时间的。</p>
+<p>我是个懒狗，能量时而充沛时而一丝不剩，低效是常态。</p>
+<h3 id="deadline管理"><a href="#deadline管理" class="headerlink" title="deadline管理"></a>deadline管理</h3><p><a href="http://chs.desktopcal.com/chs/">桌面日历 (desktopcal.com)</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211520088.png" alt="image-20220421151959103"></p>
+<h3 id="每日进度"><a href="#每日进度" class="headerlink" title="每日进度"></a>每日进度</h3><p>每日或者每隔几天规划一下待办事项，随手写，边做边规划，这是这篇论文的历程，我还没来得及扔掉。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211523521.jpg" alt="7a43e5b50e4853c34cd320f15a0147c"></p>
+<h3 id="周期进度"><a href="#周期进度" class="headerlink" title="周期进度"></a>周期进度</h3><p>我一般直接贴墙上，写起来方便。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211524778.jpg" alt="f9a3f3bbd55a8e90c67af2f6c0f0ac3"></p>
+<hr>
+<p>2022&#x2F;4&#x2F;21</p>
+<p>西走菜菜</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>杂谈</title>
+    <url>/2022/04/28/Mo/</url>
+    <content><![CDATA[<p>生活不可能像你想象得那么好，但也不会像你想象得那么糟。</p>
+<span id="more"></span>
+
+<p>莫泊桑《一生》里有一段话，这几年过来感悟越来越深。前些年一直刷新前半句的认知，最近重新理解了后半句。</p>
+<blockquote>
+<p>生活不可能像你想象得那么好，但也不会像你想象得那么糟。</p>
+<p>我觉得人的脆弱和坚强都超乎自己的想象。</p>
+<p>有时，我可能脆弱得一句话就泪流满面，有时，也发现自己咬着牙走了很长的路。</p>
+</blockquote>
+<hr>
+<p>2022&#x2F;4&#x2F;28</p>
+<p>西走菜菜</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>月报</title>
+    <url>/2022/03/31/Monthly-reports/</url>
+    <content><![CDATA[<p>这个帖子只谈自己的发展，注意力只集中在眼前和毕业找工作。</p>
+<span id="more"></span>
+
+<h2 id="2022-x2F-3-x2F-31"><a href="#2022-x2F-3-x2F-31" class="headerlink" title="2022&#x2F;3&#x2F;31"></a>2022&#x2F;3&#x2F;31</h2><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354659540&auto=1&height=32"></iframe>
+
+<p>转眼研二下了，时间所剩不多了，之前大把的时间画在碰壁，走弯路，和自己的调整上，回顾都觉得太苦了，苦到不敢回想。收获就是现在整个人更麻木，情绪很难有大的起伏（反正除了自己放弃怎么都能赖活着），更认清自己了，知道自己很脆弱，看到适合自己的路。</p>
+<p>时间很紧，必须得开始追进度了。</p>
+<p>也因为项目必须的实验和师兄们毕业的焦虑，只能放下了之前因被程过河拆桥被夺走论文而对DRL和论文产生的畏惧，下决心想想写几篇水一水，达到毕业条件，只有自己才能救自己啊。也因此，想写这篇月结看看进度，重新开始督促懒散成习惯的自己。</p>
+<h3 id="未完成的目标："><a href="#未完成的目标：" class="headerlink" title="未完成的目标："></a>未完成的目标：</h3><ul>
+<li>2022年7月，小论文；</li>
+<li>项目论文；</li>
+<li>毕业论文；</li>
+<li>工作：力扣，八股文。</li>
+</ul>
+<hr>
+<h3 id="回顾3月："><a href="#回顾3月：" class="headerlink" title="回顾3月："></a>回顾3月：</h3><ol>
+<li>项目论文实验：过去几周，做出了实验，就到此为止，剩余实验工作：1实验图像美化，2论文图片重画，3细扣模型参数，实验设置合理性。</li>
+<li>工作方面：草草过了1.5遍java，力扣刷了70来题，一轮都没完，刚刷完树层次遍历，费劲，不过能感觉到写代码的乐趣，不看题解自己写出来、提交后收到超过别人百分比鼓励、自己总结给别人写写题解想到可能能帮到别人，都挺快乐的，之前从未有过，还挺好的；八股文最近断断续续过了java基础，发现很多coding不理解的东西八股文里有写。</li>
+<li>博客方面：目前的效果我很满意，每天的乐趣来源就是给博客加加新功能。从0到1，学了浅浅的前端和markdown，对了配了GitHub图床，或许会成为未来的铺垫吧。</li>
+<li>毕业和论文方面：近度为0。</li>
+<li>游戏和其它：日常封校，在地平线4里开开车挺好的，就是太累人了，想看看电影电视剧又没什么好看的，羽毛球现在提不起兴趣。给电脑升级了1t的固态和电池，跑代码，看视频，搭环境什么都很舒服，毕业前放心coding。</li>
+<li>心理状态：恢复了，不迷茫了，忙点累点挺好的，我太闲了会出问题。变化的因为是，受了刺激，太想和莹莹走到一起，所以必须得靠自己克服异地这个巨大的困难，具体的解决路线(专注自身)：解决异地问题-&gt;赚钱余额支撑安全感-&gt;工作赚钱-&gt;毕业条件。所以现在满脑子都是毕业和工作，之前绕过的弯路太多了，所以现在时间特赶，对校园生活和社交完全失去了兴趣，也不想在实验室或者和导师的人际关系上消耗任何时间精力。只跑主线。效率！效率！效率！</li>
+</ol>
+<hr>
+<h3 id="之后计划："><a href="#之后计划：" class="headerlink" title="之后计划："></a>之后计划：</h3><ol>
+<li><strong>项目论文写作</strong>：没有参考的就东拼西凑硬着头皮写，项目的东西，收起自己的强迫症，一切以合理有说服力为标准，而不是让自己满意或者提升自己之类的。写出来完事！</li>
+<li><strong>工作方面</strong>：力扣，八股文，一轮继续，暂时顾不上做java的项目，先不管了。</li>
+<li>博客方面：看心情更新，可能还能给我充一段时间的电。</li>
+<li>毕业和论文方面：小论文理论梳理一下，好好思考一年前的复杂优化到最后为什么会失败，克服恐惧的办法就是面对恐惧。试试实验，万一运气好出来了。应用背景方面，有些迷茫。<strong>思考一下也先水出一篇达到毕业条件。</strong></li>
+<li>其它：没什么大问题，经常忘记吃饭不太好。还是每周重新一规划。</li>
+</ol>
+<hr>
+<p>对了，博客评论，不知道是我手机运营商的问题还是什么，手机流量不加载评论，但是WiFi可以。</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>地球上的星星</title>
+    <url>/2022/04/11/Movie-home-loneliness/</url>
+    <content><![CDATA[<p>我看到孩子天生对世界充满了好奇心和探索欲，一个天真的生命原本就具有对其他生命的体察，对自然、对美的感知，他会非常专注地沉浸在自己看到的、觉察到的世界中，这些都是孩子十分可贵的品质。</p>
+<span id="more"></span>
+
+<p>他从不被条条框框束缚，尽情发挥自己的奇思妙想，拥有无穷的想象力和创造力，拥有一个丰富的、充盈的内心世界。</p>
+<p>那么他是怎么变成大人眼中的“坏孩子”的呢？因为他从没有被理解、被尊重过，没有人去发现他的天赋和才能，只看到他不符合标准的部分，只用成绩衡量，只看结果，从来不寻找原因，一味指责、专制、武断，不断地否定他，指望自己的恐吓、暴力能成功教育好一个孩子，在流水线上用成功的模板打造他的样子，也不将孩子视为独立的生命体，而是作为自己生命的延伸，将自己的期望和想法强加到孩子身上。这样的行为并不是真正的关心和爱，要明白每个孩子都是特别的，都有自己的天分，都会按照自己的步调成长，不是大人以为的千篇一律，强行纠正只能扼杀孩子原本的天分、限制孩子的发展，我们要做的是真正的关爱、观察、耐心倾听、理解、尊重、引导、鼓励、肯定以及因材施教。我们需要在他人生的初始阶段，提供适宜他成长的环境，用积极的教育态度，激发他内在的生命力，这些时光是促进他的完整人格发展的基础，将成为他一生宝贵的精神财富，未来无论他处于何地，面对什么问题，他都能从中汲取勇气和动力，支撑着他渡过难关，最终能够自我发展、自我实现，过有价值的人生。</p>
+<hr>
+<p>Rosa:<br>地球上的星星</p>
+<p>Rosa:<br>很让人感动的一个电影</p>
+<p>Rosa:<br>我相信每一个人都会有自己触动的点，在这个电影里面</p>
+<p>Rosa:<br>可以把这个电影的链接还有观后感放在你的那个网站</p>
+<p>Rosa:<br>还有体检报告出来了，不容乐观</p>
+<hr>
+<p>–来自百度网盘超级会员V6的分享<br>hi，这是我用百度网盘分享的内容~复制这段内容打开「百度网盘」APP即可获取<br>链接:<a href="https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841">https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841</a><br>提取码:8841</p>
+<hr>
+<p>小伙伴Rosa被一个人隔离在广州了，真不容易。</p>
+<p>2022&#x2F;4&#x2F;11</p>
+]]></content>
+      <categories>
+        <category>小伙伴</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>电影推荐</title>
+    <url>/2022/03/21/Movie-recommendation/</url>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
+<hr>
+<span id="more"></span>
+
+<p>这是我的好朋友，买手机找他，便宜且很靠谱~我和家人换新机都找他。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211733922.jpg" alt="14452845a506cefc10220686ce97f8a"></p>
+<hr>
+<p>数码小王</p>
+<p>2022&#x2F;3&#x2F;21</p>
+]]></content>
+      <categories>
+        <category>小伙伴</category>
       </categories>
   </entry>
   <entry>
@@ -2917,137 +3173,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>幸福来得太突然</title>
-    <url>/2022/04/21/Mid-Platform/</url>
-    <content><![CDATA[<p>撞了狗屎运了，激动的发说说，对了，以后没有说说，只有博客~</p>
-<p>另外，博客评论区已经支持邮件提醒功能，留下邮箱别人回复你，你就能收到邮件提醒。</p>
-<span id="more"></span>
-
-<p>宝藏专辑</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=7388968725&auto=0&height=430"></iframe>
-
-<h2 id="项目成果成了毕业条件？"><a href="#项目成果成了毕业条件？" class="headerlink" title="项目成果成了毕业条件？"></a>项目成果成了毕业条件？</h2><p>本来都没指望文章能加我名字，突然就达到毕业条件了？？？</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211513778.png" alt="image-20220421151325684"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211513211.png" alt="image-20220421151353138"></p>
-<h2 id="时间管理"><a href="#时间管理" class="headerlink" title="时间管理"></a>时间管理</h2><p>之前小猫咪问我杂事很多，特别忙的时候是怎么管理时间的。</p>
-<p>我是个懒狗，能量时而充沛时而一丝不剩，低效是常态。</p>
-<h3 id="deadline管理"><a href="#deadline管理" class="headerlink" title="deadline管理"></a>deadline管理</h3><p><a href="http://chs.desktopcal.com/chs/">桌面日历 (desktopcal.com)</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211520088.png" alt="image-20220421151959103"></p>
-<h3 id="每日进度"><a href="#每日进度" class="headerlink" title="每日进度"></a>每日进度</h3><p>每日或者每隔几天规划一下待办事项，随手写，边做边规划，这是这篇论文的历程，我还没来得及扔掉。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211523521.jpg" alt="7a43e5b50e4853c34cd320f15a0147c"></p>
-<h3 id="周期进度"><a href="#周期进度" class="headerlink" title="周期进度"></a>周期进度</h3><p>我一般直接贴墙上，写起来方便。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204211524778.jpg" alt="f9a3f3bbd55a8e90c67af2f6c0f0ac3"></p>
-<hr>
-<p>2022&#x2F;4&#x2F;21</p>
-<p>西走菜菜</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>杂谈</title>
-    <url>/2022/04/28/Mo/</url>
-    <content><![CDATA[<p>生活不可能像你想象得那么好，但也不会像你想象得那么糟。</p>
-<span id="more"></span>
-
-<p>莫泊桑《一生》里有一段话，这几年过来感悟越来越深。前些年一直刷新前半句的认知，最近重新理解了后半句。</p>
-<blockquote>
-<p>生活不可能像你想象得那么好，但也不会像你想象得那么糟。</p>
-<p>我觉得人的脆弱和坚强都超乎自己的想象。</p>
-<p>有时，我可能脆弱得一句话就泪流满面，有时，也发现自己咬着牙走了很长的路。</p>
-</blockquote>
-<hr>
-<p>2022&#x2F;4&#x2F;28</p>
-<p>西走菜菜</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>地球上的星星</title>
-    <url>/2022/04/11/Movie-home-loneliness/</url>
-    <content><![CDATA[<p>我看到孩子天生对世界充满了好奇心和探索欲，一个天真的生命原本就具有对其他生命的体察，对自然、对美的感知，他会非常专注地沉浸在自己看到的、觉察到的世界中，这些都是孩子十分可贵的品质。</p>
-<span id="more"></span>
-
-<p>他从不被条条框框束缚，尽情发挥自己的奇思妙想，拥有无穷的想象力和创造力，拥有一个丰富的、充盈的内心世界。</p>
-<p>那么他是怎么变成大人眼中的“坏孩子”的呢？因为他从没有被理解、被尊重过，没有人去发现他的天赋和才能，只看到他不符合标准的部分，只用成绩衡量，只看结果，从来不寻找原因，一味指责、专制、武断，不断地否定他，指望自己的恐吓、暴力能成功教育好一个孩子，在流水线上用成功的模板打造他的样子，也不将孩子视为独立的生命体，而是作为自己生命的延伸，将自己的期望和想法强加到孩子身上。这样的行为并不是真正的关心和爱，要明白每个孩子都是特别的，都有自己的天分，都会按照自己的步调成长，不是大人以为的千篇一律，强行纠正只能扼杀孩子原本的天分、限制孩子的发展，我们要做的是真正的关爱、观察、耐心倾听、理解、尊重、引导、鼓励、肯定以及因材施教。我们需要在他人生的初始阶段，提供适宜他成长的环境，用积极的教育态度，激发他内在的生命力，这些时光是促进他的完整人格发展的基础，将成为他一生宝贵的精神财富，未来无论他处于何地，面对什么问题，他都能从中汲取勇气和动力，支撑着他渡过难关，最终能够自我发展、自我实现，过有价值的人生。</p>
-<hr>
-<p>Rosa:<br>地球上的星星</p>
-<p>Rosa:<br>很让人感动的一个电影</p>
-<p>Rosa:<br>我相信每一个人都会有自己触动的点，在这个电影里面</p>
-<p>Rosa:<br>可以把这个电影的链接还有观后感放在你的那个网站</p>
-<p>Rosa:<br>还有体检报告出来了，不容乐观</p>
-<hr>
-<p>–来自百度网盘超级会员V6的分享<br>hi，这是我用百度网盘分享的内容~复制这段内容打开「百度网盘」APP即可获取<br>链接:<a href="https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841">https://pan.baidu.com/s/1oiTtuta1xGx_fOBeTCZaBg?pwd=8841</a><br>提取码:8841</p>
-<hr>
-<p>小伙伴Rosa被一个人隔离在广州了，真不容易。</p>
-<p>2022&#x2F;4&#x2F;11</p>
-]]></content>
-      <categories>
-        <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>月报</title>
-    <url>/2022/03/31/Monthly-reports/</url>
-    <content><![CDATA[<p>这个帖子只谈自己的发展，注意力只集中在眼前和毕业找工作。</p>
-<span id="more"></span>
-
-<h2 id="2022-x2F-3-x2F-31"><a href="#2022-x2F-3-x2F-31" class="headerlink" title="2022&#x2F;3&#x2F;31"></a>2022&#x2F;3&#x2F;31</h2><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354659540&auto=1&height=32"></iframe>
-
-<p>转眼研二下了，时间所剩不多了，之前大把的时间画在碰壁，走弯路，和自己的调整上，回顾都觉得太苦了，苦到不敢回想。收获就是现在整个人更麻木，情绪很难有大的起伏（反正除了自己放弃怎么都能赖活着），更认清自己了，知道自己很脆弱，看到适合自己的路。</p>
-<p>时间很紧，必须得开始追进度了。</p>
-<p>也因为项目必须的实验和师兄们毕业的焦虑，只能放下了之前因被程过河拆桥被夺走论文而对DRL和论文产生的畏惧，下决心想想写几篇水一水，达到毕业条件，只有自己才能救自己啊。也因此，想写这篇月结看看进度，重新开始督促懒散成习惯的自己。</p>
-<h3 id="未完成的目标："><a href="#未完成的目标：" class="headerlink" title="未完成的目标："></a>未完成的目标：</h3><ul>
-<li>2022年7月，小论文；</li>
-<li>项目论文；</li>
-<li>毕业论文；</li>
-<li>工作：力扣，八股文。</li>
-</ul>
-<hr>
-<h3 id="回顾3月："><a href="#回顾3月：" class="headerlink" title="回顾3月："></a>回顾3月：</h3><ol>
-<li>项目论文实验：过去几周，做出了实验，就到此为止，剩余实验工作：1实验图像美化，2论文图片重画，3细扣模型参数，实验设置合理性。</li>
-<li>工作方面：草草过了1.5遍java，力扣刷了70来题，一轮都没完，刚刷完树层次遍历，费劲，不过能感觉到写代码的乐趣，不看题解自己写出来、提交后收到超过别人百分比鼓励、自己总结给别人写写题解想到可能能帮到别人，都挺快乐的，之前从未有过，还挺好的；八股文最近断断续续过了java基础，发现很多coding不理解的东西八股文里有写。</li>
-<li>博客方面：目前的效果我很满意，每天的乐趣来源就是给博客加加新功能。从0到1，学了浅浅的前端和markdown，对了配了GitHub图床，或许会成为未来的铺垫吧。</li>
-<li>毕业和论文方面：近度为0。</li>
-<li>游戏和其它：日常封校，在地平线4里开开车挺好的，就是太累人了，想看看电影电视剧又没什么好看的，羽毛球现在提不起兴趣。给电脑升级了1t的固态和电池，跑代码，看视频，搭环境什么都很舒服，毕业前放心coding。</li>
-<li>心理状态：恢复了，不迷茫了，忙点累点挺好的，我太闲了会出问题。变化的因为是，受了刺激，太想和莹莹走到一起，所以必须得靠自己克服异地这个巨大的困难，具体的解决路线(专注自身)：解决异地问题-&gt;赚钱余额支撑安全感-&gt;工作赚钱-&gt;毕业条件。所以现在满脑子都是毕业和工作，之前绕过的弯路太多了，所以现在时间特赶，对校园生活和社交完全失去了兴趣，也不想在实验室或者和导师的人际关系上消耗任何时间精力。只跑主线。效率！效率！效率！</li>
-</ol>
-<hr>
-<h3 id="之后计划："><a href="#之后计划：" class="headerlink" title="之后计划："></a>之后计划：</h3><ol>
-<li><strong>项目论文写作</strong>：没有参考的就东拼西凑硬着头皮写，项目的东西，收起自己的强迫症，一切以合理有说服力为标准，而不是让自己满意或者提升自己之类的。写出来完事！</li>
-<li><strong>工作方面</strong>：力扣，八股文，一轮继续，暂时顾不上做java的项目，先不管了。</li>
-<li>博客方面：看心情更新，可能还能给我充一段时间的电。</li>
-<li>毕业和论文方面：小论文理论梳理一下，好好思考一年前的复杂优化到最后为什么会失败，克服恐惧的办法就是面对恐惧。试试实验，万一运气好出来了。应用背景方面，有些迷茫。<strong>思考一下也先水出一篇达到毕业条件。</strong></li>
-<li>其它：没什么大问题，经常忘记吃饭不太好。还是每周重新一规划。</li>
-</ol>
-<hr>
-<p>对了，博客评论，不知道是我手机运营商的问题还是什么，手机流量不加载评论，但是WiFi可以。</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>电影推荐</title>
-    <url>/2022/03/21/Movie-recommendation/</url>
-    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
-<hr>
-<span id="more"></span>
-
-<p>这是我的好朋友，买手机找他，便宜且很靠谱~我和家人换新机都找他。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211733922.jpg" alt="14452845a506cefc10220686ce97f8a"></p>
-<hr>
-<p>数码小王</p>
-<p>2022&#x2F;3&#x2F;21</p>
-]]></content>
-      <categories>
-        <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
     <title>音乐贴(更)</title>
     <url>/2022/03/29/Music/</url>
     <content><![CDATA[<h2 id="来听歌吧"><a href="#来听歌吧" class="headerlink" title="来听歌吧~"></a>来听歌吧~</h2><p>在评论区留言音乐或者任何形式，随意点，我会把它加到帖子里并@你，<strong>如果有什么想说的，或者图片，那再好不过了，毕竟只有声音太干瘪了，灵魂是讲故事和听故事的人赋予的。</strong>我一定会一并贴上去。</p>
@@ -3439,6 +3564,26 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>软件定义-虚拟化-云计算（更）</title>
+    <url>/2022/04/29/SDMP/</url>
+    <content><![CDATA[<ol>
+<li><strong>软件定义</strong>网络及其他架构中<strong>虚拟化</strong>是怎么进行的？</li>
+<li>对于SDMP软件定义安全中台，虚拟化作用于那一层？</li>
+<li>和虚拟机什么关系？软件定义和虚拟化是同一个意思吗？</li>
+<li>虚拟化与云计算有关系吗？没有的话可能产生什么样的联系？</li>
+</ol>
+<span id="more"></span>
+
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204291643944.jpg" alt="68415f1bc400f2f08455b171f5642e2"></p>
+<hr>
+<p>西走菜菜</p>
+<p>2022-4-29</p>
+]]></content>
+      <categories>
+        <category>DRL</category>
+      </categories>
+  </entry>
+  <entry>
     <title>我们真的有自己想象的那样了解现实吗</title>
     <url>/2022/03/27/Recognizing-reality/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -3481,26 +3626,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>Sherry</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>软件定义-虚拟化-云计算（更）</title>
-    <url>/2022/04/29/SDMP/</url>
-    <content><![CDATA[<ol>
-<li><strong>软件定义</strong>网络及其他架构中<strong>虚拟化</strong>是怎么进行的？</li>
-<li>对于SDMP软件定义安全中台，虚拟化作用于那一层？</li>
-<li>和虚拟机什么关系？软件定义和虚拟化是同一个意思吗？</li>
-<li>虚拟化与云计算有关系吗？没有的话可能产生什么样的联系？</li>
-</ol>
-<span id="more"></span>
-
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204291643944.jpg" alt="68415f1bc400f2f08455b171f5642e2"></p>
-<hr>
-<p>西走菜菜</p>
-<p>2022-4-29</p>
-]]></content>
-      <categories>
-        <category>DRL</category>
       </categories>
   </entry>
   <entry>
@@ -3966,6 +4091,51 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>Typora的设置(三)</title>
+    <url>/2022/03/21/Typora-Setting/</url>
+    <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
+<span id="more"></span>
+
+<h2 id="1-下载Typora"><a href="#1-下载Typora" class="headerlink" title="1.下载Typora"></a>1.下载Typora</h2><p>百度搜索typora，源码在github，所以可能会慢，也可以挂梯子，either way is fine</p>
+<p><a href="https://www.typora.net/">Typora|Typora中文|typora下载|typora 主题</a>中文官网下载</p>
+<p><a href="http://yiting.pro/">Typora — a markdown editor, markdown reader. (yiting.pro)</a>原网页</p>
+<h2 id="2-Typora设置"><a href="#2-Typora设置" class="headerlink" title="2.Typora设置"></a>2.Typora设置</h2><p>安装完成后，这些是我的设置，我觉得非常顺手，按你的喜好来就行，直接进入<strong>偏好设置</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211135751.png" alt="982ba7245349cabf1c3b76bb9d37b29"></p>
+<p><strong>本地图床设置，很重要，否则有可能会因为移动文件夹或者电脑清理而遗失图片！</strong></p>
+<p>首先，养成良好的习惯，选择指定路径，把你的markdown集中保管。按照如图设置，在markdown管理的根目录下创建picture文件夹，然后当你拖拽或者复制粘贴图片进来的时候，typora会自动复制图片到这个文件夹去，然后把相对路径粘贴到你指定的文章位置，很方便。</p>
+<p>markdown作为文本标记语言，最头疼的就是管理图片，把它交给typora吧，你就不需要因管理图片而费心思了。</p>
+<p>到这儿你实现了图片管理自动化，但不能把包含图片的markdown或者其它导出格式分享给朋友，或者在别的地方查看，更方便的办法就是<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，不点击不影响本地配置。</p>
+<p>其它不太重要的设置：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211130280.png" alt="image-20220321113005083"></p>
+<p>设置 重新打开，自动保存，自动更新；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211131099.png" alt="b87520f2ce9005fd3881a5fc73d8c3d"></p>
+<p>我喜欢干净简洁，用一体化，侧边栏折叠，不然乱糟糟的；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211133783.png" alt="6dd2e2595d9eb940e03ea730a7a1c42"></p>
+<p>编辑器打开匹配Markdown就可以像写代码时候一样手不用离开键盘去碰鼠标了，这太恼人了，配合快捷键使用 链接；</p>
+<p>后面基本不需要什么设置了，保险起见还是贴出来。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142752.png" alt="59a29211aff71c75382498a8d20f4ac"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142846.png" alt="26559d405080171560fac7248d6e519"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142807.png" alt="e48bce4fcc0430357ed1b464b2599fd"></p>
+<h2 id="3-浏览器插件支持"><a href="#3-浏览器插件支持" class="headerlink" title="3.浏览器插件支持"></a>3.浏览器插件支持</h2><p>如果你用的是chrome或者chrome内核的edge，比如我，<a href="https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/immegcobaplfimdjgkabakodipaehfca">Copy as Markdown - Microsoft Edge Addons</a>插件是必装的，你的所有复制行为，自带markdown格式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211147083.png" alt="image-20220321114716013"></p>
+<p>之后我专门出一期如何优雅的全设备使用edge。</p>
+<h3 id="恭喜你，到此你的Markdown已经本地化非常好用啦！"><a href="#恭喜你，到此你的Markdown已经本地化非常好用啦！" class="headerlink" title="恭喜你，到此你的Markdown已经本地化非常好用啦！"></a>恭喜你，到此你的Markdown已经本地化非常好用啦！</h3><h2 id="4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四"><a href="#4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四" class="headerlink" title="4.Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) "></a>4.<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></h2><hr>
+<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
+<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
+</ol>
+<hr>
+<p>2022&#x2F;3&#x2F;21</p>
+]]></content>
+      <categories>
+        <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
     <title>win快捷键</title>
     <url>/2022/03/20/Win10-shortcut-key/</url>
     <content><![CDATA[<p>如果你和我一样是电脑小白，又很烦win10所有事情都强烈依赖鼠标，这些快捷键会让你的体验大幅度提升</p>
@@ -4015,51 +4185,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>小技巧&amp;快捷键&amp;命令</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Typora的设置(三)</title>
-    <url>/2022/03/21/Typora-Setting/</url>
-    <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
-<span id="more"></span>
-
-<h2 id="1-下载Typora"><a href="#1-下载Typora" class="headerlink" title="1.下载Typora"></a>1.下载Typora</h2><p>百度搜索typora，源码在github，所以可能会慢，也可以挂梯子，either way is fine</p>
-<p><a href="https://www.typora.net/">Typora|Typora中文|typora下载|typora 主题</a>中文官网下载</p>
-<p><a href="http://yiting.pro/">Typora — a markdown editor, markdown reader. (yiting.pro)</a>原网页</p>
-<h2 id="2-Typora设置"><a href="#2-Typora设置" class="headerlink" title="2.Typora设置"></a>2.Typora设置</h2><p>安装完成后，这些是我的设置，我觉得非常顺手，按你的喜好来就行，直接进入<strong>偏好设置</strong>：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211135751.png" alt="982ba7245349cabf1c3b76bb9d37b29"></p>
-<p><strong>本地图床设置，很重要，否则有可能会因为移动文件夹或者电脑清理而遗失图片！</strong></p>
-<p>首先，养成良好的习惯，选择指定路径，把你的markdown集中保管。按照如图设置，在markdown管理的根目录下创建picture文件夹，然后当你拖拽或者复制粘贴图片进来的时候，typora会自动复制图片到这个文件夹去，然后把相对路径粘贴到你指定的文章位置，很方便。</p>
-<p>markdown作为文本标记语言，最头疼的就是管理图片，把它交给typora吧，你就不需要因管理图片而费心思了。</p>
-<p>到这儿你实现了图片管理自动化，但不能把包含图片的markdown或者其它导出格式分享给朋友，或者在别的地方查看，更方便的办法就是<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，不点击不影响本地配置。</p>
-<p>其它不太重要的设置：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211130280.png" alt="image-20220321113005083"></p>
-<p>设置 重新打开，自动保存，自动更新；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211131099.png" alt="b87520f2ce9005fd3881a5fc73d8c3d"></p>
-<p>我喜欢干净简洁，用一体化，侧边栏折叠，不然乱糟糟的；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211133783.png" alt="6dd2e2595d9eb940e03ea730a7a1c42"></p>
-<p>编辑器打开匹配Markdown就可以像写代码时候一样手不用离开键盘去碰鼠标了，这太恼人了，配合快捷键使用 链接；</p>
-<p>后面基本不需要什么设置了，保险起见还是贴出来。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142752.png" alt="59a29211aff71c75382498a8d20f4ac"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142846.png" alt="26559d405080171560fac7248d6e519"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142807.png" alt="e48bce4fcc0430357ed1b464b2599fd"></p>
-<h2 id="3-浏览器插件支持"><a href="#3-浏览器插件支持" class="headerlink" title="3.浏览器插件支持"></a>3.浏览器插件支持</h2><p>如果你用的是chrome或者chrome内核的edge，比如我，<a href="https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/immegcobaplfimdjgkabakodipaehfca">Copy as Markdown - Microsoft Edge Addons</a>插件是必装的，你的所有复制行为，自带markdown格式。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211147083.png" alt="image-20220321114716013"></p>
-<p>之后我专门出一期如何优雅的全设备使用edge。</p>
-<h3 id="恭喜你，到此你的Markdown已经本地化非常好用啦！"><a href="#恭喜你，到此你的Markdown已经本地化非常好用啦！" class="headerlink" title="恭喜你，到此你的Markdown已经本地化非常好用啦！"></a>恭喜你，到此你的Markdown已经本地化非常好用啦！</h3><h2 id="4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四"><a href="#4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四" class="headerlink" title="4.Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) "></a>4.<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></h2><hr>
-<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
-<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
-</ol>
-<hr>
-<p>2022&#x2F;3&#x2F;21</p>
-]]></content>
-      <categories>
-        <category>Markdown&amp;Blog</category>
       </categories>
   </entry>
   <entry>
@@ -4202,6 +4327,56 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>杂谈</title>
+    <url>/2022/04/11/loneliness&amp;earphones/</url>
+    <content><![CDATA[<p>几年前考研的时候，我一直是一个人复习，我觉得很孤独，很多时候很羡慕宿舍他们四个一起复习。</p>
+<p>我本来以为，考完研，生活正常了，就不会一个人了，现在看来，那时候才是面对自己一个人生活的开始。</p>
+<span id="more"></span>
+
+<blockquote>
+<p>孤独才是人生常态啊。</p>
+</blockquote>
+<p>感悟越来越深了，真是的。<br>研一交了几百个新朋友，也丝毫没有缓解这种孤独感，反而越来越严重了，这个问题本身似乎是无解的，想通过摆脱一个人的状态脱离孤独感不现实。</p>
+<p>给自己找点事做，树立一个短期目标然后追逐，忙到忘了自己还活着，也忘记自己孤独的感受，让感受主动敲自己的内心之门，而不是自己主动花精力去感受，生活就正常了，麻木了，人却活得很舒服，说来真是奇怪。人和自己的感受，很难共存。</p>
+<hr>
+<p>关于耳机，圈内玩过些年，以前小的时候对异性朦胧的好奇和向往，潜意识喜欢<code>女毒</code>，耳机和音乐中<code>延展</code>、<code>泛音</code>、<code>明亮</code>、<code>通透</code>、<code>轻盈自然</code>很容易就能打动我，当时甚至喜欢过<code>陌生人妻</code>……可想而知是什么样的偏好。</p>
+<p>也喜欢过动次打次，鼓点，低频<code>温暖厚实</code>、<code>下潜巨大</code>、<code>层次丰富</code>不能糊。</p>
+<p>后来嫌累，就听细节多的交响或者小编制协奏多了，也入手了第一个平板振膜结构的大耳。</p>
+<p>托它的福，现在喜欢地摊儿平头塞子，大耳压发型而且我的都是开放式实验室会打扰别人，入耳入门的也被舍弃了，喜欢白开水，喜欢平头塞。</p>
+<p>题外话，大家都说平头塞带着不舒服，其实多半是因为你没有加海绵，想象一下没有硅胶哥套或者C套的入耳直接戳你耳朵里除非是私模，好可怕，多痛苦啊……</p>
+<p>可惜现在很多厂商都不做了，伤感。</p>
+<p>耳机有些<code>动态</code>，<code>通透宽松自然</code>很重要，<code>解析</code>不用太强，随便听听不想累，音乐口味清淡一些比较好，以前电源+播放+解码+耳机多好都觉得差意思，现在百十来块就很能满足了，尖尖的女声不太能接受，太吵了也会不舒服。</p>
+<hr>
+<p>2022&#x2F;4&#x2F;11</p>
+<p>西走菜菜</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/03/09/hello-world/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-surge">
+      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>博客测试</category>
+      </categories>
+  </entry>
+  <entry>
     <title>读《第一人称单数》</title>
     <url>/2022/03/26/first-person/</url>
     <content><![CDATA[<p>时隔六年村上春树又出新小说了，这是写于2018至2019年的一些短篇小说，可以说都是村上七十多岁写的东西了，但是在他的小说里，主人公永远是年轻人，一个不介意孤独的主角，能自己给自己找乐子，我对着这样的人有着莫名的亲近感。啊对了，村上本人也很健康很自律，给人一种活力充沛的印象，铁人三项的爱好者，果然爱运动的人都很有魅力呢。</p>
@@ -4247,56 +4422,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>Sherry</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/03/09/hello-world/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-surge">
-      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>博客测试</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>杂谈</title>
-    <url>/2022/04/11/loneliness&amp;earphones/</url>
-    <content><![CDATA[<p>几年前考研的时候，我一直是一个人复习，我觉得很孤独，很多时候很羡慕宿舍他们四个一起复习。</p>
-<p>我本来以为，考完研，生活正常了，就不会一个人了，现在看来，那时候才是面对自己一个人生活的开始。</p>
-<span id="more"></span>
-
-<blockquote>
-<p>孤独才是人生常态啊。</p>
-</blockquote>
-<p>感悟越来越深了，真是的。<br>研一交了几百个新朋友，也丝毫没有缓解这种孤独感，反而越来越严重了，这个问题本身似乎是无解的，想通过摆脱一个人的状态脱离孤独感不现实。</p>
-<p>给自己找点事做，树立一个短期目标然后追逐，忙到忘了自己还活着，也忘记自己孤独的感受，让感受主动敲自己的内心之门，而不是自己主动花精力去感受，生活就正常了，麻木了，人却活得很舒服，说来真是奇怪。人和自己的感受，很难共存。</p>
-<hr>
-<p>关于耳机，圈内玩过些年，以前小的时候对异性朦胧的好奇和向往，潜意识喜欢<code>女毒</code>，耳机和音乐中<code>延展</code>、<code>泛音</code>、<code>明亮</code>、<code>通透</code>、<code>轻盈自然</code>很容易就能打动我，当时甚至喜欢过<code>陌生人妻</code>……可想而知是什么样的偏好。</p>
-<p>也喜欢过动次打次，鼓点，低频<code>温暖厚实</code>、<code>下潜巨大</code>、<code>层次丰富</code>不能糊。</p>
-<p>后来嫌累，就听细节多的交响或者小编制协奏多了，也入手了第一个平板振膜结构的大耳。</p>
-<p>托它的福，现在喜欢地摊儿平头塞子，大耳压发型而且我的都是开放式实验室会打扰别人，入耳入门的也被舍弃了，喜欢白开水，喜欢平头塞。</p>
-<p>题外话，大家都说平头塞带着不舒服，其实多半是因为你没有加海绵，想象一下没有硅胶哥套或者C套的入耳直接戳你耳朵里除非是私模，好可怕，多痛苦啊……</p>
-<p>可惜现在很多厂商都不做了，伤感。</p>
-<p>耳机有些<code>动态</code>，<code>通透宽松自然</code>很重要，<code>解析</code>不用太强，随便听听不想累，音乐口味清淡一些比较好，以前电源+播放+解码+耳机多好都觉得差意思，现在百十来块就很能满足了，尖尖的女声不太能接受，太吵了也会不舒服。</p>
-<hr>
-<p>2022&#x2F;4&#x2F;11</p>
-<p>西走菜菜</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
