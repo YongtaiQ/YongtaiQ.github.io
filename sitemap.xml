@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yongtaiq.github.io/2021/11/15/Play-badminton-gracefully/</loc>
+    
+    <lastmod>2022-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yongtaiq.github.io/2022/05/02/Before-communication/</loc>
     
     <lastmod>2022-05-02</lastmod>
@@ -344,15 +353,6 @@
   </url>
   
   <url>
-    <loc>https://yongtaiq.github.io/2021/11/15/Play-badminton-gracefully/</loc>
-    
-    <lastmod>2022-03-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yongtaiq.github.io/2020/12/28/Deep-Q-Learning-with-Keras-and-Gym/</loc>
     
     <lastmod>2022-03-29</lastmod>
@@ -535,7 +535,7 @@
 
   <url>
     <loc>https://yongtaiq.github.io/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -545,70 +545,70 @@
   
   <url>
     <loc>https://yongtaiq.github.io/categories/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AF%97%E6%AD%8C/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yongtaiq.github.io/categories/Sherry/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yongtaiq.github.io/categories/%E6%97%A5%E6%9C%9F/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yongtaiq.github.io/categories/Markdown-Blog/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yongtaiq.github.io/categories/%E5%B0%8F%E4%BC%99%E4%BC%B4/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yongtaiq.github.io/categories/java/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yongtaiq.github.io/categories/DRL/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yongtaiq.github.io/categories/Cloud-Computing/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yongtaiq.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7-%E5%BF%AB%E6%8D%B7%E9%94%AE-%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yongtaiq.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
