@@ -583,6 +583,13 @@
   </url>
   
   <url>
+    <loc>https://yongtaiq.github.io/categories/Markdown-Blog/</loc>
+    <lastmod>2022-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://yongtaiq.github.io/categories/%E5%B0%8F%E4%BC%99%E4%BC%B4/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -590,7 +597,7 @@
   </url>
   
   <url>
-    <loc>https://yongtaiq.github.io/categories/Markdown-Blog/</loc>
+    <loc>https://yongtaiq.github.io/categories/DRL/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -605,13 +612,6 @@
   
   <url>
     <loc>https://yongtaiq.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7-%E5%BF%AB%E6%8D%B7%E9%94%AE-%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2022-05-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://yongtaiq.github.io/categories/DRL/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
