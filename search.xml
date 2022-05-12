@@ -4196,51 +4196,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>Typora的设置(三)</title>
-    <url>/2022/03/21/Typora-Setting/</url>
-    <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
-<span id="more"></span>
-
-<h2 id="1-下载Typora"><a href="#1-下载Typora" class="headerlink" title="1.下载Typora"></a>1.下载Typora</h2><p>百度搜索typora，源码在github，所以可能会慢，也可以挂梯子，either way is fine</p>
-<p><a href="https://www.typora.net/">Typora|Typora中文|typora下载|typora 主题</a>中文官网下载</p>
-<p><a href="http://yiting.pro/">Typora — a markdown editor, markdown reader. (yiting.pro)</a>原网页</p>
-<h2 id="2-Typora设置"><a href="#2-Typora设置" class="headerlink" title="2.Typora设置"></a>2.Typora设置</h2><p>安装完成后，这些是我的设置，我觉得非常顺手，按你的喜好来就行，直接进入<strong>偏好设置</strong>：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211135751.png" alt="982ba7245349cabf1c3b76bb9d37b29"></p>
-<p><strong>本地图床设置，很重要，否则有可能会因为移动文件夹或者电脑清理而遗失图片！</strong></p>
-<p>首先，养成良好的习惯，选择指定路径，把你的markdown集中保管。按照如图设置，在markdown管理的根目录下创建picture文件夹，然后当你拖拽或者复制粘贴图片进来的时候，typora会自动复制图片到这个文件夹去，然后把相对路径粘贴到你指定的文章位置，很方便。</p>
-<p>markdown作为文本标记语言，最头疼的就是管理图片，把它交给typora吧，你就不需要因管理图片而费心思了。</p>
-<p>到这儿你实现了图片管理自动化，但不能把包含图片的markdown或者其它导出格式分享给朋友，或者在别的地方查看，更方便的办法就是<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，不点击不影响本地配置。</p>
-<p>其它不太重要的设置：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211130280.png" alt="image-20220321113005083"></p>
-<p>设置 重新打开，自动保存，自动更新；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211131099.png" alt="b87520f2ce9005fd3881a5fc73d8c3d"></p>
-<p>我喜欢干净简洁，用一体化，侧边栏折叠，不然乱糟糟的；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211133783.png" alt="6dd2e2595d9eb940e03ea730a7a1c42"></p>
-<p>编辑器打开匹配Markdown就可以像写代码时候一样手不用离开键盘去碰鼠标了，这太恼人了，配合快捷键使用 链接；</p>
-<p>后面基本不需要什么设置了，保险起见还是贴出来。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142752.png" alt="59a29211aff71c75382498a8d20f4ac"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142846.png" alt="26559d405080171560fac7248d6e519"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142807.png" alt="e48bce4fcc0430357ed1b464b2599fd"></p>
-<h2 id="3-浏览器插件支持"><a href="#3-浏览器插件支持" class="headerlink" title="3.浏览器插件支持"></a>3.浏览器插件支持</h2><p>如果你用的是chrome或者chrome内核的edge，比如我，<a href="https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/immegcobaplfimdjgkabakodipaehfca">Copy as Markdown - Microsoft Edge Addons</a>插件是必装的，你的所有复制行为，自带markdown格式。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211147083.png" alt="image-20220321114716013"></p>
-<p>之后我专门出一期如何优雅的全设备使用edge。</p>
-<h3 id="恭喜你，到此你的Markdown已经本地化非常好用啦！"><a href="#恭喜你，到此你的Markdown已经本地化非常好用啦！" class="headerlink" title="恭喜你，到此你的Markdown已经本地化非常好用啦！"></a>恭喜你，到此你的Markdown已经本地化非常好用啦！</h3><h2 id="4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四"><a href="#4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四" class="headerlink" title="4.Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) "></a>4.<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></h2><hr>
-<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
-<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
-<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
-</ol>
-<hr>
-<p>2022&#x2F;3&#x2F;21</p>
-]]></content>
-      <categories>
-        <category>Markdown&amp;Blog</category>
-      </categories>
-  </entry>
-  <entry>
     <title>win快捷键</title>
     <url>/2022/03/20/Win10-shortcut-key/</url>
     <content><![CDATA[<p>如果你和我一样是电脑小白，又很烦win10所有事情都强烈依赖鼠标，这些快捷键会让你的体验大幅度提升</p>
@@ -4293,6 +4248,51 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>Typora的设置(三)</title>
+    <url>/2022/03/21/Typora-Setting/</url>
+    <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
+<span id="more"></span>
+
+<h2 id="1-下载Typora"><a href="#1-下载Typora" class="headerlink" title="1.下载Typora"></a>1.下载Typora</h2><p>百度搜索typora，源码在github，所以可能会慢，也可以挂梯子，either way is fine</p>
+<p><a href="https://www.typora.net/">Typora|Typora中文|typora下载|typora 主题</a>中文官网下载</p>
+<p><a href="http://yiting.pro/">Typora — a markdown editor, markdown reader. (yiting.pro)</a>原网页</p>
+<h2 id="2-Typora设置"><a href="#2-Typora设置" class="headerlink" title="2.Typora设置"></a>2.Typora设置</h2><p>安装完成后，这些是我的设置，我觉得非常顺手，按你的喜好来就行，直接进入<strong>偏好设置</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211135751.png" alt="982ba7245349cabf1c3b76bb9d37b29"></p>
+<p><strong>本地图床设置，很重要，否则有可能会因为移动文件夹或者电脑清理而遗失图片！</strong></p>
+<p>首先，养成良好的习惯，选择指定路径，把你的markdown集中保管。按照如图设置，在markdown管理的根目录下创建picture文件夹，然后当你拖拽或者复制粘贴图片进来的时候，typora会自动复制图片到这个文件夹去，然后把相对路径粘贴到你指定的文章位置，很方便。</p>
+<p>markdown作为文本标记语言，最头疼的就是管理图片，把它交给typora吧，你就不需要因管理图片而费心思了。</p>
+<p>到这儿你实现了图片管理自动化，但不能把包含图片的markdown或者其它导出格式分享给朋友，或者在别的地方查看，更方便的办法就是<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a>，不点击不影响本地配置。</p>
+<p>其它不太重要的设置：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211130280.png" alt="image-20220321113005083"></p>
+<p>设置 重新打开，自动保存，自动更新；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211131099.png" alt="b87520f2ce9005fd3881a5fc73d8c3d"></p>
+<p>我喜欢干净简洁，用一体化，侧边栏折叠，不然乱糟糟的；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211133783.png" alt="6dd2e2595d9eb940e03ea730a7a1c42"></p>
+<p>编辑器打开匹配Markdown就可以像写代码时候一样手不用离开键盘去碰鼠标了，这太恼人了，配合快捷键使用 链接；</p>
+<p>后面基本不需要什么设置了，保险起见还是贴出来。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142752.png" alt="59a29211aff71c75382498a8d20f4ac"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142846.png" alt="26559d405080171560fac7248d6e519"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211142807.png" alt="e48bce4fcc0430357ed1b464b2599fd"></p>
+<h2 id="3-浏览器插件支持"><a href="#3-浏览器插件支持" class="headerlink" title="3.浏览器插件支持"></a>3.浏览器插件支持</h2><p>如果你用的是chrome或者chrome内核的edge，比如我，<a href="https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/immegcobaplfimdjgkabakodipaehfca">Copy as Markdown - Microsoft Edge Addons</a>插件是必装的，你的所有复制行为，自带markdown格式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211147083.png" alt="image-20220321114716013"></p>
+<p>之后我专门出一期如何优雅的全设备使用edge。</p>
+<h3 id="恭喜你，到此你的Markdown已经本地化非常好用啦！"><a href="#恭喜你，到此你的Markdown已经本地化非常好用啦！" class="headerlink" title="恭喜你，到此你的Markdown已经本地化非常好用啦！"></a>恭喜你，到此你的Markdown已经本地化非常好用啦！</h3><h2 id="4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四"><a href="#4-Typora-PicGo-GitHub搭建云端图床-Markdown-amp-Blog笔记四" class="headerlink" title="4.Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) "></a>4.<a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></h2><hr>
+<h2 id="本系列和所有相关文章目录"><a href="#本系列和所有相关文章目录" class="headerlink" title="本系列和所有相关文章目录"></a>本系列和所有相关文章目录</h2><ol>
+<li><a href="https://yongtaiq.github.io/2020/12/03/Code-Markdown-gracefully/">如何优雅的编写Markdown(Markdown&amp;Blog笔记一) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Latex/">Latex&amp;流程图(Markdown&amp;Blog笔记二) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora-Setting/">Typora的设置(Markdown&amp;Blog笔记三) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Typora+PicGo+GitHub/">Typora+PicGo+GitHub搭建云端图床(Markdown&amp;Blog笔记四) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/21/Blog+Hexo/">Blog+Hexo搭建(Markdown&amp;Blog笔记五) </a></li>
+<li><a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a></li>
+</ol>
+<hr>
+<p>2022&#x2F;3&#x2F;21</p>
+]]></content>
+      <categories>
+        <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
     <title>b站更新了win客户端</title>
     <url>/2022/05/12/bilibili/</url>
     <content><![CDATA[<p>好耶！</p>
@@ -4306,9 +4306,8 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 
 <p>2022-05-10 Windows 1.1.0 正式版发布</p>
 <p><a href="https://app.bilibili.com/?spm_id_from=333.1007.0.0">哔哩哔哩下载中心 (bilibili.com)</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202205121008005.png" alt="image-20220512100837337"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202205121031542.png" alt="image-20220512103105883"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202205121010483.png" alt="image-20220512101035619"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202205121011263.png" alt="image-20220512101108710"></p>
 <hr>
 <p>西走菜菜</p>
 <p>2022-5-12</p>
