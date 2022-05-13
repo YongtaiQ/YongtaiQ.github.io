@@ -1022,6 +1022,32 @@
       </categories>
   </entry>
   <entry>
+    <title>Win删除文件</title>
+    <url>/2022/05/11/Del-nopass/</url>
+    <content><![CDATA[<blockquote>
+<p>该项目不在XXX中。请确认该项目的位置，然后重试。</p>
+</blockquote>
+<span id="more"></span>
+
+<ol>
+<li>新建<code>.txt</code>文件</li>
+<li>输入以下内容后，保存</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">DEL /F /A /Q \\?\%1</span><br><span class="line">RD /S /Q \\?\%1</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>将文件名改为<code>.bat</code></li>
+<li>将无法删除的文件或文件夹拖拽到这个文件即可删除</li>
+</ol>
+<hr>
+<p>2022-5-11</p>
+<p>西走菜菜</p>
+]]></content>
+      <categories>
+        <category>小技巧&amp;快捷键&amp;命令</category>
+      </categories>
+  </entry>
+  <entry>
     <title>AIRL中遇到的问题</title>
     <url>/2020/12/11/Difficulties-in-AIRL/</url>
     <content><![CDATA[<p> 云调度和DRL论文中 <em>待解决</em> 思考：</p>
@@ -1128,32 +1154,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Win删除文件</title>
-    <url>/2022/05/11/Del-nopass/</url>
-    <content><![CDATA[<blockquote>
-<p>该项目不在XXX中。请确认该项目的位置，然后重试。</p>
-</blockquote>
-<span id="more"></span>
-
-<ol>
-<li>新建<code>.txt</code>文件</li>
-<li>输入以下内容后，保存</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">DEL /F /A /Q \\?\%1</span><br><span class="line">RD /S /Q \\?\%1</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>将文件名改为<code>.bat</code></li>
-<li>将无法删除的文件或文件夹拖拽到这个文件即可删除</li>
-</ol>
-<hr>
-<p>2022-5-11</p>
-<p>西走菜菜</p>
-]]></content>
-      <categories>
-        <category>小技巧&amp;快捷键&amp;命令</category>
-      </categories>
-  </entry>
-  <entry>
     <title>如何优雅的驾驶</title>
     <url>/2021/03/29/Drive-gracefully/</url>
     <content><![CDATA[<p>2021年年初到3月底，每天连续开车在2小时左右，周末常常4-6小时的远路，尝试了各种手动挡的技巧。</p>
@@ -1254,156 +1254,6 @@
 ]]></content>
       <categories>
         <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>hadoop+pyspark学习和部署</title>
-    <url>/2021/09/18/Hadoop+pyspark/</url>
-    <content><![CDATA[<p><a href="https://codingdict.com/article/8880">PySpark简介</a></p>
-<p>map reduce工具 将现有算法<strong>并行化</strong>  （执行平台）<strong>hadoop</strong>（java）上执行，其它如spark兼容python</p>
-<p>基础架构如hadoop-&gt;分析基础架构hive，hbase-&gt;高级工具</p>
-<p>mapreduce做并行化的几个应用方向：文本，图，关系型数据，机器学习（）</p>
-<p>并行化挑战：进程计算结果交换；程序共享资源</p>
-<span id="more"></span>
-
-<h3 id="函数式编程初探-阮一峰的网络日志"><a href="#函数式编程初探-阮一峰的网络日志" class="headerlink" title="函数式编程初探 - 阮一峰的网络日志"></a><a href="https://www.baidu.com/link?url=B9Nckg0KW9QLQnfwtG0ugkemDjOfjEwNqxYuDnMmPO20rwFL2_uOnV_0_XAH9c23JHMXtpJ-GfKxTDJ0g08lOALp5-klyO8Riqs6K_N9oxy&wd=&eqid=b45c6d5d00040e07000000036098f887"><em>函数式编程</em>初探 - 阮一峰的网络日志</a></h3><p><strong>PySpark完成实验：</strong> Spark+python；支持本地和分布式集群；程序运行平台，spark，hadoop都可以，迁移方便。具体看官方文档。</p>
-<hr>
-<p>逻辑视图：四个原语</p>
-<p>利用MapReduce框架对某个算法并行化</p>
-<p> map map <strong>map</strong> ，$f$函数</p>
-<p>fold (或<strong>reduce</strong>)汇总，有初始值，自动完成</p>
-<p>链式组合t数组.map.map.reduce</p>
-<p><code>map(k1,v1)-&gt;list(k2,v2) </code> kv对，k主码，v其它，key，value</p>
-<p><code>reduce(k2,list(v2)-&gt;list(k3,v3)</code></p>
-<p>数据切片，k作为主码，v是信息，<code>map</code>分派$f$，数据清洗，简单来说就是用关键字划分组，以此为依据，交给<code>reduce</code>，往往是数组，汇总。</p>
-<p><strong>MapReduce“Runtime”（运行时）</strong>,framework,底层软件，类似spark或者Hadoop，他来处理：处理任务调度，负载均衡，同步异步，灾害重建</p>
-<p>为了减少map与ruduce中间分布式排序时间，MRCP</p>
-<p>增加<code>partition(k,p)</code>,上层map的k下层p为reduce用哈希绕开分布式排序</p>
-<p>和<code>combine(k2,list(v2))</code> minireduce，本地统一组合一个虚拟机的不同分片</p>
-<p>t-&gt;map-&gt;combine-&gt;partition-按关键字分组排序-&gt;reduce</p>
-<p>map，reduce 输出<code>emit</code>交给分布式排序</p>
-<hr>
-<p> 物理视图：数据分片，分布式磁盘-&gt;给了VM,Map-&gt;本地保存到本地磁盘-&gt;分布式排序，有网络通讯，远程异地-&gt;VM做reduce-&gt;输出</p>
-<p>两次分配算法都由控制主机master控制：作业提交，分配map节点，reduce节点。</p>
-<p><strong>数据移动，作业调度 是几个矩阵？</strong></p>
-<ul>
-<li>分布式数据库到map虚拟机；</li>
-<li>map虚拟机到reduce虚拟机？</li>
-<li>master指派job给map，指派job给reduce虚拟机？计算效率？通信效率？这是不是task调度？</li>
-</ul>
-<p>多个机器，低性能。随机访问代价昂贵</p>
-<p>(hadoop)job提交：</p>
-<ul>
-<li>job分成map reduce等四个task</li>
-<li>每个task会有一个任务跟踪器</li>
-<li>多个job会形成有一个工作流</li>
-</ul>
-<p>数据现在很多是以kv对的形式存储计算的，不用中间格式转换，如mangodb</p>
-<p>Hadoop可以本地部署，本地调试好在部署到云，不然debug麻烦死。</p>
-<hr>
-<p>作业：安装pyspark实现个小例子。</p>
-<p>PySpark相关资料：</p>
-<p>1、Pyspark基础教程：rdd弹性数据集 datafree<br>      <a href="https://github.com/jadianes/spark-py-notebooks">https://github.com/jadianes/spark-py-notebooks</a><br>2、PySpark MLLib教程 ：<br>      <a href="https://github.com/susanli2016/PySpark-and-MLlib">https://github.com/susanli2016/PySpark-and-MLlib</a><br>3、项目实践：<br>      <a href="https://zhuanlan.zhihu.com/p/52753778">https://zhuanlan.zhihu.com/p/52753778</a>  （知乎）</p>
-<hr>
-<p>可视化工具据deck.gl，kepler.gl</p>
-<p>版本信息用<code>py36</code>环境搭建</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">py36   //菜菜</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==3.02</span><br><span class="line">hadoopp==3.2</span><br><span class="line">winutils==3.0.0</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.6.12</span><br><span class="line">pyspark==3.0.2</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//李敏</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==2.4.7</span><br><span class="line">hadoopp==2.7.7</span><br><span class="line">winutils==2.7.1</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.7.6</span><br><span class="line">pyspark==2.4.0</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>spark下的分布式启动sark方法：spark目录下，sbin目录，集群启动，start-all.sh脚本运行</p>
-<p>终端地址<a href="http://192.168.152.131:8080/">http://192.168.152.131:8080/</a></p>
-<p>会显示集群URL</p>
-<p>提供的是spark主机的URL即可加入</p>
-<hr>
-<p>打开终端<code>Ctrl+alt+T</code></p>
-<p>复制粘贴<code>ctrl + shift + c，ctrl + shift + v</code></p>
-<p>显示目录<code>ls  </code></p>
-<p>自动补全 <code>tab</code> <code>tab</code></p>
-<p>显示当前路径 <code>pwd</code></p>
-<p>vim</p>
-<p><code>i</code>插入</p>
-<p> <code>:</code> <code>q</code>是退出，<code>w</code>保存</p>
-<p><code>wq!</code>强制保存退出vim</p>
-<p>anaconda可视化界面</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/anaconda3/bin/activate root  </span><br></pre></td></tr></table></figure>
-
-<p>显示界面<code>anaconda-navigator</code></p>
-<p>显示jyputer notebook<code>jyputer book</code></p>
-<p>显示虚拟环境<code>conda info --envs</code></p>
-<p>conda创建虚拟环境<code>conda create -n your_name python=X.X（如2.7，3.6等）</code></p>
-<p>进入虚拟环境<code>source activate your_name</code></p>
-<p>退出虚拟环境 <code>source deactivate</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export SPARK_HOME=/home/qyt/Downloads/spark-3.0.2-bin-hadoop3.2</span><br><span class="line">export PATH=$PATH:$SPARK_HOME/bin</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/home/qyt/Downloads/hadoop-3.2.2</span><br><span class="line">export PATH=$&#123;HADOOP_HOME&#125;/bin:$PATH</span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p><code>vim /etc/profile</code>环境变量配置位置</p>
-<p><code>./</code>执行文件</p>
-<hr>
-<p>MRDP-&gt;spark 为什么？</p>
-<p>大数据表达能力不足；spark对MADP扩充到四十个，一类是map一类是reduce</p>
-<p>每次map reduce 都需要HDFS文件管理系统，需要大量的IO</p>
-<p>spark RDD弹性数据集，内存分布式，spark底层对RDD做高度的冗余</p>
-<p>Hadoop不支持中间HDFS换成RDD，spark可以。</p>
-<p>mapreduce基本指令集太少，太简单了；迭代过程中间的磁盘IO太大；</p>
-<p>spark弱化了map，reduce的成对性</p>
-<p>RDD数据类型</p>
-<p>transformationscc;action</p>
-<p>构建数据流图（谱系图）linage</p>
-<p>图论做优化</p>
-<hr>
-<p>如何对梯度下降进行并行化？</p>
-<p>梯度下降法并行化设计：</p>
-<p>机器学习：分类问题或者回归预测问题</p>
-<p>特征向量，标签找出$f:X\rightarrow Y$</p>
-<p>$\to \gets \theta$ 太熟了就不写了</p>
-<p>如何并行化？</p>
-<p>递归过程不能并行化，能并行化：$\Sigma$找梯度 由map完成。reduce做外层的一次加减。 </p>
-<p>logistiic 回归 $\to$分类，w向量求梯度，可以并行化</p>
-<hr>
-<p>如何并行快速处理大规模，复杂的图？</p>
-<p>图的并行算法设计总结：</p>
-<p>BFS在map reduce怎么表示？数据结构：K，V对：node n，结点对应临界列表和最短路径d。</p>
-<p>pagerank：d不一样。衡量一个网页的重要性，随机冲浪模型：概率（网址跳转+外链）；</p>
-<p>草原生态模型：湖有高度差和邻接河道，权重矩阵是概率转移矩阵$P$，迭代直到两个状态矩阵$\pi$相同，$\pi \cdot P&#x3D;\pi$, $\pi$就是PageRank，外链访问，网页重要程度.</p>
-<p>如果有蒸发下雨，$\alpha$蒸发, 绝对地址直接访问网页，$\pi&#x3D;\pi\cdot P \times\alpha+(1-\alpha)\cdot N$，N是湖泊（网页）个数</p>
-<p>出度 由map；入度求和由reduce；KV对排序</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>PageRank</th>
-<th>BFS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>map</td>
-<td>PR&#x2F;N</td>
-<td>d+1</td>
-</tr>
-<tr>
-<td>reduce</td>
-<td>sum</td>
-<td>min</td>
-</tr>
-</tbody></table>
-<hr>
-<p>作业：</p>
-<ol>
-<li>之前pyspark的实验搭建过程</li>
-<li>大作业 自拟题目</li>
-</ol>
-<p>题目1、请自拟题目，自选方向（电力方向尤佳），撰写一篇云计算在不同领域的最新应用的综述文章。（3000+）</p>
-<p>题目2、请自拟题目，自选一个已运用MapReduce实现过的算法（机器学习算法尤佳），撰写一篇分析运用MapReduce编程模型对传统算法进行并行化的文章。（2000-3000）</p>
-<p>题目3、请自拟题目，自选一个未运用MapReduce实现过的算法（电力方向的算法尤佳），运用MapReduce程模型对该算法进行并行化设计，采用Hadoop API实现该算法，并在Hadoop集群上运行测试，根据测试结果撰写一篇文章。（2000-3000）</p>
-<hr>
-<p>Towards Self-managing cloud storage with rl</p>
-<p><code>connectedpapers.com</code> 文献追踪</p>
-<hr>
-<p>2021&#x2F;9</p>
-]]></content>
-      <categories>
-        <category>Cloud Computing</category>
       </categories>
   </entry>
   <entry>
@@ -1597,6 +1447,156 @@ li {undefined
       </categories>
   </entry>
   <entry>
+    <title>hadoop+pyspark学习和部署</title>
+    <url>/2021/09/18/Hadoop+pyspark/</url>
+    <content><![CDATA[<p><a href="https://codingdict.com/article/8880">PySpark简介</a></p>
+<p>map reduce工具 将现有算法<strong>并行化</strong>  （执行平台）<strong>hadoop</strong>（java）上执行，其它如spark兼容python</p>
+<p>基础架构如hadoop-&gt;分析基础架构hive，hbase-&gt;高级工具</p>
+<p>mapreduce做并行化的几个应用方向：文本，图，关系型数据，机器学习（）</p>
+<p>并行化挑战：进程计算结果交换；程序共享资源</p>
+<span id="more"></span>
+
+<h3 id="函数式编程初探-阮一峰的网络日志"><a href="#函数式编程初探-阮一峰的网络日志" class="headerlink" title="函数式编程初探 - 阮一峰的网络日志"></a><a href="https://www.baidu.com/link?url=B9Nckg0KW9QLQnfwtG0ugkemDjOfjEwNqxYuDnMmPO20rwFL2_uOnV_0_XAH9c23JHMXtpJ-GfKxTDJ0g08lOALp5-klyO8Riqs6K_N9oxy&wd=&eqid=b45c6d5d00040e07000000036098f887"><em>函数式编程</em>初探 - 阮一峰的网络日志</a></h3><p><strong>PySpark完成实验：</strong> Spark+python；支持本地和分布式集群；程序运行平台，spark，hadoop都可以，迁移方便。具体看官方文档。</p>
+<hr>
+<p>逻辑视图：四个原语</p>
+<p>利用MapReduce框架对某个算法并行化</p>
+<p> map map <strong>map</strong> ，$f$函数</p>
+<p>fold (或<strong>reduce</strong>)汇总，有初始值，自动完成</p>
+<p>链式组合t数组.map.map.reduce</p>
+<p><code>map(k1,v1)-&gt;list(k2,v2) </code> kv对，k主码，v其它，key，value</p>
+<p><code>reduce(k2,list(v2)-&gt;list(k3,v3)</code></p>
+<p>数据切片，k作为主码，v是信息，<code>map</code>分派$f$，数据清洗，简单来说就是用关键字划分组，以此为依据，交给<code>reduce</code>，往往是数组，汇总。</p>
+<p><strong>MapReduce“Runtime”（运行时）</strong>,framework,底层软件，类似spark或者Hadoop，他来处理：处理任务调度，负载均衡，同步异步，灾害重建</p>
+<p>为了减少map与ruduce中间分布式排序时间，MRCP</p>
+<p>增加<code>partition(k,p)</code>,上层map的k下层p为reduce用哈希绕开分布式排序</p>
+<p>和<code>combine(k2,list(v2))</code> minireduce，本地统一组合一个虚拟机的不同分片</p>
+<p>t-&gt;map-&gt;combine-&gt;partition-按关键字分组排序-&gt;reduce</p>
+<p>map，reduce 输出<code>emit</code>交给分布式排序</p>
+<hr>
+<p> 物理视图：数据分片，分布式磁盘-&gt;给了VM,Map-&gt;本地保存到本地磁盘-&gt;分布式排序，有网络通讯，远程异地-&gt;VM做reduce-&gt;输出</p>
+<p>两次分配算法都由控制主机master控制：作业提交，分配map节点，reduce节点。</p>
+<p><strong>数据移动，作业调度 是几个矩阵？</strong></p>
+<ul>
+<li>分布式数据库到map虚拟机；</li>
+<li>map虚拟机到reduce虚拟机？</li>
+<li>master指派job给map，指派job给reduce虚拟机？计算效率？通信效率？这是不是task调度？</li>
+</ul>
+<p>多个机器，低性能。随机访问代价昂贵</p>
+<p>(hadoop)job提交：</p>
+<ul>
+<li>job分成map reduce等四个task</li>
+<li>每个task会有一个任务跟踪器</li>
+<li>多个job会形成有一个工作流</li>
+</ul>
+<p>数据现在很多是以kv对的形式存储计算的，不用中间格式转换，如mangodb</p>
+<p>Hadoop可以本地部署，本地调试好在部署到云，不然debug麻烦死。</p>
+<hr>
+<p>作业：安装pyspark实现个小例子。</p>
+<p>PySpark相关资料：</p>
+<p>1、Pyspark基础教程：rdd弹性数据集 datafree<br>      <a href="https://github.com/jadianes/spark-py-notebooks">https://github.com/jadianes/spark-py-notebooks</a><br>2、PySpark MLLib教程 ：<br>      <a href="https://github.com/susanli2016/PySpark-and-MLlib">https://github.com/susanli2016/PySpark-and-MLlib</a><br>3、项目实践：<br>      <a href="https://zhuanlan.zhihu.com/p/52753778">https://zhuanlan.zhihu.com/p/52753778</a>  （知乎）</p>
+<hr>
+<p>可视化工具据deck.gl，kepler.gl</p>
+<p>版本信息用<code>py36</code>环境搭建</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">py36   //菜菜</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==3.02</span><br><span class="line">hadoopp==3.2</span><br><span class="line">winutils==3.0.0</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.6.12</span><br><span class="line">pyspark==3.0.2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//李敏</span><br><span class="line">JDK1.8</span><br><span class="line">scala==2.11.8</span><br><span class="line">spark==2.4.7</span><br><span class="line">hadoopp==2.7.7</span><br><span class="line">winutils==2.7.1</span><br><span class="line">py4j==0.10.9</span><br><span class="line">python==3.7.6</span><br><span class="line">pyspark==2.4.0</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>spark下的分布式启动sark方法：spark目录下，sbin目录，集群启动，start-all.sh脚本运行</p>
+<p>终端地址<a href="http://192.168.152.131:8080/">http://192.168.152.131:8080/</a></p>
+<p>会显示集群URL</p>
+<p>提供的是spark主机的URL即可加入</p>
+<hr>
+<p>打开终端<code>Ctrl+alt+T</code></p>
+<p>复制粘贴<code>ctrl + shift + c，ctrl + shift + v</code></p>
+<p>显示目录<code>ls  </code></p>
+<p>自动补全 <code>tab</code> <code>tab</code></p>
+<p>显示当前路径 <code>pwd</code></p>
+<p>vim</p>
+<p><code>i</code>插入</p>
+<p> <code>:</code> <code>q</code>是退出，<code>w</code>保存</p>
+<p><code>wq!</code>强制保存退出vim</p>
+<p>anaconda可视化界面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/anaconda3/bin/activate root  </span><br></pre></td></tr></table></figure>
+
+<p>显示界面<code>anaconda-navigator</code></p>
+<p>显示jyputer notebook<code>jyputer book</code></p>
+<p>显示虚拟环境<code>conda info --envs</code></p>
+<p>conda创建虚拟环境<code>conda create -n your_name python=X.X（如2.7，3.6等）</code></p>
+<p>进入虚拟环境<code>source activate your_name</code></p>
+<p>退出虚拟环境 <code>source deactivate</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export SPARK_HOME=/home/qyt/Downloads/spark-3.0.2-bin-hadoop3.2</span><br><span class="line">export PATH=$PATH:$SPARK_HOME/bin</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/home/qyt/Downloads/hadoop-3.2.2</span><br><span class="line">export PATH=$&#123;HADOOP_HOME&#125;/bin:$PATH</span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p><code>vim /etc/profile</code>环境变量配置位置</p>
+<p><code>./</code>执行文件</p>
+<hr>
+<p>MRDP-&gt;spark 为什么？</p>
+<p>大数据表达能力不足；spark对MADP扩充到四十个，一类是map一类是reduce</p>
+<p>每次map reduce 都需要HDFS文件管理系统，需要大量的IO</p>
+<p>spark RDD弹性数据集，内存分布式，spark底层对RDD做高度的冗余</p>
+<p>Hadoop不支持中间HDFS换成RDD，spark可以。</p>
+<p>mapreduce基本指令集太少，太简单了；迭代过程中间的磁盘IO太大；</p>
+<p>spark弱化了map，reduce的成对性</p>
+<p>RDD数据类型</p>
+<p>transformationscc;action</p>
+<p>构建数据流图（谱系图）linage</p>
+<p>图论做优化</p>
+<hr>
+<p>如何对梯度下降进行并行化？</p>
+<p>梯度下降法并行化设计：</p>
+<p>机器学习：分类问题或者回归预测问题</p>
+<p>特征向量，标签找出$f:X\rightarrow Y$</p>
+<p>$\to \gets \theta$ 太熟了就不写了</p>
+<p>如何并行化？</p>
+<p>递归过程不能并行化，能并行化：$\Sigma$找梯度 由map完成。reduce做外层的一次加减。 </p>
+<p>logistiic 回归 $\to$分类，w向量求梯度，可以并行化</p>
+<hr>
+<p>如何并行快速处理大规模，复杂的图？</p>
+<p>图的并行算法设计总结：</p>
+<p>BFS在map reduce怎么表示？数据结构：K，V对：node n，结点对应临界列表和最短路径d。</p>
+<p>pagerank：d不一样。衡量一个网页的重要性，随机冲浪模型：概率（网址跳转+外链）；</p>
+<p>草原生态模型：湖有高度差和邻接河道，权重矩阵是概率转移矩阵$P$，迭代直到两个状态矩阵$\pi$相同，$\pi \cdot P&#x3D;\pi$, $\pi$就是PageRank，外链访问，网页重要程度.</p>
+<p>如果有蒸发下雨，$\alpha$蒸发, 绝对地址直接访问网页，$\pi&#x3D;\pi\cdot P \times\alpha+(1-\alpha)\cdot N$，N是湖泊（网页）个数</p>
+<p>出度 由map；入度求和由reduce；KV对排序</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>PageRank</th>
+<th>BFS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>map</td>
+<td>PR&#x2F;N</td>
+<td>d+1</td>
+</tr>
+<tr>
+<td>reduce</td>
+<td>sum</td>
+<td>min</td>
+</tr>
+</tbody></table>
+<hr>
+<p>作业：</p>
+<ol>
+<li>之前pyspark的实验搭建过程</li>
+<li>大作业 自拟题目</li>
+</ol>
+<p>题目1、请自拟题目，自选方向（电力方向尤佳），撰写一篇云计算在不同领域的最新应用的综述文章。（3000+）</p>
+<p>题目2、请自拟题目，自选一个已运用MapReduce实现过的算法（机器学习算法尤佳），撰写一篇分析运用MapReduce编程模型对传统算法进行并行化的文章。（2000-3000）</p>
+<p>题目3、请自拟题目，自选一个未运用MapReduce实现过的算法（电力方向的算法尤佳），运用MapReduce程模型对该算法进行并行化设计，采用Hadoop API实现该算法，并在Hadoop集群上运行测试，根据测试结果撰写一篇文章。（2000-3000）</p>
+<hr>
+<p>Towards Self-managing cloud storage with rl</p>
+<p><code>connectedpapers.com</code> 文献追踪</p>
+<hr>
+<p>2021&#x2F;9</p>
+]]></content>
+      <categories>
+        <category>Cloud Computing</category>
+      </categories>
+  </entry>
+  <entry>
     <title>水墨画少女（更）</title>
     <url>/2022/04/26/Ink-painting-of-young-girls/</url>
     <content><![CDATA[<p>看B站大佬迟迟画水墨画美少女太心动了，所以看他的书想学学，写个帖子记录一下，有一说一美女真的难画，我应该还没掌握高颜值的关键。</p>
@@ -1774,22 +1774,6 @@ li {undefined
 ]]></content>
       <categories>
         <category>Sherry</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>读读纪伯伦的小诗吧</title>
-    <url>/2021/09/10/Kahlil-Gibran/</url>
-    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
-<span id="more"></span>
-
-<hr>
-<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
-<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
-<hr>
-<p>2021&#x2F;9&#x2F;10</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -2121,6 +2105,22 @@ li {undefined
 <h2 id="12-10大排序算法"><a href="#12-10大排序算法" class="headerlink" title="12 10大排序算法"></a>12 10大排序算法</h2><h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2>]]></content>
       <categories>
         <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>读读纪伯伦的小诗吧</title>
+    <url>/2021/09/10/Kahlil-Gibran/</url>
+    <content><![CDATA[<h2 id="论孩子"><a href="#论孩子" class="headerlink" title="论孩子"></a>论孩子</h2><p>一位怀抱婴儿的妇女说：请给我们谈谈孩子吧。<br>穆斯塔法说：<br>你们的孩子并不是你们的，<br>而是“生命”对自身的渴望所生的儿女。<br>他们借你们来到世上，却并非来自你们，<br>他们虽与你们一起生活，却并不属于你们。</p>
+<span id="more"></span>
+
+<hr>
+<p>你们可把爱给予他们，却不能给予他们思想。<br>因为他们有他们的思想。<br>你们能够庇护他们的身体，却不能庇护他们的灵魂。<br>因为他们的灵魂居于明日的华屋，那是你们无法相见的，即使在梦中。<br>你们可以努力以求像他们，但不要试图让他们像你们。<br>因为生命不能退步，它不可能滞留在昨天。<br>你们是弓，你们的孩子则是从你们的弓弦上射出的实箭。<br>射手看见竖立在无尽头路上的目标，<br>他会用自己的神力将你们的弓引满，以便让他的箭快速射至最远。<br>就让你们的弓在射手的手中甘愿曲弯；<br>因为他既爱那飞快的箭，也爱那静止的弓。</p>
+<p>摘自：《先知》 — [黎巴嫩] 纪伯伦</p>
+<hr>
+<p>2021&#x2F;9&#x2F;10</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -3186,23 +3186,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>电影推荐</title>
-    <url>/2022/03/21/Movie-recommendation/</url>
-    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
-<hr>
-<span id="more"></span>
-
-<p>这是我的好朋友，买手机找他，便宜且很靠谱~我和家人换新机都找他。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211733922.jpg" alt="14452845a506cefc10220686ce97f8a"></p>
-<hr>
-<p>数码小王</p>
-<p>2022&#x2F;3&#x2F;21</p>
-]]></content>
-      <categories>
-        <category>小伙伴</category>
-      </categories>
-  </entry>
-  <entry>
     <title>地球上的星星</title>
     <url>/2022/04/11/Movie-home-loneliness/</url>
     <content><![CDATA[<p>我看到孩子天生对世界充满了好奇心和探索欲，一个天真的生命原本就具有对其他生命的体察，对自然、对美的感知，他会非常专注地沉浸在自己看到的、觉察到的世界中，这些都是孩子十分可贵的品质。</p>
@@ -3221,6 +3204,23 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 <hr>
 <p>小伙伴Rosa被一个人隔离在广州了，真不容易。</p>
 <p>2022&#x2F;4&#x2F;11</p>
+]]></content>
+      <categories>
+        <category>小伙伴</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>电影推荐</title>
+    <url>/2022/03/21/Movie-recommendation/</url>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211728677.jpg" alt="bccb5d7c45d22efb3fa94de5401658a"></p>
+<hr>
+<span id="more"></span>
+
+<p>这是我的好朋友，买手机找他，便宜且很靠谱~我和家人换新机都找他。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211733922.jpg" alt="14452845a506cefc10220686ce97f8a"></p>
+<hr>
+<p>数码小王</p>
+<p>2022&#x2F;3&#x2F;21</p>
 ]]></content>
       <categories>
         <category>小伙伴</category>
@@ -3542,6 +3542,51 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>我们真的有自己想象的那样了解现实吗</title>
+    <url>/2022/03/27/Recognizing-reality/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>读《博闻强记的富内斯》</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<p>这个小短篇出自博尔赫斯的《虚构集》，博尔赫斯是最近发现的一位宝藏作家，作品短小精美，一般都是把一些哲学方面的思考和奇思妙想结合起来，有我以前看《苏菲的世界》那味了。目前读过的三篇短篇小说都是以无限为主题，读完第一感觉就是人是有限的，偶然的。</p>
+<span id="more"></span>
+
+<p>《博文强记的富内斯》的剧情是这样的，“我”是一个家境殷实的知识分子，在和表哥去乡下探亲时认识了不看钟表就能准确报时的年轻人富内斯，虽然只是短短一面，但是却给我留下了一些印象。后来富内斯在骑马时不小心从马背上摔下来瘫痪了，此时正赶上我在学习拉丁文，富内斯听说后，写一封信想让我给他一本拉丁文写的书和辞典，他想自学拉丁文，我当时觉得就靠一本字典学拉丁文太自大了，所以寄去了两本比较晦涩的拉丁文以及一本字典，之后我就忘了这事了。一段时间后，我的父亲病重，我回乡看父亲，偶然想起给富内斯借去的两本书便去了富内斯家，没想到这一晚的见面闲聊震撼了我的认知。刚去时富内斯在大声背诵其中一本拉丁文的一个章节，我却没怎么听出来，富内斯告诉我，自从他从马背摔下来后，理解力和记忆力好得不能再好了，无论以前再遥远，再细小的事情他都记得十分清晰。</p>
+<blockquote>
+<p>我们一眼望去，可以看到放在桌子上的三个酒杯；富内斯却能看到一株葡萄藤所有的枝条、一串串的果实和每一颗葡萄。他记得1882年4月30日黎明时南面朝霞的形状，并且在记忆中同他只见过一次的一本皮面精装书的纹理比较，同凯布拉卓暴乱前夕船桨在内格罗河激起的涟漪比较。那些并不是单纯的回忆；每一个视觉形象都和肌肉、寒暖等等的感觉有联系。他能够再现所有的梦境。他曾经两三次再现一整天的情况；从不含糊，但每次都需要一整天时间。他对我说：我一个人的回忆抵得上开天辟地以来所有人的回忆的总和。又说：我睡觉时就像你们清醒时一样。天将亮时，他说：我的记忆正如垃圾倾倒场。我们能够充分直感的形象是黑板上的一个圆圈、一个直角三角形、一个菱形；伊雷内奥却能直感马匹飞扬的鬃毛、山同上牲口的后腿直立、千变万化的火焰和无数的灰烬，以及长时间守灵时死者的种种面貌。我不知道他看到天上有多少星星。</p>
+</blockquote>
+<p>听完富内斯描述的一切，我看着清晨阳光照亮他的脸庞，觉得他像一尊青铜雕像，比埃及更古老。之后富内斯便因为肺部充血去世了。就是这么一个故事。</p>
+<p>富内斯的世界感受与普通人截然不同，他应该没有时间分隔的概念。普通人有过去，现在，未来的感受，富内斯那里过去和现在一样清晰可见。如今的我想想昨天发生的事情，或者很久没见的一个人，我知道是什么，但是总体来说很模糊，大部分细节都无可辨别。如今我坐在桌前，能清晰看到电脑左下角边框的蓝色颜料渍，或者玻璃水杯内壁那细小的气泡。清晰可辨的是现在，模糊的是过去，对富内斯而言，一切都是清晰可见的。从这个角度来看，在富内斯眼里我们也许是怪物，因为我们认为过去已经消逝，世界只存在于现在。</p>
+<p>这让我想起哲学上的第二大问题，世界是可知的吗？毕竟普通人头脑太弱记不住东西，假如普通人的感知更接近现实，那么真理也就不妨说是人的真理。爱因斯坦和泰戈尔曾经有关这个问题进行过辩论。</p>
+<blockquote>
+<p>泰戈尔：我们称之为真理的那个东西，存在于实在的主观和客观这两者的和谐之中，你会看到，决定这两者的，是我们万能的人。</p>
+<p>爱因斯坦：然而，从我们的日常生活经验中可以看到，即便人离开了，我们用的那些物品也依旧存在。举个例子来说，某个房间中空无一人，却有一张桌子，莫非这张桌子就因为人的不存在而不存在？我们之所以有这种想法，就是想找到一种合理的方式，对我们感官所提供的各种材料之间的相互关系加以确定。</p>
+<p>泰戈尔：不错，即便人不在了，那张桌子依旧存在。然而，你把万能的精神忽略了，对我所感受的那个桌子有所感受的人，必然有着跟我一样的精神，他必然知道桌子的存在。</p>
+</blockquote>
+<p>我觉得泰戈尔的意思是真理有一定的人为色彩，但是这并不违背客观实际，就像泰勒公式一样，它是对现实的一种极限逼近。人不可能理解宇宙中所有的客观存在，那些不在我们经验范畴，和人毫无关系的东西不会被人表达出来，最后也不在真理的范畴了。感觉这么一想自己好像成了主观唯心的人了。</p>
+<blockquote>
+<p>泰戈尔：桌子是一种外观，实际上就是一堆木头。也就是说，一种认为是桌子的那种东西存在于人的精神之中，人类若是消失了，人的精神若是没有了，显然它也就会随之消失。科学已经证实了这一点。并且，就物理实在性（物理属性）而言，桌子仅仅是众多单独的、旋转着的引力中心，而这些中心也一样在人的精神中存在着。</p>
+</blockquote>
+<p>是的，桌子的概念存在于人类的精神之中，现在在我桌上蹦蹦跳跳的小飞虫肯定不会把桌子之类的当真理了。</p>
+<p>另外一个小说里我觉得有意思的点是下面这段：</p>
+<blockquote>
+<p>我们能够充分直感的形象是黑板上的一个圆圈、一个直角三角形、一个菱形；富内斯却能直感马匹飞扬的鬃毛、山同上牲口的后腿直立、千变万化的火焰和无数的灰烬，以及长时间守灵时死者的种种面貌。我不知道他看到天上有多少星星。</p>
+</blockquote>
+<p>这该是一种什么奇特的感觉，我拿起笔能在纸上精确画出三角形，锐角的，钝角的，直角的，细节分明准确。但让我同样精确描摹火焰，马的鬃毛根本不可能，这些东西都太复杂了，变化多到数不胜数，富内斯却能像普通人描绘三角形一样描绘出来，普通人只能采用简笔画的形式描出大概。这里我感受到了人的有限性，仔细想想，人的认知都是由简化的概念组成的，文学，数学，艺术的复杂性都是简单细节的有序组合。富内斯是直接简单粗暴得理解复杂性，他的大脑是一根大水管，一股脑得把所有得信息收归其中，普通人是小吸管，只能接受很小很小的一部分信息量，所以需要抽象概括。人，实在是太有限了。</p>
+<p>我觉得富内斯像一台计算机，他没有抽象能力，计算机看到一个图像，需要借助灰度值和像素值来编号记忆，说到底就是基于统计，和人看世界的感觉截然不同。富内斯没法理解狗的概念，他不理解可以用一个词指代那么多千变万化的个体。人类的认识与认知真偶然，可见光波长，文化倾向，脑容量大小这些好多好多制约决定了我们看到的世界的样子，跳出这些制约的世界我们无从得知，再想想自己身边这些枷锁，又怎么能说是理所当然，一旦制约条件有所变化，所谓正确的知识也会变化。</p>
+<p>要说想成为富内斯那样的人我是完全不敢的，我觉得他丢失了对世界基本的理解性。但是要达到可理解性又是以丢失细节为代价的，世界上的许多概念有些简单粗暴，大家不如说都在框架之内。</p>
+<hr>
+<p>Sherry</p>
+<p>2022&#x2F;3&#x2F;27</p>
+]]></content>
+      <categories>
+        <category>Sherry</category>
+      </categories>
+  </entry>
+  <entry>
     <title>谈谈项目经历</title>
     <url>/2022/04/01/Project-experience/</url>
     <content><![CDATA[<blockquote>
@@ -3661,51 +3706,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>我们真的有自己想象的那样了解现实吗</title>
-    <url>/2022/03/27/Recognizing-reality/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>读《博闻强记的富内斯》</p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote>
-
-<p>这个小短篇出自博尔赫斯的《虚构集》，博尔赫斯是最近发现的一位宝藏作家，作品短小精美，一般都是把一些哲学方面的思考和奇思妙想结合起来，有我以前看《苏菲的世界》那味了。目前读过的三篇短篇小说都是以无限为主题，读完第一感觉就是人是有限的，偶然的。</p>
-<span id="more"></span>
-
-<p>《博文强记的富内斯》的剧情是这样的，“我”是一个家境殷实的知识分子，在和表哥去乡下探亲时认识了不看钟表就能准确报时的年轻人富内斯，虽然只是短短一面，但是却给我留下了一些印象。后来富内斯在骑马时不小心从马背上摔下来瘫痪了，此时正赶上我在学习拉丁文，富内斯听说后，写一封信想让我给他一本拉丁文写的书和辞典，他想自学拉丁文，我当时觉得就靠一本字典学拉丁文太自大了，所以寄去了两本比较晦涩的拉丁文以及一本字典，之后我就忘了这事了。一段时间后，我的父亲病重，我回乡看父亲，偶然想起给富内斯借去的两本书便去了富内斯家，没想到这一晚的见面闲聊震撼了我的认知。刚去时富内斯在大声背诵其中一本拉丁文的一个章节，我却没怎么听出来，富内斯告诉我，自从他从马背摔下来后，理解力和记忆力好得不能再好了，无论以前再遥远，再细小的事情他都记得十分清晰。</p>
-<blockquote>
-<p>我们一眼望去，可以看到放在桌子上的三个酒杯；富内斯却能看到一株葡萄藤所有的枝条、一串串的果实和每一颗葡萄。他记得1882年4月30日黎明时南面朝霞的形状，并且在记忆中同他只见过一次的一本皮面精装书的纹理比较，同凯布拉卓暴乱前夕船桨在内格罗河激起的涟漪比较。那些并不是单纯的回忆；每一个视觉形象都和肌肉、寒暖等等的感觉有联系。他能够再现所有的梦境。他曾经两三次再现一整天的情况；从不含糊，但每次都需要一整天时间。他对我说：我一个人的回忆抵得上开天辟地以来所有人的回忆的总和。又说：我睡觉时就像你们清醒时一样。天将亮时，他说：我的记忆正如垃圾倾倒场。我们能够充分直感的形象是黑板上的一个圆圈、一个直角三角形、一个菱形；伊雷内奥却能直感马匹飞扬的鬃毛、山同上牲口的后腿直立、千变万化的火焰和无数的灰烬，以及长时间守灵时死者的种种面貌。我不知道他看到天上有多少星星。</p>
-</blockquote>
-<p>听完富内斯描述的一切，我看着清晨阳光照亮他的脸庞，觉得他像一尊青铜雕像，比埃及更古老。之后富内斯便因为肺部充血去世了。就是这么一个故事。</p>
-<p>富内斯的世界感受与普通人截然不同，他应该没有时间分隔的概念。普通人有过去，现在，未来的感受，富内斯那里过去和现在一样清晰可见。如今的我想想昨天发生的事情，或者很久没见的一个人，我知道是什么，但是总体来说很模糊，大部分细节都无可辨别。如今我坐在桌前，能清晰看到电脑左下角边框的蓝色颜料渍，或者玻璃水杯内壁那细小的气泡。清晰可辨的是现在，模糊的是过去，对富内斯而言，一切都是清晰可见的。从这个角度来看，在富内斯眼里我们也许是怪物，因为我们认为过去已经消逝，世界只存在于现在。</p>
-<p>这让我想起哲学上的第二大问题，世界是可知的吗？毕竟普通人头脑太弱记不住东西，假如普通人的感知更接近现实，那么真理也就不妨说是人的真理。爱因斯坦和泰戈尔曾经有关这个问题进行过辩论。</p>
-<blockquote>
-<p>泰戈尔：我们称之为真理的那个东西，存在于实在的主观和客观这两者的和谐之中，你会看到，决定这两者的，是我们万能的人。</p>
-<p>爱因斯坦：然而，从我们的日常生活经验中可以看到，即便人离开了，我们用的那些物品也依旧存在。举个例子来说，某个房间中空无一人，却有一张桌子，莫非这张桌子就因为人的不存在而不存在？我们之所以有这种想法，就是想找到一种合理的方式，对我们感官所提供的各种材料之间的相互关系加以确定。</p>
-<p>泰戈尔：不错，即便人不在了，那张桌子依旧存在。然而，你把万能的精神忽略了，对我所感受的那个桌子有所感受的人，必然有着跟我一样的精神，他必然知道桌子的存在。</p>
-</blockquote>
-<p>我觉得泰戈尔的意思是真理有一定的人为色彩，但是这并不违背客观实际，就像泰勒公式一样，它是对现实的一种极限逼近。人不可能理解宇宙中所有的客观存在，那些不在我们经验范畴，和人毫无关系的东西不会被人表达出来，最后也不在真理的范畴了。感觉这么一想自己好像成了主观唯心的人了。</p>
-<blockquote>
-<p>泰戈尔：桌子是一种外观，实际上就是一堆木头。也就是说，一种认为是桌子的那种东西存在于人的精神之中，人类若是消失了，人的精神若是没有了，显然它也就会随之消失。科学已经证实了这一点。并且，就物理实在性（物理属性）而言，桌子仅仅是众多单独的、旋转着的引力中心，而这些中心也一样在人的精神中存在着。</p>
-</blockquote>
-<p>是的，桌子的概念存在于人类的精神之中，现在在我桌上蹦蹦跳跳的小飞虫肯定不会把桌子之类的当真理了。</p>
-<p>另外一个小说里我觉得有意思的点是下面这段：</p>
-<blockquote>
-<p>我们能够充分直感的形象是黑板上的一个圆圈、一个直角三角形、一个菱形；富内斯却能直感马匹飞扬的鬃毛、山同上牲口的后腿直立、千变万化的火焰和无数的灰烬，以及长时间守灵时死者的种种面貌。我不知道他看到天上有多少星星。</p>
-</blockquote>
-<p>这该是一种什么奇特的感觉，我拿起笔能在纸上精确画出三角形，锐角的，钝角的，直角的，细节分明准确。但让我同样精确描摹火焰，马的鬃毛根本不可能，这些东西都太复杂了，变化多到数不胜数，富内斯却能像普通人描绘三角形一样描绘出来，普通人只能采用简笔画的形式描出大概。这里我感受到了人的有限性，仔细想想，人的认知都是由简化的概念组成的，文学，数学，艺术的复杂性都是简单细节的有序组合。富内斯是直接简单粗暴得理解复杂性，他的大脑是一根大水管，一股脑得把所有得信息收归其中，普通人是小吸管，只能接受很小很小的一部分信息量，所以需要抽象概括。人，实在是太有限了。</p>
-<p>我觉得富内斯像一台计算机，他没有抽象能力，计算机看到一个图像，需要借助灰度值和像素值来编号记忆，说到底就是基于统计，和人看世界的感觉截然不同。富内斯没法理解狗的概念，他不理解可以用一个词指代那么多千变万化的个体。人类的认识与认知真偶然，可见光波长，文化倾向，脑容量大小这些好多好多制约决定了我们看到的世界的样子，跳出这些制约的世界我们无从得知，再想想自己身边这些枷锁，又怎么能说是理所当然，一旦制约条件有所变化，所谓正确的知识也会变化。</p>
-<p>要说想成为富内斯那样的人我是完全不敢的，我觉得他丢失了对世界基本的理解性。但是要达到可理解性又是以丢失细节为代价的，世界上的许多概念有些简单粗暴，大家不如说都在框架之内。</p>
-<hr>
-<p>Sherry</p>
-<p>2022&#x2F;3&#x2F;27</p>
-]]></content>
-      <categories>
-        <category>Sherry</category>
       </categories>
   </entry>
   <entry>
@@ -3834,6 +3834,48 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>Cloud Computing</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>高声大嗓</title>
+    <url>/2021/03/15/The-farmer/</url>
+    <content><![CDATA[<p>有这么一个农民，外号叫”高声大嗓”，这个外号，是爸妈取的。</p>
+<p>他从来没有进过我们家门，每次要不用自行车驮着纤维袋子鼓鼓囊囊装满的洋芋，要不洋芋拉在三轮车上，到了家门口，大声吆喝”取洋芋咯！”他从不担心我们会听不到，因为他的声音能轻松响彻巷子里所有的街坊邻居，轻松盖过各自家里的电视节目声音。这是已经搬迁了的巷子邻居的共同记忆。</p>
+<p>20多年前，他胃溃疡萎缩性胃炎严重，看了很多大夫都没用，生命垂危，我爸治好了他。但他只是我爸看无数病人中的一位普通病人。</p>
+<span id="more"></span>
+
+<p>因为感激爸爸的救命之恩，20多年来，每年自己种的洋芋成熟的时候，都会留一袋子比较好的用最低廉的价格给我们家送来，从来都没间断过，按我爸妈的话来说，他送的洋芋和市场上卖的区别很大，一点都不麻，又大又好吃。</p>
+<p>近些年年，”高声大嗓”说自己年龄大了，60多了，自行车骑不动了，三轮没上牌，城里管的很严去不了。但洋芋每年都给我们留着，要不就找人带，要不就我们自己去取。</p>
+<p>之前对此人的了解，只是停留在爸妈口中的人真的很好，现在这样的病人再也没有了，以及每年不用买的洋芋，因为自己在家几乎不做饭，而且从没见过，所以其实印象很浅。</p>
+<p>今年因为我回学校晚，为了练练车技，我们全家今天下午开车去他家，甘肃省定西市临洮县龙门镇大宅子村林家嘴，取洋芋。</p>
+<h2 id="路上"><a href="#路上" class="headerlink" title="路上"></a>路上</h2><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213535525.png" alt="image-20210315213535525" style="zoom: 50%;" />
+
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213608787.png" alt="image-20210315213608787"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203150950687.png" alt="image-20210315213626300"></p>
+<p>这路，是真的难走，走完盘旋山路，就是更难走的水泥硬化路，全程只能勉强两辆车通过，一侧山体一侧悬崖。再后来，从山上到山脚，索性连路都没有了，导航完全没用，只有拖拉机压出来的黄土，和土墙山坳，全程只允许我的一辆小型车勉强通过，坑洼不平，还有松软的泥泞。我尽可能防止挂到车辆底盘，仍在走错路田间掉头时，陷入了松土中，轮胎空转，爸妈下车推车，再上车时我们三个被轮胎的焦糊味熏得眼睛难受。到了以后，刹车片发烫。</p>
+<p>期间因为实在找不到路在哪儿，边走边问路，问了好多村民，最后因为遇上了放学的小学生，恰好也是去林家嘴的，载着她，这才找到庄子。</p>
+<p>趟着厚厚的黄土，迎着大风，摸摸索索终于找到了人家。</p>
+<p>面朝黄土背朝天，太贴切了。我妈说，如果她有女儿，绝不肯嫁到这种地方来，太苦了。</p>
+<h2 id="到了"><a href="#到了" class="headerlink" title="到了"></a>到了</h2><p>我昨晚喝了酒，早上没胃口，中午吃的有点少，开山路集中精力搞得我疲倦，我确实是又累又饿，有点低血糖头晕。</p>
+<p>到了以后，风很大土很大，我们三个蓬头垢面，嘴里都沙碌碌的。家里没人，果然去下地干活了，我和我妈都在埋怨为什么我爸不提前打电话。打了电话告知我们已经到了家门口，大爷大娘了然，大娘从山脚一路跑步到了我们面前，气喘吁吁，随后大爷的三轮也回来了。</p>
+<p>他们精瘦的体格，黝黑的，深深刻印了皱纹的干枯的皮肤，诉说着地地道道庄稼汉的苦。</p>
+<p>进去以后，房屋十分简单，养鸡种地，客厅堆了药材，所以只能去厨房一座。一进门，便是久违的，熟悉的，昏暗潮湿的霉味和炕味。</p>
+<p>大娘大爷显然没有料到我们会来，手足无措，按照他们的习惯应该劳作一天，天黑再回家做饭。此时竟不知道该拿什么来招待我们。想擀面做饭，想煮自己家的鸡肉，被爸妈拼命拦下，一来不想麻烦他们，二来太晚天黑了路太难走，太危险，回不去。</p>
+<p>所以只泡了茶，因为外出没有生火，当然也没有热水，就用电磁炉烧了敞口的壶。没有小块的冰糖，大块的用手掰不动，大娘只能用菜刀刀背在案板上敲开，结果碎的到处都是，取完整的小块冰糖和放在柜子里的铁罐里的碎茶叶泡了茶。</p>
+<p>一进门大娘就开始找所有能让我们带走的东西，找来找去，只找到了之前杀的鸡，和没吃的肉，全装袋子了。</p>
+<p>拿出自己种的粮食做的馍，就着这满是土腥味儿的茶，比普洱没洗的味道还要浓好多倍，我吃的十分香甜，真真切切能尝到粮食的香味。估计是看我吃的太投入，饿了。大娘用自己家的鸡蛋做点喝的，根本拦不住，切点小葱，飘在表面，我和我爸一人盛了三个荷包蛋。我觉得小葱很好吃，于是无所事事的我妈在案板下面帮我找了一根。</p>
+<p>大娘看到后，说喜欢葱的话还有更新鲜的！二话不说跑去近处的田里，摘了一把，回来洗净一根推搡给我，我已经吃完了，我这样吃不习惯葱的人只吃葱怎么可能吃得下啊。剩下没洗的说什么都要让装走，说吃不完种在盆里也行。看我吃饼吃的很香，又摸出今天带去田里干活还没来及吃的饼，也带走。盛情难却啊。</p>
+<p>我终于理解了为什么我爸不肯提前打电话告知了。</p>
+<p>天色渐晚，稍微果腹后，我们打算带着洋芋回去。大娘风风火火，不到半个小时庄子的人们都知道秦大夫来了，纷纷围了过来，在村头的路口，一个个都希望看看自己家里的病，其实都是些小病，很快开完药方后，被全庄一起簇拥着，热热闹闹各自说着家长里短，来到了停车的麦场。离开的时候，大爷大娘对我说爷爷死了没叫他们太遗憾了，我结婚的时候一定要叫啊。</p>
+<h2 id="离开了"><a href="#离开了" class="headerlink" title="离开了"></a>离开了</h2><p>吃饭的时候，吃完站在院子里逗猫的时候，我看着我爸在村头路上给大家看病的时候，我的眼睛湿润了很多次，尤其是经历过之前一段时间，我对人与人的信任感降到过最低，没想到我这辈子能亲眼见到，亲自感受到如此淳朴善良亲切的人们，没想到这样的人真的存在。我感觉到了从未有过的脚踏实地甚至深深扎根在黄土中的真实，心贴心的开心和感动，即便都是初次相见。我对我的追求产生了深深的动摇，金钱和地位应该可以给我虚荣的快感，更好的生活，更容易交到的朋友，但能给我这种感觉吗，不能。我非常心动，我想，如果纯粹为了这种感觉，而不是为了造福大众这种虚伪的理由，我真的愿意回来做个乡土干部。</p>
+<p>但是想了想，太不现实了，我已经出去了，想回来太难了。我能快乐感动一段时间，但是时间长了，我终究做不到没有物欲，此外太不方便和城市化导致住户一直在减少，只有剩下的老人在种田，这样的可爱的偏远的庄子最终还是会消失的，而且或许用不了多少年了。</p>
+<p>中国还有无数个这种小村庄，只有在自己最擅长的领域发光发热，为祖国的强大供能，才能最大限度帮助脱贫吧。</p>
+<p>多想以后和”人”相处累了，我还能在某个不知道是哪儿的地方找到这种感觉。</p>
+<hr>
+<p>2021&#x2F;3&#x2F;15</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -4092,48 +4134,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>高声大嗓</title>
-    <url>/2021/03/15/The-farmer/</url>
-    <content><![CDATA[<p>有这么一个农民，外号叫”高声大嗓”，这个外号，是爸妈取的。</p>
-<p>他从来没有进过我们家门，每次要不用自行车驮着纤维袋子鼓鼓囊囊装满的洋芋，要不洋芋拉在三轮车上，到了家门口，大声吆喝”取洋芋咯！”他从不担心我们会听不到，因为他的声音能轻松响彻巷子里所有的街坊邻居，轻松盖过各自家里的电视节目声音。这是已经搬迁了的巷子邻居的共同记忆。</p>
-<p>20多年前，他胃溃疡萎缩性胃炎严重，看了很多大夫都没用，生命垂危，我爸治好了他。但他只是我爸看无数病人中的一位普通病人。</p>
-<span id="more"></span>
-
-<p>因为感激爸爸的救命之恩，20多年来，每年自己种的洋芋成熟的时候，都会留一袋子比较好的用最低廉的价格给我们家送来，从来都没间断过，按我爸妈的话来说，他送的洋芋和市场上卖的区别很大，一点都不麻，又大又好吃。</p>
-<p>近些年年，”高声大嗓”说自己年龄大了，60多了，自行车骑不动了，三轮没上牌，城里管的很严去不了。但洋芋每年都给我们留着，要不就找人带，要不就我们自己去取。</p>
-<p>之前对此人的了解，只是停留在爸妈口中的人真的很好，现在这样的病人再也没有了，以及每年不用买的洋芋，因为自己在家几乎不做饭，而且从没见过，所以其实印象很浅。</p>
-<p>今年因为我回学校晚，为了练练车技，我们全家今天下午开车去他家，甘肃省定西市临洮县龙门镇大宅子村林家嘴，取洋芋。</p>
-<h2 id="路上"><a href="#路上" class="headerlink" title="路上"></a>路上</h2><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213535525.png" alt="image-20210315213535525" style="zoom: 50%;" />
-
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/image-20210315213608787.png" alt="image-20210315213608787"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203150950687.png" alt="image-20210315213626300"></p>
-<p>这路，是真的难走，走完盘旋山路，就是更难走的水泥硬化路，全程只能勉强两辆车通过，一侧山体一侧悬崖。再后来，从山上到山脚，索性连路都没有了，导航完全没用，只有拖拉机压出来的黄土，和土墙山坳，全程只允许我的一辆小型车勉强通过，坑洼不平，还有松软的泥泞。我尽可能防止挂到车辆底盘，仍在走错路田间掉头时，陷入了松土中，轮胎空转，爸妈下车推车，再上车时我们三个被轮胎的焦糊味熏得眼睛难受。到了以后，刹车片发烫。</p>
-<p>期间因为实在找不到路在哪儿，边走边问路，问了好多村民，最后因为遇上了放学的小学生，恰好也是去林家嘴的，载着她，这才找到庄子。</p>
-<p>趟着厚厚的黄土，迎着大风，摸摸索索终于找到了人家。</p>
-<p>面朝黄土背朝天，太贴切了。我妈说，如果她有女儿，绝不肯嫁到这种地方来，太苦了。</p>
-<h2 id="到了"><a href="#到了" class="headerlink" title="到了"></a>到了</h2><p>我昨晚喝了酒，早上没胃口，中午吃的有点少，开山路集中精力搞得我疲倦，我确实是又累又饿，有点低血糖头晕。</p>
-<p>到了以后，风很大土很大，我们三个蓬头垢面，嘴里都沙碌碌的。家里没人，果然去下地干活了，我和我妈都在埋怨为什么我爸不提前打电话。打了电话告知我们已经到了家门口，大爷大娘了然，大娘从山脚一路跑步到了我们面前，气喘吁吁，随后大爷的三轮也回来了。</p>
-<p>他们精瘦的体格，黝黑的，深深刻印了皱纹的干枯的皮肤，诉说着地地道道庄稼汉的苦。</p>
-<p>进去以后，房屋十分简单，养鸡种地，客厅堆了药材，所以只能去厨房一座。一进门，便是久违的，熟悉的，昏暗潮湿的霉味和炕味。</p>
-<p>大娘大爷显然没有料到我们会来，手足无措，按照他们的习惯应该劳作一天，天黑再回家做饭。此时竟不知道该拿什么来招待我们。想擀面做饭，想煮自己家的鸡肉，被爸妈拼命拦下，一来不想麻烦他们，二来太晚天黑了路太难走，太危险，回不去。</p>
-<p>所以只泡了茶，因为外出没有生火，当然也没有热水，就用电磁炉烧了敞口的壶。没有小块的冰糖，大块的用手掰不动，大娘只能用菜刀刀背在案板上敲开，结果碎的到处都是，取完整的小块冰糖和放在柜子里的铁罐里的碎茶叶泡了茶。</p>
-<p>一进门大娘就开始找所有能让我们带走的东西，找来找去，只找到了之前杀的鸡，和没吃的肉，全装袋子了。</p>
-<p>拿出自己种的粮食做的馍，就着这满是土腥味儿的茶，比普洱没洗的味道还要浓好多倍，我吃的十分香甜，真真切切能尝到粮食的香味。估计是看我吃的太投入，饿了。大娘用自己家的鸡蛋做点喝的，根本拦不住，切点小葱，飘在表面，我和我爸一人盛了三个荷包蛋。我觉得小葱很好吃，于是无所事事的我妈在案板下面帮我找了一根。</p>
-<p>大娘看到后，说喜欢葱的话还有更新鲜的！二话不说跑去近处的田里，摘了一把，回来洗净一根推搡给我，我已经吃完了，我这样吃不习惯葱的人只吃葱怎么可能吃得下啊。剩下没洗的说什么都要让装走，说吃不完种在盆里也行。看我吃饼吃的很香，又摸出今天带去田里干活还没来及吃的饼，也带走。盛情难却啊。</p>
-<p>我终于理解了为什么我爸不肯提前打电话告知了。</p>
-<p>天色渐晚，稍微果腹后，我们打算带着洋芋回去。大娘风风火火，不到半个小时庄子的人们都知道秦大夫来了，纷纷围了过来，在村头的路口，一个个都希望看看自己家里的病，其实都是些小病，很快开完药方后，被全庄一起簇拥着，热热闹闹各自说着家长里短，来到了停车的麦场。离开的时候，大爷大娘对我说爷爷死了没叫他们太遗憾了，我结婚的时候一定要叫啊。</p>
-<h2 id="离开了"><a href="#离开了" class="headerlink" title="离开了"></a>离开了</h2><p>吃饭的时候，吃完站在院子里逗猫的时候，我看着我爸在村头路上给大家看病的时候，我的眼睛湿润了很多次，尤其是经历过之前一段时间，我对人与人的信任感降到过最低，没想到我这辈子能亲眼见到，亲自感受到如此淳朴善良亲切的人们，没想到这样的人真的存在。我感觉到了从未有过的脚踏实地甚至深深扎根在黄土中的真实，心贴心的开心和感动，即便都是初次相见。我对我的追求产生了深深的动摇，金钱和地位应该可以给我虚荣的快感，更好的生活，更容易交到的朋友，但能给我这种感觉吗，不能。我非常心动，我想，如果纯粹为了这种感觉，而不是为了造福大众这种虚伪的理由，我真的愿意回来做个乡土干部。</p>
-<p>但是想了想，太不现实了，我已经出去了，想回来太难了。我能快乐感动一段时间，但是时间长了，我终究做不到没有物欲，此外太不方便和城市化导致住户一直在减少，只有剩下的老人在种田，这样的可爱的偏远的庄子最终还是会消失的，而且或许用不了多少年了。</p>
-<p>中国还有无数个这种小村庄，只有在自己最擅长的领域发光发热，为祖国的强大供能，才能最大限度帮助脱贫吧。</p>
-<p>多想以后和”人”相处累了，我还能在某个不知道是哪儿的地方找到这种感觉。</p>
-<hr>
-<p>2021&#x2F;3&#x2F;15</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Typora的设置(三)</title>
     <url>/2022/03/21/Typora-Setting/</url>
     <content><![CDATA[<p>这是我的Typora的页面，我喜欢干净整洁，通过简单的设置，右键菜单，和常用<a href="https://yongtaiq.github.io/2022/03/20/Win10-shortcut-key/">win快捷键 </a>可以轻松完成编写，本文一步一步告诉你我是怎么使用Typora的，markdown的缺点是文件支持，设置重点在于<strong>图床</strong>。<br><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203211115065.png" alt="image-20220321111548894"></p>
@@ -4362,19 +4362,19 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 </blockquote>
 <p>8K帧率低所以码率低，可能是我设备的原因，也可能是B站解码的问题，按理说能推到8K@120hz</p>
 <blockquote>
-<p>Resolution:7680 x <a href="mailto:&#52;&#x33;&#50;&#x30;&#64;&#x33;&#48;&#46;&#48;&#49;&#57;">&#52;&#x33;&#50;&#x30;&#64;&#x33;&#48;&#46;&#48;&#49;&#57;</a><br>Video DataRate:3609 Kbps<br>Audio DataRate:311 Kbps</p>
+<p>Resolution:7680 x <a href="mailto:&#52;&#51;&#50;&#48;&#x40;&#x33;&#48;&#x2e;&#48;&#x31;&#x39;">&#52;&#51;&#50;&#48;&#x40;&#x33;&#48;&#x2e;&#48;&#x31;&#x39;</a><br>Video DataRate:3609 Kbps<br>Audio DataRate:311 Kbps</p>
 </blockquote>
 <p>4K</p>
 <blockquote>
-<p>Resolution:<a href="mailto:&#51;&#x38;&#52;&#48;&#120;&#50;&#x31;&#54;&#x30;&#x40;&#x31;&#49;&#49;&#46;&#49;&#x31;&#x31;">&#51;&#x38;&#52;&#48;&#120;&#50;&#x31;&#54;&#x30;&#x40;&#x31;&#49;&#49;&#46;&#49;&#x31;&#x31;</a><br>Video DataRate:11672 Kbps<br>Audio DataRate:311 Kbps</p>
+<p>Resolution:<a href="mailto:&#x33;&#x38;&#x34;&#48;&#x78;&#x32;&#49;&#54;&#48;&#x40;&#x31;&#x31;&#49;&#x2e;&#49;&#x31;&#49;">&#x33;&#x38;&#x34;&#48;&#x78;&#x32;&#49;&#54;&#48;&#x40;&#x31;&#x31;&#49;&#x2e;&#49;&#x31;&#49;</a><br>Video DataRate:11672 Kbps<br>Audio DataRate:311 Kbps</p>
 </blockquote>
 <p>1080p60hz</p>
 <blockquote>
-<p>Resolution:1920 x <a href="mailto:&#49;&#48;&#x38;&#x30;&#64;&#54;&#x30;&#x2e;&#x31;&#53;&#x30;">&#49;&#48;&#x38;&#x30;&#64;&#54;&#x30;&#x2e;&#x31;&#53;&#x30;</a><br>Video DataRate:1541 Kbps<br>Audio DataRate:311 Kbps</p>
+<p>Resolution:1920 x <a href="mailto:&#x31;&#x30;&#56;&#x30;&#64;&#54;&#x30;&#x2e;&#49;&#x35;&#x30;">&#x31;&#x30;&#56;&#x30;&#64;&#54;&#x30;&#x2e;&#49;&#x35;&#x30;</a><br>Video DataRate:1541 Kbps<br>Audio DataRate:311 Kbps</p>
 </blockquote>
 <p>1080p</p>
 <blockquote>
-<p>Resolution:1920 x <a href="mailto:&#49;&#48;&#x38;&#x30;&#64;&#51;&#48;&#46;&#48;&#49;&#x39;">&#49;&#48;&#x38;&#x30;&#64;&#51;&#48;&#46;&#48;&#49;&#x39;</a><br>Video DataRate: 655 Kbps<br>Audio DataRate:311 Kbps</p>
+<p>Resolution:1920 x <a href="mailto:&#49;&#48;&#56;&#x30;&#64;&#x33;&#48;&#46;&#x30;&#x31;&#x39;">&#49;&#48;&#56;&#x30;&#64;&#x33;&#48;&#46;&#x30;&#x31;&#x39;</a><br>Video DataRate: 655 Kbps<br>Audio DataRate:311 Kbps</p>
 </blockquote>
 <p>320kbps水平大概是三分钟的音乐10MB大小</p>
 <p>达不到无损，但绝对吊打网页解码，试试就明白了</p>
@@ -4497,6 +4497,35 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
+    <title>关于精力的一些想法</title>
+    <url>/2022/04/25/energy/</url>
+    <content><![CDATA[<p>这一个月跟着学校的生物钟自己生活规律了一些，醒着的时间变多了，但是很多时候做事感觉力不从心，精力充沛的感觉越来越少，这才慢慢重视起自己的精力来，毕竟长时间不快乐一定会在某个时间点奔溃。</p>
+<p>对时间的管理规划有点治标不治本，它是有帮助的，但总有啥也不想干的时候，同时也不是每件事都有足够的精力去做好。精力耗尽会变得情绪暴躁，容易分神。</p>
+<span id="more"></span>
+
+<h2 id="周期性消耗周期性补充"><a href="#周期性消耗周期性补充" class="headerlink" title="周期性消耗周期性补充"></a>周期性消耗周期性补充</h2><p>身体的锻炼，中断一个星期，锻炼的好处就会明显下降，因为胳膊再没去打球，一个人跑步有点孤单也不是每天都去，所以那种之前熟悉的倦怠感又来了，我摸了摸右小臂上的肌肉，感觉很可惜。说明身体的精力需要得到补充，昨天跟着视频深蹲挺舒服的，不能打球的时候就跑步居家运动换着来吧。情感也是一样的道理，积极得和别人或者自己进行情感联系能够增加恢复力，多和别人交流，也就是多交些朋友，平时随便的闲聊都有意想不到的好效果。思维上的恢复方法就是不断的智力挑战，比如刷题，看书写心得。精神上我做得很少，操作难度也挺大的，需要时常回顾自己想要的是什么，包括自己最重要的事情，最重要的人，我是不是做到了为自己负责，前一阵子我把自己觉得重要得事情写在A4纸上，挺有效果的。</p>
+<p>精力的消耗和补充能形成动态平衡就能活得更舒服一点了，至少不会到某个时间点，或者中途遇到压力就引发奔溃模式。</p>
+<p>精力应该用在刀刃上，比如有两个需要大量精力的事，A和B之间有一个间隙，注意力可以好好放松，我发现绘画在这方面帮助挺多的，午觉前看小说（最近在看鼠疫）能帮我快速平静，当然不是那种情节性很强的小说；睡前或者闲暇画画能让我充分休息，顺带发现画美少女是个有待发开的技能，以前只考虑画得像不像，现在需要考虑画的美不美了。</p>
+<h2 id="身体的"><a href="#身体的" class="headerlink" title="身体的"></a>身体的</h2><p>睡眠时长和质量，吃饭，包括吃的东西和吃的时间。</p>
+<p>只有三餐，时间太长，我发现一个半小时过后就开始饿了，试了一下空气炸锅挺好用的，平时可以自己做点小零食，比如蛋挞，薯条，鸡翅什么的，水果也是一个补充来源，下午来一杯果茶我就很有精神，下个小目标是整一个搅拌机，能平时自己榨果汁，加点冰块，蜂蜜什么的应该很享受，反正在家，不如好好利用一下。咖啡和饮料其实喝的多了会疲劳，爸爸送我的那个尤尼克斯大杯子真不错，打一大杯常温的水能喝一上午。</p>
+<p>锻炼方面，高强度的锻炼很解压，之前打网球和羽毛球（比我厉害的人）都挺释放的，现在是短跑冲刺和50次深蹲还有跳绳，跳绳现在跳1000左右刚刚好。</p>
+<p>睡觉7小时以上和以下真的是两个状态，睡够了醒来心气很足，而且前一天不开心的事情几乎都会不记得了。中午半小时足够了，不过下午两点左右精力是全天最低，也没有什么办法好像。晚上睡觉前和爸爸聊天，或者看书，都比较放松心情，泡泡脚也是很好的选择。早起喝醪糟，牛奶或者紫菜汤胃都很舒服，也容易清醒。</p>
+<h2 id="思想的"><a href="#思想的" class="headerlink" title="思想的"></a>思想的</h2><p>来自对未来的，以及没发生的事情的担忧在这方面消耗掉了我大部分的精力，消极的想法如果能让我意识到我的一些没有满足的重要需求或者现在亟待需要解决的问题其实还好，毕竟能避免掉破坏性的结果，但是如果不是为了解决目前的问题，而是防范式的，那就会消耗精力，毕竟乐观的精神才能更好得迎接挑战。</p>
+<p>思考会消耗很多，感觉内耗就是我的性格缺陷，我得一辈子斗争，后果就是创造力底，错误判断多，无法理性得分析问题。回忆一下我有好想法或者和人交往起来很舒服一般都是比较低压轻松的状态，不会想太多。更重要的是，想太多占太多内存思维就僵化了，比如不愿看清现实，听不进去别人的意见，懒得换位思考，不想改变自己的现状等等。</p>
+<p>总而言之，思想的精力主要用于安排生活，集中注意力做事，最有助于全身心投入的就是现实主义的乐观精神：时刻看看自己的现实，然后积极得朝自己的目标努力。</p>
+<h2 id="情感的"><a href="#情感的" class="headerlink" title="情感的"></a>情感的</h2><p>快乐是一种能力，如今越来越这样觉得，这不是自发得，这也需要努力，情感上精力充沛的最好状态就是自信，能做到自我调整，和别人交往能愉快轻松，比之前包容性，共情能力更强，有耐心，很坦诚，比较欢乐。</p>
+<p>消极情感的代价可太高了，很快消耗掉精力，而且很容易传染给别人，让别人焦虑，抵触，消极。和别人积极得交流能够促进情感的正向循环，多鼓励鼓励，夸夸别人，和打球的小妹妹聊聊她得羽毛球比赛夸夸她，和认识的姐姐聊聊她好看之类的，实在不应该带着挑剔的眼光甚至冷漠的眼光都没必要，情感得流动起来才是活的。健康的友谊是一个丰富得源泉，说起这个，不知道是不是以前的朋友看我考试失败挺惨的，平时找我聊天还挺多，这方面我挺感谢他们。另外我和爸爸的关系现在慢慢趋于稳定，安全感也很足，有来有往的，感情起码不再是负担了。</p>
+<p>所有愉快的，有成就感的，肯定的活动都会增加积极的情感，平时多找找这样的活动，这是很重要的源泉。</p>
+<h2 id="精神的"><a href="#精神的" class="headerlink" title="精神的"></a>精神的</h2><p>精神上的精力涉及到动力毅力，以及方向调整。最好的状态就是对生活充满热情，最差的状态可能就是绝望吧，对未来没有希望，不知道干啥，想自杀。其实挑战自己自满和私利往往能把自己从缺乏精神精力的状态中拉出来，拥有一个值得努力的目标和为自由选择的任务而奋斗就是自由，就能把自己拉出来。太闲会出毛病。不用太关注自己，适当关爱自己，多看看超越自己的目标，多关爱关爱别人就能很好的补充精力了。</p>
+<hr>
+<p>Sherry</p>
+<p>2022-4-25</p>
+]]></content>
+      <categories>
+        <category>Sherry</category>
+      </categories>
+  </entry>
+  <entry>
     <title>读《第一人称单数》</title>
     <url>/2022/03/26/first-person/</url>
     <content><![CDATA[<p>时隔六年村上春树又出新小说了，这是写于2018至2019年的一些短篇小说，可以说都是村上七十多岁写的东西了，但是在他的小说里，主人公永远是年轻人，一个不介意孤独的主角，能自己给自己找乐子，我对着这样的人有着莫名的亲近感。啊对了，村上本人也很健康很自律，给人一种活力充沛的印象，铁人三项的爱好者，果然爱运动的人都很有魅力呢。</p>
@@ -4539,35 +4568,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 <hr>
 <p>Sherry</p>
 <p>2022-3-26</p>
-]]></content>
-      <categories>
-        <category>Sherry</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>关于精力的一些想法</title>
-    <url>/2022/04/25/energy/</url>
-    <content><![CDATA[<p>这一个月跟着学校的生物钟自己生活规律了一些，醒着的时间变多了，但是很多时候做事感觉力不从心，精力充沛的感觉越来越少，这才慢慢重视起自己的精力来，毕竟长时间不快乐一定会在某个时间点奔溃。</p>
-<p>对时间的管理规划有点治标不治本，它是有帮助的，但总有啥也不想干的时候，同时也不是每件事都有足够的精力去做好。精力耗尽会变得情绪暴躁，容易分神。</p>
-<span id="more"></span>
-
-<h2 id="周期性消耗周期性补充"><a href="#周期性消耗周期性补充" class="headerlink" title="周期性消耗周期性补充"></a>周期性消耗周期性补充</h2><p>身体的锻炼，中断一个星期，锻炼的好处就会明显下降，因为胳膊再没去打球，一个人跑步有点孤单也不是每天都去，所以那种之前熟悉的倦怠感又来了，我摸了摸右小臂上的肌肉，感觉很可惜。说明身体的精力需要得到补充，昨天跟着视频深蹲挺舒服的，不能打球的时候就跑步居家运动换着来吧。情感也是一样的道理，积极得和别人或者自己进行情感联系能够增加恢复力，多和别人交流，也就是多交些朋友，平时随便的闲聊都有意想不到的好效果。思维上的恢复方法就是不断的智力挑战，比如刷题，看书写心得。精神上我做得很少，操作难度也挺大的，需要时常回顾自己想要的是什么，包括自己最重要的事情，最重要的人，我是不是做到了为自己负责，前一阵子我把自己觉得重要得事情写在A4纸上，挺有效果的。</p>
-<p>精力的消耗和补充能形成动态平衡就能活得更舒服一点了，至少不会到某个时间点，或者中途遇到压力就引发奔溃模式。</p>
-<p>精力应该用在刀刃上，比如有两个需要大量精力的事，A和B之间有一个间隙，注意力可以好好放松，我发现绘画在这方面帮助挺多的，午觉前看小说（最近在看鼠疫）能帮我快速平静，当然不是那种情节性很强的小说；睡前或者闲暇画画能让我充分休息，顺带发现画美少女是个有待发开的技能，以前只考虑画得像不像，现在需要考虑画的美不美了。</p>
-<h2 id="身体的"><a href="#身体的" class="headerlink" title="身体的"></a>身体的</h2><p>睡眠时长和质量，吃饭，包括吃的东西和吃的时间。</p>
-<p>只有三餐，时间太长，我发现一个半小时过后就开始饿了，试了一下空气炸锅挺好用的，平时可以自己做点小零食，比如蛋挞，薯条，鸡翅什么的，水果也是一个补充来源，下午来一杯果茶我就很有精神，下个小目标是整一个搅拌机，能平时自己榨果汁，加点冰块，蜂蜜什么的应该很享受，反正在家，不如好好利用一下。咖啡和饮料其实喝的多了会疲劳，爸爸送我的那个尤尼克斯大杯子真不错，打一大杯常温的水能喝一上午。</p>
-<p>锻炼方面，高强度的锻炼很解压，之前打网球和羽毛球（比我厉害的人）都挺释放的，现在是短跑冲刺和50次深蹲还有跳绳，跳绳现在跳1000左右刚刚好。</p>
-<p>睡觉7小时以上和以下真的是两个状态，睡够了醒来心气很足，而且前一天不开心的事情几乎都会不记得了。中午半小时足够了，不过下午两点左右精力是全天最低，也没有什么办法好像。晚上睡觉前和爸爸聊天，或者看书，都比较放松心情，泡泡脚也是很好的选择。早起喝醪糟，牛奶或者紫菜汤胃都很舒服，也容易清醒。</p>
-<h2 id="思想的"><a href="#思想的" class="headerlink" title="思想的"></a>思想的</h2><p>来自对未来的，以及没发生的事情的担忧在这方面消耗掉了我大部分的精力，消极的想法如果能让我意识到我的一些没有满足的重要需求或者现在亟待需要解决的问题其实还好，毕竟能避免掉破坏性的结果，但是如果不是为了解决目前的问题，而是防范式的，那就会消耗精力，毕竟乐观的精神才能更好得迎接挑战。</p>
-<p>思考会消耗很多，感觉内耗就是我的性格缺陷，我得一辈子斗争，后果就是创造力底，错误判断多，无法理性得分析问题。回忆一下我有好想法或者和人交往起来很舒服一般都是比较低压轻松的状态，不会想太多。更重要的是，想太多占太多内存思维就僵化了，比如不愿看清现实，听不进去别人的意见，懒得换位思考，不想改变自己的现状等等。</p>
-<p>总而言之，思想的精力主要用于安排生活，集中注意力做事，最有助于全身心投入的就是现实主义的乐观精神：时刻看看自己的现实，然后积极得朝自己的目标努力。</p>
-<h2 id="情感的"><a href="#情感的" class="headerlink" title="情感的"></a>情感的</h2><p>快乐是一种能力，如今越来越这样觉得，这不是自发得，这也需要努力，情感上精力充沛的最好状态就是自信，能做到自我调整，和别人交往能愉快轻松，比之前包容性，共情能力更强，有耐心，很坦诚，比较欢乐。</p>
-<p>消极情感的代价可太高了，很快消耗掉精力，而且很容易传染给别人，让别人焦虑，抵触，消极。和别人积极得交流能够促进情感的正向循环，多鼓励鼓励，夸夸别人，和打球的小妹妹聊聊她得羽毛球比赛夸夸她，和认识的姐姐聊聊她好看之类的，实在不应该带着挑剔的眼光甚至冷漠的眼光都没必要，情感得流动起来才是活的。健康的友谊是一个丰富得源泉，说起这个，不知道是不是以前的朋友看我考试失败挺惨的，平时找我聊天还挺多，这方面我挺感谢他们。另外我和爸爸的关系现在慢慢趋于稳定，安全感也很足，有来有往的，感情起码不再是负担了。</p>
-<p>所有愉快的，有成就感的，肯定的活动都会增加积极的情感，平时多找找这样的活动，这是很重要的源泉。</p>
-<h2 id="精神的"><a href="#精神的" class="headerlink" title="精神的"></a>精神的</h2><p>精神上的精力涉及到动力毅力，以及方向调整。最好的状态就是对生活充满热情，最差的状态可能就是绝望吧，对未来没有希望，不知道干啥，想自杀。其实挑战自己自满和私利往往能把自己从缺乏精神精力的状态中拉出来，拥有一个值得努力的目标和为自由选择的任务而奋斗就是自由，就能把自己拉出来。太闲会出毛病。不用太关注自己，适当关爱自己，多看看超越自己的目标，多关爱关爱别人就能很好的补充精力了。</p>
-<hr>
-<p>Sherry</p>
-<p>2022-4-25</p>
 ]]></content>
       <categories>
         <category>Sherry</category>
@@ -4657,32 +4657,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>尝试一下uTools(更)</title>
-    <url>/2022/04/20/uTools/</url>
-    <content><![CDATA[<p><a href="https://u.tools/">uTools</a>是一个效率提升的工具。</p>
-<p>使用一段时间之后慢慢更新。</p>
-<span id="more"></span>
-
-<p>之前觉得很麻烦，而且没有必要，就懒得弄了。今天尝试了一下，所有功能都是win自带或者其它可以替代，优点在于聚合，所以很方便。</p>
-<p>后端是一个插件聚合的工具，看了看，更新和插件内容很丰富，质量很不错，资源占用率目前有待测试。</p>
-<p>常用的很多插件也是我常用的开源工具。</p>
-<p>前端主要两种方式，随便举例一下：</p>
-<ol>
-<li>搜索框<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204201648900.png" alt="image-20220420164551325" style="zoom: 25%;" />功能很强大，很方便</li>
-<li>超级面板<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204201647305.png" alt="image-20220420164707938" style="zoom:33%;" />方便，会根据选择文件不同而不同</li>
-</ol>
-<iframe src="//player.bilibili.com/player.html?aid=504310921&bvid=BV1eg411M7TZ&cid=374628689&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-
-<hr>
-<p>2022&#x2F;4&#x2F;20</p>
-<p>西走菜菜</p>
-]]></content>
-      <categories>
-        <category>小技巧&amp;快捷键&amp;命令</category>
-      </categories>
-  </entry>
-  <entry>
     <title>关于异地恋</title>
     <url>/2022/04/08/long-distance-romance/</url>
     <content><![CDATA[<p>昨天晚上看《东京爱情故事》，女主太可爱了，很久没有看过这么甜的恋爱剧了，晚上就做了一个美梦，和自己心爱的人在一起的感觉真好。这个时代可真苛刻。</p>
@@ -4743,6 +4717,32 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>Sherry</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>尝试一下uTools(更)</title>
+    <url>/2022/04/20/uTools/</url>
+    <content><![CDATA[<p><a href="https://u.tools/">uTools</a>是一个效率提升的工具。</p>
+<p>使用一段时间之后慢慢更新。</p>
+<span id="more"></span>
+
+<p>之前觉得很麻烦，而且没有必要，就懒得弄了。今天尝试了一下，所有功能都是win自带或者其它可以替代，优点在于聚合，所以很方便。</p>
+<p>后端是一个插件聚合的工具，看了看，更新和插件内容很丰富，质量很不错，资源占用率目前有待测试。</p>
+<p>常用的很多插件也是我常用的开源工具。</p>
+<p>前端主要两种方式，随便举例一下：</p>
+<ol>
+<li>搜索框<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204201648900.png" alt="image-20220420164551325" style="zoom: 25%;" />功能很强大，很方便</li>
+<li>超级面板<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202204201647305.png" alt="image-20220420164707938" style="zoom:33%;" />方便，会根据选择文件不同而不同</li>
+</ol>
+<iframe src="//player.bilibili.com/player.html?aid=504310921&bvid=BV1eg411M7TZ&cid=374628689&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+<hr>
+<p>2022&#x2F;4&#x2F;20</p>
+<p>西走菜菜</p>
+]]></content>
+      <categories>
+        <category>小技巧&amp;快捷键&amp;命令</category>
       </categories>
   </entry>
 </search>
