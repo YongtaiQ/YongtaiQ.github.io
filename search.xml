@@ -849,28 +849,6 @@
       </categories>
   </entry>
   <entry>
-    <title>山的那边</title>
-    <url>/2022/04/16/Chairzhou/</url>
-    <content><![CDATA[<blockquote>
-<p>周恩来在文艺工作座谈会和故事片创作会议上的讲话</p>
-<p>有的人</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="周恩来在文艺工作座谈会和故事片创作会议上的讲话"><a href="#周恩来在文艺工作座谈会和故事片创作会议上的讲话" class="headerlink" title="周恩来在文艺工作座谈会和故事片创作会议上的讲话"></a>周恩来在文艺工作座谈会和故事片创作会议上的讲话</h2><p>人民喜闻乐见，你不喜欢，你算老几？上海人喜爱评弹、淮剧、越剧，要你北京人去批准干什么？领导人可以有喜好，有人爱看戏，有人爱看画，有人爱古董，这有什么关系？我们看了戏说好，不一定就好，我们的话靠不住，各人有各人的爱好，怎能作为标准？艺术是要人民批准的。只要人民爱好，就有价值；不是反党、反社会主义的，就许可存在，没有权力去禁演。艺术家要面对人民，而不是只面对领导。 </p>
-<p>艺术是要人民批准的。只要人民爱好，就有价值；不是反党、反社会主义的，就许可存在，没有权力去禁演。艺术家要面对人民，而不是只面对领导。这是不是主张反对领导呢？不是的。领导在政治上有权提意见，要政治挂帅，但政治挂帅主要是看它是香花还是毒草，是否反党反社会主义，政治上的敏锐要放在这个方面。至于艺术方面，我们懂得很少。 </p>
-<p>在座的同志都是做领导的人，希望你们干涉少些，当然不是要你们不负责任。第一，要负责任；第二，要干涉少些。负责任主要指政治上，不要放任毒草，放任修正主义。但是一定要区分清楚，不要把什么都说成是修正主义。有人问我：文艺的教育作用和娱乐作用是不是统一的？是辩证的统一。群众看戏、看电影是要从中得到娱乐和休息，你通过典型化的形象表演，教育寓于其中，寓于娱乐之中。当然要多样化，不能老是打仗。朱德同志说，我打了一辈子仗，想看点不打仗的片子。如果天天让人家看打仗的片子，人家就不爱看，就要去看香港片，这只能说明电影局的工作没做好；反之，一个打仗的片子也没有，让青年丧失战斗性，也不好。现代片多少，历史片多少，要大体上有个比例。至于题材，完全可以允许作者自由选择。 </p>
-<p>周恩来在文艺工作座谈会和故事片创作会议上的讲话（一九六一年六月十九日） </p>
-<hr>
-<h2 id="【有的人】"><a href="#【有的人】" class="headerlink" title="【有的人】"></a>【有的人】</h2><p>──纪念鲁迅有感</p>
-<p>有的人活着，<br>他已经死了；<br>有的人死了，<br>他还活着。<br>有的人<br>骑在人民头上：“呵，我多么伟大！”<br>有的人<br>俯下身子给人民当牛马。<br>有的人<br>把名字刻入石头，想“不朽”；<br>有的人<br>情愿作野草，<br>等着地下的火燃烧。<br>有的人<br>他活着别人就不能活；<br>有的人<br>他活着为了多数人更好地活。<br>骑在人民头上的<br>人民把他摔倒；<br>给人民作牛马的<br>人民永远记住他！<br>把名字刻在石头上的<br>名字比尸首烂得更早；<br>只要春风吹到的地方<br>到处是青青的野草。<br>他活着别人就不能活的人，<br>他的下场可以看到；<br>他活着为了多数人更好地活着的人，<br>群众把他抬举得很高，很高。</p>
-<hr>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
     <title>随手画记录（更）</title>
     <url>/2022/03/23/Casual-painting/</url>
     <content><![CDATA[<p>感觉都是一些碎碎念了。</p>
@@ -942,112 +920,25 @@
       </categories>
   </entry>
   <entry>
-    <title>数据结构API</title>
-    <url>/2022/03/15/Data-structure-API/</url>
-    <content><![CDATA[<p>interface接口(申明后直接调用方法)-implement实现(不关心)</p>
-<h2 id="1-集合类-基本接口"><a href="#1-集合类-基本接口" class="headerlink" title="1. 集合类 基本接口"></a>1. 集合类 基本接口</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Collection&#123;</span><br><span class="line">    add(e);</span><br><span class="line">    iterator迭代器();&#125;</span><br></pre></td></tr></table></figure>
-
+    <title>山的那边</title>
+    <url>/2022/04/16/Chairzhou/</url>
+    <content><![CDATA[<blockquote>
+<p>周恩来在文艺工作座谈会和故事片创作会议上的讲话</p>
+<p>有的人</p>
+</blockquote>
 <span id="more"></span>
 
-<h3 id="1-1-迭代器"><a href="#1-1-迭代器" class="headerlink" title="1.1 迭代器"></a>1.1 迭代器</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">iterator&#123;</span><br><span class="line">    next();</span><br><span class="line">    hasNext();</span><br><span class="line">    remove();&#125;</span><br></pre></td></tr></table></figure>
-
-<p> next最后会抛出异常，需要先hasNext;</p>
-<p>查找一个元素唯一个方法是next；</p>
-<h3 id="1-2删除-remove前必须先next，remove删除上次next返回的元素"><a href="#1-2删除-remove前必须先next，remove删除上次next返回的元素" class="headerlink" title="1.2删除 remove前必须先next，remove删除上次next返回的元素;"></a>1.2删除 remove前必须先next，remove删除上次next返回的元素;</h3><h2 id="1-3-Collection-泛型实用方法-所有都能用"><a href="#1-3-Collection-泛型实用方法-所有都能用" class="headerlink" title="1.3 Collection 泛型实用方法,所有都能用:"></a>1.3 Collection 泛型实用方法,所有都能用:</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collection&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">iterator</span><span class="params">()</span>;<span class="comment">//返回一个用于访问集合每个元素的迭代器    </span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">size</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object other)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(Object obj)</span>;<span class="comment">//有返回值</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">addAll</span><span class="params">(Collection&lt;? extends&gt; from)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">removeAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">retainAll</span><span class="params">(Collection&lt;?&gt; other)</span>;<span class="comment">//保留，既删除所有与other集合不一样的元素</span></span><br><span class="line">    </span><br><span class="line">Object[] toArray();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Iterator&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasNext</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">next</span><span class="params">()</span>;<span class="comment">//到达尾部报错</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">remove</span><span class="params">()</span>;<span class="comment">//删除上次访问对象，紧跟next，如果期间集合发生变化报错</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-具体集合"><a href="#2-具体集合" class="headerlink" title="2 具体集合"></a>2 具体集合</h2><p>map结尾的类以外都实现了Collection接口，map结尾的类实现map接口</p>
-<h3 id="2-1-链表LinkList"><a href="#2-1-链表LinkList" class="headerlink" title="2.1 链表LinkList"></a>2.1 链表LinkList</h3><p>数组列表，链表共有</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java,util.List&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">()</span>;<span class="comment">//列表迭代器，用来迭代</span></span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">(<span class="type">int</span> index)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> i,E element)</span>;<span class="comment">//在给定位置添加，无返回值，默认成功</span></span><br><span class="line"></span><br><span class="line">Void <span class="title function_">addAll</span><span class="params">(<span class="type">int</span> i,Collection&lt;? extends E&gt; elements)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//删除该位置元素并返回</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">get</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//get和set随机访问每一个元素只适用于数组列表，链表只能用迭代器提供的</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">set</span><span class="params">(<span class="type">int</span> i,E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(Object obj)</span>;<span class="comment">//如果没有返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(Object obj)</span>;<span class="comment">//返回列表中最后一次出现的元素，没有返回-1</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ListIterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(E newElement)</span>;<span class="comment">//当前位置</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">set</span><span class="params">(E newElement)</span>;<span class="comment">//修改next上次访问位置，如果列表在其间被修改了，会报错</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasPrevious</span><span class="params">()</span>;<span class="comment">//反向的hasNext</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">previous</span><span class="params">()</span>;<span class="comment">//头，抛出异常</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">nextIndex</span><span class="params">()</span>;<span class="comment">//下次调用next返回索引</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">prevIndex</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="链表专属独有"><a href="#链表专属独有" class="headerlink" title="链表专属独有"></a>链表专属独有</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">LinkedList();<span class="comment">//构造空链表</span></span><br><span class="line"></span><br><span class="line">LinkedList(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;<span class="comment">//在头或尾添加</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;<span class="comment">//返回头或尾元素</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-数组列表-ArryList-类-实现了List接口"><a href="#2-2-数组列表-ArryList-类-实现了List接口" class="headerlink" title="2.2 数组列表 ArryList 类 实现了List接口"></a>2.2 数组列表 ArryList 类 实现了List接口</h3><p>List接口（包含的迭代器）描述有顺序的集合，位置重要，两种协议：1get和set随机访问每一个元素只适用于数组列表，2链表只能用迭代器提供的。</p>
-<p>Victor同步，多线程同时访问安全；ArryList不同步，多个同时访问不安全。</p>
-<h3 id="2-3-散列集-HashSet"><a href="#2-3-散列集-HashSet" class="headerlink" title="2.3 散列集 HashSet"></a>2.3 散列集 HashSet</h3><p>无序</p>
-<p>HashTable 散列表用链表数组实现，每个列表 桶。</p>
-<p>散列表实现的数据类型如HashSet</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.HashSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">HashSet();</span><br><span class="line"></span><br><span class="line">HashSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity);<span class="comment">//构造指定桶的空散列集</span></span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor);<span class="comment">//填装因子，大于时再散列</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Object;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span>;<span class="comment">//返回哈希码</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-4-树集TreeSet，排序集"><a href="#2-4-树集TreeSet，排序集" class="headerlink" title="2.4 树集TreeSet，排序集"></a>2.4 树集TreeSet，排序集</h3><p>有排序的集合（sorted collection）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br></pre></td></tr></table></figure>
-
-<p>和比较紧密相关，因为是排序集合</p>
-<h3 id="2-5-排序集的-对象比较"><a href="#2-5-排序集的-对象比较" class="headerlink" title="2.5 排序集的 对象比较"></a>2.5 排序集的 对象比较</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Comparable&lt;T&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T other)</span>;<span class="comment">//将这个对象this与other比较，this在other之前，返回负值，之后返回正值，相同为0</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Comparator&lt;T&gt;;</span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T a,T b)</span>;<span class="comment">//a与b比较</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> E&gt; comparator();<span class="comment">//返回对元素排序的比较器？</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">first</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">last</span><span class="params">()</span>;<span class="comment">//返回排序集合的最小或最大</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.NavigableSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">higher</span><span class="params">(E value)</span>;<span class="comment">//返回大于value的最小元素或最大，没有返回null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">lower</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">ceiling</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">floor</span><span class="params">(E value)</span>;<span class="comment">//返回最大或最小，没有则null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//删除并返回这个排序集的最大或最小，空null</span></span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">descendingIterator</span><span class="params">()</span>;<span class="comment">//返回一个按递减顺序遍历集中元素的迭代器</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造树，用指定比较器对其中元素排序</span></span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);<span class="comment">//构造树，所有元素添加，与给定集相同元素的比较器</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-6-队列Queue与双端队列Deque"><a href="#2-6-队列Queue与双端队列Deque" class="headerlink" title="2.6 队列Queue与双端队列Deque"></a>2.6 队列Queue与双端队列Deque</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Queue&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offer</span><span class="params">(E element)</span>;<span class="comment">//如果队列没满，添加队尾返回true；满了add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">poll</span><span class="params">()</span>;<span class="comment">//队列不空，返回第一个并删除；空，remove报错，第二个null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">element</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//队列不空，返回头；空，element抛出异常，peek null</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Deque;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerLast</span><span class="params">(E element)</span>;<span class="comment">//如果满，add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFist</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//不空，删除并返回，空remove报错，poll null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekLast</span><span class="params">()</span>;<span class="comment">//返回头，空，get报错，peek null</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayDeque;</span><br><span class="line"></span><br><span class="line">ArrayDeque();</span><br><span class="line"></span><br><span class="line">ArrayDeque(<span class="type">int</span> initialCapacity);<span class="comment">//初始化16或给定容量双端队列</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-7-优先级队列PriorityQueue-最小-堆heap"><a href="#2-7-优先级队列PriorityQueue-最小-堆heap" class="headerlink" title="2.7 优先级队列PriorityQueue  (最小)堆heap"></a>2.7 优先级队列PriorityQueue  (最小)堆heap</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.PriorityQueue;</span><br><span class="line"></span><br><span class="line">PriorityQueue();</span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity);<span class="comment">//构造一个用于存放Comparable对象的优先级队列</span></span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity,Comparator&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造一个优先级队列，指定比较器排序</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-8映射表Map-lt-K-V-gt-泛型"><a href="#2-8映射表Map-lt-K-V-gt-泛型" class="headerlink" title="2.8映射表Map&lt;K,V&gt; 泛型"></a>2.8映射表Map&lt;K,V&gt; 泛型</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">get</span><span class="params">(Object Key)</span>;<span class="comment">//返回key对应value，没有null</span></span><br><span class="line"></span><br><span class="line">V <span class="title function_">put</span><span class="params">(K key,V value)</span>;插入，如果存在，取代，返回旧值；键可以为<span class="literal">null</span>值不能为<span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">putAll</span><span class="params">(Map&lt;? extends K, ? extends V&gt; entries)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsKey</span><span class="params">(Object key)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsValue</span><span class="params">(Object value)</span>;</span><br><span class="line"></span><br><span class="line">set&lt;Map.Entry&lt;K,V&gt; <span class="title function_">entrySet</span><span class="params">()</span>;<span class="comment">//返回Map.Entry的集视图，也就是映射表的KV对;可以从这儿删除元素，映射表也同步删除，不能添加</span></span><br><span class="line"></span><br><span class="line">Set&lt;K&gt; <span class="title function_">KeySet</span><span class="params">()</span>;<span class="comment">//映射表所有键的集视图，可删除不能添加</span></span><br><span class="line"></span><br><span class="line">Collection&lt;V&gt; <span class="title function_">values</span><span class="params">()</span>;<span class="comment">//映射表所有值的集视图，可删除不能添加</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map.Entry&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">getKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">getValue</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">setValue</span><span class="params">(V newValue)</span>;<span class="comment">//设置新值，返回旧值</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">HashMap();</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity);</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor)<span class="comment">//填装因子</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">TreeMap(Comparator&lt;? <span class="built_in">super</span> K&gt; c);<span class="comment">//构造树映射表，指定比较器排序</span></span><br><span class="line"></span><br><span class="line">TreeMap(Map&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//映射表全部添加到树映射表</span></span><br><span class="line"></span><br><span class="line">TreeMap(SortedMap&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//排序映射表添加到树映射表，用相同的比较器</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortedMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> K&gt; comparator);<span class="comment">//返回对K排序的比较器，compareto null</span></span><br><span class="line"></span><br><span class="line">K <span class="title function_">firstKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">lastKey</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-9-HashTable-Vector-enum-Stack"><a href="#2-9-HashTable-Vector-enum-Stack" class="headerlink" title="2.9 HashTable Vector enum Stack"></a>2.9 HashTable Vector enum Stack</h3><p>hashTable 与hashMap区别不大，不同是HashTable线程安全，同步访问；</p>
-<p>vector与ArrayList同理；</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Enumeration&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasMoreElement</span><span class="params">()</span>;有更多<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">nextElement</span><span class="params">()</span>;hasmore <span class="literal">false</span> 会报错</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Hashtable&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;K&gt; <span class="title function_">Keys</span><span class="params">()</span>;<span class="comment">//遍历 枚举</span></span><br><span class="line"></span><br><span class="line">Enumeration&lt;V&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Vector&lt;V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;E&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">push</span><span class="params">(E item)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pop</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//空会报错</span></span><br></pre></td></tr></table></figure>
-
-<p>位？</p>
-<h3 id="集合框架framework-展示Collection-Map两个接口的混用"><a href="#集合框架framework-展示Collection-Map两个接口的混用" class="headerlink" title="集合框架framework 展示Collection||Map两个接口的混用"></a>集合框架framework 展示Collection||Map两个接口的混用</h3><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713542.jpg" alt="5d21cab304c41c724c490927f5c531e" style="zoom:50%;" />
-
-<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713602.jpg" alt="cc74125cd2da1434cf19312dcaabde4" style="zoom:50%;" />
-
-<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151714149.jpg" alt="b246c578c263f40249028234ad8adca" style="zoom:50%;" />
-
+<h2 id="周恩来在文艺工作座谈会和故事片创作会议上的讲话"><a href="#周恩来在文艺工作座谈会和故事片创作会议上的讲话" class="headerlink" title="周恩来在文艺工作座谈会和故事片创作会议上的讲话"></a>周恩来在文艺工作座谈会和故事片创作会议上的讲话</h2><p>人民喜闻乐见，你不喜欢，你算老几？上海人喜爱评弹、淮剧、越剧，要你北京人去批准干什么？领导人可以有喜好，有人爱看戏，有人爱看画，有人爱古董，这有什么关系？我们看了戏说好，不一定就好，我们的话靠不住，各人有各人的爱好，怎能作为标准？艺术是要人民批准的。只要人民爱好，就有价值；不是反党、反社会主义的，就许可存在，没有权力去禁演。艺术家要面对人民，而不是只面对领导。 </p>
+<p>艺术是要人民批准的。只要人民爱好，就有价值；不是反党、反社会主义的，就许可存在，没有权力去禁演。艺术家要面对人民，而不是只面对领导。这是不是主张反对领导呢？不是的。领导在政治上有权提意见，要政治挂帅，但政治挂帅主要是看它是香花还是毒草，是否反党反社会主义，政治上的敏锐要放在这个方面。至于艺术方面，我们懂得很少。 </p>
+<p>在座的同志都是做领导的人，希望你们干涉少些，当然不是要你们不负责任。第一，要负责任；第二，要干涉少些。负责任主要指政治上，不要放任毒草，放任修正主义。但是一定要区分清楚，不要把什么都说成是修正主义。有人问我：文艺的教育作用和娱乐作用是不是统一的？是辩证的统一。群众看戏、看电影是要从中得到娱乐和休息，你通过典型化的形象表演，教育寓于其中，寓于娱乐之中。当然要多样化，不能老是打仗。朱德同志说，我打了一辈子仗，想看点不打仗的片子。如果天天让人家看打仗的片子，人家就不爱看，就要去看香港片，这只能说明电影局的工作没做好；反之，一个打仗的片子也没有，让青年丧失战斗性，也不好。现代片多少，历史片多少，要大体上有个比例。至于题材，完全可以允许作者自由选择。 </p>
+<p>周恩来在文艺工作座谈会和故事片创作会议上的讲话（一九六一年六月十九日） </p>
 <hr>
-<p>2022&#x2F;3&#x2F;15</p>
+<h2 id="【有的人】"><a href="#【有的人】" class="headerlink" title="【有的人】"></a>【有的人】</h2><p>──纪念鲁迅有感</p>
+<p>有的人活着，<br>他已经死了；<br>有的人死了，<br>他还活着。<br>有的人<br>骑在人民头上：“呵，我多么伟大！”<br>有的人<br>俯下身子给人民当牛马。<br>有的人<br>把名字刻入石头，想“不朽”；<br>有的人<br>情愿作野草，<br>等着地下的火燃烧。<br>有的人<br>他活着别人就不能活；<br>有的人<br>他活着为了多数人更好地活。<br>骑在人民头上的<br>人民把他摔倒；<br>给人民作牛马的<br>人民永远记住他！<br>把名字刻在石头上的<br>名字比尸首烂得更早；<br>只要春风吹到的地方<br>到处是青青的野草。<br>他活着别人就不能活的人，<br>他的下场可以看到；<br>他活着为了多数人更好地活着的人，<br>群众把他抬举得很高，很高。</p>
+<hr>
 ]]></content>
       <categories>
-        <category>java</category>
+        <category>生活和诗歌</category>
       </categories>
   </entry>
   <entry>
@@ -1187,6 +1078,115 @@
 ]]></content>
       <categories>
         <category>Markdown&amp;Blog</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>数据结构API</title>
+    <url>/2022/03/15/Data-structure-API/</url>
+    <content><![CDATA[<p>interface接口(申明后直接调用方法)-implement实现(不关心)</p>
+<h2 id="1-集合类-基本接口"><a href="#1-集合类-基本接口" class="headerlink" title="1. 集合类 基本接口"></a>1. 集合类 基本接口</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Collection&#123;</span><br><span class="line">    add(e);</span><br><span class="line">    iterator迭代器();&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="1-1-迭代器"><a href="#1-1-迭代器" class="headerlink" title="1.1 迭代器"></a>1.1 迭代器</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">iterator&#123;</span><br><span class="line">    next();</span><br><span class="line">    hasNext();</span><br><span class="line">    remove();&#125;</span><br></pre></td></tr></table></figure>
+
+<p> next最后会抛出异常，需要先hasNext;</p>
+<p>查找一个元素唯一个方法是next；</p>
+<h3 id="1-2删除-remove前必须先next，remove删除上次next返回的元素"><a href="#1-2删除-remove前必须先next，remove删除上次next返回的元素" class="headerlink" title="1.2删除 remove前必须先next，remove删除上次next返回的元素;"></a>1.2删除 remove前必须先next，remove删除上次next返回的元素;</h3><h2 id="1-3-Collection-泛型实用方法-所有都能用"><a href="#1-3-Collection-泛型实用方法-所有都能用" class="headerlink" title="1.3 Collection 泛型实用方法,所有都能用:"></a>1.3 Collection 泛型实用方法,所有都能用:</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collection&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">iterator</span><span class="params">()</span>;<span class="comment">//返回一个用于访问集合每个元素的迭代器    </span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">size</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object other)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(Object obj)</span>;<span class="comment">//有返回值</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">addAll</span><span class="params">(Collection&lt;? extends&gt; from)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object obj)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">removeAll</span><span class="params">(Collection&lt;?&gt; c)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">retainAll</span><span class="params">(Collection&lt;?&gt; other)</span>;<span class="comment">//保留，既删除所有与other集合不一样的元素</span></span><br><span class="line">    </span><br><span class="line">Object[] toArray();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Iterator&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasNext</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">next</span><span class="params">()</span>;<span class="comment">//到达尾部报错</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">remove</span><span class="params">()</span>;<span class="comment">//删除上次访问对象，紧跟next，如果期间集合发生变化报错</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-具体集合"><a href="#2-具体集合" class="headerlink" title="2 具体集合"></a>2 具体集合</h2><p>map结尾的类以外都实现了Collection接口，map结尾的类实现map接口</p>
+<h3 id="2-1-链表LinkList"><a href="#2-1-链表LinkList" class="headerlink" title="2.1 链表LinkList"></a>2.1 链表LinkList</h3><p>数组列表，链表共有</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java,util.List&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">()</span>;<span class="comment">//列表迭代器，用来迭代</span></span><br><span class="line"></span><br><span class="line">ListIterator&lt;E&gt; <span class="title function_">listOterator</span><span class="params">(<span class="type">int</span> index)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> i,E element)</span>;<span class="comment">//在给定位置添加，无返回值，默认成功</span></span><br><span class="line"></span><br><span class="line">Void <span class="title function_">addAll</span><span class="params">(<span class="type">int</span> i,Collection&lt;? extends E&gt; elements)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//删除该位置元素并返回</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">get</span><span class="params">(<span class="type">int</span> i)</span>;<span class="comment">//get和set随机访问每一个元素只适用于数组列表，链表只能用迭代器提供的</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">set</span><span class="params">(<span class="type">int</span> i,E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(Object obj)</span>;<span class="comment">//如果没有返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(Object obj)</span>;<span class="comment">//返回列表中最后一次出现的元素，没有返回-1</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ListIterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">add</span><span class="params">(E newElement)</span>;<span class="comment">//当前位置</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">set</span><span class="params">(E newElement)</span>;<span class="comment">//修改next上次访问位置，如果列表在其间被修改了，会报错</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasPrevious</span><span class="params">()</span>;<span class="comment">//反向的hasNext</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">previous</span><span class="params">()</span>;<span class="comment">//头，抛出异常</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">nextIndex</span><span class="params">()</span>;<span class="comment">//下次调用next返回索引</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">prevIndex</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="链表专属独有"><a href="#链表专属独有" class="headerlink" title="链表专属独有"></a>链表专属独有</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">LinkedList();<span class="comment">//构造空链表</span></span><br><span class="line"></span><br><span class="line">LinkedList(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;<span class="comment">//在头或尾添加</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;<span class="comment">//返回头或尾元素</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-数组列表-ArryList-类-实现了List接口"><a href="#2-2-数组列表-ArryList-类-实现了List接口" class="headerlink" title="2.2 数组列表 ArryList 类 实现了List接口"></a>2.2 数组列表 ArryList 类 实现了List接口</h3><p>List接口（包含的迭代器）描述有顺序的集合，位置重要，两种协议：1get和set随机访问每一个元素只适用于数组列表，2链表只能用迭代器提供的。</p>
+<p>Victor同步，多线程同时访问安全；ArryList不同步，多个同时访问不安全。</p>
+<h3 id="2-3-散列集-HashSet"><a href="#2-3-散列集-HashSet" class="headerlink" title="2.3 散列集 HashSet"></a>2.3 散列集 HashSet</h3><p>无序</p>
+<p>HashTable 散列表用链表数组实现，每个列表 桶。</p>
+<p>散列表实现的数据类型如HashSet</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.HashSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">HashSet();</span><br><span class="line"></span><br><span class="line">HashSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity);<span class="comment">//构造指定桶的空散列集</span></span><br><span class="line"></span><br><span class="line">HashSet(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor);<span class="comment">//填装因子，大于时再散列</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Object;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span>;<span class="comment">//返回哈希码</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-4-树集TreeSet，排序集"><a href="#2-4-树集TreeSet，排序集" class="headerlink" title="2.4 树集TreeSet，排序集"></a>2.4 树集TreeSet，排序集</h3><p>有排序的集合（sorted collection）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);</span><br></pre></td></tr></table></figure>
+
+<p>和比较紧密相关，因为是排序集合</p>
+<h3 id="2-5-排序集的-对象比较"><a href="#2-5-排序集的-对象比较" class="headerlink" title="2.5 排序集的 对象比较"></a>2.5 排序集的 对象比较</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.Comparable&lt;T&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T other)</span>;<span class="comment">//将这个对象this与other比较，this在other之前，返回负值，之后返回正值，相同为0</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Comparator&lt;T&gt;;</span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> <span class="title function_">comparable</span><span class="params">(T a,T b)</span>;<span class="comment">//a与b比较</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> E&gt; comparator();<span class="comment">//返回对元素排序的比较器？</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">first</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">last</span><span class="params">()</span>;<span class="comment">//返回排序集合的最小或最大</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.NavigableSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">higher</span><span class="params">(E value)</span>;<span class="comment">//返回大于value的最小元素或最大，没有返回null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">lower</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">ceiling</span><span class="params">(E value)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">floor</span><span class="params">(E value)</span>;<span class="comment">//返回最大或最小，没有则null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//删除并返回这个排序集的最大或最小，空null</span></span><br><span class="line"></span><br><span class="line">Iterator&lt;E&gt; <span class="title function_">descendingIterator</span><span class="params">()</span>;<span class="comment">//返回一个按递减顺序遍历集中元素的迭代器</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeSet&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">TreeSet();</span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造树，用指定比较器对其中元素排序</span></span><br><span class="line"></span><br><span class="line">TreeSet(Collection&lt;? <span class="keyword">extends</span> <span class="title class_">E</span>&gt; elements);<span class="comment">//构造树，所有元素添加，与给定集相同元素的比较器</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-6-队列Queue与双端队列Deque"><a href="#2-6-队列Queue与双端队列Deque" class="headerlink" title="2.6 队列Queue与双端队列Deque"></a>2.6 队列Queue与双端队列Deque</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Queue&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offer</span><span class="params">(E element)</span>;<span class="comment">//如果队列没满，添加队尾返回true；满了add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">remove</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">poll</span><span class="params">()</span>;<span class="comment">//队列不空，返回第一个并删除；空，remove报错，第二个null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">element</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//队列不空，返回头；空，element抛出异常，peek null</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Deque;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerFirst</span><span class="params">(E element)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">offerLast</span><span class="params">(E element)</span>;<span class="comment">//如果满，add抛出异常，offer false</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeFist</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pollLast</span><span class="params">()</span>;<span class="comment">//不空，删除并返回，空remove报错，poll null</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekFirst</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peekLast</span><span class="params">()</span>;<span class="comment">//返回头，空，get报错，peek null</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayDeque;</span><br><span class="line"></span><br><span class="line">ArrayDeque();</span><br><span class="line"></span><br><span class="line">ArrayDeque(<span class="type">int</span> initialCapacity);<span class="comment">//初始化16或给定容量双端队列</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-7-优先级队列PriorityQueue-最小-堆heap"><a href="#2-7-优先级队列PriorityQueue-最小-堆heap" class="headerlink" title="2.7 优先级队列PriorityQueue  (最小)堆heap"></a>2.7 优先级队列PriorityQueue  (最小)堆heap</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.PriorityQueue;</span><br><span class="line"></span><br><span class="line">PriorityQueue();</span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity);<span class="comment">//构造一个用于存放Comparable对象的优先级队列</span></span><br><span class="line"></span><br><span class="line">PriorityQueue(<span class="type">int</span> initialCapacity,Comparator&lt;? <span class="built_in">super</span> E&gt; c);<span class="comment">//构造一个优先级队列，指定比较器排序</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-8映射表Map-lt-K-V-gt-泛型"><a href="#2-8映射表Map-lt-K-V-gt-泛型" class="headerlink" title="2.8映射表Map&lt;K,V&gt; 泛型"></a>2.8映射表Map&lt;K,V&gt; 泛型</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">get</span><span class="params">(Object Key)</span>;<span class="comment">//返回key对应value，没有null</span></span><br><span class="line"></span><br><span class="line">V <span class="title function_">put</span><span class="params">(K key,V value)</span>;插入，如果存在，取代，返回旧值；键可以为<span class="literal">null</span>值不能为<span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">putAll</span><span class="params">(Map&lt;? extends K, ? extends V&gt; entries)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsKey</span><span class="params">(Object key)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">containsValue</span><span class="params">(Object value)</span>;</span><br><span class="line"></span><br><span class="line">set&lt;Map.Entry&lt;K,V&gt; <span class="title function_">entrySet</span><span class="params">()</span>;<span class="comment">//返回Map.Entry的集视图，也就是映射表的KV对;可以从这儿删除元素，映射表也同步删除，不能添加</span></span><br><span class="line"></span><br><span class="line">Set&lt;K&gt; <span class="title function_">KeySet</span><span class="params">()</span>;<span class="comment">//映射表所有键的集视图，可删除不能添加</span></span><br><span class="line"></span><br><span class="line">Collection&lt;V&gt; <span class="title function_">values</span><span class="params">()</span>;<span class="comment">//映射表所有值的集视图，可删除不能添加</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map.Entry&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">getKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">getValue</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">V <span class="title function_">setValue</span><span class="params">(V newValue)</span>;<span class="comment">//设置新值，返回旧值</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">HashMap();</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity);</span><br><span class="line"></span><br><span class="line">HashMap(<span class="type">int</span> initialCapacity,<span class="type">float</span> loadFactor)<span class="comment">//填装因子</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TreeMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">TreeMap(Comparator&lt;? <span class="built_in">super</span> K&gt; c);<span class="comment">//构造树映射表，指定比较器排序</span></span><br><span class="line"></span><br><span class="line">TreeMap(Map&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//映射表全部添加到树映射表</span></span><br><span class="line"></span><br><span class="line">TreeMap(SortedMap&lt;? <span class="keyword">extends</span> <span class="title class_">K</span>, <span class="keyword">extends</span> <span class="title class_">V</span>&gt; entires);<span class="comment">//排序映射表添加到树映射表，用相同的比较器</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.SortedMap&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Comparator&lt;? <span class="built_in">super</span> K&gt; comparator);<span class="comment">//返回对K排序的比较器，compareto null</span></span><br><span class="line"></span><br><span class="line">K <span class="title function_">firstKey</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">K <span class="title function_">lastKey</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-9-HashTable-Vector-enum-Stack"><a href="#2-9-HashTable-Vector-enum-Stack" class="headerlink" title="2.9 HashTable Vector enum Stack"></a>2.9 HashTable Vector enum Stack</h3><p>hashTable 与hashMap区别不大，不同是HashTable线程安全，同步访问；</p>
+<p>vector与ArrayList同理；</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Enumeration&lt;E&gt;;</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">hasMoreElement</span><span class="params">()</span>;有更多<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">E <span class="title function_">nextElement</span><span class="params">()</span>;hasmore <span class="literal">false</span> 会报错</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Hashtable&lt;K,V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;K&gt; <span class="title function_">Keys</span><span class="params">()</span>;<span class="comment">//遍历 枚举</span></span><br><span class="line"></span><br><span class="line">Enumeration&lt;V&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Vector&lt;V&gt;;</span><br><span class="line"></span><br><span class="line">Enumeration&lt;E&gt; <span class="title function_">elements</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack&lt;E&gt;;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">push</span><span class="params">(E item)</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">pop</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">peek</span><span class="params">()</span>;<span class="comment">//空会报错</span></span><br></pre></td></tr></table></figure>
+
+<p>位？</p>
+<h3 id="集合框架framework-展示Collection-Map两个接口的混用"><a href="#集合框架framework-展示Collection-Map两个接口的混用" class="headerlink" title="集合框架framework 展示Collection||Map两个接口的混用"></a>集合框架framework 展示Collection||Map两个接口的混用</h3><img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713542.jpg" alt="5d21cab304c41c724c490927f5c531e" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151713602.jpg" alt="cc74125cd2da1434cf19312dcaabde4" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/YongtaiQ/Markdown_Picture/img/202203151714149.jpg" alt="b246c578c263f40249028234ad8adca" style="zoom:50%;" />
+
+<hr>
+<p>2022&#x2F;3&#x2F;15</p>
+]]></content>
+      <categories>
+        <category>java</category>
       </categories>
   </entry>
   <entry>
@@ -2635,96 +2635,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>当我开始真正爱自己</title>
-    <url>/2022/05/19/Love-myself/</url>
-    <content><![CDATA[<p>作者：卓别林</p>
-<span id="more"></span>
-
-<iframe src="//player.bilibili.com/player.html?aid=851222323&bvid=BV12L4y1W7jG&cid=498371086&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p>当我真正开始爱自己，</p>
-<p>我才认识到，所有的痛苦和情感的折磨，</p>
-<p>都只是提醒我：活着，不要违背自己的本心。</p>
-<p>今天我明白了，这叫做“真实”。</p>
-<p>当我真正开始爱自己，</p>
-<p>我才懂得，把自己的愿望强加于人，</p>
-<p>是多么的无礼，就算我知道，时机并不成熟，</p>
-<p>那人也还没有做好准备，</p>
-<p>就算那个人就是我自己。</p>
-<p>今天我明白了，这叫做“尊重”。</p>
-<p>当我开始爱自己，</p>
-<p>我不再渴求不同的人生，</p>
-<p>我知道任何发生在我身边的事情，</p>
-<p>都是对我成长的邀请。</p>
-<p>如今，我称之为“成熟”。</p>
-<p>当我开始真正爱自己，</p>
-<p>我才明白，我其实一直都在正确的时间，</p>
-<p>正确的地方，发生的一切都恰如其分。</p>
-<p>由此我得以平静。</p>
-<p>今天我明白了，这叫做“自信”。</p>
-<p>当我真正开始爱自己，</p>
-<p>我不再牺牲自己的自由时间，</p>
-<p>不再去勾画什么宏伟的明天。</p>
-<p>今天我只做有趣和快乐的事，</p>
-<p>做自己热爱，让心欢喜的事，</p>
-<p>用我的方式、我的韵律。</p>
-<p>今天我明白了，这叫做“单纯”。</p>
-<p>当我开始真正爱自己，</p>
-<p>我开始远离一切不健康的东西。</p>
-<p>不论是饮食和人物，还是事情和环境，</p>
-<p>我远离一切让我远离本真的东西。</p>
-<p>从前我把这叫做“追求健康的自私自利”，</p>
-<p>但今天我明白了，这是“自爱”。</p>
-<p>当我开始真正爱自己，</p>
-<p>我不再总想着要永远正确，不犯错误。</p>
-<p>我今天明白了，这叫做“谦逊”。</p>
-<p>当我开始真正爱自己，</p>
-<p>我不再继续沉溺于过去，</p>
-<p>也不再为明天而忧虑，</p>
-<p>现在我只活在一切正在发生的当下，</p>
-<p>今天，我活在此时此地，</p>
-<p>如此日复一日。这就叫“完美”。</p>
-<p>当我开始真正爱自己，</p>
-<p>我明白，我的思虑让我变得贫乏和病态，</p>
-<p>但当我唤起了心灵的力量，</p>
-<p>理智就变成了一个重要的伙伴，</p>
-<p>这种组合我称之为，“心的智慧”。</p>
-<p>我们无须再害怕自己和他人的分歧，</p>
-<p>矛盾和问题，因为即使星星有时也会碰在一起，</p>
-<p>形成新的世界，今天我明白，这就是“生命”。</p>
-<hr>
-<blockquote>
-<p>AS I BEGAN TO LOVE MYSELF</p>
-<p>CHARLIE CHAPLIN ON HIS 70TH BIRTHDAY</p>
-</blockquote>
-<p>As I began to love myself I found that anguish and emotional suffering are only warning signs that I was living against my own truth.</p>
-<p>Today, I know, this is AUTHENTICITY.</p>
-<p>As I began to love myself I understood how much it can offend somebody as I try to force my desires on this person, even though I knew the time was not right and the person was not ready for it, and even though this person was me.</p>
-<p>Today I call it RESPECT.</p>
-<p>As I began to love myself I stopped craving for a different life, and I could see that everything that surrounded me was inviting me to grow.</p>
-<p>Today I call it MATURITY.</p>
-<p>As I began to love myself I understood that at any circumstance, I am in the right place at the right time, and everything happens at the exactly right moment, so I could be calm.</p>
-<p>Today I call it SELF-CONFIDENCE.</p>
-<p>As I began to love myself I quit stealing my own time, and I stopped designing huge projects for the future. Today, I only do what brings me joy and happiness, things I love to do and that make my heart cheer, and I do them in my own way and in my own rhythm.</p>
-<p>Today I call it SIMPLICITY.</p>
-<p>As I began to love myself I freed myself of anything that is no good for my health – food, people, things, situations, and everything that drew me down and away from myself. At first I called this attitude a healthy egoism.</p>
-<p>Today I know it is LOVE OF ONESELF.</p>
-<p>As I began to love myself I quit trying to always be right, and ever since I was wrong less of the time.</p>
-<p>Today I discovered that is MODESTY.</p>
-<p>As I began to love myself I refused to go on living in the past and worry about the future. Now, I only live for the moment, where EVERYTHING is happening.</p>
-<p>Today I live each day, day by day, and I call it FULFILLMENT.</p>
-<p>As I began to love myself I recognized that my mind can disturb me and it can make me sick. But As I connected it to my heart, my mind became a valuable ally.</p>
-<p>Today I call this connection WISDOM OF THE HEART.</p>
-<p>We no longer need to fear arguments, confrontations or any kind of problems with ourselves or others. Even stars collide, and out of their crashing new worlds are born.</p>
-<p>Today I know THAT IS “LIFE“!</p>
-<hr>
-<p>西走菜菜</p>
-]]></content>
-      <categories>
-        <category>生活和诗歌</category>
-      </categories>
-  </entry>
-  <entry>
     <title>离骚</title>
     <url>/2022/04/07/Li-sao/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -3499,6 +3409,96 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 
 <hr>
 <p>2022&#x2F;4&#x2F;7</p>
+]]></content>
+      <categories>
+        <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>当我开始真正爱自己</title>
+    <url>/2022/05/19/Love-myself/</url>
+    <content><![CDATA[<p>作者：卓别林</p>
+<span id="more"></span>
+
+<iframe src="//player.bilibili.com/player.html?aid=851222323&bvid=BV12L4y1W7jG&cid=498371086&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>当我真正开始爱自己，</p>
+<p>我才认识到，所有的痛苦和情感的折磨，</p>
+<p>都只是提醒我：活着，不要违背自己的本心。</p>
+<p>今天我明白了，这叫做“真实”。</p>
+<p>当我真正开始爱自己，</p>
+<p>我才懂得，把自己的愿望强加于人，</p>
+<p>是多么的无礼，就算我知道，时机并不成熟，</p>
+<p>那人也还没有做好准备，</p>
+<p>就算那个人就是我自己。</p>
+<p>今天我明白了，这叫做“尊重”。</p>
+<p>当我开始爱自己，</p>
+<p>我不再渴求不同的人生，</p>
+<p>我知道任何发生在我身边的事情，</p>
+<p>都是对我成长的邀请。</p>
+<p>如今，我称之为“成熟”。</p>
+<p>当我开始真正爱自己，</p>
+<p>我才明白，我其实一直都在正确的时间，</p>
+<p>正确的地方，发生的一切都恰如其分。</p>
+<p>由此我得以平静。</p>
+<p>今天我明白了，这叫做“自信”。</p>
+<p>当我真正开始爱自己，</p>
+<p>我不再牺牲自己的自由时间，</p>
+<p>不再去勾画什么宏伟的明天。</p>
+<p>今天我只做有趣和快乐的事，</p>
+<p>做自己热爱，让心欢喜的事，</p>
+<p>用我的方式、我的韵律。</p>
+<p>今天我明白了，这叫做“单纯”。</p>
+<p>当我开始真正爱自己，</p>
+<p>我开始远离一切不健康的东西。</p>
+<p>不论是饮食和人物，还是事情和环境，</p>
+<p>我远离一切让我远离本真的东西。</p>
+<p>从前我把这叫做“追求健康的自私自利”，</p>
+<p>但今天我明白了，这是“自爱”。</p>
+<p>当我开始真正爱自己，</p>
+<p>我不再总想着要永远正确，不犯错误。</p>
+<p>我今天明白了，这叫做“谦逊”。</p>
+<p>当我开始真正爱自己，</p>
+<p>我不再继续沉溺于过去，</p>
+<p>也不再为明天而忧虑，</p>
+<p>现在我只活在一切正在发生的当下，</p>
+<p>今天，我活在此时此地，</p>
+<p>如此日复一日。这就叫“完美”。</p>
+<p>当我开始真正爱自己，</p>
+<p>我明白，我的思虑让我变得贫乏和病态，</p>
+<p>但当我唤起了心灵的力量，</p>
+<p>理智就变成了一个重要的伙伴，</p>
+<p>这种组合我称之为，“心的智慧”。</p>
+<p>我们无须再害怕自己和他人的分歧，</p>
+<p>矛盾和问题，因为即使星星有时也会碰在一起，</p>
+<p>形成新的世界，今天我明白，这就是“生命”。</p>
+<hr>
+<blockquote>
+<p>AS I BEGAN TO LOVE MYSELF</p>
+<p>CHARLIE CHAPLIN ON HIS 70TH BIRTHDAY</p>
+</blockquote>
+<p>As I began to love myself I found that anguish and emotional suffering are only warning signs that I was living against my own truth.</p>
+<p>Today, I know, this is AUTHENTICITY.</p>
+<p>As I began to love myself I understood how much it can offend somebody as I try to force my desires on this person, even though I knew the time was not right and the person was not ready for it, and even though this person was me.</p>
+<p>Today I call it RESPECT.</p>
+<p>As I began to love myself I stopped craving for a different life, and I could see that everything that surrounded me was inviting me to grow.</p>
+<p>Today I call it MATURITY.</p>
+<p>As I began to love myself I understood that at any circumstance, I am in the right place at the right time, and everything happens at the exactly right moment, so I could be calm.</p>
+<p>Today I call it SELF-CONFIDENCE.</p>
+<p>As I began to love myself I quit stealing my own time, and I stopped designing huge projects for the future. Today, I only do what brings me joy and happiness, things I love to do and that make my heart cheer, and I do them in my own way and in my own rhythm.</p>
+<p>Today I call it SIMPLICITY.</p>
+<p>As I began to love myself I freed myself of anything that is no good for my health – food, people, things, situations, and everything that drew me down and away from myself. At first I called this attitude a healthy egoism.</p>
+<p>Today I know it is LOVE OF ONESELF.</p>
+<p>As I began to love myself I quit trying to always be right, and ever since I was wrong less of the time.</p>
+<p>Today I discovered that is MODESTY.</p>
+<p>As I began to love myself I refused to go on living in the past and worry about the future. Now, I only live for the moment, where EVERYTHING is happening.</p>
+<p>Today I live each day, day by day, and I call it FULFILLMENT.</p>
+<p>As I began to love myself I recognized that my mind can disturb me and it can make me sick. But As I connected it to my heart, my mind became a valuable ally.</p>
+<p>Today I call this connection WISDOM OF THE HEART.</p>
+<p>We no longer need to fear arguments, confrontations or any kind of problems with ourselves or others. Even stars collide, and out of their crashing new worlds are born.</p>
+<p>Today I know THAT IS “LIFE“!</p>
+<hr>
+<p>西走菜菜</p>
 ]]></content>
       <categories>
         <category>生活和诗歌</category>
@@ -4600,19 +4600,19 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 </blockquote>
 <p>8K帧率低所以码率低，可能是我设备的原因，也可能是B站解码的问题，按理说能推到8K@120hz</p>
 <blockquote>
-<p>Resolution:7680 x <a href="mailto:&#52;&#x33;&#x32;&#48;&#64;&#51;&#48;&#46;&#x30;&#49;&#x39;">&#52;&#x33;&#x32;&#48;&#64;&#51;&#48;&#46;&#x30;&#49;&#x39;</a><br>Video DataRate:3609 Kbps<br>Audio DataRate:311 Kbps</p>
+<p>Resolution:7680 x <a href="mailto:&#x34;&#51;&#x32;&#48;&#x40;&#x33;&#48;&#x2e;&#48;&#49;&#57;">&#x34;&#51;&#x32;&#48;&#x40;&#x33;&#48;&#x2e;&#48;&#49;&#57;</a><br>Video DataRate:3609 Kbps<br>Audio DataRate:311 Kbps</p>
 </blockquote>
 <p>4K</p>
 <blockquote>
-<p>Resolution:<a href="mailto:&#51;&#x38;&#x34;&#48;&#x78;&#50;&#49;&#54;&#x30;&#64;&#49;&#x31;&#x31;&#46;&#49;&#x31;&#x31;">&#51;&#x38;&#x34;&#48;&#x78;&#50;&#49;&#54;&#x30;&#64;&#49;&#x31;&#x31;&#46;&#49;&#x31;&#x31;</a><br>Video DataRate:11672 Kbps<br>Audio DataRate:311 Kbps</p>
+<p>Resolution:<a href="mailto:&#x33;&#56;&#52;&#48;&#120;&#x32;&#49;&#x36;&#x30;&#64;&#49;&#x31;&#x31;&#46;&#x31;&#x31;&#49;">&#x33;&#56;&#52;&#48;&#120;&#x32;&#49;&#x36;&#x30;&#64;&#49;&#x31;&#x31;&#46;&#x31;&#x31;&#49;</a><br>Video DataRate:11672 Kbps<br>Audio DataRate:311 Kbps</p>
 </blockquote>
 <p>1080p60hz</p>
 <blockquote>
-<p>Resolution:1920 x <a href="mailto:&#x31;&#48;&#x38;&#48;&#64;&#x36;&#x30;&#x2e;&#49;&#x35;&#x30;">&#x31;&#48;&#x38;&#48;&#64;&#x36;&#x30;&#x2e;&#49;&#x35;&#x30;</a><br>Video DataRate:1541 Kbps<br>Audio DataRate:311 Kbps</p>
+<p>Resolution:1920 x <a href="mailto:&#x31;&#x30;&#x38;&#x30;&#64;&#54;&#48;&#x2e;&#x31;&#53;&#x30;">&#x31;&#x30;&#x38;&#x30;&#64;&#54;&#48;&#x2e;&#x31;&#53;&#x30;</a><br>Video DataRate:1541 Kbps<br>Audio DataRate:311 Kbps</p>
 </blockquote>
 <p>1080p</p>
 <blockquote>
-<p>Resolution:1920 x <a href="mailto:&#x31;&#x30;&#x38;&#48;&#x40;&#x33;&#48;&#x2e;&#48;&#x31;&#57;">&#x31;&#x30;&#x38;&#48;&#x40;&#x33;&#48;&#x2e;&#48;&#x31;&#57;</a><br>Video DataRate: 655 Kbps<br>Audio DataRate:311 Kbps</p>
+<p>Resolution:1920 x <a href="mailto:&#x31;&#x30;&#x38;&#x30;&#64;&#x33;&#48;&#46;&#x30;&#49;&#x39;">&#x31;&#x30;&#x38;&#x30;&#64;&#x33;&#48;&#46;&#x30;&#49;&#x39;</a><br>Video DataRate: 655 Kbps<br>Audio DataRate:311 Kbps</p>
 </blockquote>
 <p>320kbps水平大概是三分钟的音乐10MB大小</p>
 <p>达不到无损，但绝对吊打网页解码，试试就明白了</p>
@@ -4812,28 +4812,6 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
       </categories>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/03/09/hello-world/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-surge">
-      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>博客测试</category>
-      </categories>
-  </entry>
-  <entry>
     <title>学习&amp;知识</title>
     <url>/2022/05/01/knowledge/</url>
     <content><![CDATA[<p>可能是最近习强国等乱七八糟的东西刷多了，觉得在2022年附近的时代背景下，中国的文化氛围中，汉语<code>学习</code>这两个字已经成为了灾难，关于学习的口号泛滥，其当今对于大多数人认知的解释在我看来是非常主观、非常形而上、非常虚伪、非常焦虑功利又盲目的伪命题。</p>
@@ -4864,6 +4842,28 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 ]]></content>
       <categories>
         <category>生活和诗歌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/03/09/hello-world/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试，格式0101哦~." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="19429c733dd5dade9a874a46fe10ed7dae240e419a6b637e909277dd1b598aa5">2a1fcbdcb7eb03b565a95d6de79a0002f5271d842644c55201e689c5ff7e762bd96e5bcd5d76221099436b8e4a585406892bac5ac8f6cb3cdc23b786e38237b929d000e5d3becd9384bf22ca319e979b6fc75e7f5e228286efd8cacca2422a8bcae12cda4e62510a83ae9d63f82981f96607c11b2351e8516630f975cedf379322e92e876e00296ebab6999c437346f6b433df928d96799439e9940ceb5e37a4194475c2be85646fcc575e262f7dc683138327ccd68e234202a65f0cb88f3d0cb49e5f286518e75589278c9b28e87fc6b92c6c943880873cfeb822fcdf63ca14e326dcc75685e681e790a9418ee1cdf8badfafaa1addc2d3173412af18b60b6de97535022443aee70d019b64f5fec719c8924249e32488793f0f3e9e378de3b59c07f54d3f5aed4f9570cd7c38d8a9fce9c292735ba2e18f57c33dd012fc2a1cca5a3ad0434ae6b9cb9030280ffb4ed507e847e94c57c9e6ee394ebaea7b484bc053aabdef11531ffe0e9345861e8b4d1d710aa00a1f6bb269ec0f0a58ad504b5737f7aaab092282874dac87829291c7e827c3c8ddad6716a7632ce2fed69703e28577729d642cc62a709704ad1223679d8d3531d0165c05b8ccb5b67d41d9e448c4d76592a71db975035de4130208d31ad85993aef49aeb63910eca17c3216a6db03590e6dc0b58292f6da567f2edfe0796321a7a2e5461c7e123b528c00d5a13109cd8cba32e430311bdc84f50e2061e911ff363a7aa0f421b86c1ab8537ecd91f45faa19a54de7037c646509f5dd03fc8ccc2fc75bef7ae4413e77018c304b68c6697a019a96873dc9ede2adf8eb02e41b74c15de75f84ee54b026292e3abd211102ba62fe3830bcbc2357647525cfae9aadc6d9077baad7932f97fb299c15cfac5d6b7867ac4f936aa85a3cd7f4e5530ae51a1cf6460e7cc11baf2c76b21618d771835ed8c6f2ffc20d043a9a514deecdd203c42df79e46197c62fc27e16318db92e1c3dd413283186f309257b9f67232dbb63a7d5079a7567433116e1cfa28ef193b3535df72b3b64ffffb6899408519d539e32792a97bc84f03ec1c51d7068e05af07f439527110d8f1c50977751f2eab6b99a81e29d5c667b84439f304c50f41934c86a4aeb16b1a54f67492518993a00e3f2af25db2f9ccdaba63dd803b2d5b13f45d8541162b7f319a97d7c6a7f2d5c5c59d6b9d391d96d9436ecca5110757c34e6895f851824bd2a76d04613039b1f11879a450dd012e294085f60a1870ba928d554a3b5612dc5c6a8840af451926766ac58180169b8c0106c93825f0fd21f988a49ec27250d98041f6b5a2a66e5d7d26e31c09eb08b3245eddcca979106ae3b8409c7c28812984a7daeb781a2ddde14d2ed14f596b7265bc78df0f98bb8f18914dc2a88807a41203540c2070d5c7376f7368b101e45fe5a8810bf3720a9e2c1835f7a92ea2529a0681022a8277a81e8b9ccec78b3278e12dbc692b7c47ab14fedfb85af252a1150a4e48c4e6c55a30f1e9d47454140a7002148c1d59c0f45818bbe4ae49620149e24934b90fcf6068c923668a24c19c9661e84886d63ef65dfd71ce247aa5b08a9267709d1060cd203a7720a8c5503a41acfe4e13d5b744df81a562da9c8c582739e261e38f9ba34ace8003f0d385dea3652fd2a692bf2fcf40841a3ffaae9e4137448c270d3a9552e1486db567f1a253929f2df286e8b600786d8bc97a41f8d37cb9b3642fa8dda63356600ac2d4e89414df02bfd829d17f2c9ea287514479b35f4683c362b77892b3cef6dc61df391ec51c73bfa69412503847133f6491bddb7f808eea6308f1ab6a590a9cedbffb9d5cdaab92b9c04e41fb2d138d0edc81a19489acee6ca35f65796d6c4ae294c9dadbebb93150a49b40dba9181f1b079beff8c41063b4352504f2bfde1c17a4007358257e61424a7fb994eccf604e747d837cf9294db68aa63590927d8ac58c7bf0676899687696b403b22d66bb6403c84af5e89689760363bf68ba2eb6da98ae01e2d46d35b300170830dc67319fe55744413c665fc56e30e6981e9b5e6c544c18aeaae6efd2c2f61e9d7e1399e12c85c41925d15b960a52619a96c621b67b95db434511d67b228c2e49eb81aaf5d4b28fa3672b367f110265c94de2c0b5b1e4c40a4d4e0c7d3c5777a9ec306d220a2f5cb1c62bea8699216bd4c32c10383b9eee4185d0e55c2943468ade1282192d42adb17b07e33a8262044e88d45acd094a43aba5d052c2579ac0325aab2eb11d2c2eb4a7262e01ea1035b43dbd079d85552b9f59848d0d3b7bd202f834ac1b38924b2e2c9a3a6589da8cfcd03a79727098182834aa4f014b48586c9966b35c7fa2812f4b339e148d7dc478b0978d856be60c593706ab56dd16ce1b467edc4a406b3a804a37ad14461b2591e18e0adf6b7d775b3ca9350204860d181d27a35c9ca418e1c18ae3127a737e6a96784fc54bf37f2d58711cec2c55c4e4808e373f8429ececef9d9d327bedb05ea85d9dab6aa5b59a78a36974dcac5e0ebbbbea512815d735d25db7fc47fc0101213ee21a975f30de333d5c9c98891eb38a5d68d1d30becfbdbacd2b2f9378989e7d111f3294bc29ce562b2c2e738a35e8ecaf945bb278f8b1f711e512aef36a0637ed95a987f04b8ea29ccf838fd075e3754d414b7bf04f24dcf9332ef72c51cecf2066b542d03ae43bede6da505e6fafbab1c1db48dc3c485fe90181eb371f896a85f2b9f0f9447b32d008e9145341049905dfc5d63d2ae6184ce517d396728e941c8c905991f82cdd592b1652f161763759f834f26bc42affedf18daf5fd8a66a34c3dd6cb4c6baf6dd05eb253cf79242c13ba42ccd761da0c458a484dc2f2d92f87e87bb7afa71e92bd617aa1730fbee15a2307d030143a1c91379fc7783876f741f003e0ea51938d1258f20e2870a0e12e6e1a313b3976e3cd4826f5e1c830291681e1b80af1b5f275b41604497218b4b2ad332fb3ebf2bffcef04f2886e1e529e2ba1bdbb89d3a2013be4415576961c648d6538e9e054d9c8d183f056411a6c30c3ee057ff55f83537f9504ca7a40da90e497f93b255499f454679db28a2039525ac984276d1f7800a152fb88c8372032060fe36b870cd6871856a81e05ae6987ed10cf40c3c1ba93e254ca3bd924168229471f95a97c06b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-surge">
+      <input class="hbe hbe-input-field hbe-input-field-surge" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-surge" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-surge" data-content="还记得我的生日吗？如101(对应1月1号)">还记得我的生日吗？如101(对应1月1号)</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-surge" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>博客测试</category>
       </categories>
   </entry>
   <entry>
